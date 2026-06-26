@@ -158,7 +158,7 @@ msgid "Invalid YouTube URL"
 msgstr "Yanlış YouTube URL"
 
 msgid "Language changed to %s"
-msgstr ""
+msgstr "Dil %s olaraq dəyişdirildi"
 
 msgid "Live webcam viewer featuring global locations"
 msgstr "Qlobal məkanları əks etdirən canlı veb-kamera izləyicisi"

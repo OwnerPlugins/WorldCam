@@ -173,7 +173,7 @@ msgid "No favorites to export"
 msgstr "No favorites ji bo hinardekirina"
 
 msgid "No favorites yet"
-msgstr ""
+msgstr "No favorites hê"
 
 msgid "No playlists available"
 msgstr "Lîsteyên lîstikê tune"

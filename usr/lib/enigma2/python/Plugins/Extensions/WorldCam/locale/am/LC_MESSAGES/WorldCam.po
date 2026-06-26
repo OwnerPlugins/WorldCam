@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "- Local YouTube playlist"
-msgstr ""
+msgstr "- የአካባቢ የዩቲዩብ አጫዋች ዝርዝር"
 
 msgid "- Local webcam list"
 msgstr "- የአካባቢ የድር ካሜራ ዝርዝር"
@@ -26,7 +26,7 @@ msgid "- Online Direct and YouTube webcams"
 msgstr "- የመስመር ላይ ቀጥታ እና የዩቲዩብ ድር ካሜራዎች"
 
 msgid "- Online webcam list"
-msgstr ""
+msgstr "- የመስመር ላይ የድር ካሜራ ዝርዝር"
 
 msgid "- Other sources"
 msgstr "- ሌሎች ምንጮች"
@@ -47,7 +47,7 @@ msgid "Add/Remove"
 msgstr "አክል/አስወግድ"
 
 msgid "Added to favorites!"
-msgstr ""
+msgstr "ወደ ተወዳጆች ታክሏል!"
 
 msgid "Categories"
 msgstr "ምድቦች"
@@ -56,10 +56,10 @@ msgid "Change language"
 msgstr "ቋንቋ ቀይር"
 
 msgid "Continents"
-msgstr ""
+msgstr "አህጉራት"
 
 msgid "Could not extract YouTube stream"
-msgstr ""
+msgstr "የዩቲዩብ ዥረት ማውጣት አልተቻለም"
 
 msgid "Could not extract video stream"
 msgstr "የቪዲዮ ዥረት ማውጣት አልተቻለም"
@@ -80,7 +80,7 @@ msgid "Empty playlist file"
 msgstr "ባዶ አጫዋች ዝርዝር ፋይል"
 
 msgid "Error adding favorite"
-msgstr ""
+msgstr "ተወዳጅ ማከል ላይ ስህተት"
 
 msgid "Error changing language"
 msgstr "ቋንቋ መቀየር ላይ ስህተት"
@@ -95,7 +95,7 @@ msgid "Error loading countries"
 msgstr "አገሮችን መጫን ላይ ስህተት"
 
 msgid "Error loading favorites"
-msgstr ""
+msgstr "ተወዳጆችን መጫን ላይ ስህተት"
 
 msgid "Error loading locations"
 msgstr "ቦታዎችን መጫን ላይ ስህተት"
@@ -116,7 +116,7 @@ msgid "Error opening language selection"
 msgstr "የቋንቋ ምርጫን መክፈት ላይ ስህተት"
 
 msgid "Error opening playlist"
-msgstr ""
+msgstr "አጫዋች ዝርዝር መክፈት ላይ ስህተት"
 
 msgid "Error removing favorite"
 msgstr "ተወዳጅን ማስወገድ ላይ ስህተት"
@@ -158,7 +158,7 @@ msgid "Invalid YouTube URL"
 msgstr "ልክ ያልሆነ የዩቲዩብ ዩአርኤል"
 
 msgid "Language changed to %s"
-msgstr ""
+msgstr "ቋንቋ ወደ %s ተቀይሯል።"
 
 msgid "Live webcam viewer featuring global locations"
 msgstr "አለምአቀፍ አካባቢዎችን የሚያሳይ የቀጥታ የድር ካሜራ መመልከቻ"

@@ -71,7 +71,7 @@ msgid "Country"
 msgstr "Država"
 
 msgid "Developed by Lululla"
-msgstr ""
+msgstr "Razvio Lululla"
 
 msgid "EUROPE"
 msgstr "EVROPA"

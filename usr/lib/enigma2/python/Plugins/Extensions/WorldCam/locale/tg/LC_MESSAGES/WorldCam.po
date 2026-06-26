@@ -266,7 +266,7 @@ msgid "WorldCam v%s"
 msgstr ""
 
 msgid "WorldCam v{}"
-msgstr ""
+msgstr "WorldCam в{}"
 
 msgid "You are already running the latest version: {}"
 msgstr "Шумо аллакай версияи охиринро иҷро карда истодаед: {}"

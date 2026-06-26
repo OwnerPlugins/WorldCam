@@ -219,7 +219,7 @@ msgid "Select a valid category"
 msgstr "Selectați o categorie validă"
 
 msgid "Select a valid location"
-msgstr ""
+msgstr "Selectați o locație validă"
 
 msgid "Select a valid playlist"
 msgstr "Selectați o listă de redare validă"

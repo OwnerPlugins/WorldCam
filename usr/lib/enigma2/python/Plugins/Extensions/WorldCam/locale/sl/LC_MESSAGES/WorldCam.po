@@ -189,7 +189,7 @@ msgid "Play"
 msgstr "Igraj"
 
 msgid "Play/pause not supported for this stream"
-msgstr ""
+msgstr "Predvajanje/pavza ni podprto za ta tok"
 
 msgid "Playback error"
 msgstr "Napaka pri predvajanju"

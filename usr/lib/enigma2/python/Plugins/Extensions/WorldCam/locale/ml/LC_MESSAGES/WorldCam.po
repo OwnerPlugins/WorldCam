@@ -263,7 +263,7 @@ msgid "User Lists"
 msgstr "ഉപയോക്തൃ പട്ടികകൾ"
 
 msgid "WorldCam v%s"
-msgstr ""
+msgstr "വേൾഡ്‌ക്യാം v%s"
 
 msgid "WorldCam v{}"
 msgstr ""

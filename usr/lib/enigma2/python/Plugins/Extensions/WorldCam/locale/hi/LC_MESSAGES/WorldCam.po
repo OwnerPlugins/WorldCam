@@ -20,7 +20,7 @@ msgid "- Local YouTube playlist"
 msgstr "- स्थानीय यूट्यूब प्लेलिस्ट"
 
 msgid "- Local webcam list"
-msgstr ""
+msgstr "- स्थानीय वेबकैम सूची"
 
 msgid "- Online Direct and YouTube webcams"
 msgstr "- ऑनलाइन डायरेक्ट और यूट्यूब वेबकैम"
