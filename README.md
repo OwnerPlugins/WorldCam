@@ -1,21 +1,44 @@
 <h1 align="center">🌍 You WorldCam Plugin</h1>
 
-[![Version](https://img.shields.io/badge/Version-6.8-blue.svg)](https://github.com/Belfagor2005/WorldCam)
-[![Enigma2](https://img.shields.io/badge/Enigma2-Plugin-ff6600.svg)](https://www.enigma2.net)
-[![Python](https://img.shields.io/badge/Python-3-blue.svg)](https://www.python.org)
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Python package](https://github.com/OwnerPlugins/WorldCam/actions/workflows/pylint.yml/badge.svg)](https://github.com/OwnerPlugins/WorldCam/actions/workflows/pylint.yml)
-[![Ruff Status](https://github.com/OwnerPlugins/WorldCam/actions/workflows/ruff.yml/badge.svg)](https://github.com/OwnerPlugins/WorldCam/actions/workflows/ruff.yml)
+<p align="center">
+  <a href="https://github.com/Belfagor2005/WorldCam">
+    <img src="https://img.shields.io/badge/Version-6.8-blue.svg" alt="Version">
+  </a>
+  <a href="https://www.enigma2.net">
+    <img src="https://img.shields.io/badge/Enigma2-Plugin-ff6600.svg" alt="Enigma2">
+  </a>
+  <a href="https://www.python.org">
+    <img src="https://img.shields.io/badge/Python-3-blue.svg" alt="Python">
+  </a>
+  <a href="https://www.gnu.org/licenses/gpl-3.0.html">
+    <img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="GPLv3">
+  </a>
+  <a href="https://github.com/OwnerPlugins/WorldCam/actions/workflows/pylint.yml">
+    <img src="https://github.com/OwnerPlugins/WorldCam/actions/workflows/pylint.yml/badge.svg" alt="Python package">
+  </a>
+  <a href="https://github.com/OwnerPlugins/WorldCam/actions/workflows/ruff.yml">
+    <img src="https://github.com/OwnerPlugins/WorldCam/actions/workflows/ruff.yml/badge.svg" alt="Ruff Status">
+  </a>
+</p>
 
-[![Visitors](https://komarev.com/ghpvc/?username=Belfagor2005&label=Repository%20Views&color=blueviolet)](https://github.com/Belfagor2005)
-[![Donate](https://img.shields.io/badge/_-Donate-red.svg?logo=githubsponsors&labelColor=555555&style=for-the-badge)](https://ko-fi.com/lululla)
-[![Donate](https://img.shields.io/badge/_-Donate-green.svg?logo=githubsponsors&labelColor=555555&style=for-the-badge)](https://paypal.me/belfagor2005)
+<p align="center">
+  <a href="https://github.com/Belfagor2005">
+    <img src="https://komarev.com/ghpvc/?username=Belfagor2005&label=Repository%20Views&color=blueviolet" alt="Visitors">
+  </a>
+</p>
+<p align="center">
+  <a href="https://ko-fi.com/lululla">
+    <img src="https://img.shields.io/badge/_-Donate-red.svg?logo=githubsponsors&labelColor=555555&style=for-the-badge" alt="Donate via Ko-fi">
+  </a>
+  <a href="https://paypal.me/belfagor2005">
+    <img src="https://img.shields.io/badge/_-Donate-green.svg?logo=githubsponsors&labelColor=555555&style=for-the-badge" alt="Donate via PayPal">
+  </a>
+</p>
 
-**WorldCam** is an Enigma2 plugin that allows you to view live webcams from around the world,  
-with a simple, fast, and stable interface.  
-Completely rewritten and optimized in version **6.0**,  
-the plugin now offers new features and greater reliability.
-
+<h1 align="center">
+**WorldCam** is an Enigma2 plugin that allows you to view live webcams from around the world,  with a simple, fast, and stable interface.  
+Completely rewritten and optimized in version **6.0**,  the plugin now offers new features and greater reliability.
+</h1>
 ---
 
 🚀 **What's new from version > 5.0**
