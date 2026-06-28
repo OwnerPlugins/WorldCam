@@ -149,7 +149,7 @@ msgid "Forum support: www.corvoboys.org"
 msgstr "Dukungan forum: www.corvoboys.org"
 
 msgid "GitHub: %s"
-msgstr ""
+msgstr "Github: %s"
 
 msgid "Included playlists and sources:"
 msgstr "Daftar putar dan sumber yang disertakan:"
