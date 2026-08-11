@@ -222,21 +222,21 @@ def load_cache_from_disk():
 def _protect_placeholders(text):
     """
     Protect placeholders before translation to prevent them from being translated.
-    
+
     Handles:
     - Python: %(name)s, %(name)d, etc.
     - C# / Enigma2: {0}, {name}, {hours}, etc.
-    
+
     Returns:
         tuple: (protected_text, python_placeholders, csharp_placeholders)
     """
     if not text:
         return text, {}, {}
-    
+
     python_placeholders = {}
     csharp_placeholders = {}
     idx = 0
-    
+
     # 1. Protect Python placeholders: %(name)s, %(name)d, etc.
     python_regex = re.compile(r'%\([a-zA-Z_][a-zA-Z0-9_]*\)[diouxXeEfFgGcrs]')
     for match in python_regex.finditer(text):
@@ -245,7 +245,7 @@ def _protect_placeholders(text):
         text = text.replace(placeholder, replacement)
         python_placeholders[replacement] = placeholder
         idx += 1
-    
+
     # 2. Protect C# / Enigma2 placeholders: {0}, {name}, {hours}, etc.
     idx = 0
     csharp_regex = re.compile(r'\{[^{}]+\}')
@@ -255,7 +255,7 @@ def _protect_placeholders(text):
         text = text.replace(placeholder, replacement)
         csharp_placeholders[replacement] = placeholder
         idx += 1
-    
+
     return text, python_placeholders, csharp_placeholders
 
 
@@ -265,15 +265,15 @@ def _restore_placeholders(text, python_placeholders, csharp_placeholders):
     """
     if not text:
         return text
-    
+
     # Restore C# placeholders first
     for key, value in csharp_placeholders.items():
         text = text.replace(key, value)
-    
+
     # Restore Python placeholders
     for key, value in python_placeholders.items():
         text = text.replace(key, value)
-    
+
     return text
 
 
@@ -300,12 +300,14 @@ def translate_text(text, target_lang=None, use_cache=True):
     # ============================================================
     # PROTECT PLACEHOLDERS BEFORE TRANSLATION
     # ============================================================
-    protected_text, python_placeholders, csharp_placeholders = _protect_placeholders(text_unicode)
+    protected_text, python_placeholders, csharp_placeholders = _protect_placeholders(
+        text_unicode)
 
     if use_cache:
         cached = _get_cached_translation(protected_text, target_lang)
         if cached is not None:
-            restored = _restore_placeholders(cached, python_placeholders, csharp_placeholders)
+            restored = _restore_placeholders(
+                cached, python_placeholders, csharp_placeholders)
             return restored
 
     if len(protected_text) > MAX_CHARS_PER_REQUEST:
@@ -343,9 +345,11 @@ def translate_text(text, target_lang=None, use_cache=True):
             # ============================================================
             # RESTORE PLACEHOLDERS AFTER TRANSLATION
             # ============================================================
-            translated_text = _restore_placeholders(translated_text, python_placeholders, csharp_placeholders)
+            translated_text = _restore_placeholders(
+                translated_text, python_placeholders, csharp_placeholders)
             if use_cache:
-                _cache_translation(protected_text, target_lang, translated_text)
+                _cache_translation(
+                    protected_text, target_lang, translated_text)
             return translated_text
         else:
             _log("Empty API response for: '{}...'".format(text_unicode[:30]))
@@ -381,7 +385,7 @@ def auto_translate_po_file(po_file, target_lang):
                 if not msgstr_content.strip():
                     translated = translate_text(msgid, target_lang)
                     if translated and translated != msgid:
-                        msgstr_line = 'msgstr "{}"\n'.format(translated)
+                        msgstr_line = 'msgstr {}\n'.format(json.dumps(translated, ensure_ascii=False))
                         print("  [auto-translated] {}... -> {}...".format(
                             msgid[:40], translated[:40]))
                 new_lines.append(msgstr_line)
@@ -545,7 +549,7 @@ def update_pot_file(xml_strings, py_strings):
             pass
     with open(POT_FILE, 'w') as f:
         if pot_header:
-            f.write(pot_header)
+            f.write(pot_header.rstrip('\n') + '\n')
         else:
             f.write('# {} translations\n'.format(PLUGIN_NAME))
             f.write('# Copyright (C) 2025 Lululla Team\n')
@@ -567,64 +571,73 @@ def update_pot_file(xml_strings, py_strings):
             f.write('"Content-Transfer-Encoding: 8bit\\n"\n\n')
         for msgid in all_strings:
             msgstr_value = existing_translations.get(msgid, "")
-            f.write('\nmsgid "{}"\nmsgstr "{}"\n'.format(msgid, msgstr_value))
+            f.write('\nmsgid {}\nmsgstr {}\n'.format(
+                json.dumps(msgid, ensure_ascii=False),
+                json.dumps(msgstr_value, ensure_ascii=False)
+            ))
     print("Updated .pot file: {}".format(POT_FILE))
     return len(all_strings)
 
 
 def fix_po_file(po_file):
+    """
+    Fix a .po file:
+    - Escape backslashes and double quotes using json.dumps
+    - Remove duplicate msgid entries
+    - Ensure a valid header exists
+    """
     try:
-        with open(po_file, 'r') as f:
+        with open(po_file, 'r', encoding='utf-8') as f:
             lines = f.readlines()
-        fixed_lines = []
-        i = 0
-        while i < len(lines):
-            line = lines[i]
-            if line.strip() == 'msgid ""' and i + \
-                    1 < len(lines) and lines[i + 1].strip() == 'msgstr ""':
-                if not any(ls.strip().startswith('"Project-Id-Version:')
-                           for ls in fixed_lines):
-                    fixed_lines.append(line)
-                    fixed_lines.append(lines[i + 1])
-                    i += 2
-                    while i < len(lines) and lines[i].strip().startswith('"'):
-                        fixed_lines.append(lines[i])
-                        i += 1
-                    continue
-                else:
-                    i += 2
-                    continue
-            if line.strip().startswith('msgid "') and '""' in line:
-                fixed_lines.append('msgid ""\n')
-                i += 1
-                continue
-            fixed_lines.append(line)
-            i += 1
-        seen_msgids = set()
-        cleaned_lines = []
-        i = 0
-        while i < len(fixed_lines):
-            if fixed_lines[i].strip().startswith('msgid "'):
-                msgid_line = fixed_lines[i]
-                if msgid_line in seen_msgids:
-                    i += 1
-                    while i < len(
-                            fixed_lines) and fixed_lines[i].strip() != '':
-                        i += 1
-                    continue
-                else:
-                    seen_msgids.add(msgid_line)
-                    cleaned_lines.append(fixed_lines[i])
-                    i += 1
-            else:
-                cleaned_lines.append(fixed_lines[i])
-                i += 1
-        with open(po_file, 'w') as f:
-            f.writelines(cleaned_lines)
-        return True
     except Exception as e:
-        print("ERROR fixing {}: {}".format(po_file, e))
+        print("ERROR reading {}: {}".format(po_file, e))
         return False
+
+    new_lines = []
+    seen_msgids = set()
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        m = re.match(r'^(msg(id|str))\s+"(.*)"\s*$', line.rstrip('\n'))
+        if m:
+            prefix = m.group(1)
+            content = m.group(3)
+            escaped = json.dumps(content, ensure_ascii=False)
+            new_line = "{} {}\n".format(prefix, escaped)
+
+            if prefix == 'msgid':
+                if content == '':
+                    if not any(l.startswith('msgid ""') for l in new_lines if l.startswith('msgid')):
+                        new_lines.append(new_line)
+                else:
+                    if content in seen_msgids:
+                        i += 1
+                        while i < len(lines) and not lines[i].strip().startswith('msgid "'):
+                            i += 1
+                        continue
+                    else:
+                        seen_msgids.add(content)
+                        new_lines.append(new_line)
+            else:
+                new_lines.append(new_line)
+            i += 1
+        else:
+            new_lines.append(line)
+            i += 1
+
+    try:
+        with open(po_file, 'w', encoding='utf-8') as f:
+            f.writelines(new_lines)
+    except Exception as e:
+        print("ERROR writing {}: {}".format(po_file, e))
+        return False
+
+    try:
+        subprocess.run(['msgfmt', '-c', po_file], check=False, capture_output=True)
+    except Exception:
+        pass
+
+    return True
 
 
 STANDARD_LANGUAGES = [
@@ -667,7 +680,7 @@ def create_template_po_file(po_file, lang_code):
             f.write('"Content-Type: text/plain; charset=UTF-8\\n"\n')
             f.write('"Content-Transfer-Encoding: 8bit\\n"\n\n')
             for msgid in msgid_blocks:
-                f.write('msgid "{}"\n'.format(msgid))
+                f.write('msgid {}\n'.format(json.dumps(msgid, ensure_ascii=False)))
                 f.write('msgstr ""\n\n')
         print(" ✓ Created clean template for: {}".format(lang_code))
         return True
@@ -704,7 +717,9 @@ def update_po_files():
         po_file = join(lc_messages_dir, "{}.po".format(PLUGIN_NAME))
         if exists(po_file):
             print("Updating: {}".format(lang_code))
-            fix_po_file(po_file)
+            if not fix_po_file(po_file):
+                print("Can't fix po file {}".format(po_file))
+                continue
             cmd = [
                 'msgmerge',
                 '--update',
@@ -772,7 +787,9 @@ def compile_mo_files():
         mo_file = join(lc_messages_dir, "{}.mo".format(PLUGIN_NAME))
         if exists(po_file):
             try:
-                fix_po_file(po_file)
+                if not fix_po_file(po_file):
+                    print(f"  ✗ Can't fix {po_file}, skipping")
+                    continue
                 cmd = ['msgfmt', po_file, '-o', mo_file]
                 process = subprocess.Popen(
                     cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
