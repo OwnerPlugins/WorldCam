@@ -16,23 +16,23 @@ msgstr ""
 
 #, fuzzy
 msgid "- Local YouTube playlist"
-msgstr "- Helyi YouTube lejátszási lista (teszt)\\\\\\\\n"
+msgstr "- Helyi YouTube lejátszási lista (teszt)\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 #, fuzzy
 msgid "- Local webcam list"
-msgstr "- Helyi webkamerák listája\\\\\\\\n"
+msgstr "- Helyi webkamerák listája\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 #, fuzzy
 msgid "- Online Direct and YouTube webcams"
-msgstr "- Online Direct és YouTube webkamerák lejátszási listája (teszt)\\\\\\\\n"
+msgstr "- Online Direct és YouTube webkamerák lejátszási listája (teszt)\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 #, fuzzy
 msgid "- Online webcam list"
-msgstr "- Online webkamerák listája\\\\\\\\n"
+msgstr "- Online webkamerák listája\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 #, fuzzy
 msgid "- Other sources"
-msgstr "- Egyéb források\\\\\\\\n"
+msgstr "- Egyéb források\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "AFRICA"
 msgstr "AFRIKA"
@@ -164,7 +164,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Included playlists and sources:"
-msgstr "Mellékelt lejátszási listák és források:\\\\\\\\n"
+msgstr "Mellékelt lejátszási listák és források:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Invalid YouTube URL"
 msgstr "Érvénytelen YouTube URL"
@@ -197,7 +197,7 @@ msgstr "Nem található lejátszási lista"
 
 #, fuzzy
 msgid "No valid webcams in playlist"
-msgstr "- Helyi webkamerák listája\\\\\\\\n"
+msgstr "- Helyi webkamerák listája\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Play"
 msgstr "Lejátszás"

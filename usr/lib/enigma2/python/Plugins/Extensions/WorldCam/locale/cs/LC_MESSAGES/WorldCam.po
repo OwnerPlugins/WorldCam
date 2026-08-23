@@ -16,23 +16,23 @@ msgstr ""
 
 #, fuzzy
 msgid "- Local YouTube playlist"
-msgstr "- Lokální playlist na YouTube (test)\\\\\\\\n"
+msgstr "- Lokální playlist na YouTube (test)\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 #, fuzzy
 msgid "- Local webcam list"
-msgstr "- Seznam místních webkamer\\\\\\\\n"
+msgstr "- Seznam místních webkamer\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 #, fuzzy
 msgid "- Online Direct and YouTube webcams"
-msgstr "- Seznam videí z online webkamer a webkamer na YouTube (test)\\\\\\\\n"
+msgstr "- Seznam videí z online webkamer a webkamer na YouTube (test)\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 #, fuzzy
 msgid "- Online webcam list"
-msgstr "- Seznam webkamer online\\\\\\\\n"
+msgstr "- Seznam webkamer online\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 #, fuzzy
 msgid "- Other sources"
-msgstr "- Jiné zdroje\\\\\\\\n"
+msgstr "- Jiné zdroje\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "AFRICA"
 msgstr "AFRIKA"
@@ -164,7 +164,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Included playlists and sources:"
-msgstr "Zahrnuté playlisty a zdroje:\\\\\\\\n"
+msgstr "Zahrnuté playlisty a zdroje:\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Invalid YouTube URL"
 msgstr "Neplatná URL adresa YouTube"
@@ -197,7 +197,7 @@ msgstr "Nenalezeny žádné playlisty"
 
 #, fuzzy
 msgid "No valid webcams in playlist"
-msgstr "- Seznam místních webkamer\\\\\\\\n"
+msgstr "- Seznam místních webkamer\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n"
 
 msgid "Play"
 msgstr "Přehrát"
