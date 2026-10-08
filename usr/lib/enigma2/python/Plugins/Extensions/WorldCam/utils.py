@@ -903,6 +903,10 @@ def convert_youtube_embed_to_watch(url):
     """
     if not is_youtube_url(url):
         return url
+    # Channel live embed: keep it a channel URL (resolved as /live)
+    m = search(r'/embed/live_stream\?(?:.*&)?channel=([^&#]+)', url)
+    if m:
+        return "https://www.youtube.com/channel/%s/live" % m.group(1)
     patterns = [
         r'(?:youtube-nocookie\.com|youtube\.com)/embed/([^/?#&]+)',
         r'youtube\.com/live/([^/?#&]+)',
@@ -931,7 +935,7 @@ def get_service_type(preferred=None):
     Return the best eServiceReference type for playback.
 
     preferred: 'auto' (default), 'exteplayer3', 'gstplayer', 'mp3'.
-    Falls back to 4097 if ServiceApp is missing.
+    exteplayer3/gstplayer need ServiceApp, otherwise 4097 is used.
     """
     if preferred in ("exteplayer3", "gstplayer"):
         if has_serviceapp():
@@ -940,7 +944,19 @@ def get_service_type(preferred=None):
         Logger().warning(
             "Player '%s' requires ServiceApp, falling back to 4097"
             % preferred)
-    if has_serviceapp():
-        # gstplayer is generally safer than exteplayer3 for HLS
-        return SERVICE_GSTPLAYER
+    # 4097 by default: with ServiceApp installed, 4097 already follows
+    # the player chosen in the ServiceApp settings
     return SERVICE_MP3
+
+
+def timer_connect(timer, callback):
+    """
+    Connect an eTimer callback on both DreamOS and OE images.
+    The returned connection object (DreamOS) MUST be kept alive by the
+    caller, otherwise the callback is disconnected immediately.
+    """
+    try:
+        return timer.timeout.connect(callback)
+    except AttributeError:
+        timer.callback.append(callback)
+        return None
