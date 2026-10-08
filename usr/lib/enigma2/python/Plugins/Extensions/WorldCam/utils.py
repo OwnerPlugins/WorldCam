@@ -3,7 +3,7 @@
 
 from json import load, dump
 from os import makedirs, remove, listdir
-from os.path import abspath, dirname, exists, isfile, join
+from os.path import abspath, dirname, exists, isfile, join, isdir
 
 from re import search, sub
 import sys
@@ -13,7 +13,7 @@ import html
 
 from urllib.parse import quote, urlparse, urlunparse
 from enigma import eDVBDB, eEnv
-from Tools.Directories import resolveFilename, SCOPE_CURRENT_SKIN
+from Tools.Directories import resolveFilename, SCOPE_CURRENT_SKIN, SCOPE_PLUGINS
 
 try:
     from Components.AVSwitch import AVSwitch
@@ -521,17 +521,25 @@ def get_ytdlp_path():
 
 
 def is_ytdlp_available(logger=None):
-    """Return (YoutubeDL, DownloadError) from the system installation."""
+    """
+    Check whether yt-dlp is available as a system binary.
+    Returns True if a working yt-dlp binary is found, False otherwise.
+    (Uses youtube_helper.find_ytdlp which auto-detects the binary.)
+    """
     try:
-        from yt_dlp import YoutubeDL
-        from yt_dlp.utils import DownloadError
+        from .youtube_helper import find_ytdlp
+        cmd = find_ytdlp()
+        if cmd:
+            if logger:
+                logger.info("yt-dlp binary available: %s" % " ".join(cmd))
+            return True
         if logger:
-            logger.info("Using system-wide yt_dlp")
-        return YoutubeDL, DownloadError
+            logger.error("yt-dlp binary not found")
+        return False
     except Exception as e:
         if logger:
-            logger.error("System yt_dlp import failed: %s", str(e))
-        return None, None
+            logger.error("yt-dlp availability check failed: %s" % str(e))
+        return False
 
 def extract_list_item(current, logger=None):
     """
@@ -867,3 +875,72 @@ def check_and_warn_dependencies(logger=None):
         if logger:
             logger.error("Error checking dependencies: %s", str(e))
         return []
+
+# =========================================================================
+# YouTube / ServiceApp helpers (added for player.py rewrite)
+# =========================================================================
+
+SERVICE_MP3        = 4097   # servicemp3 - always available
+SERVICE_GSTPLAYER  = 5001   # requires ServiceApp
+SERVICE_EXTEPLAYER3 = 5002  # requires ServiceApp
+
+
+def is_youtube_url(url):
+    """Check if URL points to YouTube."""
+    if not url or not isinstance(url, str):
+        return False
+    u = url.lower()
+    return ("youtube.com" in u
+            or "youtu.be" in u
+            or "youtube-nocookie.com" in u)
+
+
+def convert_youtube_embed_to_watch(url):
+    """
+    Convert any YouTube URL (embed, nocookie, live, shorts, youtu.be)
+    to the canonical https://www.youtube.com/watch?v=ID form.
+    Other URLs are returned unchanged.
+    """
+    if not is_youtube_url(url):
+        return url
+    patterns = [
+        r'(?:youtube-nocookie\.com|youtube\.com)/embed/([^/?#&]+)',
+        r'youtube\.com/live/([^/?#&]+)',
+        r'youtu\.be/([^/?#&]+)',
+        r'youtube\.com/shorts/([^/?#&]+)',
+        r'youtube\.com/v/([^/?#&]+)',
+    ]
+    for pattern in patterns:
+        m = search(pattern, url)
+        if m:
+            return "https://www.youtube.com/watch?v=%s" % m.group(1)
+    return url
+
+
+def has_serviceapp():
+    """Check if the ServiceApp system plugin is installed."""
+    try:
+        return isdir(resolveFilename(
+            SCOPE_PLUGINS, "SystemPlugins/ServiceApp"))
+    except Exception:
+        return False
+
+
+def get_service_type(preferred=None):
+    """
+    Return the best eServiceReference type for playback.
+
+    preferred: 'auto' (default), 'exteplayer3', 'gstplayer', 'mp3'.
+    Falls back to 4097 if ServiceApp is missing.
+    """
+    if preferred in ("exteplayer3", "gstplayer"):
+        if has_serviceapp():
+            return (SERVICE_EXTEPLAYER3 if preferred == "exteplayer3"
+                    else SERVICE_GSTPLAYER)
+        Logger().warning(
+            "Player '%s' requires ServiceApp, falling back to 4097"
+            % preferred)
+    if has_serviceapp():
+        # gstplayer is generally safer than exteplayer3 for HLS
+        return SERVICE_GSTPLAYER
+    return SERVICE_MP3

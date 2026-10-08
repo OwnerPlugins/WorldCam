@@ -1,7 +1,7 @@
 #!/bin/bash
 
-version='6.7'
-changelog='Fix Youtube Movie'
+version='6.9'
+changelog='Bump version to 6.9 and refactor YouTube playback to be non-blocking. player.py now normalizes YouTube URLs, uses twisted.deferToThread to call youtube_helper.resolve_youtube, and handles stale requests and errors. Removed embedded yt-dlp probing/format logic. Added helpers in utils.py (is_youtube_url, convert_youtube_embed_to_watch, has_serviceapp, get_service_type) and improved is_ytdlp_available to detect a working yt-dlp binary. checkdependencies.py now detects yt-dlp as binary or python module and imports os.path.exists. Removed legacy dom_parser.py. Overall improves responsiveness and service selection for YouTube streams.'
 
 TMPPATH=/tmp/WorldCam-install
 FILEPATH=/tmp/WorldCam-main.tar.gz

@@ -1,6 +1,6 @@
 import subprocess
 from shutil import which
-
+from os.path import exists
 
 REQUIRED_PACKAGES = {
     "ffmpeg": "ffmpeg",
@@ -39,6 +39,24 @@ def get_python_variant():
     return "python3" if which("python3") else "python"
 
 
+def _has_ytdlp():
+    """
+    yt-dlp is usable if either the binary or the Python module
+    (python3 -m yt_dlp) is available.
+    """
+    if which("yt-dlp") is not None:
+        return True
+    for path in ("/usr/bin/yt-dlp", "/usr/local/bin/yt-dlp"):
+        if exists(path):
+            return True
+    # Fallback: python module
+    try:
+        from yt_dlp import YoutubeDL  # noqa: F401
+        return True
+    except ImportError:
+        return False
+
+
 def check_requirements(logger=None):
     """
     Check optional dependencies needed for YouTube playback.
@@ -46,17 +64,15 @@ def check_requirements(logger=None):
     """
     missing = []
 
-    # Check system yt_dlp Python module
-    try:
-        from yt_dlp import YoutubeDL  # noqa: F401
-    except ImportError:
+    # yt-dlp: binary OR python module
+    if not _has_ytdlp():
         missing.append("yt-dlp")
 
-    # Check streamlink (binary)
+    # streamlink (binary)
     if which("streamlink") is None:
         missing.append("streamlink")
 
-    # Check requests (Python module)
+    # requests (Python module)
     try:
         import requests  # noqa: F401
     except ImportError:
