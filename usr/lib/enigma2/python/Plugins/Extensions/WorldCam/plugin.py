@@ -4,6 +4,7 @@
 # Standard library
 from os import makedirs
 from os.path import exists, join, splitext, getsize
+from re import findall
 
 from urllib.request import Request, urlopen
 
@@ -43,7 +44,7 @@ from . import (
     DEFAULT_ICON
 )
 from .player import WorldCamPlayer
-from .scraper import SkylineScraper
+from .scraper import SKYLINE_LANGUAGES, SkylineScraper
 from .utils import (
     CATEGORY_ICONS,
     FavoritesManager,
@@ -57,8 +58,8 @@ from .utils import (
     get_system_language,
     language_flag_mapping,
     set_current_language,
+    timer_connect,
 )
-
 
 
 """
@@ -85,17 +86,17 @@ __author__ = "Lululla"
 # Initialize logger
 logger = Logger()
 
-# System language
+# System language (English if skylinewebcams.com does not offer it)
 current_language = get_system_language()
+if current_language not in SKYLINE_LANGUAGES:
+    current_language = "en"
 set_current_language(current_language)
 screen_width = getDesktop(0).size().width()
 
 
-# try export with#
-# DESCRIPTION Alghero - Mugoni Beach
-# SERVICE
-# 4097:0:1:46DE:221E:EC:0:0:0:0:streamlink%3a//https%3a//www.skylinewebcams.com/it/webcam/italia/sardegna/sassari/stintino.html:Sassari
-# - Stintino - La Pelosa
+def version_tuple(version):
+    """'7.0.1' -> (7, 0, 1): versions compare as numbers, not strings"""
+    return tuple(int(x) for x in findall(r"\d+", str(version)))
 
 
 class WebcamList(MenuList):
@@ -284,6 +285,36 @@ class WebcamBaseScreen(Screen):
         self.skin_path = self.get_skin_path()
         self.skin = self.load_skin()
         self["list"] = WebcamList([])
+        self.screen_closed = False
+        self._async_title = None
+        self.onClose.append(self._mark_closed)
+
+    def _mark_closed(self):
+        self.screen_closed = True
+
+    def run_async(self, func, callback, title=None):
+        """
+        Run func() in a worker thread (network fetches) and call
+        callback(result) on the GUI thread; result is None on error.
+        """
+        self._async_title = title
+        if title is not None and "title" in self:
+            self["title"].setText(_("Loading..."))
+        from twisted.internet import threads
+        d = threads.deferToThread(func)
+        d.addCallback(self._async_done, callback)
+        d.addErrback(self._async_failed, callback)
+
+    def _async_done(self, result, callback):
+        if self.screen_closed:
+            return
+        if self._async_title is not None and "title" in self:
+            self["title"].setText(self._async_title)
+        callback(result)
+
+    def _async_failed(self, failure, callback):
+        self.logger.error("Loading error: %s" % failure.getErrorMessage())
+        self._async_done(None, callback)
 
     def get_skin_path(self):
         """Determine skin path based on screen resolution"""
@@ -393,7 +424,7 @@ class WorldCamMainScreen(WebcamBaseScreen):
             "about": self.open_about_direct
         })
         self.timer = eTimer()
-        self.timer.callback.append(self.check_update_silent)
+        self.timer_conn = timer_connect(self.timer, self.check_update_silent)
         self.timer.start(500, 1)
         self.onLayoutFinish.append(self.initialize)
         self.onLayoutFinish.append(self.set_flag_icon)
@@ -433,7 +464,7 @@ class WorldCamMainScreen(WebcamBaseScreen):
                 category = self.categories[index]
                 self.logger.info(
                     f"Opening screen for category: {category['name']}")
-                self.session.open(category["screen"])
+                self.session.open(category["screen"], lang=self.lang)
             else:
                 self.logger.warning("Invalid selection index")
                 self.logger.info(
@@ -480,8 +511,8 @@ class WorldCamMainScreen(WebcamBaseScreen):
                 label, callback = self.menu_items[index]
                 self.logger.info("Selected menu item: %s" % label)
                 if callable(callback):
-                    if hasattr(self, 'current_menu') and self.current_menu:
-                        self.current_menu.close()
+                    # The ChoiceBox is already closed here
+                    self.current_menu = None
                     callback()
         except Exception as e:
             self.logger.error("Exception during menu callback: %s" % str(e))
@@ -494,7 +525,8 @@ class WorldCamMainScreen(WebcamBaseScreen):
                 self.on_language_selected,
                 LanguageScreen,
                 self.lang,
-                language_flag_mapping
+                dict((code, flag) for code, flag in language_flag_mapping.items()
+                     if code in SKYLINE_LANGUAGES)
             )
         except Exception as e:
             self.logger.error(f"Language screen error: {str(e)}")
@@ -582,8 +614,6 @@ class WorldCamMainScreen(WebcamBaseScreen):
             self.defer_message(
                 _("Error opening settings:\n%s") %
                 str(e), MessageBox.TYPE_ERROR)
-        finally:
-            self.open_menu()
 
     # def settings_closed(self, result=None):
         # self.logger.info(
@@ -595,36 +625,48 @@ class WorldCamMainScreen(WebcamBaseScreen):
         self.update_plugin(silent=True)
 
     def update_plugin(self, silent=False):
-        """Check and update the plugin"""
+        """Check for a new version (network access off the GUI thread)"""
+        from twisted.internet import threads
+        d = threads.deferToThread(self._fetch_remote_version)
+        d.addCallback(self._version_fetched, silent)
+        d.addErrback(self._version_failed, silent)
+
+    @staticmethod
+    def _fetch_remote_version():
+        """Worker thread: return (version, changelog) from installer.sh"""
+        req = Request(
+            b64decoder(installer_url), headers={
+                "User-Agent": AgentRequest})
+        page = urlopen(req, timeout=15).read().decode("utf-8")
         remote_version = "0.0"
         remote_changelog = ""
-
-        try:
-            req = Request(
-                b64decoder(installer_url), headers={
-                    "User-Agent": AgentRequest})
-            page = urlopen(req).read().decode("utf-8")
-        except Exception as e:
-            if not silent:
-                self.defer_message(
-                    _("Unable to fetch version info:\n{}").format(
-                        str(e)), MessageBox.TYPE_ERROR)
-            return
-
         for line in page.split("\n"):
             line = line.strip()
             if line.startswith("version"):
                 remote_version = line.split(
-                    "=")[-1].strip().strip("'").strip('"')
+                    "=", 1)[-1].strip().strip("'").strip('"')
             elif line.startswith("changelog"):
                 remote_changelog = line.split(
-                    "=")[-1].strip().strip("'").strip('"')
+                    "=", 1)[-1].strip().strip("'").strip('"')
                 break
+        return remote_version, remote_changelog
 
+    def _version_failed(self, failure, silent):
+        self.logger.error(
+            "Update check failed: %s" % failure.getErrorMessage())
+        if not silent and not self.screen_closed:
+            self.defer_message(
+                _("Unable to fetch version info:\n{}").format(
+                    failure.getErrorMessage()), MessageBox.TYPE_ERROR)
+
+    def _version_fetched(self, result, silent):
+        if self.screen_closed:
+            return
+        remote_version, remote_changelog = result
         self.new_version = str(remote_version)
         self.new_changelog = str(remote_changelog)
 
-        if PLUGIN_VERSION < self.new_version:
+        if version_tuple(PLUGIN_VERSION) < version_tuple(self.new_version):
             self.ask_update()
         else:
             if not silent:
@@ -651,7 +693,7 @@ class WorldCamMainScreen(WebcamBaseScreen):
                 MessageBox.TYPE_YESNO
             )
         self._defer_timer = eTimer()
-        self._defer_timer.callback.append(ask)
+        self._defer_timer_conn = timer_connect(self._defer_timer, ask)
         self._defer_timer.start(100, True)
 
     def install_update(self, answer=False):
@@ -678,13 +720,16 @@ class WorldCamMainScreen(WebcamBaseScreen):
     def update_callback(self, result=None):
         """Handle update completion"""
         self.logger.info("Update finished with result: %s" % str(result))
-        if result == 0:
-            self.session.open(
+        # Most images call finishedCallback() without a return code
+        if result in (None, 0):
+            self.session.openWithCallback(
+                lambda *args: self.close(),
                 MessageBox,
-                _("Update completed successfully!\n\nThe plugin will now close."),
+                _("Update completed successfully!\n\n"
+                  "Restart Enigma2 to use the new version.\n"
+                  "The plugin will now close."),
                 type=MessageBox.TYPE_INFO,
-                timeout=4).addCallback(
-                lambda _: self.close())
+                timeout=4)
         else:
             self.defer_message(
                 _("Update encountered an error (code: %s)") % str(result),
@@ -697,7 +742,7 @@ class WorldCamMainScreen(WebcamBaseScreen):
             _("Live webcam viewer featuring global locations") + "\n\n" +
             _("Developed by Lululla") + "\n\n" +
             _("Powered by Enigma2 and Python") + "\n\n" +
-            _("GitHub: %s") % "https://github.com/Belfagor2005/" + "\n" +
+            _("GitHub: %s") % "https://github.com/OwnerPlugins/WorldCam" + "\n" +
             _("Forum support: www.corvoboys.org") + "\n\n" +
             _("Included playlists and sources:") + "\n" +
             _("- Local webcam list") + "\n" +
@@ -726,9 +771,9 @@ class WorldCamMainScreen(WebcamBaseScreen):
     def defer_message(self, text, mtype=MessageBox.TYPE_INFO):
         """Show message with a short delay to avoid UI modal conflicts"""
         self._defer_timer = eTimer()
-        self._defer_timer.callback.append(
-            lambda: self.session.open(
-                MessageBox, text, type=mtype))
+        self._defer_timer_conn = timer_connect(
+            self._defer_timer,
+            lambda: self.session.open(MessageBox, text, type=mtype))
         self._defer_timer.start(100, True)
 
 
@@ -753,6 +798,7 @@ class WorldCamFavoritesScreen(WebcamBaseScreen):
             "yellow": self.remove_favorite,
             "blue": self.export_favorites
         })
+        self.favorites = []
         self.onLayoutFinish.append(self.load_favorites)
         self.onLayoutFinish.append(self.set_flag_icon)
 
@@ -761,6 +807,8 @@ class WorldCamFavoritesScreen(WebcamBaseScreen):
         try:
             self.favorites = FavoritesManager.load_favorites()
             if not self.favorites:
+                # Clear the list (the last favorite may just be removed)
+                showlist([], self["list"], is_category=True)
                 self["title"].setText(_("No favorites yet"))
                 self["key_yellow"].setText("")
                 return
@@ -768,8 +816,10 @@ class WorldCamFavoritesScreen(WebcamBaseScreen):
             webcam_names = [fav["name"] for fav in self.favorites]
             showlist(webcam_names, self["list"], is_category=True)
             self["list"].setCurrentIndex(0)
+            self["title"].setText(_("Your Favorites"))
             self["key_yellow"].setText(_("Remove"))
         except Exception as e:
+            self.favorites = []
             self.logger.error("Error loading favorites: %s" % str(e))
             self["title"].setText(_("Error loading favorites"))
 
@@ -820,7 +870,7 @@ class WorldCamLocalScreen(WebcamBaseScreen):
         super().__init__(session, lang)
         disable_summary(self)
         self.logger.info("Initializing WorldCamLocalScreen")
-        self.scraper = SkylineScraper(lang if lang else "en")
+        self.scraper = SkylineScraper(self.lang)
         self["title"] = Label(_("User Lists"))
         self["flag_icon"] = Pixmap()
         self["language_label"] = Label(self.lang.upper())
@@ -833,6 +883,7 @@ class WorldCamLocalScreen(WebcamBaseScreen):
             "ok": self.on_item_selected,
             "cancel": self.close,
         })
+        self.user_lists = []
         self.onLayoutFinish.append(self.load_user_lists)
         self.onLayoutFinish.append(self.set_flag_icon)
 
@@ -889,7 +940,7 @@ class WorldCamLocalScreen(WebcamBaseScreen):
 
             playlists = self.user_lists[idx]
             self.logger.info("Opening user playlist: %s" % playlists)
-            self.session.open(WorldCamLocal, playlists)
+            self.session.open(WorldCamLocal, playlists, lang=self.lang)
         except Exception as e:
             self.logger.error("Error on item selected: %s" % str(e))
             self["title"].setText(_("Error opening playlist"))
@@ -907,8 +958,9 @@ class WorldCamLocal(WebcamBaseScreen):
             "Initializing WorldCamLocal with category: %s" %
             playlists)
         self.category = playlists
-        self.scraper = SkylineScraper(lang if lang else "en")
+        self.scraper = SkylineScraper(self.lang)
         self["title"] = Label(splitext(playlists)[0])
+        self.webcams = []
         self["flag_icon"] = Pixmap()
         self["language_label"] = Label(self.lang.upper())
         self["paypal"] = Label(paypal())
@@ -938,7 +990,7 @@ class WorldCamLocal(WebcamBaseScreen):
                 self["title"].setText(_("Empty playlist file"))
                 return
 
-            self.webcams = self.scraper.parse_local_playlist_file(path)
+            self.webcams = self.scraper.parse_local_playlist_file(path) or []
 
             if not self.webcams:
                 self.logger.warning("No webcams parsed from file")
@@ -981,7 +1033,7 @@ class WorldCamContinentScreen(WebcamBaseScreen):
         super().__init__(session, lang)
         disable_summary(self)
         self.logger.info("Initializing WorldCamContinentScreen")
-        self.scraper = SkylineScraper(lang if lang else "en")
+        self.scraper = SkylineScraper(self.lang)
         self["title"] = Label(_("Continents"))
         self["flag_icon"] = Pixmap()
         self["language_label"] = Label(self.lang.upper())
@@ -1000,8 +1052,14 @@ class WorldCamContinentScreen(WebcamBaseScreen):
 
     def load_continents(self):
         """Load continents from scraper"""
+        self.run_async(self.scraper.get_continents, self._continents_loaded,
+                       _("Continents"))
+
+    def _continents_loaded(self, continents):
         try:
-            self.continents = self.scraper.get_continents()
+            if continents is None:
+                raise ValueError("no data")
+            self.continents = continents
             continent_names = [continent["name"]
                                for continent in self.continents]
             self.logger.info(f"Loaded {len(continent_names)} continents")
@@ -1021,7 +1079,8 @@ class WorldCamContinentScreen(WebcamBaseScreen):
             return
         continent = self.continents[index]
         self.logger.info(f"Selected continent: {continent['name']}")
-        self.session.open(WorldCamContinentCountryScreen, continent)
+        self.session.open(
+            WorldCamContinentCountryScreen, continent, lang=self.lang)
 
 
 class WorldCamContinentCountryScreen(WebcamBaseScreen):
@@ -1034,7 +1093,7 @@ class WorldCamContinentCountryScreen(WebcamBaseScreen):
             "Initializing WorldCamContinentCountryScreen for {0}".format(
                 continent["name"]))
         self.continent = continent
-        # self.scraper = SkylineScraper(lang if lang else "en")
+        # self.scraper = SkylineScraper(self.lang)
         self["title"] = Label(continent["name"])
         self["flag_icon"] = Pixmap()
         self["language_label"] = Label(self.lang.upper())
@@ -1077,7 +1136,7 @@ class WorldCamContinentCountryScreen(WebcamBaseScreen):
 
         country = self.countries[index]
         self.logger.info(f"Selected country: {country['name']}")
-        self.session.open(WorldCamLocationScreen, country)
+        self.session.open(WorldCamLocationScreen, country, lang=self.lang)
 
 
 class WorldCamCountryScreen(WebcamBaseScreen):
@@ -1089,7 +1148,7 @@ class WorldCamCountryScreen(WebcamBaseScreen):
         super().__init__(session, lang)
         disable_summary(self)
         self.logger.info("Initializing WorldCamCountryScreen")
-        self.scraper = SkylineScraper(lang if lang else "en")
+        self.scraper = SkylineScraper(self.lang)
         self["title"] = Label(_("Country"))
         self["flag_icon"] = Pixmap()
         self["language_label"] = Label(self.lang.upper())
@@ -1102,13 +1161,19 @@ class WorldCamCountryScreen(WebcamBaseScreen):
             "ok": self.on_item_selected,
             "cancel": self.close,
         })
+        self.countries = []
         self.onLayoutFinish.append(self.load_countries)
         self.onLayoutFinish.append(self.set_flag_icon)
 
     def load_countries(self):
         """Load and sort countries from scraper, then show in list."""
+        self.run_async(self.scraper.get_countries, self._countries_loaded,
+                       _("Country"))
+
+    def _countries_loaded(self, countries):
         try:
-            countries = self.scraper.get_countries()
+            if countries is None:
+                raise ValueError("no data")
             self.countries = sorted(countries, key=lambda c: c["name"].lower())
             country_names = [country["name"] for country in self.countries]
             self.logger.info("Loaded and sorted countries: %s" % country_names)
@@ -1132,7 +1197,7 @@ class WorldCamCountryScreen(WebcamBaseScreen):
 
         country = self.countries[index]
         self.logger.info("Selected country: %s" % country)
-        self.session.open(WorldCamLocationScreen, country)
+        self.session.open(WorldCamLocationScreen, country, lang=self.lang)
 
 
 class WorldCamCategoryScreen(WebcamBaseScreen):
@@ -1144,7 +1209,7 @@ class WorldCamCategoryScreen(WebcamBaseScreen):
         super().__init__(session, lang)
         disable_summary(self)
         self.logger.info("Initializing WorldCamCategoryScreen")
-        self.scraper = SkylineScraper(lang if lang else "en")
+        self.scraper = SkylineScraper(self.lang)
         self["title"] = Label(_("Categories"))
         self["flag_icon"] = Pixmap()
         self["language_label"] = Label(self.lang.upper())
@@ -1163,8 +1228,13 @@ class WorldCamCategoryScreen(WebcamBaseScreen):
 
     def load_categories(self):
         """Load categories from scraper and display them sorted."""
+        self.run_async(self.scraper.get_categories, self._categories_loaded,
+                       _("Categories"))
+
+    def _categories_loaded(self, categories):
         try:
-            categories = self.scraper.get_categories()
+            if categories is None:
+                raise ValueError("no data")
             self.categories = sorted(
                 categories, key=lambda c: c["name"].lower())
             category_names = [cat["name"] for cat in self.categories]
@@ -1192,7 +1262,7 @@ class WorldCamCategoryScreen(WebcamBaseScreen):
 
         category = self.categories[index]
         self.logger.info("Selected category: %s" % category)
-        self.session.open(WorldCamWebcamScreen, category)
+        self.session.open(WorldCamWebcamScreen, category, lang=self.lang)
 
 
 class WorldCamTopScreen(WebcamBaseScreen):
@@ -1204,7 +1274,7 @@ class WorldCamTopScreen(WebcamBaseScreen):
         super().__init__(session, lang)
         disable_summary(self)
         self.logger.info("Initializing WorldCamTopScreen")
-        self.scraper = SkylineScraper(lang if lang else "en")
+        self.scraper = SkylineScraper(self.lang)
         self["title"] = Label(_("Top Webcams"))
         self["flag_icon"] = Pixmap()
         self["language_label"] = Label(self.lang.upper())
@@ -1225,14 +1295,19 @@ class WorldCamTopScreen(WebcamBaseScreen):
         """
         Load the list of top webcams, sort them by name and display in the list.
         """
+        self.run_async(self.scraper.get_top_webcams, self._top_loaded,
+                       _("Top Webcams"))
+
+    def _top_loaded(self, top_webcams):
         try:
-            top_webcams = self.scraper.get_top_webcams()
+            if top_webcams is None:
+                raise ValueError("no data")
+            # Filter the list itself, so list rows and webcams match
             self.top_webcams = sorted(
-                top_webcams, key=lambda c: c["name"].lower())
-            webcam_names = [
-                w["name"] for w in self.top_webcams
-                if w["name"].strip().lower() != "top live cams"
-            ]
+                [w for w in top_webcams
+                 if w["name"].strip().lower() != "top live cams"],
+                key=lambda c: c["name"].lower())
+            webcam_names = [w["name"] for w in self.top_webcams]
             self.logger.info(
                 "Loaded and sorted top webcams: %s" %
                 webcam_names)
@@ -1277,7 +1352,7 @@ class WorldCamLocationScreen(WebcamBaseScreen):
         disable_summary(self)
         self.logger.info("Initializing WorldCamLocationScreen")
         self.country = country
-        self.scraper = SkylineScraper(lang if lang else "en")
+        self.scraper = SkylineScraper(self.lang)
         self["title"] = Label(country["name"])
         self["flag_icon"] = Pixmap()
         self["language_label"] = Label(self.lang.upper())
@@ -1298,10 +1373,18 @@ class WorldCamLocationScreen(WebcamBaseScreen):
         """
         Load and display the list of locations for the current country.
         """
+        self.run_async(
+            lambda: self.scraper.get_locations(self.country["url"]),
+            self._locations_loaded, self.country["name"])
+
+    def _locations_loaded(self, locations):
         try:
-            self.locations = self.scraper.get_locations(self.country["url"])
-            location_names = sorted(
-                [loc["name"] for loc in self.locations], key=lambda s: s.lower())
+            if locations is None:
+                raise ValueError("no data")
+            # Sort the list itself, so list rows and locations match
+            self.locations = sorted(
+                locations, key=lambda loc: loc["name"].lower())
+            location_names = [loc["name"] for loc in self.locations]
             self.logger.info(
                 "Loaded locations for country %s: %s" %
                 (self.country["name"], location_names))
@@ -1336,7 +1419,7 @@ class WorldCamLocationScreen(WebcamBaseScreen):
             self.logger.info("Selected location name: %s" % selected_name)
             location = self.locations[index]
             self.logger.info("Selected location dict: %s" % str(location))
-            self.session.open(WorldCamWebcamScreen, location)
+            self.session.open(WorldCamWebcamScreen, location, lang=self.lang)
         else:
             self.logger.warning(
                 "Selected item is None or not a list: %s" %
@@ -1353,7 +1436,7 @@ class WorldCamWebcamScreen(WebcamBaseScreen):
         self.logger.info("Initializing WorldCamWebcamScreen")
         disable_summary(self)
         self.location = location
-        self.scraper = SkylineScraper(lang if lang else "en")
+        self.scraper = SkylineScraper(self.lang)
         self["title"] = Label(location["name"])
         self["flag_icon"] = Pixmap()
         self["language_label"] = Label(self.lang.upper())
@@ -1470,8 +1553,14 @@ class WorldCamWebcamScreen(WebcamBaseScreen):
         """
         Load and display the list of webcams for the current location.
         """
+        self.run_async(
+            lambda: self.scraper.get_webcams(self.location["url"]),
+            self._webcams_loaded, self.location["name"])
+
+    def _webcams_loaded(self, webcams):
         try:
-            webcams = self.scraper.get_webcams(self.location["url"])
+            if webcams is None:
+                raise ValueError("no data")
             self.webcams = sorted(webcams, key=lambda w: w["name"].lower())
             webcam_names = [webcam["name"] for webcam in self.webcams]
             self.logger.info(
