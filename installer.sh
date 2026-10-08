@@ -1,7 +1,7 @@
 #!/bin/bash
 
-version='7.0'
-changelog='Bump version to 6.9 and refactor YouTube playback to be non-blocking. player.py now normalizes YouTube URLs, uses twisted.deferToThread to call youtube_helper.resolve_youtube, and handles stale requests and errors. Removed embedded yt-dlp probing/format logic. Added helpers in utils.py (is_youtube_url, convert_youtube_embed_to_watch, has_serviceapp, get_service_type) and improved is_ytdlp_available to detect a working yt-dlp binary. checkdependencies.py now detects yt-dlp as binary or python module and imports os.path.exists. Removed legacy dom_parser.py. Overall improves responsiveness and service selection for YouTube streams.'
+version='7.1'
+changelog='Player no longer closes when zapping, stale YouTube answers ignored, YouTube channel and live links resolved, webcams exported to bouquets play (YouTube via ytdlpwrapper), location export exports its own webcams, M3U playlists no longer duplicated, Top Webcams and Locations open the selected row, lists load without freezing the GUI, no opkg at startup, updates from OwnerPlugins, installer installs yt-dlp on Python 3 images.'
 
 TMPPATH=/tmp/WorldCam-install
 FILEPATH=/tmp/WorldCam-main.tar.gz
@@ -41,60 +41,52 @@ detect_os
 cleanup
 mkdir -p "$TMPPATH"
 
-if ! command -v wget >/dev/null 2>&1; then
-    echo "Installing wget..."
+# Refresh the package lists once
+FEED_UPDATED=0
+update_feeds() {
+    [ "$FEED_UPDATED" = "1" ] && return
+    echo "Updating package lists..."
     case "$OSTYPE" in
-        "DreamOs")
-            apt-get update && apt-get install -y wget || { echo "Failed to install wget"; exit 1; }
-            ;;
-        "OE")
-            opkg update && opkg install wget || { echo "Failed to install wget"; exit 1; }
-            ;;
-        *)
-            echo "Unsupported OS type. Cannot install wget."
-            exit 1
-            ;;
+        "DreamOs") apt-get update >/dev/null 2>&1 ;;
+        "OE") opkg update >/dev/null 2>&1 ;;
     esac
-fi
-
-if python --version 2>&1 | grep -q '^Python 3\.'; then
-    echo "Python3 image detected"
-    PYTHON="PY3"
-    Packagesix="python3-six"
-    Packagerequests="python3-requests"
-    PY="python3"
-else
-    echo "Python2 image detected"
-    PYTHON="PY2"
-    Packagerequests="python-requests"
-    Packagesix="python-six"
-    PY="python"
-fi
-
-install_pkg() {
-    local pkg=$1
-    if [ -z "$STATUS" ] || ! grep -qs "Package: $pkg" "$STATUS" 2>/dev/null; then
-        echo "Installing $pkg..."
-        case "$OSTYPE" in
-            "DreamOs")
-                apt-get update && apt-get install -y "$pkg" || { echo "Could not install $pkg, continuing anyway..."; }
-                ;;
-            "OE")
-                opkg update && opkg install "$pkg" || { echo "Could not install $pkg, continuing anyway..."; }
-                ;;
-            *)
-                echo "Cannot install $pkg on unknown OS type, continuing..."
-                ;;
-        esac
-    else
-        echo "$pkg already installed"
-    fi
+    FEED_UPDATED=1
 }
 
-if [ "$PYTHON" = "PY3" ]; then
-    install_pkg "$Packagesix"
+install_pkg() {
+    pkg=$1
+    if [ -n "$STATUS" ] && grep -qx "Package: $pkg" "$STATUS" 2>/dev/null; then
+        echo "$pkg already installed"
+        return 0
+    fi
+    update_feeds
+    echo "Installing $pkg..."
+    case "$OSTYPE" in
+        "DreamOs")
+            apt-get install -y "$pkg" >/dev/null 2>&1 && return 0 ;;
+        "OE")
+            opkg install "$pkg" >/dev/null 2>&1 && return 0 ;;
+        *)
+            echo "Cannot install $pkg on unknown OS type"
+            return 1 ;;
+    esac
+    echo "Could not install $pkg, continuing anyway..."
+    return 1
+}
+
+if ! command -v wget >/dev/null 2>&1; then
+    install_pkg wget
+    command -v wget >/dev/null 2>&1 || { echo "wget is required"; exit 1; }
 fi
-install_pkg "$Packagerequests"
+
+# WorldCam is Python 3 only (images may have python3 without 'python')
+if ! command -v python3 >/dev/null 2>&1; then
+    echo "ERROR: WorldCam requires a Python 3 image"
+    exit 1
+fi
+echo "Python: $(python3 --version 2>&1)"
+
+install_pkg python3-six
 
 if [ "$OSTYPE" = "OE" ]; then
     echo "Installing additional multimedia packages..."
@@ -103,8 +95,30 @@ if [ "$OSTYPE" = "OE" ]; then
     done
 fi
 
+# yt-dlp: needed for YouTube webcams
+ytdlp_ok() {
+    command -v yt-dlp >/dev/null 2>&1 || python3 -c "import yt_dlp" >/dev/null 2>&1
+}
+
+if ! ytdlp_ok; then
+    install_pkg python3-yt-dlp
+fi
+if ! ytdlp_ok; then
+    echo "yt-dlp not in the feed, installing it with pip..."
+    command -v pip3 >/dev/null 2>&1 || install_pkg python3-pip
+    if command -v pip3 >/dev/null 2>&1; then
+        pip3 install -U yt-dlp >/dev/null 2>&1 || \
+            pip3 install -U --break-system-packages yt-dlp >/dev/null 2>&1
+    fi
+fi
+if ytdlp_ok; then
+    echo "yt-dlp OK: $(yt-dlp --version 2>/dev/null || python3 -m yt_dlp --version 2>/dev/null)"
+else
+    echo "WARNING: yt-dlp could not be installed: YouTube webcams will not play"
+fi
+
 echo "Downloading WorldCam..."
-wget --no-check-certificate 'https://github.com/Belfagor2005/WorldCam/archive/refs/heads/main.tar.gz' -O "$FILEPATH"
+wget --no-check-certificate "https://github.com/OwnerPlugins/WorldCam/archive/refs/heads/main.tar.gz" -O "$FILEPATH"
 if [ $? -ne 0 ]; then
     echo "Failed to download WorldCam package!"
     cleanup
@@ -157,15 +171,13 @@ if [ "$OSTYPE" = "OE" ]; then
     for pkg in \
         streamlink \
         enigma2-plugin-extensions-streamlinkwrapper \
-        enigma2-plugin-extensions-streamlinkproxyv \
+        enigma2-plugin-extensions-streamlinkproxy \
         enigma2-plugin-extensions-ytdlpwrapper \
         enigma2-plugin-extensions-ytdlwrapper \
         python3-re \
         gstreamer1.0-plugins-bad \
         gstreamer1.0-plugins-ugly \
-        gstreamer1.0-libav \
-        ${PY}-yt-dlp \
-        ${PY}-youtube-dl; do
+        gstreamer1.0-libav; do
         install_pkg "$pkg"
     done
 fi
@@ -203,7 +215,7 @@ fi
 
 [ -z "$distro_value" ] && distro_value="Unknown"
 [ -z "$distro_version" ] && distro_version="Unknown"
-python_vers=$(python --version 2>&1)
+python_vers=$(python3 --version 2>&1)
 
 cat <<EOF
 
@@ -212,7 +224,7 @@ cat <<EOF
 #                developed by LULULLA                   #
 #               https://corvoboys.org                   #
 #########################################################
-#           your Device will RESTART Now                #
+#        Restart Enigma2 to use the plugin              #
 #########################################################
 ^^^^^^^^^^Debug information:
 BOX MODEL: $box_type
