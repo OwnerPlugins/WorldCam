@@ -133,11 +133,11 @@ msgstr "အားလုံးကို ပန်းစည်းသို့ တ�
 msgid "Export failed:"
 msgstr "ထုတ်ယူမှု မအောင်မြင်ပါ"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "%d ဝဘ်ကင်မရာများကို '%s' သို့ တင်ပို့ခဲ့သည်"
+
 msgid "Favorites"
 msgstr "အကြိုက်ဆုံးများ"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "စိတ်ကြိုက်များကို အောင်မြင်စွာ တင်ပို့ပြီးပါပြီ။ ၎င်းတို့ကိုကြည့်ရှုရန် Enigma2 ကို ပြန်လည်စတင်ပါ။"
 
 msgid "File not found"
 msgstr "ဖိုင်မတွေ့ပါ။"
@@ -160,6 +160,14 @@ msgstr "ကမ္ဘာလုံးဆိုင်ရာတည်နေရာမ
 msgid "Live webcams from around the world"
 msgstr "ကမ္ဘာတစ်ဝှမ်းမှ တိုက်ရိုက် webcams များ"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "YouTube ထုတ်လွှင့်မှုကို ထုတ်ယူ၍မရပါ။"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "အဆင့်မြှင့်တင်နေသည်..."
+
 msgid "Menu"
 msgstr "မီနူး"
 
@@ -175,8 +183,19 @@ msgstr "အစီအစဉ်များ မရရှိနိုင်ပါ�
 msgid "No playlists found"
 msgstr "အစီအစဉ်များ မတွေ့ပါ။"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "အစီအစဉ်များ မတွေ့ပါ။"
+
 msgid "No valid webcams in playlist"
 msgstr "အစီအစဉ်တွင် တရားဝင် ဝဘ်ကင်မရာများ မရှိပါ။"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "တင်ပို့ရန် စိတ်ကြိုက်များမရှိပါ။"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "OK = အချက်အလက် | CH-/CH+ = Prev/Next | အပြာ = Fav | PLAY/PAUSE = ပြောင်းရန် | STOP = ရပ်ရန် | EXIT = ထွက်ရန် | Lululla မှ"
 
 msgid "Play"
 msgstr "ကစားပါ။"
@@ -236,6 +255,13 @@ msgstr "ဆက်တင်များ"
 msgid "Settings functionality coming soon!"
 msgstr "ဆက်တင်များ လုပ်ဆောင်ချက်ကို မကြာမီလာမည်"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "SkylineWebcams ထည့်သွင်းမှုများကို streamlink wrapper ပလပ်အင် (enigma2-plugin-extensions-streamlinkwrapper) ဖြင့်သာ ပန်းစည်းမှ ကစားပါသည်။"
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "YouTube ထုတ်လွှင့်မှုကို မရရှိနိုင်ပါ။"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Webcam.pl တွင် နည်းပညာပိုင်းဆိုင်ရာ အမှားအယွင်း"
 
@@ -269,14 +295,17 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "သင်သည် နောက်ဆုံးဗားရှင်းကို အသုံးပြုနေပြီဖြစ်သည်- {}"
 
-msgid "YouTube playback error"
-msgstr "YouTube ပြန်ဖွင့်ခြင်း အမှား"
-
-msgid "YouTube stream not available"
-msgstr "YouTube ထုတ်လွှင့်မှုကို မရရှိနိုင်ပါ။"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "YouTube ထည့်သွင်းမှုများကို yt-dlp wrapper ပလပ်အင် (enigma2-plugin-extensions-ytdlpwrapper) ဖြင့်သာ ပန်းစည်းမှဖွင့်သည်။"
 
 msgid "Your Favorites"
 msgstr "သင့်အကြိုက်များ"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "စိတ်ကြိုက်များကို အောင်မြင်စွာ တင်ပို့ပြီးပါပြီ။ ၎င်းတို့ကိုကြည့်ရှုရန် Enigma2 ကို ပြန်လည်စတင်ပါ။"
+
+#~ msgid "YouTube playback error"
+#~ msgstr "YouTube ပြန်ဖွင့်ခြင်း အမှား"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "YouTube URL မမှန်ကန်ပါ။"

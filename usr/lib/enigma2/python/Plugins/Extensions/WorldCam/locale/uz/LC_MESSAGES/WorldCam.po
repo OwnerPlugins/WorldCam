@@ -133,11 +133,11 @@ msgstr "Hammasini Buketga eksport qiling"
 msgid "Export failed:"
 msgstr "Eksport amalga oshmadi:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "%d ta veb-kamera '%s'ga eksport qilindi"
+
 msgid "Favorites"
 msgstr "Sevimlilar"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "Sevimlilar eksport qilindi! Ularni ko'rish uchun Enigma2-ni qayta ishga tushiring."
 
 msgid "File not found"
 msgstr "Fayl topilmadi"
@@ -160,6 +160,14 @@ msgstr "Global joylarni aks ettiruvchi jonli veb-kamera ko'rish"
 msgid "Live webcams from around the world"
 msgstr "Dunyo bo'ylab jonli veb-kameralar"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "YouTube oqimini chiqarib bo‘lmadi"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "Yangilanmoqda..."
+
 msgid "Menu"
 msgstr "Menyu"
 
@@ -175,8 +183,19 @@ msgstr "Hech qanday pleylist mavjud emas"
 msgid "No playlists found"
 msgstr "Hech qanday pleylist topilmadi"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "Hech qanday pleylist topilmadi"
+
 msgid "No valid webcams in playlist"
 msgstr "Pleylistda yaroqli veb-kamera mavjud emas"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "Eksport qilish uchun sevimlilar yo'q"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "OK = Ma'lumot | CH-/CH+ = Oldingi/Keyingi | KO'K = Fav | PLAY/PAUSE = O'zgartirish | STOP = To'xtatish | EXIT = Chiqish | Lululla tomonidan"
 
 msgid "Play"
 msgstr "O'ynang"
@@ -236,6 +255,13 @@ msgstr "Sozlamalar"
 msgid "Settings functionality coming soon!"
 msgstr "Sozlamalar funksiyasi tez orada!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "SkylineWebcams yozuvlari guldastadan faqat streamlink wrapper plagini (enigma2-plugin-extensions-streamlinkwrapper) bilan ijro etiladi."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "YouTube oqimi mavjud emas"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Webcam.pl da texnik xatolik"
 
@@ -269,14 +295,17 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "Siz allaqachon oxirgi versiyani ishga tushiryapsiz: {}"
 
-msgid "YouTube playback error"
-msgstr "YouTube ijro etish xatosi"
-
-msgid "YouTube stream not available"
-msgstr "YouTube oqimi mavjud emas"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "YouTube yozuvlari guldastadan faqat yt-dlp wrapper plagini (enigma2-plugin-extensions-ytdlpwrapper) bilan ijro etiladi."
 
 msgid "Your Favorites"
 msgstr "Sevimlilaringiz"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "Sevimlilar eksport qilindi! Ularni ko'rish uchun Enigma2-ni qayta ishga tushiring."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "YouTube ijro etish xatosi"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "YouTube URL manzili noto‘g‘ri"

@@ -134,11 +134,11 @@ msgstr "Eksportuokite viską į puokštę"
 msgid "Export failed:"
 msgstr "Eksportuoti nepavyko:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "Eksportuota %d žiniatinklio kameros į '%s'"
+
 msgid "Favorites"
 msgstr "Mėgstamiausi"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "Mėgstamiausi sėkmingai eksportuoti! Iš naujo paleiskite Enigma2, kad pamatytumėte juos."
 
 msgid "File not found"
 msgstr "Failas nerastas"
@@ -161,6 +161,14 @@ msgstr "Tiesioginė žiniatinklio kameros peržiūros priemonė su pasaulio viet
 msgid "Live webcams from around the world"
 msgstr "Tiesioginės internetinės kameros iš viso pasaulio"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "Nepavyko išskleisti „YouTube“ srauto"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "Naujovinama..."
+
 msgid "Menu"
 msgstr "Meniu"
 
@@ -176,8 +184,19 @@ msgstr "Nėra pasiekiamų grojaraščių"
 msgid "No playlists found"
 msgstr "Nerasta jokių grojaraščių"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "Nerasta jokių grojaraščių"
+
 msgid "No valid webcams in playlist"
 msgstr "Grojaraštyje nėra galiojančių internetinių kamerų"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "Nėra mėgstamų eksportuoti"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "Gerai = Informacija | CH-/CH+ = Ankstesnis/Kitas | MĖLYNA = Fav | PLAY/PAUSE = Perjungti | STOP = Stop | EXIT = Išeiti | pateikė Lululla"
 
 msgid "Play"
 msgstr "Žaisti"
@@ -237,6 +256,13 @@ msgstr "Nustatymai"
 msgid "Settings functionality coming soon!"
 msgstr "Nustatymų funkcija netrukus!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "SkylineWebcams įrašai paleidžiami iš puokštės tik naudojant „streamlink wrapper“ papildinį (enigma2-plugin-extensions-streamlinkwrapper)."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "„YouTube“ srautas nepasiekiamas"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Techninė klaida Webcam.pl"
 
@@ -270,14 +296,17 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "Jau naudojate naujausią versiją: {}"
 
-msgid "YouTube playback error"
-msgstr "„YouTube“ atkūrimo klaida"
-
-msgid "YouTube stream not available"
-msgstr "„YouTube“ srautas nepasiekiamas"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "„YouTube“ įrašai iš puokštės leidžiami tik naudojant yt-dlp įvyniojimo papildinį (enigma2-plugin-extensions-ytdlpwrapper)."
 
 msgid "Your Favorites"
 msgstr "Jūsų mėgstamiausi"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "Mėgstamiausi sėkmingai eksportuoti! Iš naujo paleiskite Enigma2, kad pamatytumėte juos."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "„YouTube“ atkūrimo klaida"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "Netinkamas „YouTube“ URL"

@@ -134,11 +134,11 @@ msgstr "Eksportige kõik kimpu"
 msgid "Export failed:"
 msgstr "Eksport ebaõnnestus:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "Eksporditi %d veebikaamerat asukohta '%s'"
+
 msgid "Favorites"
 msgstr "Lemmikud"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "Lemmikud eksporditi edukalt! Nende nägemiseks taaskäivitage Enigma2."
 
 msgid "File not found"
 msgstr "Faili ei leitud"
@@ -161,6 +161,14 @@ msgstr "Reaalajas veebikaamera vaataja globaalsete asukohtadega"
 msgid "Live webcams from around the world"
 msgstr "Reaalajas veebikaamerad kogu maailmast"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "YouTube'i voogu ei saanud ekstraktida"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "Täiendamine..."
+
 msgid "Menu"
 msgstr "Menüü"
 
@@ -176,8 +184,19 @@ msgstr "Esitusloendeid pole saadaval"
 msgid "No playlists found"
 msgstr "Esitusloendeid ei leitud"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "Esitusloendeid ei leitud"
+
 msgid "No valid webcams in playlist"
 msgstr "Esitusloendis pole kehtivaid veebikaameraid"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "Lemmikuid, mida eksportida, pole"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "OK = Info | CH-/CH+ = Eelmine/Järgmine | SININE = Lemmik | ESITA/PAUS = Lülita | STOP = Stopp | EXIT = Välju | Lululla poolt"
 
 msgid "Play"
 msgstr "Mängi"
@@ -237,6 +256,13 @@ msgstr "Seaded"
 msgid "Settings functionality coming soon!"
 msgstr "Seadete funktsioon on peagi saadaval!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "SkylineWebcamsi kirjeid esitatakse kimbust ainult voolingi ümbrise pistikprogrammiga (enigma2-plugin-extensions-streamlinkwrapper)."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "YouTube'i voog pole saadaval"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Tehniline viga saidil Webcam.pl"
 
@@ -270,14 +296,17 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "Kasutate juba uusimat versiooni: {}"
 
-msgid "YouTube playback error"
-msgstr "YouTube'i taasesituse viga"
-
-msgid "YouTube stream not available"
-msgstr "YouTube'i voog pole saadaval"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "YouTube'i kirjeid esitatakse kimbust ainult yt-dlp ümbrise pistikprogrammiga (enigma2-plugin-extensions-ytdlpwrapper)."
 
 msgid "Your Favorites"
 msgstr "Teie lemmikud"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "Lemmikud eksporditi edukalt! Nende nägemiseks taaskäivitage Enigma2."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "YouTube'i taasesituse viga"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "Vale YouTube'i URL"

@@ -133,11 +133,11 @@ msgstr "ส่งออกทั้งหมดไปยังช่อดอก
 msgid "Export failed:"
 msgstr "การส่งออกล้มเหลว:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "ส่งออกเว็บแคม %d รายการไปยัง '%s'"
+
 msgid "Favorites"
 msgstr "รายการโปรด"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "ส่งออกรายการโปรดเรียบร้อยแล้ว! รีสตาร์ท Enigma2 เพื่อดูพวกเขา"
 
 msgid "File not found"
 msgstr "ไม่พบไฟล์"
@@ -160,6 +160,14 @@ msgstr "โปรแกรมดูเว็บแคมสดที่มีส
 msgid "Live webcams from around the world"
 msgstr "เว็บแคมถ่ายทอดสดจากทั่วโลก"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "ไม่สามารถแยกสตรีม YouTube ได้"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "กำลังอัปเกรด..."
+
 msgid "Menu"
 msgstr "เมนู"
 
@@ -175,8 +183,19 @@ msgstr "ไม่มีเพลย์ลิสต์"
 msgid "No playlists found"
 msgstr "ไม่พบเพลย์ลิสต์"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "ไม่พบเพลย์ลิสต์"
+
 msgid "No valid webcams in playlist"
 msgstr "ไม่มีเว็บแคมที่ถูกต้องในเพลย์ลิสต์"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "ไม่มีรายการโปรดที่จะส่งออก"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "ตกลง = ข้อมูล | CH-/CH+ = ก่อนหน้า/ถัดไป | สีฟ้า = สิ่งที่ชอบ | เล่น/หยุดชั่วคราว = สลับ | หยุด = หยุด | ออก = ออก | โดย ลุลลา"
 
 msgid "Play"
 msgstr "เล่น"
@@ -236,6 +255,13 @@ msgstr "การตั้งค่า"
 msgid "Settings functionality coming soon!"
 msgstr "ฟังก์ชั่นการตั้งค่าจะมาเร็ว ๆ นี้!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "รายการ SkylineWebcams จะเล่นจากช่อดอกไม้ด้วยปลั๊กอิน streamlink wrapper เท่านั้น (enigma2-plugin-extensions-streamlinkwrapper)"
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "สตรีม YouTube ไม่พร้อมใช้งาน"
+
 msgid "Technical error in Webcam.pl"
 msgstr "ข้อผิดพลาดทางเทคนิคใน Webcam.pl"
 
@@ -269,14 +295,17 @@ msgstr "เวิลด์แคม วี{}"
 msgid "You are already running the latest version: {}"
 msgstr "คุณกำลังใช้งานเวอร์ชันล่าสุดอยู่แล้ว: {}"
 
-msgid "YouTube playback error"
-msgstr "ข้อผิดพลาดในการเล่น YouTube"
-
-msgid "YouTube stream not available"
-msgstr "สตรีม YouTube ไม่พร้อมใช้งาน"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "รายการ YouTube จะเล่นจากช่อดอกไม้ด้วยปลั๊กอิน yt-dlp wrapper เท่านั้น (enigma2-plugin-extensions-ytdlpwrapper)"
 
 msgid "Your Favorites"
 msgstr "รายการโปรดของคุณ"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "ส่งออกรายการโปรดเรียบร้อยแล้ว! รีสตาร์ท Enigma2 เพื่อดูพวกเขา"
+
+#~ msgid "YouTube playback error"
+#~ msgstr "ข้อผิดพลาดในการเล่น YouTube"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "URL ของ YouTube ไม่ถูกต้อง"

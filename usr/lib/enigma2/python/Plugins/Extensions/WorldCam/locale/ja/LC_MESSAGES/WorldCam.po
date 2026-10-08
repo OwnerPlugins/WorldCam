@@ -134,11 +134,11 @@ msgstr "すべてを Bouquet にエクスポート"
 msgid "Export failed:"
 msgstr "エクスポートに失敗しました:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "%d 個の Web カメラを '%s' にエクスポートしました"
+
 msgid "Favorites"
 msgstr "お気に入り"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "お気に入りが正常にエクスポートされました。 Enigma2 を再起動してそれらを表示します。"
 
 msgid "File not found"
 msgstr "ファイルが見つかりません"
@@ -161,6 +161,14 @@ msgstr "世界中の場所を表示するライブ Web カメラ ビューア"
 msgid "Live webcams from around the world"
 msgstr "世界中からのライブウェブカメラ"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "YouTube ストリームを抽出できませんでした"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "アップグレード中..."
+
 msgid "Menu"
 msgstr "メニュー"
 
@@ -176,8 +184,19 @@ msgstr "利用可能なプレイリストがありません"
 msgid "No playlists found"
 msgstr "プレイリストが見つかりません"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "プレイリストが見つかりません"
+
 msgid "No valid webcams in playlist"
 msgstr "プレイリストに有効なウェブカメラがありません"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "エクスポートするお気に入りがありません"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "OK = 情報 | CH-/CH+ = 前/次 |青 = お気に入り |再生/一時停止 = トグル |停止 = 停止 | EXIT = 終了 | by ルルラ"
 
 msgid "Play"
 msgstr "遊ぶ"
@@ -237,6 +256,13 @@ msgstr "設定"
 msgid "Settings functionality coming soon!"
 msgstr "設定機能は近日公開予定です。"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "SkylineWebcams エントリは、streamlink ラッパー プラグイン (enigma2-plugin-extensions-streamlinkwrapper) を使用してのみブーケから再生されます。"
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "YouTube ストリームは利用できません"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Webcam.pl の技術的エラー"
 
@@ -270,14 +296,17 @@ msgstr "ワールドカメラ v{}"
 msgid "You are already running the latest version: {}"
 msgstr "すでに最新バージョンを実行しています: {}"
 
-msgid "YouTube playback error"
-msgstr "YouTube 再生エラー"
-
-msgid "YouTube stream not available"
-msgstr "YouTube ストリームは利用できません"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "YouTube エントリは、yt-dlp ラッパー プラグイン (enigma2-plugin-extensions-ytdlpwrapper) を使用してのみブーケから再生されます。"
 
 msgid "Your Favorites"
 msgstr "お気に入り"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "お気に入りが正常にエクスポートされました。 Enigma2 を再起動してそれらを表示します。"
+
+#~ msgid "YouTube playback error"
+#~ msgstr "YouTube 再生エラー"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "無効な YouTube URL"

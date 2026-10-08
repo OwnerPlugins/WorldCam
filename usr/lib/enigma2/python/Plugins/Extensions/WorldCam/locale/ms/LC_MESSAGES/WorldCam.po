@@ -133,11 +133,11 @@ msgstr "Eksport Semua ke Bouquet"
 msgid "Export failed:"
 msgstr "Eksport gagal:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "Mengeksport %d kamera web ke '%s'"
+
 msgid "Favorites"
 msgstr "Kegemaran"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "Kegemaran berjaya dieksport! Mulakan semula Enigma2 untuk melihatnya."
 
 msgid "File not found"
 msgstr "Fail tidak ditemui"
@@ -160,6 +160,14 @@ msgstr "Pemapar webcam langsung yang memaparkan lokasi global"
 msgid "Live webcams from around the world"
 msgstr "Webcam langsung dari seluruh dunia"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "Tidak dapat mengeluarkan strim YouTube"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "Menaik taraf..."
+
 msgid "Menu"
 msgstr ""
 
@@ -175,8 +183,19 @@ msgstr "Tiada senarai main tersedia"
 msgid "No playlists found"
 msgstr "Tiada senarai main ditemui"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "Tiada senarai main ditemui"
+
 msgid "No valid webcams in playlist"
 msgstr "Tiada kamera web yang sah dalam senarai main"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "Tiada kegemaran untuk dieksport"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "OK = Maklumat | CH-/CH+ = Sebelum/Seterusnya | BIRU = Kegemaran | PLAY/PAUSE = Togol | BERHENTI = Berhenti | KELUAR = Keluar | oleh Lululla"
 
 msgid "Play"
 msgstr "Main"
@@ -236,6 +255,13 @@ msgstr "tetapan"
 msgid "Settings functionality coming soon!"
 msgstr "Fungsi tetapan akan datang tidak lama lagi!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "Entri SkylineWebcams dimainkan dari sejambak hanya dengan pemalam pembalut pautan strim (enigma2-plugin-extensions-streamlinkwrapper)."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "Strim YouTube tidak tersedia"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Ralat teknikal dalam Webcam.pl"
 
@@ -269,14 +295,17 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "Anda sudah pun menjalankan versi terkini: {}"
 
-msgid "YouTube playback error"
-msgstr "Ralat main balik YouTube"
-
-msgid "YouTube stream not available"
-msgstr "Strim YouTube tidak tersedia"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "Entri YouTube dimainkan dari sejambak hanya dengan pemalam pembungkus yt-dlp (enigma2-plugin-extensions-ytdlpwrapper)."
 
 msgid "Your Favorites"
 msgstr "Kegemaran Anda"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "Kegemaran berjaya dieksport! Mulakan semula Enigma2 untuk melihatnya."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "Ralat main balik YouTube"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "URL YouTube tidak sah"

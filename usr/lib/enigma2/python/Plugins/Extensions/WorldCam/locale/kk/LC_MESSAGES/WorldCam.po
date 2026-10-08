@@ -133,11 +133,11 @@ msgstr "Барлығын Букетке экспорттау"
 msgid "Export failed:"
 msgstr "Экспорттау сәтсіз аяқталды:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "%d веб-камера '%s' ішіне экспортталды"
+
 msgid "Favorites"
 msgstr "Таңдаулылар"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "Таңдаулылар сәтті экспортталды! Оларды көру үшін Enigma2 бағдарламасын қайта іске қосыңыз."
 
 msgid "File not found"
 msgstr "Файл табылмады"
@@ -160,6 +160,14 @@ msgstr "Жаһандық орындарды көрсететін тікелей 
 msgid "Live webcams from around the world"
 msgstr "Дүние жүзіндегі тірі веб-камералар"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "YouTube ағынын шығару мүмкін болмады"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "Жаңартылуда..."
+
 msgid "Menu"
 msgstr "Мәзір"
 
@@ -175,8 +183,19 @@ msgstr "Ойнату тізімдері қолжетімді емес"
 msgid "No playlists found"
 msgstr "Ойнату тізімдері табылмады"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "Ойнату тізімдері табылмады"
+
 msgid "No valid webcams in playlist"
 msgstr "Ойнату тізімінде жарамды веб-камералар жоқ"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "Экспортталатын таңдаулылар жоқ"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "OK = Ақпарат | CH-/CH+ = Алдыңғы/Келесі | КӨК = Сүйікті | ОЙНАТУ/ТОҚТАТУ = Ауыстыру | ТОҚТАТУ = Тоқтату | EXIT = Шығу | Лулулла"
 
 msgid "Play"
 msgstr "Ойнау"
@@ -236,6 +255,13 @@ msgstr "Параметрлер"
 msgid "Settings functionality coming soon!"
 msgstr "Параметрлер функциясы жақында келеді!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "SkylineWebcams жазбалары букеттен тек streamlink wrapper плагинімен (enigma2-plugin-extensions-streamlinkwrapper) ойнайды."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "YouTube ағыны қолжетімді емес"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Webcam.pl сайтындағы техникалық қате"
 
@@ -269,14 +295,17 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "Сіз қазірдің өзінде соңғы нұсқасын іске қосып жатырсыз: {}"
 
-msgid "YouTube playback error"
-msgstr "YouTube ойнату қатесі"
-
-msgid "YouTube stream not available"
-msgstr "YouTube ағыны қолжетімді емес"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "YouTube жазбалары букеттен тек yt-dlp орауыш плагинімен (enigma2-plugin-extensions-ytdlpwrapper) ойнатылады."
 
 msgid "Your Favorites"
 msgstr "Таңдаулыларыңыз"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "Таңдаулылар сәтті экспортталды! Оларды көру үшін Enigma2 бағдарламасын қайта іске қосыңыз."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "YouTube ойнату қатесі"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "Жарамсыз YouTube URL мекенжайы"

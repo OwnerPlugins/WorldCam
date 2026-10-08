@@ -133,11 +133,11 @@ msgstr "Ekspor Semua ke Buket"
 msgid "Export failed:"
 msgstr "Ekspor gagal:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "Mengekspor %d webcam ke '%s'"
+
 msgid "Favorites"
 msgstr "Favorit"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "Favorit berhasil diekspor! Mulai ulang Enigma2 untuk melihatnya."
 
 msgid "File not found"
 msgstr "Berkas tidak ditemukan"
@@ -160,6 +160,14 @@ msgstr "Penampil webcam langsung yang menampilkan lokasi global"
 msgid "Live webcams from around the world"
 msgstr "Webcam langsung dari seluruh dunia"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "Tidak dapat mengekstrak aliran YouTube"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "Perbaikan..."
+
 msgid "Menu"
 msgstr ""
 
@@ -175,8 +183,19 @@ msgstr "Tidak ada daftar putar yang tersedia"
 msgid "No playlists found"
 msgstr "Tidak ada daftar putar yang ditemukan"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "Tidak ada daftar putar yang ditemukan"
+
 msgid "No valid webcams in playlist"
 msgstr "Tidak ada webcam yang valid dalam daftar putar"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "Tidak ada favorit untuk diekspor"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "Oke = Info | CH-/CH+ = Sebelumnya/Berikutnya | BIRU = Favorit | MAINKAN/JEDA = Beralih | BERHENTI = Berhenti | KELUAR = Keluar | oleh Lululla"
 
 msgid "Play"
 msgstr "Bermain"
@@ -236,6 +255,13 @@ msgstr "Pengaturan"
 msgid "Settings functionality coming soon!"
 msgstr "Fungsi pengaturan segera hadir!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "Entri SkylineWebcams diputar dari buket hanya dengan plugin streamlink wrapper (enigma2-plugin-extensions-streamlinkwrapper)."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "Aliran YouTube tidak tersedia"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Kesalahan teknis di Webcam.pl"
 
@@ -269,14 +295,17 @@ msgstr "Kamera Dunia v{}"
 msgid "You are already running the latest version: {}"
 msgstr "Anda sudah menjalankan versi terbaru: {}"
 
-msgid "YouTube playback error"
-msgstr "Kesalahan pemutaran YouTube"
-
-msgid "YouTube stream not available"
-msgstr "Aliran YouTube tidak tersedia"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "Entri YouTube diputar dari buket hanya dengan plugin pembungkus yt-dlp (enigma2-plugin-extensions-ytdlpwrapper)."
 
 msgid "Your Favorites"
 msgstr "Favorit Anda"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "Favorit berhasil diekspor! Mulai ulang Enigma2 untuk melihatnya."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "Kesalahan pemutaran YouTube"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "URL YouTube tidak valid"

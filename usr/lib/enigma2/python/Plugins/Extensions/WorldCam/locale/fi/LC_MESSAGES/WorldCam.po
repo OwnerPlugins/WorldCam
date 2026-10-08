@@ -134,11 +134,11 @@ msgstr "Vie kaikki Bouquetiin"
 msgid "Export failed:"
 msgstr "Vienti epäonnistui:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "%d verkkokameraa vietiin kohteeseen %s"
+
 msgid "Favorites"
 msgstr "Suosikit"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "Suosikkien vienti onnistui! Käynnistä Enigma2 uudelleen nähdäksesi ne."
 
 msgid "File not found"
 msgstr "Tiedostoa ei löydy"
@@ -161,6 +161,14 @@ msgstr "Live-verkkokamerakatseluohjelma, joka sisältää maailmanlaajuiset sija
 msgid "Live webcams from around the world"
 msgstr "Live-web-kamerat ympäri maailmaa"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "YouTube-streamia ei voitu purkaa"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "Päivitetään..."
+
 msgid "Menu"
 msgstr "Valikko"
 
@@ -176,8 +184,19 @@ msgstr "Ei soittolistoja saatavilla"
 msgid "No playlists found"
 msgstr "Soittolistoja ei löytynyt"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "Soittolistoja ei löytynyt"
+
 msgid "No valid webcams in playlist"
 msgstr "Soittolistassa ei ole kelvollisia verkkokameroita"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "Ei suosikkeja vietäväksi"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "OK = Info | CH-/CH+ = Edellinen/Seuraava | SININEN = suosikki | PLAY/PAUSE = Toggle | STOP = Pysäytä | EXIT = Poistu | kirjoittanut Lululla"
 
 msgid "Play"
 msgstr "Pelata"
@@ -237,6 +256,13 @@ msgstr "Asetukset"
 msgid "Settings functionality coming soon!"
 msgstr "Asetukset tulevat pian!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "SkylineWebcams-merkinnät toistetaan kimpussa vain streamlink wrapper -laajennuksella (enigma2-plugin-extensions-streamlinkwrapper)."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "YouTube-stream ei ole käytettävissä"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Tekninen virhe Webcam.pl"
 
@@ -270,14 +296,17 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "Käytössäsi on jo uusin versio: {}"
 
-msgid "YouTube playback error"
-msgstr "YouTube-toistovirhe"
-
-msgid "YouTube stream not available"
-msgstr "YouTube-stream ei ole käytettävissä"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "YouTube-merkinnät toistetaan kimpussa vain yt-dlp-käärelaajennuksella (enigma2-plugin-extensions-ytdlpwrapper)."
 
 msgid "Your Favorites"
 msgstr "Omat suosikit"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "Suosikkien vienti onnistui! Käynnistä Enigma2 uudelleen nähdäksesi ne."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "YouTube-toistovirhe"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "Virheellinen YouTube-URL-osoite"

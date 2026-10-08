@@ -134,11 +134,11 @@ msgstr "Exportați totul în Buchet"
 msgid "Export failed:"
 msgstr "Export eșuat:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "Au exportat %d camere web în „%s”"
+
 msgid "Favorites"
 msgstr "Favorite"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "Favoritele au fost exportate cu succes! Reporniți Enigma2 pentru a le vedea."
 
 msgid "File not found"
 msgstr "Fișierul nu a fost găsit"
@@ -161,6 +161,14 @@ msgstr "Vizualizator live webcam cu locații globale"
 msgid "Live webcams from around the world"
 msgstr "Camere web live din întreaga lume"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "Nu s-a putut extrage fluxul YouTube"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "Se actualizează..."
+
 msgid "Menu"
 msgstr "Meniu"
 
@@ -176,8 +184,19 @@ msgstr "Nu există liste de redare disponibile"
 msgid "No playlists found"
 msgstr "Nu s-au găsit liste de redare"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "Nu s-au găsit liste de redare"
+
 msgid "No valid webcams in playlist"
 msgstr "Nu există camere web valide în lista de redare"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "Nu sunt favorite de exportat"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "OK = Info | CH-/CH+ = Anterior/Următorul | ALBASTRU = Fav | PLAY/PAUSE = Comutare | STOP = Stop | EXIT = Ieșire | de Lululla"
 
 msgid "Play"
 msgstr "Juca"
@@ -237,6 +256,13 @@ msgstr "Setări"
 msgid "Settings functionality coming soon!"
 msgstr "Funcționalitatea setărilor va veni în curând!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "Intrările SkylineWebcams sunt redate din buchet numai cu pluginul streamlink wrapper (enigma2-plugin-extensions-streamlinkwrapper)."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "Fluxul YouTube nu este disponibil"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Eroare tehnică în Webcam.pl"
 
@@ -270,14 +296,17 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "Rulați deja cea mai recentă versiune: {}"
 
-msgid "YouTube playback error"
-msgstr "Eroare de redare YouTube"
-
-msgid "YouTube stream not available"
-msgstr "Fluxul YouTube nu este disponibil"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "Intrările YouTube sunt redate din buchet numai cu pluginul yt-dlp wrapper (enigma2-plugin-extensions-ytdlpwrapper)."
 
 msgid "Your Favorites"
 msgstr "Favoritele tale"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "Favoritele au fost exportate cu succes! Reporniți Enigma2 pentru a le vedea."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "Eroare de redare YouTube"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "Adresă URL YouTube nevalidă"

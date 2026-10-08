@@ -133,11 +133,11 @@ msgstr "صادرات همه به دسته گل"
 msgid "Export failed:"
 msgstr "صادرات انجام نشد:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "%d وب‌کم به «%s» صادر شد"
+
 msgid "Favorites"
 msgstr "موارد دلخواه"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "موارد دلخواه با موفقیت صادر شد! Enigma2 را مجددا راه اندازی کنید تا آنها را ببینید."
 
 msgid "File not found"
 msgstr "فایل پیدا نشد"
@@ -160,6 +160,14 @@ msgstr "نمایشگر وب کم زنده با مکان های جهانی"
 msgid "Live webcams from around the world"
 msgstr "وب کم های زنده از سراسر جهان"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "پخش جریانی YouTube استخراج نشد"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "در حال ارتقاء..."
+
 msgid "Menu"
 msgstr "منو"
 
@@ -175,8 +183,19 @@ msgstr "هیچ لیست پخشی در دسترس نیست"
 msgid "No playlists found"
 msgstr "هیچ لیست پخشی یافت نشد"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "هیچ لیست پخشی یافت نشد"
+
 msgid "No valid webcams in playlist"
 msgstr "هیچ وب کم معتبری در لیست پخش وجود ندارد"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "هیچ مورد دلخواه برای صادرات وجود ندارد"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "OK = اطلاعات | CH-/CH+ = قبلی/بعدی | BLUE = Fav | PLAY/PAUSE = جابجایی | STOP = توقف | EXIT = خروج | توسط لولولا"
 
 msgid "Play"
 msgstr "بازی کنید"
@@ -236,6 +255,13 @@ msgstr "تنظیمات"
 msgid "Settings functionality coming soon!"
 msgstr "عملکرد تنظیمات به زودی!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "ورودی‌های SkylineWebcams فقط با افزونه streamlink wrapper (enigma2-plugin-extensions-streamlinkwrapper) از دسته گل پخش می‌شوند."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "پخش جریانی YouTube در دسترس نیست"
+
 msgid "Technical error in Webcam.pl"
 msgstr "خطای فنی در Webcam.pl"
 
@@ -269,14 +295,17 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "شما در حال حاضر آخرین نسخه را اجرا می کنید: {}"
 
-msgid "YouTube playback error"
-msgstr "خطای پخش YouTube"
-
-msgid "YouTube stream not available"
-msgstr "پخش جریانی YouTube در دسترس نیست"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "ورودی‌های YouTube از دسته گل فقط با افزونه yt-dlp wrapper (enigma2-plugin-extensions-ytdlpwrapper) پخش می‌شوند."
 
 msgid "Your Favorites"
 msgstr "موارد دلخواه شما"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "موارد دلخواه با موفقیت صادر شد! Enigma2 را مجددا راه اندازی کنید تا آنها را ببینید."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "خطای پخش YouTube"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "URL YouTube نامعتبر است"

@@ -133,11 +133,11 @@ msgstr "עקספּאָרט אַלע צו בוקיי"
 msgid "Export failed:"
 msgstr "עקספּאָרט ניט אַנדערש:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "עקספּאָרטירט %d וועבקאַם צו '%s'"
+
 msgid "Favorites"
 msgstr "פאַוואָריטעס"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "פאַוואָריטעס יקספּאָרטאַד הצלחה! ריסטאַרט Enigma2 צו זען זיי."
 
 msgid "File not found"
 msgstr "טעקע ניט געפונען"
@@ -160,6 +160,14 @@ msgstr "לעבן וועבקאַם צוקוקער מיט גלאבאלע לאָו�
 msgid "Live webcams from around the world"
 msgstr "לעבן וועבקאַמס פון אַרום די וועלט"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "קען נישט עקסטראַקט יאָוטובע סטרים"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "אַפּגרייד ..."
+
 msgid "Menu"
 msgstr "מעניו"
 
@@ -175,8 +183,19 @@ msgstr "ניט קיין פּלייַליסץ בנימצא"
 msgid "No playlists found"
 msgstr "קיין פּלייַליסץ געפונען"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "קיין פּלייַליסץ געפונען"
+
 msgid "No valid webcams in playlist"
 msgstr "קיין גילטיק וועבקאַמס אין פּלייַליסט"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "קיין פאַוואָריטעס צו אַרויספירן"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "OK = אינפֿאָרמאַציע | CH-/CH+ = Prev/Next | בלוי = פאַוו | שפּיל / פּויזע = טאַגאַל | STOP = האַלטן | EXIT = אַרויסגאַנג | דורך Lululla"
 
 msgid "Play"
 msgstr "שפּיל"
@@ -236,6 +255,13 @@ msgstr "סעטטינגס"
 msgid "Settings functionality coming soon!"
 msgstr "סעטטינגס פאַנגקשאַנאַליטי קומט באַלד!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "סקיילינע וועבקאַמס איינסן שפּילן בלויז פֿון די בוקיי מיט די סטרימלינק ראַפּער פּלוגין (עניגמאַ 2-פּלוגין-extensions-streamlinkwrapper)."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "יאָוטובע סטרימינג איז ניט בנימצא"
+
 msgid "Technical error in Webcam.pl"
 msgstr "טעכניש טעות אין Webcam.pl"
 
@@ -269,14 +295,17 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "איר לויפן שוין די לעצטע ווערסיע: {}"
 
-msgid "YouTube playback error"
-msgstr "יאָוטובע פּלייבאַק טעות"
-
-msgid "YouTube stream not available"
-msgstr "יאָוטובע סטרימינג איז ניט בנימצא"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "יאָוטובע איינסן שפּילן פֿון די בוקיי בלויז מיט די yt-dlp ראַפּער פּלוגין (enigma2-plugin-extensions-ytdlpwrapper)."
 
 msgid "Your Favorites"
 msgstr "דיין פאַוואָריטעס"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "פאַוואָריטעס יקספּאָרטאַד הצלחה! ריסטאַרט Enigma2 צו זען זיי."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "יאָוטובע פּלייבאַק טעות"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "אומגילטיק יאָוטובע URL"

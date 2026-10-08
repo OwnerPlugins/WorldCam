@@ -134,11 +134,11 @@ msgstr "Eksportu Ĉion al Bukedo"
 msgid "Export failed:"
 msgstr "Eksporto malsukcesis:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "Eksportitaj %d retkameraoj al '%s'"
+
 msgid "Favorites"
 msgstr "Plej ŝatataj"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "Plej ŝatataj eksportitaj sukcese! Rekomencu Enigma2 por vidi ilin."
 
 msgid "File not found"
 msgstr "Dosiero ne trovita"
@@ -161,6 +161,14 @@ msgstr "Viva retkamerao-spektilo kun tutmondaj lokoj"
 msgid "Live webcams from around the world"
 msgstr "Vivaj retkameraoj el la tuta mondo"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "Ne eblis ĉerpi jutuban fluon"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "Ĝisdatigante..."
+
 msgid "Menu"
 msgstr "Menuo"
 
@@ -176,8 +184,19 @@ msgstr "Neniuj ludlistoj haveblaj"
 msgid "No playlists found"
 msgstr "Neniuj ludlistoj trovitaj"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "Neniuj ludlistoj trovitaj"
+
 msgid "No valid webcams in playlist"
 msgstr "Neniuj validaj retkameraoj en ludlisto"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "Neniuj ŝatatoj por eksporti"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "OK = Informoj | CH-/CH+ = Antaŭa/Sekva | BLUA = Fav | LUDO/PAUZO = Baskuligi | STOP = Haltu | EXIT = Eliro | de Lululla"
 
 msgid "Play"
 msgstr "Ludu"
@@ -237,6 +256,13 @@ msgstr "Agordoj"
 msgid "Settings functionality coming soon!"
 msgstr "Agordaj funkcioj baldaŭ venos!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "SkylineWebcams-enskriboj ludas el la bukedo nur per la kromaĵo streamlink wrapper (enigma2-plugin-extensions-streamlinkwrapper)."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "Jutuba rivereto ne havebla"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Teknika eraro en Webcam.pl"
 
@@ -270,14 +296,17 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "Vi jam funkcias la plej novan version: {}"
 
-msgid "YouTube playback error"
-msgstr "Jutuba reprodukta eraro"
-
-msgid "YouTube stream not available"
-msgstr "Jutuba rivereto ne havebla"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "Jutubaj enskriboj ludas el la bukedo nur per la yt-dlp-envolvilo kromaĵo (enigma2-plugin-extensions-ytdlpwrapper)."
 
 msgid "Your Favorites"
 msgstr "Viaj Favoritaj"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "Plej ŝatataj eksportitaj sukcese! Rekomencu Enigma2 por vidi ilin."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "Jutuba reprodukta eraro"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "Nevalida YouTube-URL"

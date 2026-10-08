@@ -133,11 +133,11 @@ msgstr "Hamisha Yote kwa Bouquet"
 msgid "Export failed:"
 msgstr "Imeshindwa kutuma:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "Imehamisha kamera za wavuti %d hadi '%s'"
+
 msgid "Favorites"
 msgstr "Vipendwa"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "Vipendwa vimehamishwa! Anzisha upya Enigma2 ili kuziona."
 
 msgid "File not found"
 msgstr "Faili haijapatikana"
@@ -160,6 +160,14 @@ msgstr "Kitazamaji cha moja kwa moja cha kamera ya wavuti kinachoangazia maeneo 
 msgid "Live webcams from around the world"
 msgstr "Kamera za wavuti moja kwa moja kutoka kote ulimwenguni"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "Haikuweza kutoa mtiririko wa YouTube"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "Inaboresha..."
+
 msgid "Menu"
 msgstr "Menyu"
 
@@ -175,8 +183,19 @@ msgstr "Hakuna orodha za kucheza zinazopatikana"
 msgid "No playlists found"
 msgstr "Hakuna orodha za kucheza zilizopatikana"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "Hakuna orodha za kucheza zilizopatikana"
+
 msgid "No valid webcams in playlist"
 msgstr "Hakuna kamera za wavuti halali katika orodha ya kucheza"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "Hakuna vipendwa vya kusafirisha"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "SAWA = Taarifa | CH-/CH+ = Iliyotangulia/Inayofuata | BLUU = Fav | CHEZA/SITISHA = Geuza | SIMAMA = Acha | ONDOKA = Toka | by Lululla"
 
 msgid "Play"
 msgstr "Cheza"
@@ -236,6 +255,13 @@ msgstr "Mipangilio"
 msgid "Settings functionality coming soon!"
 msgstr "Utendaji wa mipangilio unakuja hivi karibuni!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "Maingizo ya SkylineWebcams hucheza kutoka kwenye shada pekee kwa kutumia programu-jalizi ya kanga ya streamlink (enigma2-plugin-extensions-streamlinkwrapper)."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "Mtiririko wa YouTube haupatikani"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Hitilafu ya kiufundi katika Webcam.pl"
 
@@ -269,14 +295,17 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "Tayari unatumia toleo jipya zaidi: {}"
 
-msgid "YouTube playback error"
-msgstr "Hitilafu ya kucheza YouTube"
-
-msgid "YouTube stream not available"
-msgstr "Mtiririko wa YouTube haupatikani"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "Maingizo ya YouTube hucheza kutoka kwenye shada pekee kwa kutumia programu-jalizi ya yt-dlp (enigma2-plugin-extensions-ytdlpwrapper)."
 
 msgid "Your Favorites"
 msgstr "Vipendwa vyako"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "Vipendwa vimehamishwa! Anzisha upya Enigma2 ili kuziona."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "Hitilafu ya kucheza YouTube"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "URL ya YouTube si sahihi"

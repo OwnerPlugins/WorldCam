@@ -134,11 +134,11 @@ msgstr "ייצא הכל לזר"
 msgid "Export failed:"
 msgstr "הייצוא נכשל:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "ייצאו %d מצלמות אינטרנט אל '%s'"
+
 msgid "Favorites"
 msgstr "מועדפים"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "המועדפים יוצאו בהצלחה! הפעל מחדש את Enigma2 כדי לראות אותם."
 
 msgid "File not found"
 msgstr "הקובץ לא נמצא"
@@ -161,6 +161,14 @@ msgstr "מציג מצלמת אינטרנט חיה הכוללת מיקומים ג
 msgid "Live webcams from around the world"
 msgstr "מצלמות רשת חיות מכל העולם"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "לא ניתן היה לחלץ את זרם YouTube"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "משדרג..."
+
 msgid "Menu"
 msgstr "תַפרִיט"
 
@@ -176,8 +184,19 @@ msgstr "אין רשימות השמעה זמינות"
 msgid "No playlists found"
 msgstr "לא נמצאו רשימות השמעה"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "לא נמצאו רשימות השמעה"
+
 msgid "No valid webcams in playlist"
 msgstr "אין מצלמות אינטרנט חוקיות ברשימת ההשמעה"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "אין מועדפים לייצוא"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "אישור = מידע | CH-/CH+ = הקודם/הבא | כחול = Fav | PLAY/PAUSE = החלף | STOP = עצור | יציאה = יציאה | מאת לולולה"
 
 msgid "Play"
 msgstr "לְשַׂחֵק"
@@ -237,6 +256,13 @@ msgstr "הגדרות"
 msgid "Settings functionality coming soon!"
 msgstr "פונקציונליות ההגדרות בקרוב!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "ערכי SkylineWebcams משחקים מהזר רק עם תוסף ה-streamlink wrapper (enigma2-plugin-extensions-streamlinkwrapper)."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "זרם YouTube אינו זמין"
+
 msgid "Technical error in Webcam.pl"
 msgstr "שגיאה טכנית ב-Webcam.pl"
 
@@ -270,14 +296,17 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "אתה כבר מפעיל את הגרסה העדכנית ביותר: {}"
 
-msgid "YouTube playback error"
-msgstr "שגיאת הפעלה של YouTube"
-
-msgid "YouTube stream not available"
-msgstr "זרם YouTube אינו זמין"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "ערכים ביוטיוב פועלים מהזר רק עם התוסף yt-dlp wrapper (enigma2-plugin-extensions-ytdlpwrapper)."
 
 msgid "Your Favorites"
 msgstr "המועדפים שלך"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "המועדפים יוצאו בהצלחה! הפעל מחדש את Enigma2 כדי לראות אותם."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "שגיאת הפעלה של YouTube"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "כתובת אתר לא חוקית של YouTube"

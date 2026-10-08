@@ -134,11 +134,11 @@ msgstr "Exporteer alles naar Boeket"
 msgid "Export failed:"
 msgstr "Exporteren mislukt:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "%d webcams geëxporteerd naar '%s'"
+
 msgid "Favorites"
 msgstr "Favorieten"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "Favorieten zijn succesvol geëxporteerd! Start Enigma2 opnieuw om ze te zien."
 
 msgid "File not found"
 msgstr "Bestand niet gevonden"
@@ -161,6 +161,14 @@ msgstr "Live webcamviewer met wereldwijde locaties"
 msgid "Live webcams from around the world"
 msgstr "Live webcams van over de hele wereld"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "Kan YouTube-stream niet extraheren"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "Upgraden..."
+
 msgid "Menu"
 msgstr ""
 
@@ -176,8 +184,19 @@ msgstr "Geen afspeellijsten beschikbaar"
 msgid "No playlists found"
 msgstr "Geen afspeellijsten gevonden"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "Geen afspeellijsten gevonden"
+
 msgid "No valid webcams in playlist"
 msgstr "Geen geldige webcams in de afspeellijst"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "Geen favorieten om te exporteren"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "OK = Info | CH-/CH+ = Vorige/Volgende | BLAUW = Favoriet | AFSPELEN/PAUZE = Schakelen | STOPPEN = Stoppen | AFSLUITEN = Afsluiten | door Lululla"
 
 msgid "Play"
 msgstr "Toneelstuk"
@@ -237,6 +256,13 @@ msgstr "Instellingen"
 msgid "Settings functionality coming soon!"
 msgstr "Instellingenfunctionaliteit binnenkort beschikbaar!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "SkylineWebcams-inzendingen worden alleen vanuit het boeket afgespeeld met de streamlink-wrapper-plug-in (enigma2-plugin-extensions-streamlinkwrapper)."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "YouTube-stream niet beschikbaar"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Technische fout in Webcam.pl"
 
@@ -270,14 +296,17 @@ msgstr "WereldCam v{}"
 msgid "You are already running the latest version: {}"
 msgstr "U gebruikt al de nieuwste versie: {}"
 
-msgid "YouTube playback error"
-msgstr "YouTube-afspeelfout"
-
-msgid "YouTube stream not available"
-msgstr "YouTube-stream niet beschikbaar"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "YouTube-items worden alleen vanuit het boeket afgespeeld met de yt-dlp wrapper-plug-in (enigma2-plugin-extensions-ytdlpwrapper)."
 
 msgid "Your Favorites"
 msgstr "Je favorieten"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "Favorieten zijn succesvol geëxporteerd! Start Enigma2 opnieuw om ze te zien."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "YouTube-afspeelfout"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "Ongeldige YouTube-URL"

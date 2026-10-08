@@ -138,11 +138,11 @@ msgstr "Εξαγωγή όλων σε μπουκέτο"
 msgid "Export failed:"
 msgstr "Η εξαγωγή απέτυχε: "
 
+msgid "Exported %d webcams to '%s'"
+msgstr "Έγινε εξαγωγή %d webcam στο '%s'"
+
 msgid "Favorites"
 msgstr "Αγαπημένα"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "Τα αγαπημένα εξήχθησαν με επιτυχία! Επανεκκινήστε το Enigma2 για να τα δείτε."
 
 #, fuzzy
 msgid "File not found"
@@ -166,6 +166,14 @@ msgstr "Προβολή ζωντανών καμερών ιστού από τοπ�
 msgid "Live webcams from around the world"
 msgstr "Ζωντανές κάμερες ιστού από όλο τον κόσμο"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "Δεν ήταν δυνατή η εξαγωγή της ροής βίντεο"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "Αναβάθμιση..."
+
 msgid "Menu"
 msgstr "Μενού"
 
@@ -182,8 +190,19 @@ msgid "No playlists found"
 msgstr "Δεν βρέθηκαν λίστες αναπαραγωγής"
 
 #, fuzzy
+msgid "No valid streams found"
+msgstr "Δεν βρέθηκαν λίστες αναπαραγωγής"
+
+#, fuzzy
 msgid "No valid webcams in playlist"
 msgstr "- Τοπική λίστα καμερών ιστού"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "Δεν υπάρχουν αγαπημένα προς εξαγωγή"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "OK = Πληροφορίες | CH-/CH+ = Προηγούμενο/Επόμενο | ΜΠΛΕ = Αγαπημένο | PLAY/PAUSE = Εναλλαγή | STOP = Στάση | ΕΞΟΔΟΣ = Έξοδος | από τον Lululla"
 
 msgid "Play"
 msgstr "Αναπαραγωγή"
@@ -245,6 +264,13 @@ msgstr "Ρυθμίσεις"
 msgid "Settings functionality coming soon!"
 msgstr "Η λειτουργία Ρυθμίσεις έρχεται σύντομα!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "Οι καταχωρήσεις SkylineWebcams αναπαράγονται από το μπουκέτο μόνο με την προσθήκη streamlink wrapper (enigma2-plugin-extensions-streamlinkwrapper)."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "Η ροή YouTube δεν είναι διαθέσιμη"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Τεχνικό σφάλμα στο Webcam.pl"
 
@@ -278,15 +304,18 @@ msgstr "WorldCam v{}"
 msgid "You are already running the latest version: {}"
 msgstr "Χρησιμοποιείτε ήδη την πιο πρόσφατη έκδοση: {}"
 
-#, fuzzy
-msgid "YouTube playback error"
-msgstr "Όλες οι μέθοδοι αναπαραγωγής YouTube απέτυχαν!"
-
-msgid "YouTube stream not available"
-msgstr "Η ροή YouTube δεν είναι διαθέσιμη"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "Οι καταχωρίσεις στο YouTube παίζονται από το μπουκέτο μόνο με την προσθήκη yt-dlp wrapper (enigma2-plugin-extensions-ytdlpwrapper)."
 
 msgid "Your Favorites"
 msgstr "Τα αγαπημένα σας"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "Τα αγαπημένα εξήχθησαν με επιτυχία! Επανεκκινήστε το Enigma2 για να τα δείτε."
+
+#, fuzzy
+#~ msgid "YouTube playback error"
+#~ msgstr "Όλες οι μέθοδοι αναπαραγωγής YouTube απέτυχαν!"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "Μη έγκυρο URL YouTube"
