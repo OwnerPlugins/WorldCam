@@ -84,12 +84,28 @@ Safe use of cross-version libraries and methods, with automatic fallbacks.
 
 ## 🎥 YouTube Player Support
 
-The WorldCam plugin supports playing YouTube streams with three fallback mechanisms to ensure smooth playback:
+WorldCam plays YouTube streams using **yt-dlp** with a robust
+fallback chain, tuned for slow ARM/MIPS receivers:
 
-1. **Direct playback using yt\_dlp and eServiceReference**
-   The plugin tries to play YouTube videos directly by extracting the stream URL with yt\_dlp.
+1. **`android_vr` client first**  
+   It works without a JavaScript runtime and returns a muxed HLS
+   stream that Enigma2 players (4097 / 5001 / 5002) can handle.
 
-This ensures maximum compatibility and reliability for YouTube streams.
+2. **Default yt-dlp clients as fallback**  
+   If `android_vr` fails, yt-dlp uses its built-in defaults
+   (this path benefits from an installed JS runtime — see below).
+
+3. **Single-shot format chain**  
+   Instead of starting yt-dlp once per format (slow on receivers),
+   a single call tries `18/22/best[ext=mp4][protocol^=http]/best`
+   in order and returns the first available stream.
+
+Playback is **non-blocking**: yt-dlp runs in a worker thread
+(`twisted.internet.threads.deferToThread`), so the Enigma2 GUI
+stays responsive and the player is not killed by the watchdog.
+
+If resolution fails, the actual yt-dlp error is shown in the
+message box, instead of a generic "stream not available".
 
 ---
 
@@ -139,9 +155,11 @@ Place your local list file (for example, named `worldcam_list.txt`) inside the f
 ---
 
 ## ⚙️ Requirements
-- Enigma2 STB (Dreambox, Vu+, Zgemma, etc.)  
+
+- Enigma2 STB (Dreambox, Vu+, Zgemma, Ustym, Octagon, …)  
 - Active internet connection  
-- Python ≥ 3.0
+- Python ≥ 3.8  
+- **`yt-dlp`** (binary preferred, module also works):
 ---
 
 ## 🧪 Debug & Log
