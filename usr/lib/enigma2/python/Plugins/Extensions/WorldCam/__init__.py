@@ -38,7 +38,7 @@ __author__ = "Lululla"
 __email__ = "ekekaz@gmail.com"
 __copyright__ = 'Copyright (c) 2024 Lululla'
 __license__ = "GPL-v2"
-__version__ = "6.9"
+__version__ = "7.0"
 
 PLUGIN_VERSION = __version__
 PLUGIN_PATH = dirname(__file__)
