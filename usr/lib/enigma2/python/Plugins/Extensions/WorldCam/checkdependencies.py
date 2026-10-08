@@ -1,4 +1,5 @@
 import subprocess
+from importlib.util import find_spec
 from shutil import which
 from os.path import exists
 
@@ -49,11 +50,10 @@ def _has_ytdlp():
     for path in ("/usr/bin/yt-dlp", "/usr/local/bin/yt-dlp"):
         if exists(path):
             return True
-    # Fallback: python module
+    # Fallback: python module (found without importing it: slow)
     try:
-        from yt_dlp import YoutubeDL  # noqa: F401
-        return True
-    except ImportError:
+        return find_spec("yt_dlp") is not None
+    except Exception:
         return False
 
 
@@ -71,12 +71,6 @@ def check_requirements(logger=None):
     # streamlink (binary)
     if which("streamlink") is None:
         missing.append("streamlink")
-
-    # requests (Python module)
-    try:
-        import requests  # noqa: F401
-    except ImportError:
-        missing.append("requests")
 
     if logger and missing:
         logger.warning("Missing optional components: " + ", ".join(missing))
