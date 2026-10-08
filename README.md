@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/Belfagor2005/WorldCam">
-    <img src="https://img.shields.io/badge/Version-6.8-blue.svg" alt="Version">
+    <img src="https://img.shields.io/badge/Version-6.9-blue.svg" alt="Version">
   </a>
   <a href="https://www.enigma2.net">
     <img src="https://img.shields.io/badge/Enigma2-Plugin-ff6600.svg" alt="Enigma2">
