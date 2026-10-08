@@ -59,9 +59,6 @@ msgstr "Vaihda kieli"
 msgid "Continents"
 msgstr "maanosat"
 
-msgid "Could not extract YouTube stream"
-msgstr "YouTube-streamia ei voitu purkaa"
-
 msgid "Could not extract video stream"
 msgstr "Videovirtaa ei voitu purkaa"
 
@@ -155,9 +152,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Mukana olevat soittolistat ja lähteet:"
 
-msgid "Invalid YouTube URL"
-msgstr "Virheellinen YouTube-URL-osoite"
-
 msgid "Language changed to %s"
 msgstr "Kieleksi vaihdettiin %s"
 
@@ -211,6 +205,10 @@ msgstr "Poistettu suosikeista"
 
 msgid "Removed from favorites: %s"
 msgstr "Poistettu suosikeista: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "YouTube-streamia ei voitu purkaa"
 
 msgid "Select"
 msgstr "Valitse"
@@ -275,8 +273,14 @@ msgstr "Käytössäsi on jo uusin versio: {}"
 msgid "YouTube playback error"
 msgstr "YouTube-toistovirhe"
 
+msgid "YouTube stream not available"
+msgstr "YouTube-stream ei ole käytettävissä"
+
 msgid "Your Favorites"
 msgstr "Omat suosikit"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp ei löydy. Asenna se."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "Virheellinen YouTube-URL-osoite"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp ei löydy. Asenna se."

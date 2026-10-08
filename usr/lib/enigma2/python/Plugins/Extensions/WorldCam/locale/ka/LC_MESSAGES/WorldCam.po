@@ -58,9 +58,6 @@ msgstr "ენის შეცვლა"
 msgid "Continents"
 msgstr "კონტინენტები"
 
-msgid "Could not extract YouTube stream"
-msgstr "YouTube ნაკადის ამოღება ვერ მოხერხდა"
-
 msgid "Could not extract video stream"
 msgstr "ვიდეო ნაკადის ამოღება ვერ მოხერხდა"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "მოყვება დასაკრავი სიები და წყაროები:"
 
-msgid "Invalid YouTube URL"
-msgstr "არასწორი YouTube URL"
-
 msgid "Language changed to %s"
 msgstr "ენა შეიცვალა %s-ით"
 
@@ -210,6 +204,10 @@ msgstr "ამოღებულია რჩეულებიდან"
 
 msgid "Removed from favorites: %s"
 msgstr "წაშლილია რჩეულებიდან: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "YouTube ნაკადის ამოღება ვერ მოხერხდა"
 
 msgid "Select"
 msgstr "აირჩიეთ"
@@ -274,8 +272,14 @@ msgstr "თქვენ უკვე იყენებთ უახლეს �
 msgid "YouTube playback error"
 msgstr "YouTube დაკვრის შეცდომა"
 
+msgid "YouTube stream not available"
+msgstr "YouTube ნაკადი მიუწვდომელია"
+
 msgid "Your Favorites"
 msgstr "შენი რჩეულები"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp ვერ მოიძებნა. გთხოვთ დააინსტალიროთ."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "არასწორი YouTube URL"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp ვერ მოიძებნა. გთხოვთ დააინსტალიროთ."

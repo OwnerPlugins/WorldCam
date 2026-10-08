@@ -53,10 +53,6 @@ msgstr "Zmień język"
 msgid "Continents"
 msgstr "Kontynenty"
 
-#, fuzzy
-msgid "Could not extract YouTube stream"
-msgstr "Nie można wyodrębnić strumienia wideo"
-
 msgid "Could not extract video stream"
 msgstr "Nie można wyodrębnić strumienia wideo"
 
@@ -153,9 +149,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Dołączone listy odtwarzania i źródła:"
 
-msgid "Invalid YouTube URL"
-msgstr "Nieprawidłowy adres URL YouTube"
-
 msgid "Language changed to %s"
 msgstr "Język %s  wybrany."
 
@@ -211,6 +204,10 @@ msgstr "Usunięto z ulubionych"
 
 msgid "Removed from favorites: %s"
 msgstr "Usunięto z ulubionych: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Nie można wyodrębnić strumienia wideo"
 
 msgid "Select"
 msgstr "Wybierz"
@@ -276,11 +273,17 @@ msgstr "Używasz już najnowszej wersji: {}"
 msgid "YouTube playback error"
 msgstr "Wszystkie metody odtwarzania YouTube nie powiodły się!"
 
+msgid "YouTube stream not available"
+msgstr "Transmisja YouTube nie jest dostępna"
+
 msgid "Your Favorites"
 msgstr "Twoje ulubione"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "Nie znaleziono yt-dlp. Zainstaluj go."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "Nieprawidłowy adres URL YouTube"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "Nie znaleziono yt-dlp. Zainstaluj go."
 
 #~ msgid "Update yt-dlp"
 #~ msgstr "Aktualizuj yt-dlp"

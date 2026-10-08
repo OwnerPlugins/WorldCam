@@ -58,9 +58,6 @@ msgstr "Dil üýtgetmek"
 msgid "Continents"
 msgstr "Kontinentler"
 
-msgid "Could not extract YouTube stream"
-msgstr "YouTube akymyny alyp bolmady"
-
 msgid "Could not extract video stream"
 msgstr "Wideo akymyny alyp bolmady"
 
@@ -154,9 +151,6 @@ msgstr "GitHub:% s"
 msgid "Included playlists and sources:"
 msgstr "Goşulan sanaw sanawlary we çeşmeler:"
 
-msgid "Invalid YouTube URL"
-msgstr "Nädogry YouTube URL"
-
 msgid "Language changed to %s"
 msgstr "Dil% s üýtgedi"
 
@@ -210,6 +204,10 @@ msgstr "Halanýanlardan aýryldy"
 
 msgid "Removed from favorites: %s"
 msgstr "Halanýanlardan aýryldy:% s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "YouTube akymyny alyp bolmady"
 
 msgid "Select"
 msgstr "Saýlaň"
@@ -274,8 +272,14 @@ msgstr "Iň soňky wersiýasyny eýýäm işleýärsiňiz: {}"
 msgid "YouTube playback error"
 msgstr "YouTube oýnamak ýalňyşlygy"
 
+msgid "YouTube stream not available"
+msgstr "YouTube akymy elýeterli däl"
+
 msgid "Your Favorites"
 msgstr "Halaýanlaryňyz"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp tapylmady Gurnamagyňyzy haýyş edýäris."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "Nädogry YouTube URL"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp tapylmady Gurnamagyňyzy haýyş edýäris."

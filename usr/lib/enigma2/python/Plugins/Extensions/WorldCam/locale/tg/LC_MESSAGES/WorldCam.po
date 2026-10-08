@@ -58,9 +58,6 @@ msgstr "Забонро иваз кунед"
 msgid "Continents"
 msgstr "Қитъаҳо"
 
-msgid "Could not extract YouTube stream"
-msgstr "Ҷараёни YouTube-ро истихроҷ карда натавонист"
-
 msgid "Could not extract video stream"
 msgstr "Ҷараёни видеоро гирифта натавонист"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Рӯйхати навозишҳо ва манбаъҳои дохилшуда:"
 
-msgid "Invalid YouTube URL"
-msgstr "URL-и YouTube нодуруст"
-
 msgid "Language changed to %s"
 msgstr "Забон ба %s иваз карда шуд"
 
@@ -210,6 +204,10 @@ msgstr "Аз дӯстдоштаҳо хориҷ карда шуд"
 
 msgid "Removed from favorites: %s"
 msgstr "Аз дӯстдоштаҳо хориҷ карда шуд: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Ҷараёни YouTube-ро истихроҷ карда натавонист"
 
 msgid "Select"
 msgstr "Интихоб кунед"
@@ -274,8 +272,14 @@ msgstr "Шумо аллакай версияи охиринро иҷро кар�
 msgid "YouTube playback error"
 msgstr "Хатогии бозикунии YouTube"
 
+msgid "YouTube stream not available"
+msgstr "Ҷараёни YouTube дастрас нест"
+
 msgid "Your Favorites"
 msgstr "Дӯстдоштаи шумо"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp ёфт нашуд. Лутфан онро насб кунед."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "URL-и YouTube нодуруст"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp ёфт нашуд. Лутфан онро насб кунед."

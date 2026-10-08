@@ -58,9 +58,6 @@ msgstr "更改語言"
 msgid "Continents"
 msgstr "大陸"
 
-msgid "Could not extract YouTube stream"
-msgstr "無法提取 YouTube 串流"
-
 msgid "Could not extract video stream"
 msgstr "無法提取視訊串流"
 
@@ -154,9 +151,6 @@ msgstr "GitHub：%s"
 msgid "Included playlists and sources:"
 msgstr "包含的播放清單和來源："
 
-msgid "Invalid YouTube URL"
-msgstr "YouTube 網址無效"
-
 msgid "Language changed to %s"
 msgstr "語言更改為 %s"
 
@@ -210,6 +204,10 @@ msgstr "已從收藏夾中刪除"
 
 msgid "Removed from favorites: %s"
 msgstr "已從收藏夾中刪除：%s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "無法提取 YouTube 串流"
 
 msgid "Select"
 msgstr "選擇"
@@ -274,8 +272,14 @@ msgstr "您已經在執行最新版本：{}"
 msgid "YouTube playback error"
 msgstr "YouTube 播放錯誤"
 
+msgid "YouTube stream not available"
+msgstr "YouTube 串流不可用"
+
 msgid "Your Favorites"
 msgstr "您的最愛"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "未找到 yt-dlp。請安裝它。"
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "YouTube 網址無效"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "未找到 yt-dlp。請安裝它。"

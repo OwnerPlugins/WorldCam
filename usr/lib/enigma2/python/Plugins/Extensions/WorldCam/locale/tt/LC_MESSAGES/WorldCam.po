@@ -58,9 +58,6 @@ msgstr "Телне үзгәртү"
 msgid "Continents"
 msgstr "Континентлар"
 
-msgid "Could not extract YouTube stream"
-msgstr "YouTube агымын чыгарып булмады"
-
 msgid "Could not extract video stream"
 msgstr "Видео агымны чыгарып булмады"
 
@@ -154,9 +151,6 @@ msgstr "GitHub:% s"
 msgid "Included playlists and sources:"
 msgstr "Плейлистлар һәм чыганаклар кертелгән:"
 
-msgid "Invalid YouTube URL"
-msgstr "Ярак YouTube URL"
-
 msgid "Language changed to %s"
 msgstr "Тел% s итеп үзгәрде"
 
@@ -210,6 +204,10 @@ msgstr "Фаворитлардан алынды"
 
 msgid "Removed from favorites: %s"
 msgstr "Фаворитлардан алынды:% s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "YouTube агымын чыгарып булмады"
 
 msgid "Select"
 msgstr "Сайлагыз"
@@ -274,8 +272,14 @@ msgstr "Сез инде соңгы версияне эшлисез: {}"
 msgid "YouTube playback error"
 msgstr "YouTube уйнау хата"
 
+msgid "YouTube stream not available"
+msgstr "YouTube агымы мөмкин түгел"
+
 msgid "Your Favorites"
 msgstr "Сезнең яратканнарыгыз"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp табылмады. Зинһар, урнаштырыгыз."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "Ярак YouTube URL"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp табылмады. Зинһар, урнаштырыгыз."

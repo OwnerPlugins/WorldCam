@@ -58,9 +58,6 @@ msgstr "Tukar bahasa"
 msgid "Continents"
 msgstr "benua"
 
-msgid "Could not extract YouTube stream"
-msgstr "Tidak dapat mengeluarkan strim YouTube"
-
 msgid "Could not extract video stream"
 msgstr "Tidak dapat mengeluarkan strim video"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Senarai main dan sumber yang disertakan:"
 
-msgid "Invalid YouTube URL"
-msgstr "URL YouTube tidak sah"
-
 msgid "Language changed to %s"
 msgstr "Bahasa ditukar kepada %s"
 
@@ -210,6 +204,10 @@ msgstr "Dialih keluar daripada kegemaran"
 
 msgid "Removed from favorites: %s"
 msgstr "Dialih keluar daripada kegemaran: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Tidak dapat mengeluarkan strim YouTube"
 
 msgid "Select"
 msgstr "Pilih"
@@ -274,8 +272,14 @@ msgstr "Anda sudah pun menjalankan versi terkini: {}"
 msgid "YouTube playback error"
 msgstr "Ralat main balik YouTube"
 
+msgid "YouTube stream not available"
+msgstr "Strim YouTube tidak tersedia"
+
 msgid "Your Favorites"
 msgstr "Kegemaran Anda"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp tidak ditemui. Sila pasang."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "URL YouTube tidak sah"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp tidak ditemui. Sila pasang."

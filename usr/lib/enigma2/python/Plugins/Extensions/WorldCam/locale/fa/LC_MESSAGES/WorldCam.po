@@ -58,9 +58,6 @@ msgstr "تغییر زبان"
 msgid "Continents"
 msgstr "قاره ها"
 
-msgid "Could not extract YouTube stream"
-msgstr "پخش جریانی YouTube استخراج نشد"
-
 msgid "Could not extract video stream"
 msgstr "پخش جریانی ویدیو استخراج نشد"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "فهرست‌های پخش و منابع موجود:"
 
-msgid "Invalid YouTube URL"
-msgstr "URL YouTube نامعتبر است"
-
 msgid "Language changed to %s"
 msgstr "زبان به %s تغییر کرد"
 
@@ -210,6 +204,10 @@ msgstr "از موارد دلخواه حذف شد"
 
 msgid "Removed from favorites: %s"
 msgstr "از موارد دلخواه حذف شد: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "پخش جریانی YouTube استخراج نشد"
 
 msgid "Select"
 msgstr "انتخاب کنید"
@@ -274,8 +272,14 @@ msgstr "شما در حال حاضر آخرین نسخه را اجرا می کن�
 msgid "YouTube playback error"
 msgstr "خطای پخش YouTube"
 
+msgid "YouTube stream not available"
+msgstr "پخش جریانی YouTube در دسترس نیست"
+
 msgid "Your Favorites"
 msgstr "موارد دلخواه شما"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp پیدا نشد. لطفا آن را نصب کنید."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "URL YouTube نامعتبر است"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp پیدا نشد. لطفا آن را نصب کنید."

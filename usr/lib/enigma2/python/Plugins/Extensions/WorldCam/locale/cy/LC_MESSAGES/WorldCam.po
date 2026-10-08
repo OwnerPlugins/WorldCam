@@ -58,9 +58,6 @@ msgstr "Newid iaith"
 msgid "Continents"
 msgstr "Cyfandiroedd"
 
-msgid "Could not extract YouTube stream"
-msgstr "Methu echdynnu ffrwd YouTube"
-
 msgid "Could not extract video stream"
 msgstr "Methu echdynnu ffrwd fideo"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Wedi cynnwys rhestri chwarae a ffynonellau:"
 
-msgid "Invalid YouTube URL"
-msgstr "URL YouTube annilys"
-
 msgid "Language changed to %s"
 msgstr "Iaith wedi newid i %s"
 
@@ -210,6 +204,10 @@ msgstr "Wedi'i dynnu o'r ffefrynnau"
 
 msgid "Removed from favorites: %s"
 msgstr "Wedi'i dynnu o'r ffefrynnau: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Methu echdynnu ffrwd YouTube"
 
 msgid "Select"
 msgstr "Dewiswch"
@@ -274,8 +272,14 @@ msgstr "Rydych chi eisoes yn rhedeg y fersiwn diweddaraf: {}"
 msgid "YouTube playback error"
 msgstr "Gwall chwarae YouTube"
 
+msgid "YouTube stream not available"
+msgstr "Nid yw ffrwd YouTube ar gael"
+
 msgid "Your Favorites"
 msgstr "Eich Ffefrynnau"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp heb ei ganfod. Os gwelwch yn dda gosod."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "URL YouTube annilys"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp heb ei ganfod. Os gwelwch yn dda gosod."

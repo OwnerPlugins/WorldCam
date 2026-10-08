@@ -58,9 +58,6 @@ msgstr "ഭാഷ മാറ്റുക"
 msgid "Continents"
 msgstr "ഭൂഖണ്ഡങ്ങൾ"
 
-msgid "Could not extract YouTube stream"
-msgstr "YouTube സ്ട്രീം എക്‌സ്‌ട്രാക്‌റ്റുചെയ്യാനായില്ല"
-
 msgid "Could not extract video stream"
 msgstr "വീഡിയോ സ്ട്രീം എക്‌സ്‌ട്രാക്‌റ്റുചെയ്യാനായില്ല"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "ഉൾപ്പെടുത്തിയ പ്ലേലിസ്റ്റുകളും ഉറവിടങ്ങളും:"
 
-msgid "Invalid YouTube URL"
-msgstr "അസാധുവായ YouTube URL"
-
 msgid "Language changed to %s"
 msgstr "ഭാഷ %s എന്നാക്കി മാറ്റി"
 
@@ -210,6 +204,10 @@ msgstr "പ്രിയപ്പെട്ടവയിൽ നിന്ന് ന�
 
 msgid "Removed from favorites: %s"
 msgstr "പ്രിയപ്പെട്ടവയിൽ നിന്ന് നീക്കംചെയ്‌തു: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "YouTube സ്ട്രീം എക്‌സ്‌ട്രാക്‌റ്റുചെയ്യാനായില്ല"
 
 msgid "Select"
 msgstr "തിരഞ്ഞെടുക്കുക"
@@ -274,8 +272,14 @@ msgstr "നിങ്ങൾ ഇതിനകം ഏറ്റവും പുതി
 msgid "YouTube playback error"
 msgstr "YouTube പ്ലേബാക്ക് പിശക്"
 
+msgid "YouTube stream not available"
+msgstr "YouTube സ്ട്രീം ലഭ്യമല്ല"
+
 msgid "Your Favorites"
 msgstr "നിങ്ങളുടെ പ്രിയപ്പെട്ടവ"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp കണ്ടെത്തിയില്ല. ദയവായി ഇത് ഇൻസ്റ്റാൾ ചെയ്യുക."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "അസാധുവായ YouTube URL"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp കണ്ടെത്തിയില്ല. ദയവായി ഇത് ഇൻസ്റ്റാൾ ചെയ്യുക."

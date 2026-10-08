@@ -58,9 +58,6 @@ msgstr "Verander taal"
 msgid "Continents"
 msgstr "Kontinente"
 
-msgid "Could not extract YouTube stream"
-msgstr "Kon nie YouTube-stroom onttrek nie"
-
 msgid "Could not extract video stream"
 msgstr "Kon nie videostroom onttrek nie"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Ingesluit snitlyste en bronne:"
 
-msgid "Invalid YouTube URL"
-msgstr "Ongeldige YouTube-URL"
-
 msgid "Language changed to %s"
 msgstr "Taal verander na %s"
 
@@ -210,6 +204,10 @@ msgstr "Uit gunstelinge verwyder"
 
 msgid "Removed from favorites: %s"
 msgstr "Uit gunstelinge verwyder: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Kon nie YouTube-stroom onttrek nie"
 
 msgid "Select"
 msgstr "Kies"
@@ -274,8 +272,14 @@ msgstr "Jy gebruik reeds die nuutste weergawe: {}"
 msgid "YouTube playback error"
 msgstr "YouTube-terugspeelfout"
 
+msgid "YouTube stream not available"
+msgstr "YouTube-stroom nie beskikbaar nie"
+
 msgid "Your Favorites"
 msgstr "Jou gunstelinge"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp nie gevind nie. Installeer dit asseblief."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "Ongeldige YouTube-URL"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp nie gevind nie. Installeer dit asseblief."

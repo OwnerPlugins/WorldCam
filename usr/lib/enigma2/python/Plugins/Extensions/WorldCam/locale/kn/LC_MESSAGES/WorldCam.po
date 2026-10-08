@@ -58,9 +58,6 @@ msgstr "ಭಾಷೆಯನ್ನು ಬದಲಾಯಿಸಿ"
 msgid "Continents"
 msgstr "ಖಂಡಗಳು"
 
-msgid "Could not extract YouTube stream"
-msgstr "YouTube ಸ್ಟ್ರೀಮ್ ಅನ್ನು ಹೊರತೆಗೆಯಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ"
-
 msgid "Could not extract video stream"
 msgstr "ವೀಡಿಯೊ ಸ್ಟ್ರೀಮ್ ಅನ್ನು ಹೊರತೆಗೆಯಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "ಪ್ಲೇಪಟ್ಟಿಗಳು ಮತ್ತು ಮೂಲಗಳನ್ನು ಸೇರಿಸಲಾಗಿದೆ:"
 
-msgid "Invalid YouTube URL"
-msgstr "ಅಮಾನ್ಯವಾದ YouTube URL"
-
 msgid "Language changed to %s"
 msgstr "ಭಾಷೆಯನ್ನು %s ಗೆ ಬದಲಾಯಿಸಲಾಗಿದೆ"
 
@@ -210,6 +204,10 @@ msgstr "ಮೆಚ್ಚಿನವುಗಳಿಂದ ತೆಗೆದುಹಾಕ�
 
 msgid "Removed from favorites: %s"
 msgstr "ಮೆಚ್ಚಿನವುಗಳಿಂದ ತೆಗೆದುಹಾಕಲಾಗಿದೆ: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "YouTube ಸ್ಟ್ರೀಮ್ ಅನ್ನು ಹೊರತೆಗೆಯಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ"
 
 msgid "Select"
 msgstr "ಆಯ್ಕೆ ಮಾಡಿ"
@@ -274,8 +272,14 @@ msgstr "ನೀವು ಈಗಾಗಲೇ ಇತ್ತೀಚಿನ ಆವೃತ್
 msgid "YouTube playback error"
 msgstr "YouTube ಪ್ಲೇಬ್ಯಾಕ್ ದೋಷ"
 
+msgid "YouTube stream not available"
+msgstr "YouTube ಸ್ಟ್ರೀಮ್ ಲಭ್ಯವಿಲ್ಲ"
+
 msgid "Your Favorites"
 msgstr "ನಿಮ್ಮ ಮೆಚ್ಚಿನವುಗಳು"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp ಕಂಡುಬಂದಿಲ್ಲ. ದಯವಿಟ್ಟು ಅದನ್ನು ಸ್ಥಾಪಿಸಿ."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "ಅಮಾನ್ಯವಾದ YouTube URL"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp ಕಂಡುಬಂದಿಲ್ಲ. ದಯವಿಟ್ಟು ಅದನ್ನು ಸ್ಥಾಪಿಸಿ."

@@ -59,9 +59,6 @@ msgstr "Keisti kalbą"
 msgid "Continents"
 msgstr "Žemynai"
 
-msgid "Could not extract YouTube stream"
-msgstr "Nepavyko išskleisti „YouTube“ srauto"
-
 msgid "Could not extract video stream"
 msgstr "Nepavyko išgauti vaizdo srauto"
 
@@ -155,9 +152,6 @@ msgstr "„GitHub“: %s"
 msgid "Included playlists and sources:"
 msgstr "Įtraukti grojaraščiai ir šaltiniai:"
 
-msgid "Invalid YouTube URL"
-msgstr "Netinkamas „YouTube“ URL"
-
 msgid "Language changed to %s"
 msgstr "Kalba pakeista į %s"
 
@@ -211,6 +205,10 @@ msgstr "Pašalinta iš mėgstamiausių"
 
 msgid "Removed from favorites: %s"
 msgstr "Pašalinta iš mėgstamiausių: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Nepavyko išskleisti „YouTube“ srauto"
 
 msgid "Select"
 msgstr "Pasirinkite"
@@ -275,8 +273,14 @@ msgstr "Jau naudojate naujausią versiją: {}"
 msgid "YouTube playback error"
 msgstr "„YouTube“ atkūrimo klaida"
 
+msgid "YouTube stream not available"
+msgstr "„YouTube“ srautas nepasiekiamas"
+
 msgid "Your Favorites"
 msgstr "Jūsų mėgstamiausi"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp nerastas. Įdiekite jį."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "Netinkamas „YouTube“ URL"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp nerastas. Įdiekite jį."

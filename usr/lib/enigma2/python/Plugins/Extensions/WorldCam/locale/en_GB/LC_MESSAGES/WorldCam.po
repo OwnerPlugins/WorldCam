@@ -58,9 +58,6 @@ msgstr ""
 msgid "Continents"
 msgstr ""
 
-msgid "Could not extract YouTube stream"
-msgstr ""
-
 msgid "Could not extract video stream"
 msgstr ""
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr ""
 
-msgid "Invalid YouTube URL"
-msgstr ""
-
 msgid "Language changed to %s"
 msgstr ""
 
@@ -209,6 +203,9 @@ msgid "Removed from favorites"
 msgstr ""
 
 msgid "Removed from favorites: %s"
+msgstr ""
+
+msgid "Resolving YouTube stream..."
 msgstr ""
 
 msgid "Select"
@@ -274,8 +271,8 @@ msgstr ""
 msgid "YouTube playback error"
 msgstr ""
 
-msgid "Your Favorites"
+msgid "YouTube stream not available"
 msgstr ""
 
-msgid "yt-dlp not found. Please install it."
+msgid "Your Favorites"
 msgstr ""

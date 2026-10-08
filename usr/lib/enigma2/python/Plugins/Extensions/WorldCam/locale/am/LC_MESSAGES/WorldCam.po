@@ -58,9 +58,6 @@ msgstr "ቋንቋ ቀይር"
 msgid "Continents"
 msgstr "አህጉራት"
 
-msgid "Could not extract YouTube stream"
-msgstr "የዩቲዩብ ዥረት ማውጣት አልተቻለም"
-
 msgid "Could not extract video stream"
 msgstr "የቪዲዮ ዥረት ማውጣት አልተቻለም"
 
@@ -154,9 +151,6 @@ msgstr "GitHub፡ %s"
 msgid "Included playlists and sources:"
 msgstr "የተካተቱ አጫዋች ዝርዝሮች እና ምንጮች፡-"
 
-msgid "Invalid YouTube URL"
-msgstr "ልክ ያልሆነ የዩቲዩብ ዩአርኤል"
-
 msgid "Language changed to %s"
 msgstr "ቋንቋ ወደ %s ተቀይሯል።"
 
@@ -210,6 +204,10 @@ msgstr "ከተወዳጆች ተወግዷል"
 
 msgid "Removed from favorites: %s"
 msgstr "ከተወዳጆች ተወግዷል፡ %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "የዩቲዩብ ዥረት ማውጣት አልተቻለም"
 
 msgid "Select"
 msgstr "ይምረጡ"
@@ -274,8 +272,14 @@ msgstr "አስቀድመው የቅርብ ጊዜውን ስሪት እያሄዱ ነ�
 msgid "YouTube playback error"
 msgstr "የዩቲዩብ መልሶ ማጫወት ስህተት"
 
+msgid "YouTube stream not available"
+msgstr "የዩቲዩብ ዥረት አይገኝም"
+
 msgid "Your Favorites"
 msgstr "የእርስዎ ተወዳጆች"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp አልተገኘም። እባክዎ ይጫኑት።"
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "ልክ ያልሆነ የዩቲዩብ ዩአርኤል"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp አልተገኘም። እባክዎ ይጫኑት።"

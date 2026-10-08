@@ -58,9 +58,6 @@ msgstr "เปลี่ยนภาษา"
 msgid "Continents"
 msgstr "ทวีป"
 
-msgid "Could not extract YouTube stream"
-msgstr "ไม่สามารถแยกสตรีม YouTube ได้"
-
 msgid "Could not extract video stream"
 msgstr "ไม่สามารถแยกสตรีมวิดีโอได้"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "เพลย์ลิสต์และแหล่งที่มาที่รวมไว้:"
 
-msgid "Invalid YouTube URL"
-msgstr "URL ของ YouTube ไม่ถูกต้อง"
-
 msgid "Language changed to %s"
 msgstr "ภาษาเปลี่ยนเป็น %s"
 
@@ -210,6 +204,10 @@ msgstr "ลบออกจากรายการโปรดแล้ว"
 
 msgid "Removed from favorites: %s"
 msgstr "ลบออกจากรายการโปรด: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "ไม่สามารถแยกสตรีม YouTube ได้"
 
 msgid "Select"
 msgstr "เลือก"
@@ -274,8 +272,14 @@ msgstr "คุณกำลังใช้งานเวอร์ชันล่
 msgid "YouTube playback error"
 msgstr "ข้อผิดพลาดในการเล่น YouTube"
 
+msgid "YouTube stream not available"
+msgstr "สตรีม YouTube ไม่พร้อมใช้งาน"
+
 msgid "Your Favorites"
 msgstr "รายการโปรดของคุณ"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "ไม่พบ yt-dlp กรุณาติดตั้ง."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "URL ของ YouTube ไม่ถูกต้อง"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "ไม่พบ yt-dlp กรุณาติดตั้ง."

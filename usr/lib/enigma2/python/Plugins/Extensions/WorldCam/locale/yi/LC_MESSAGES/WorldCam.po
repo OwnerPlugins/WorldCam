@@ -58,9 +58,6 @@ msgstr "טוישן שפּראַך"
 msgid "Continents"
 msgstr "קאָנטינענץ"
 
-msgid "Could not extract YouTube stream"
-msgstr "קען נישט עקסטראַקט יאָוטובע סטרים"
-
 msgid "Could not extract video stream"
 msgstr "קען נישט עקסטראַקט ווידעא סטרים"
 
@@ -154,9 +151,6 @@ msgstr "גיטהוב: %s"
 msgid "Included playlists and sources:"
 msgstr "אַרייַנגערעכנט פּלייַליסץ און מקורים:"
 
-msgid "Invalid YouTube URL"
-msgstr "אומגילטיק יאָוטובע URL"
-
 msgid "Language changed to %s"
 msgstr "שפּראַך געביטן צו %s"
 
@@ -210,6 +204,10 @@ msgstr "אַוועקגענומען פון פאַוואָריטעס"
 
 msgid "Removed from favorites: %s"
 msgstr "אַוועקגענומען פון פאַוואָריטעס: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "קען נישט עקסטראַקט יאָוטובע סטרים"
 
 msgid "Select"
 msgstr "אויסקלייַבן"
@@ -274,8 +272,14 @@ msgstr "איר לויפן שוין די לעצטע ווערסיע: {}"
 msgid "YouTube playback error"
 msgstr "יאָוטובע פּלייבאַק טעות"
 
+msgid "YouTube stream not available"
+msgstr "יאָוטובע סטרימינג איז ניט בנימצא"
+
 msgid "Your Favorites"
 msgstr "דיין פאַוואָריטעס"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp ניט געפֿונען. ביטע ינסטאַלירן עס."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "אומגילטיק יאָוטובע URL"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp ניט געפֿונען. ביטע ינסטאַלירן עס."

@@ -59,9 +59,6 @@ msgstr "Промени језик"
 msgid "Continents"
 msgstr "Континенти"
 
-msgid "Could not extract YouTube stream"
-msgstr "Није могуће издвојити ИоуТубе стрим"
-
 msgid "Could not extract video stream"
 msgstr "Није могуће издвојити видео стрим"
 
@@ -155,9 +152,6 @@ msgstr "ГитХуб: %с"
 msgid "Included playlists and sources:"
 msgstr "Укључене плејлисте и извори:"
 
-msgid "Invalid YouTube URL"
-msgstr "Неважећи ИоуТубе УРЛ"
-
 msgid "Language changed to %s"
 msgstr "Језик је промењен у %с"
 
@@ -211,6 +205,10 @@ msgstr "Уклоњено из омиљених"
 
 msgid "Removed from favorites: %s"
 msgstr "Уклоњено из омиљених: %с"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Није могуће издвојити ИоуТубе стрим"
 
 msgid "Select"
 msgstr "Изаберите"
@@ -275,8 +273,14 @@ msgstr "Већ користите најновију верзију: {}"
 msgid "YouTube playback error"
 msgstr "Грешка при репродукцији на ИоуТубе-у"
 
+msgid "YouTube stream not available"
+msgstr "ИоуТубе стрим није доступан"
+
 msgid "Your Favorites"
 msgstr "Ваши фаворити"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "ит-длп није пронађен. Молимо вас да га инсталирате."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "Неважећи ИоуТубе УРЛ"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "ит-длп није пронађен. Молимо вас да га инсталирате."

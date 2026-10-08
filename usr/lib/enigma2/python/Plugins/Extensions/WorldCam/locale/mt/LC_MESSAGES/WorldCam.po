@@ -58,9 +58,6 @@ msgstr "Ibdel il-lingwa"
 msgid "Continents"
 msgstr "Kontinenti"
 
-msgid "Could not extract YouTube stream"
-msgstr "Ma setax estratt YouTube stream"
-
 msgid "Could not extract video stream"
 msgstr "Ma setax estratt nixxiegħa tal-vidjo"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Playlists u sorsi inklużi:"
 
-msgid "Invalid YouTube URL"
-msgstr "URL YouTube mhux validu"
-
 msgid "Language changed to %s"
 msgstr "Lingwa nbidlet għal %s"
 
@@ -210,6 +204,10 @@ msgstr "Imneħħija mill-favoriti"
 
 msgid "Removed from favorites: %s"
 msgstr "Imneħħi mill-favoriti: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Ma setax estratt YouTube stream"
 
 msgid "Select"
 msgstr "Agħżel"
@@ -274,8 +272,14 @@ msgstr "Diġà qed tħaddem l-aħħar verżjoni: {}"
 msgid "YouTube playback error"
 msgstr "Żball fil-plejbek ta' YouTube"
 
+msgid "YouTube stream not available"
+msgstr "Il-fluss ta' YouTube mhux disponibbli"
+
 msgid "Your Favorites"
 msgstr "Il-favoriti tiegħek"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp ma nstabx. Jekk jogħġbok installah."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "URL YouTube mhux validu"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp ma nstabx. Jekk jogħġbok installah."

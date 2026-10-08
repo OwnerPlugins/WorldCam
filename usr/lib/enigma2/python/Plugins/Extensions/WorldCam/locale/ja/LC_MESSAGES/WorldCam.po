@@ -59,9 +59,6 @@ msgstr "言語を変更する"
 msgid "Continents"
 msgstr "大陸"
 
-msgid "Could not extract YouTube stream"
-msgstr "YouTube ストリームを抽出できませんでした"
-
 msgid "Could not extract video stream"
 msgstr "ビデオストリームを抽出できませんでした"
 
@@ -155,9 +152,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "含まれるプレイリストとソース:"
 
-msgid "Invalid YouTube URL"
-msgstr "無効な YouTube URL"
-
 msgid "Language changed to %s"
 msgstr "言語が %s に変更されました"
 
@@ -211,6 +205,10 @@ msgstr "お気に入りから削除されました"
 
 msgid "Removed from favorites: %s"
 msgstr "お気に入りから削除されました: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "YouTube ストリームを抽出できませんでした"
 
 msgid "Select"
 msgstr "選択"
@@ -275,8 +273,14 @@ msgstr "すでに最新バージョンを実行しています: {}"
 msgid "YouTube playback error"
 msgstr "YouTube 再生エラー"
 
+msgid "YouTube stream not available"
+msgstr "YouTube ストリームは利用できません"
+
 msgid "Your Favorites"
 msgstr "お気に入り"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp が見つかりません。インストールしてください。"
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "無効な YouTube URL"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp が見つかりません。インストールしてください。"

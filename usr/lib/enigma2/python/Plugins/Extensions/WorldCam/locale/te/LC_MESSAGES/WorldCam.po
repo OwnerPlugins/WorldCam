@@ -58,9 +58,6 @@ msgstr "భాషను మార్చండి"
 msgid "Continents"
 msgstr "ఖండాలు"
 
-msgid "Could not extract YouTube stream"
-msgstr "YouTube స్ట్రీమ్‌ను సంగ్రహించడం సాధ్యపడలేదు"
-
 msgid "Could not extract video stream"
 msgstr "వీడియో స్ట్రీమ్‌ని సంగ్రహించడం సాధ్యపడలేదు"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "ప్లేజాబితాలు మరియు మూలాలు ఉన్నాయి:"
 
-msgid "Invalid YouTube URL"
-msgstr "చెల్లని YouTube URL"
-
 msgid "Language changed to %s"
 msgstr "భాష %sకి మార్చబడింది"
 
@@ -210,6 +204,10 @@ msgstr "ఇష్టమైన వాటి నుండి తీసివేయ
 
 msgid "Removed from favorites: %s"
 msgstr "ఇష్టమైన వాటి నుండి తీసివేయబడింది: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "YouTube స్ట్రీమ్‌ను సంగ్రహించడం సాధ్యపడలేదు"
 
 msgid "Select"
 msgstr "ఎంచుకోండి"
@@ -274,8 +272,14 @@ msgstr "మీరు ఇప్పటికే తాజా సంస్కరణ
 msgid "YouTube playback error"
 msgstr "YouTube ప్లేబ్యాక్ లోపం"
 
+msgid "YouTube stream not available"
+msgstr "YouTube స్ట్రీమ్ అందుబాటులో లేదు"
+
 msgid "Your Favorites"
 msgstr "మీ ఇష్టమైనవి"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp కనుగొనబడలేదు. దయచేసి దీన్ని ఇన్‌స్టాల్ చేయండి."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "చెల్లని YouTube URL"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp కనుగొనబడలేదు. దయచేసి దీన్ని ఇన్‌స్టాల్ చేయండి."

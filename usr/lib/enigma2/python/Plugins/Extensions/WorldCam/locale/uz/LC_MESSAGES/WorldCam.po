@@ -58,9 +58,6 @@ msgstr "Tilni o'zgartirish"
 msgid "Continents"
 msgstr "Qit'alar"
 
-msgid "Could not extract YouTube stream"
-msgstr "YouTube oqimini chiqarib bo‘lmadi"
-
 msgid "Could not extract video stream"
 msgstr "Video oqimini chiqarib bo‘lmadi"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Kiritilgan pleylistlar va manbalar:"
 
-msgid "Invalid YouTube URL"
-msgstr "YouTube URL manzili noto‘g‘ri"
-
 msgid "Language changed to %s"
 msgstr "Til %s ga o‘zgartirildi"
 
@@ -210,6 +204,10 @@ msgstr "Sevimlilardan olib tashlandi"
 
 msgid "Removed from favorites: %s"
 msgstr "Sevimlilardan olib tashlandi: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "YouTube oqimini chiqarib bo‘lmadi"
 
 msgid "Select"
 msgstr "Tanlang"
@@ -274,8 +272,14 @@ msgstr "Siz allaqachon oxirgi versiyani ishga tushiryapsiz: {}"
 msgid "YouTube playback error"
 msgstr "YouTube ijro etish xatosi"
 
+msgid "YouTube stream not available"
+msgstr "YouTube oqimi mavjud emas"
+
 msgid "Your Favorites"
 msgstr "Sevimlilaringiz"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp topilmadi. Iltimos, uni oʻrnating."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "YouTube URL manzili noto‘g‘ri"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp topilmadi. Iltimos, uni oʻrnating."

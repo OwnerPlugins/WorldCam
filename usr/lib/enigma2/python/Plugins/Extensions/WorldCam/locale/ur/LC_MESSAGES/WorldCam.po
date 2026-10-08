@@ -58,9 +58,6 @@ msgstr "زبان بدلو"
 msgid "Continents"
 msgstr "براعظموں"
 
-msgid "Could not extract YouTube stream"
-msgstr "YouTube سلسلہ نہیں نکالا جا سکا"
-
 msgid "Could not extract video stream"
 msgstr "ویڈیو سلسلہ نہیں نکالا جا سکا"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "شامل پلے لسٹس اور ذرائع:"
 
-msgid "Invalid YouTube URL"
-msgstr "غلط YouTube URL"
-
 msgid "Language changed to %s"
 msgstr "زبان کو %s میں تبدیل کر دیا گیا۔"
 
@@ -210,6 +204,10 @@ msgstr "پسندیدہ سے ہٹا دیا گیا۔"
 
 msgid "Removed from favorites: %s"
 msgstr "پسندیدہ سے ہٹا دیا گیا: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "YouTube سلسلہ نہیں نکالا جا سکا"
 
 msgid "Select"
 msgstr "منتخب کریں۔"
@@ -274,8 +272,14 @@ msgstr "آپ پہلے ہی تازہ ترین ورژن چلا رہے ہیں: {}"
 msgid "YouTube playback error"
 msgstr "YouTube پلے بیک کی خرابی۔"
 
+msgid "YouTube stream not available"
+msgstr "YouTube سلسلہ دستیاب نہیں ہے۔"
+
 msgid "Your Favorites"
 msgstr "آپ کے پسندیدہ"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp نہیں ملا۔ براہ کرم اسے انسٹال کریں۔"
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "غلط YouTube URL"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp نہیں ملا۔ براہ کرم اسے انسٹال کریں۔"

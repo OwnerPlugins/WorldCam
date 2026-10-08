@@ -59,9 +59,6 @@ msgstr "Spremenite jezik"
 msgid "Continents"
 msgstr "Celine"
 
-msgid "Could not extract YouTube stream"
-msgstr "YouTubovega toka ni bilo mogoče ekstrahirati"
-
 msgid "Could not extract video stream"
 msgstr "Videotoka ni bilo mogoče ekstrahirati"
 
@@ -155,9 +152,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Vključeni seznami predvajanja in viri:"
 
-msgid "Invalid YouTube URL"
-msgstr "Neveljaven URL YouTube"
-
 msgid "Language changed to %s"
 msgstr "Jezik spremenjen v %s"
 
@@ -211,6 +205,10 @@ msgstr "Odstranjeno iz priljubljenih"
 
 msgid "Removed from favorites: %s"
 msgstr "Odstranjeno iz priljubljenih: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "YouTubovega toka ni bilo mogoče ekstrahirati"
 
 msgid "Select"
 msgstr "Izberite"
@@ -275,8 +273,14 @@ msgstr "Že uporabljate najnovejšo različico: {}"
 msgid "YouTube playback error"
 msgstr "Napaka pri predvajanju YouTube"
 
+msgid "YouTube stream not available"
+msgstr "YouTube tok ni na voljo"
+
 msgid "Your Favorites"
 msgstr "Vaši priljubljeni"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp ni mogoče najti. Prosim namestite ga."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "Neveljaven URL YouTube"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp ni mogoče najti. Prosim namestite ga."

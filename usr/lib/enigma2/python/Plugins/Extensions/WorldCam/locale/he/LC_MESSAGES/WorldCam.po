@@ -59,9 +59,6 @@ msgstr "שנה שפה"
 msgid "Continents"
 msgstr "יבשות"
 
-msgid "Could not extract YouTube stream"
-msgstr "לא ניתן היה לחלץ את זרם YouTube"
-
 msgid "Could not extract video stream"
 msgstr "לא ניתן היה לחלץ את זרם הווידאו"
 
@@ -155,9 +152,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "רשימות השמעה ומקורות כלולים:"
 
-msgid "Invalid YouTube URL"
-msgstr "כתובת אתר לא חוקית של YouTube"
-
 msgid "Language changed to %s"
 msgstr "השפה השתנתה ל-%s"
 
@@ -211,6 +205,10 @@ msgstr "הוסר מהמועדפים"
 
 msgid "Removed from favorites: %s"
 msgstr "הוסר מהמועדפים: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "לא ניתן היה לחלץ את זרם YouTube"
 
 msgid "Select"
 msgstr "לִבחוֹר"
@@ -275,8 +273,14 @@ msgstr "אתה כבר מפעיל את הגרסה העדכנית ביותר: {}"
 msgid "YouTube playback error"
 msgstr "שגיאת הפעלה של YouTube"
 
+msgid "YouTube stream not available"
+msgstr "זרם YouTube אינו זמין"
+
 msgid "Your Favorites"
 msgstr "המועדפים שלך"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp לא נמצא. נא להתקין אותו."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "כתובת אתר לא חוקית של YouTube"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp לא נמצא. נא להתקין אותו."

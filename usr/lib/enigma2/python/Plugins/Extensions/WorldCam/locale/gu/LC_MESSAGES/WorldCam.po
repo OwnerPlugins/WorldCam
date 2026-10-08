@@ -58,9 +58,6 @@ msgstr "ભાષા બદલો"
 msgid "Continents"
 msgstr "ખંડો"
 
-msgid "Could not extract YouTube stream"
-msgstr "YouTube સ્ટ્રીમ કાઢી શકાયું નથી"
-
 msgid "Could not extract video stream"
 msgstr "વિડિયો સ્ટ્રીમ કાઢી શકાયું નથી"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "શામેલ પ્લેલિસ્ટ્સ અને સ્ત્રોતો:"
 
-msgid "Invalid YouTube URL"
-msgstr "અમાન્ય YouTube URL"
-
 msgid "Language changed to %s"
 msgstr "ભાષા %s માં બદલાઈ"
 
@@ -210,6 +204,10 @@ msgstr "મનપસંદમાંથી દૂર કર્યું"
 
 msgid "Removed from favorites: %s"
 msgstr "મનપસંદમાંથી દૂર કર્યું: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "YouTube સ્ટ્રીમ કાઢી શકાયું નથી"
 
 msgid "Select"
 msgstr "પસંદ કરો"
@@ -274,8 +272,14 @@ msgstr "તમે પહેલેથી જ નવીનતમ સંસ્ક�
 msgid "YouTube playback error"
 msgstr "YouTube પ્લેબેક ભૂલ"
 
+msgid "YouTube stream not available"
+msgstr "YouTube સ્ટ્રીમ ઉપલબ્ધ નથી"
+
 msgid "Your Favorites"
 msgstr "તમારા મનપસંદ"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp મળ્યું નથી. કૃપા કરીને તેને ઇન્સ્ટોલ કરો."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "અમાન્ય YouTube URL"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp મળ્યું નથી. કૃપા કરીને તેને ઇન્સ્ટોલ કરો."

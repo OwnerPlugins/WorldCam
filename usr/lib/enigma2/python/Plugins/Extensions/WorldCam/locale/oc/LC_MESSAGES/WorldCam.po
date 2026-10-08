@@ -58,9 +58,6 @@ msgstr "Cambiar de lenga"
 msgid "Continents"
 msgstr ""
 
-msgid "Could not extract YouTube stream"
-msgstr "Poguèt pas extraire lo flux YouTube"
-
 msgid "Could not extract video stream"
 msgstr "Poguèt pas extraire lo flux vidèo"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Listas de lectura e fonts incluses:"
 
-msgid "Invalid YouTube URL"
-msgstr "URL YouTube invalida"
-
 msgid "Language changed to %s"
 msgstr "Lenga modificada a %s"
 
@@ -210,6 +204,10 @@ msgstr "Suprimit dels favorits"
 
 msgid "Removed from favorites: %s"
 msgstr "Suprimit dels favorits : %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Poguèt pas extraire lo flux YouTube"
 
 msgid "Select"
 msgstr "Causir"
@@ -274,8 +272,14 @@ msgstr "Sètz ja en cors d'execucion de la darrièra version : {}"
 msgid "YouTube playback error"
 msgstr "Error de lectura de YouTube"
 
+msgid "YouTube stream not available"
+msgstr "Flux YouTube pas disponible"
+
 msgid "Your Favorites"
 msgstr "Vòstres favorits"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp pas trobat. Mercés de l'installar."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "URL YouTube invalida"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp pas trobat. Mercés de l'installar."

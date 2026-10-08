@@ -58,9 +58,6 @@ msgstr "تغيير اللغة"
 msgid "Continents"
 msgstr "القارات"
 
-msgid "Could not extract YouTube stream"
-msgstr "تعذر استخراج دفق YouTube"
-
 msgid "Could not extract video stream"
 msgstr "تعذر استخراج دفق الفيديو"
 
@@ -154,9 +151,6 @@ msgstr "جيثب: %s"
 msgid "Included playlists and sources:"
 msgstr "قوائم التشغيل والمصادر المضمنة:"
 
-msgid "Invalid YouTube URL"
-msgstr "عنوان URL لموقع YouTube غير صالح"
-
 msgid "Language changed to %s"
 msgstr "تم تغيير اللغة إلى %s"
 
@@ -210,6 +204,10 @@ msgstr "تمت الإزالة من المفضلة"
 
 msgid "Removed from favorites: %s"
 msgstr "تمت الإزالة من المفضلة: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "تعذر استخراج دفق YouTube"
 
 msgid "Select"
 msgstr "يختار"
@@ -274,8 +272,14 @@ msgstr "أنت تقوم بالفعل بتشغيل أحدث إصدار: {}"
 msgid "YouTube playback error"
 msgstr "خطأ في تشغيل اليوتيوب"
 
+msgid "YouTube stream not available"
+msgstr "دفق يوتيوب غير متوفر"
+
 msgid "Your Favorites"
 msgstr "المفضلة لديك"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "لم يتم العثور على yt-dlp. الرجاء تثبيته."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "عنوان URL لموقع YouTube غير صالح"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "لم يتم العثور على yt-dlp. الرجاء تثبيته."

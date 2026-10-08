@@ -58,9 +58,6 @@ msgstr "Тілді өзгерту"
 msgid "Continents"
 msgstr "Материктер"
 
-msgid "Could not extract YouTube stream"
-msgstr "YouTube ағынын шығару мүмкін болмады"
-
 msgid "Could not extract video stream"
 msgstr "Бейне ағынын шығару мүмкін болмады"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Қосылған ойнату тізімдері мен дереккөздер:"
 
-msgid "Invalid YouTube URL"
-msgstr "Жарамсыз YouTube URL мекенжайы"
-
 msgid "Language changed to %s"
 msgstr "Тіл %s болып өзгертілді"
 
@@ -210,6 +204,10 @@ msgstr "Таңдаулылардан жойылды"
 
 msgid "Removed from favorites: %s"
 msgstr "Таңдаулылардан жойылды: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "YouTube ағынын шығару мүмкін болмады"
 
 msgid "Select"
 msgstr "таңдаңыз"
@@ -274,8 +272,14 @@ msgstr "Сіз қазірдің өзінде соңғы нұсқасын іск�
 msgid "YouTube playback error"
 msgstr "YouTube ойнату қатесі"
 
+msgid "YouTube stream not available"
+msgstr "YouTube ағыны қолжетімді емес"
+
 msgid "Your Favorites"
 msgstr "Таңдаулыларыңыз"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp табылмады. Оны орнатыңыз."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "Жарамсыз YouTube URL мекенжайы"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp табылмады. Оны орнатыңыз."

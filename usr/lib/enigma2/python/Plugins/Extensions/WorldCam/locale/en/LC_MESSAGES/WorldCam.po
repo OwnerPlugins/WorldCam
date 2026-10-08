@@ -59,9 +59,6 @@ msgstr "Change language"
 msgid "Continents"
 msgstr "Continents"
 
-msgid "Could not extract YouTube stream"
-msgstr "Could not extract YouTube stream"
-
 msgid "Could not extract video stream"
 msgstr "Could not extract video stream"
 
@@ -155,9 +152,6 @@ msgstr "GitHub: %s"
 msgid "Included playlists and sources:"
 msgstr "Included playlists and sources:"
 
-msgid "Invalid YouTube URL"
-msgstr "Invalid YouTube URL"
-
 msgid "Language changed to %s"
 msgstr "Language changed to %s"
 
@@ -211,6 +205,10 @@ msgstr "Removed from favorites"
 
 msgid "Removed from favorites: %s"
 msgstr "Removed from favorites: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Could not extract YouTube stream"
 
 msgid "Select"
 msgstr "Select"
@@ -275,11 +273,17 @@ msgstr "You are already running the latest version: {}"
 msgid "YouTube playback error"
 msgstr "YouTube playback error"
 
+msgid "YouTube stream not available"
+msgstr ""
+
 msgid "Your Favorites"
 msgstr "Your Favorites"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp not found. Please install it."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "Invalid YouTube URL"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp not found. Please install it."
 
 #~ msgid "Update yt-dlp"
 #~ msgstr "Update yt-dlp"

@@ -59,9 +59,6 @@ msgstr "Muuda keelt"
 msgid "Continents"
 msgstr "Mandrid"
 
-msgid "Could not extract YouTube stream"
-msgstr "YouTube'i voogu ei saanud ekstraktida"
-
 msgid "Could not extract video stream"
 msgstr "Videovoogu ei saanud ekstraktida"
 
@@ -155,9 +152,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Kaasatud esitusloendid ja allikad:"
 
-msgid "Invalid YouTube URL"
-msgstr "Vale YouTube'i URL"
-
 msgid "Language changed to %s"
 msgstr "Keeleks muudeti %s"
 
@@ -211,6 +205,10 @@ msgstr "Lemmikutest eemaldatud"
 
 msgid "Removed from favorites: %s"
 msgstr "Lemmikutest eemaldatud: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "YouTube'i voogu ei saanud ekstraktida"
 
 msgid "Select"
 msgstr "Valige"
@@ -275,8 +273,14 @@ msgstr "Kasutate juba uusimat versiooni: {}"
 msgid "YouTube playback error"
 msgstr "YouTube'i taasesituse viga"
 
+msgid "YouTube stream not available"
+msgstr "YouTube'i voog pole saadaval"
+
 msgid "Your Favorites"
 msgstr "Teie lemmikud"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp ei leitud. Palun installige see."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "Vale YouTube'i URL"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp ei leitud. Palun installige see."

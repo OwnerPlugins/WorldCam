@@ -58,9 +58,6 @@ msgstr "Ziman biguherînin"
 msgid "Continents"
 msgstr "Parzemîn"
 
-msgid "Could not extract YouTube stream"
-msgstr "Nekarî weşana YouTube derxe"
-
 msgid "Could not extract video stream"
 msgstr "Nekarî weşana vîdyoyê derxe"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Lîsteyên lîstikê û çavkaniyan tê de:"
 
-msgid "Invalid YouTube URL"
-msgstr "URL-ya YouTube nederbasdar e"
-
 msgid "Language changed to %s"
 msgstr "Ziman bû %s"
 
@@ -210,6 +204,10 @@ msgstr "Ji bijartan rakirin"
 
 msgid "Removed from favorites: %s"
 msgstr "Ji bijartan hat rakirin: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Nekarî weşana YouTube derxe"
 
 msgid "Select"
 msgstr "Neqandin"
@@ -274,8 +272,14 @@ msgstr "Jixwe tu guhertoya herî dawî dixebitî: {}"
 msgid "YouTube playback error"
 msgstr "Çewtiya lîstika YouTube"
 
+msgid "YouTube stream not available"
+msgstr "Weşana YouTube peyda nabe"
+
 msgid "Your Favorites"
 msgstr "Favorites te"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp nehat dîtin. Ji kerema xwe saz bikin."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "URL-ya YouTube nederbasdar e"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp nehat dîtin. Ji kerema xwe saz bikin."

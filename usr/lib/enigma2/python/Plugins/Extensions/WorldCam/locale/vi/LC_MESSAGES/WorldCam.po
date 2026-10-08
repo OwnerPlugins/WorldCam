@@ -59,9 +59,6 @@ msgstr "Thay đổi ngôn ngữ"
 msgid "Continents"
 msgstr "lục địa"
 
-msgid "Could not extract YouTube stream"
-msgstr "Không thể trích xuất luồng YouTube"
-
 msgid "Could not extract video stream"
 msgstr "Không thể trích xuất luồng video"
 
@@ -155,9 +152,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Danh sách phát và nguồn bao gồm:"
 
-msgid "Invalid YouTube URL"
-msgstr "URL YouTube không hợp lệ"
-
 msgid "Language changed to %s"
 msgstr "Ngôn ngữ đã thay đổi thành %s"
 
@@ -211,6 +205,10 @@ msgstr "Đã xóa khỏi mục yêu thích"
 
 msgid "Removed from favorites: %s"
 msgstr "Đã xóa khỏi mục yêu thích: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Không thể trích xuất luồng YouTube"
 
 msgid "Select"
 msgstr "Lựa chọn"
@@ -275,8 +273,14 @@ msgstr "Bạn đang chạy phiên bản mới nhất: {}"
 msgid "YouTube playback error"
 msgstr "Lỗi phát lại YouTube"
 
+msgid "YouTube stream not available"
+msgstr "Luồng YouTube không khả dụng"
+
 msgid "Your Favorites"
 msgstr "Yêu thích của bạn"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "không tìm thấy yt-dlp. Hãy cài đặt nó."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "URL YouTube không hợp lệ"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "không tìm thấy yt-dlp. Hãy cài đặt nó."

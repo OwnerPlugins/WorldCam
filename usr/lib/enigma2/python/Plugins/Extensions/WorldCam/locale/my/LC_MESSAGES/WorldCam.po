@@ -58,9 +58,6 @@ msgstr "ဘာသာစကားပြောင်းပါ။"
 msgid "Continents"
 msgstr "တိုက်ကြီး"
 
-msgid "Could not extract YouTube stream"
-msgstr "YouTube ထုတ်လွှင့်မှုကို ထုတ်ယူ၍မရပါ။"
-
 msgid "Could not extract video stream"
 msgstr "ဗီဒီယိုစီးကြောင်းကို ထုတ်ယူ၍မရပါ။"
 
@@ -154,9 +151,6 @@ msgstr "GitHub- %s"
 msgid "Included playlists and sources:"
 msgstr "အစီအစဉ်များနှင့် အရင်းအမြစ်များ ပါဝင်သည်-"
 
-msgid "Invalid YouTube URL"
-msgstr "YouTube URL မမှန်ကန်ပါ။"
-
 msgid "Language changed to %s"
 msgstr "ဘာသာစကားကို %s သို့ပြောင်းထားသည်။"
 
@@ -210,6 +204,10 @@ msgstr "စိတ်ကြိုက်များမှ ဖယ်ရှား�
 
 msgid "Removed from favorites: %s"
 msgstr "စိတ်ကြိုက်များမှ ဖယ်ရှားထားသည်- %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "YouTube ထုတ်လွှင့်မှုကို ထုတ်ယူ၍မရပါ။"
 
 msgid "Select"
 msgstr "ရွေးချယ်ပါ။"
@@ -274,8 +272,14 @@ msgstr "သင်သည် နောက်ဆုံးဗားရှင်း�
 msgid "YouTube playback error"
 msgstr "YouTube ပြန်ဖွင့်ခြင်း အမှား"
 
+msgid "YouTube stream not available"
+msgstr "YouTube ထုတ်လွှင့်မှုကို မရရှိနိုင်ပါ။"
+
 msgid "Your Favorites"
 msgstr "သင့်အကြိုက်များ"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp မတွေ့ပါ။ ကျေးဇူးပြု၍ ထည့်သွင်းပါ။"
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "YouTube URL မမှန်ကန်ပါ။"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp မတွေ့ပါ။ ကျေးဇူးပြု၍ ထည့်သွင်းပါ။"

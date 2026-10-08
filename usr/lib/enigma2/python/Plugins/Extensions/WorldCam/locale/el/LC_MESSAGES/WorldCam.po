@@ -61,10 +61,6 @@ msgstr "Αλλαγή γλώσσας"
 msgid "Continents"
 msgstr "Ήπειροι"
 
-#, fuzzy
-msgid "Could not extract YouTube stream"
-msgstr "Δεν ήταν δυνατή η εξαγωγή της ροής βίντεο"
-
 msgid "Could not extract video stream"
 msgstr "Δεν ήταν δυνατή η εξαγωγή της ροής βίντεο"
 
@@ -161,9 +157,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Περιλαμβανόμενες λίστες αναπαραγωγής και πηγές:"
 
-msgid "Invalid YouTube URL"
-msgstr "Μη έγκυρο URL YouTube"
-
 msgid "Language changed to %s"
 msgstr "Η γλώσσα άλλαξε σε %s"
 
@@ -219,6 +212,10 @@ msgstr "Αφαιρέθηκε από τα αγαπημένα"
 
 msgid "Removed from favorites: %s"
 msgstr "Αφαιρέθηκε από τα αγαπημένα: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Δεν ήταν δυνατή η εξαγωγή της ροής βίντεο"
 
 msgid "Select"
 msgstr "Επιλογή"
@@ -285,11 +282,17 @@ msgstr "Χρησιμοποιείτε ήδη την πιο πρόσφατη έκ�
 msgid "YouTube playback error"
 msgstr "Όλες οι μέθοδοι αναπαραγωγής YouTube απέτυχαν!"
 
+msgid "YouTube stream not available"
+msgstr "Η ροή YouTube δεν είναι διαθέσιμη"
+
 msgid "Your Favorites"
 msgstr "Τα αγαπημένα σας"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "Το yt-dlp δεν βρέθηκε. Εγκαταστήστε το."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "Μη έγκυρο URL YouTube"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "Το yt-dlp δεν βρέθηκε. Εγκαταστήστε το."
 
 #~ msgid "GitHub: https://github.com/Belfagor2005/"
 #~ msgstr "GitHub: https://github.com/Belfagor2005/"

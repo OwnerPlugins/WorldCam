@@ -59,9 +59,6 @@ msgstr "Mainīt valodu"
 msgid "Continents"
 msgstr "Kontinenti"
 
-msgid "Could not extract YouTube stream"
-msgstr "Nevarēja izvilkt YouTube straumi"
-
 msgid "Could not extract video stream"
 msgstr "Nevarēja izvilkt video straumi"
 
@@ -155,9 +152,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Iekļautie atskaņošanas saraksti un avoti:"
 
-msgid "Invalid YouTube URL"
-msgstr "Nederīgs YouTube URL"
-
 msgid "Language changed to %s"
 msgstr "Valoda mainīta uz %s"
 
@@ -211,6 +205,10 @@ msgstr "Noņemts no izlases"
 
 msgid "Removed from favorites: %s"
 msgstr "Noņemts no izlases: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Nevarēja izvilkt YouTube straumi"
 
 msgid "Select"
 msgstr "Izvēlieties"
@@ -275,8 +273,14 @@ msgstr "Jūs jau izmantojat jaunāko versiju: ​​{}"
 msgid "YouTube playback error"
 msgstr "YouTube atskaņošanas kļūda"
 
+msgid "YouTube stream not available"
+msgstr "YouTube straume nav pieejama"
+
 msgid "Your Favorites"
 msgstr "Jūsu izlase"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp nav atrasts. Lūdzu, instalējiet to."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "Nederīgs YouTube URL"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp nav atrasts. Lūdzu, instalējiet to."

@@ -58,9 +58,6 @@ msgstr "භාෂාව වෙනස් කරන්න"
 msgid "Continents"
 msgstr "මහාද්වීප"
 
-msgid "Could not extract YouTube stream"
-msgstr "YouTube ප්‍රවාහය උපුටා ගැනීමට නොහැකි විය"
-
 msgid "Could not extract video stream"
 msgstr "වීඩියෝ ප්‍රවාහය උපුටා ගැනීමට නොහැකි විය"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "ඇතුළත් ධාවන ලැයිස්තු සහ මූලාශ්‍ර:"
 
-msgid "Invalid YouTube URL"
-msgstr "වලංගු නොවන YouTube URL"
-
 msgid "Language changed to %s"
 msgstr "භාෂාව %s වෙත වෙනස් විය"
 
@@ -210,6 +204,10 @@ msgstr "ප්‍රියතමයන් වෙතින් ඉවත් කර
 
 msgid "Removed from favorites: %s"
 msgstr "ප්‍රියතමයන් වෙතින් ඉවත් කරන ලදී: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "YouTube ප්‍රවාහය උපුටා ගැනීමට නොහැකි විය"
 
 msgid "Select"
 msgstr "තෝරන්න"
@@ -274,8 +272,14 @@ msgstr "ඔබ දැනටමත් නවතම අනුවාදය ධා�
 msgid "YouTube playback error"
 msgstr "YouTube පසුධාවන දෝෂයකි"
 
+msgid "YouTube stream not available"
+msgstr "YouTube ප්‍රවාහය නොමැත"
+
 msgid "Your Favorites"
 msgstr "ඔබේ ප්රියතම"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp හමු නොවීය. කරුණාකර එය ස්ථාපනය කරන්න."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "වලංගු නොවන YouTube URL"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp හමු නොවීය. කරුණාකර එය ස්ථාපනය කරන්න."

@@ -58,9 +58,6 @@ msgstr "Atharraich cànan"
 msgid "Continents"
 msgstr "Mòr-thìrean"
 
-msgid "Could not extract YouTube stream"
-msgstr "Cha b' urrainn dhuinn sruth YouTube a thoirt a-mach"
-
 msgid "Could not extract video stream"
 msgstr "Cha b' urrainn dhuinn sruth bhidio a thoirt a-mach"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "A’ gabhail a-steach liostaichean-cluiche agus stòran:"
 
-msgid "Invalid YouTube URL"
-msgstr "URL YouTube mì-dhligheach"
-
 msgid "Language changed to %s"
 msgstr "Chaidh cànan atharrachadh gu %s"
 
@@ -210,6 +204,10 @@ msgstr "Air a thoirt air falbh bhon fheadhainn as fheàrr leotha"
 
 msgid "Removed from favorites: %s"
 msgstr "Air a thoirt air falbh o na roghainnean: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Cha b' urrainn dhuinn sruth YouTube a thoirt a-mach"
 
 msgid "Select"
 msgstr "Tagh"
@@ -274,8 +272,14 @@ msgstr "Tha thu mu thràth a' ruith an tionndadh as ùire: {}"
 msgid "YouTube playback error"
 msgstr "Tha mearachd ath-chluich YouTube"
 
+msgid "YouTube stream not available"
+msgstr "Chan eil sruth YouTube ri fhaighinn"
+
 msgid "Your Favorites"
 msgstr "Na rudan as fheàrr leat"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp cha deach a lorg. Feuch an stàlaich thu e."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "URL YouTube mì-dhligheach"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp cha deach a lorg. Feuch an stàlaich thu e."

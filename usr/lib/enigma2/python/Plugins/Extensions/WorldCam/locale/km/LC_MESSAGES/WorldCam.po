@@ -58,9 +58,6 @@ msgstr "ផ្លាស់ប្តូរភាសា"
 msgid "Continents"
 msgstr "ទ្វីប"
 
-msgid "Could not extract YouTube stream"
-msgstr "មិន​អាច​ទាញ​យក​ការ​ផ្សាយ​របស់ YouTube"
-
 msgid "Could not extract video stream"
 msgstr "មិន​អាច​ទាញ​យក​ការ​ផ្សាយ​វីដេអូ"
 
@@ -154,9 +151,6 @@ msgstr "GitHub៖ %s"
 msgid "Included playlists and sources:"
 msgstr "បញ្ជីចាក់ និងប្រភពរួមបញ្ចូល៖"
 
-msgid "Invalid YouTube URL"
-msgstr "URL YouTube មិន​ត្រឹមត្រូវ"
-
 msgid "Language changed to %s"
 msgstr "ភាសាបានប្តូរទៅជា %s"
 
@@ -210,6 +204,10 @@ msgstr "បានដកចេញពីចំណូលចិត្ត"
 
 msgid "Removed from favorites: %s"
 msgstr "បានដកចេញពីចំណូលចិត្ត៖ %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "មិន​អាច​ទាញ​យក​ការ​ផ្សាយ​របស់ YouTube"
 
 msgid "Select"
 msgstr "ជ្រើសរើស"
@@ -274,8 +272,14 @@ msgstr "អ្នកកំពុងដំណើរការកំណែចុង
 msgid "YouTube playback error"
 msgstr "កំហុសក្នុងការលេង YouTube"
 
+msgid "YouTube stream not available"
+msgstr "ការ​ផ្សាយ​តាម YouTube មិន​អាច​ប្រើ​បាន​ទេ។"
+
 msgid "Your Favorites"
 msgstr "ចំណូលចិត្តរបស់អ្នក។"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp រកមិនឃើញទេ។ សូមដំឡើងវា។"
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "URL YouTube មិន​ត្រឹមត្រូវ"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp រកមិនឃើញទេ។ សូមដំឡើងវា។"

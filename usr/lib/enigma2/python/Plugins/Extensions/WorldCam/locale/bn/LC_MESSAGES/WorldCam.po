@@ -58,9 +58,6 @@ msgstr "ভাষা পরিবর্তন করুন"
 msgid "Continents"
 msgstr "মহাদেশ"
 
-msgid "Could not extract YouTube stream"
-msgstr "YouTube স্ট্রীম বের করা যায়নি"
-
 msgid "Could not extract video stream"
 msgstr "ভিডিও স্ট্রীম বের করা যায়নি"
 
@@ -154,9 +151,6 @@ msgstr "গিটহাব: %s"
 msgid "Included playlists and sources:"
 msgstr "অন্তর্ভুক্ত প্লেলিস্ট এবং উত্স:"
 
-msgid "Invalid YouTube URL"
-msgstr "অবৈধ YouTube URL"
-
 msgid "Language changed to %s"
 msgstr "ভাষা %s এ পরিবর্তিত হয়েছে"
 
@@ -210,6 +204,10 @@ msgstr "প্রিয় থেকে সরানো হয়েছে"
 
 msgid "Removed from favorites: %s"
 msgstr "পছন্দসই থেকে সরানো হয়েছে: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "YouTube স্ট্রীম বের করা যায়নি"
 
 msgid "Select"
 msgstr "নির্বাচন করুন"
@@ -274,8 +272,14 @@ msgstr "আপনি ইতিমধ্যেই সর্বশেষ সংস
 msgid "YouTube playback error"
 msgstr "YouTube প্লেব্যাক ত্রুটি"
 
+msgid "YouTube stream not available"
+msgstr "YouTube স্ট্রীম উপলব্ধ নয়"
+
 msgid "Your Favorites"
 msgstr "আপনার প্রিয়"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp পাওয়া যায়নি। এটা ইনস্টল করুন."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "অবৈধ YouTube URL"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp পাওয়া যায়নি। এটা ইনস্টল করুন."

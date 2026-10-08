@@ -58,9 +58,6 @@ msgstr "Skiptu um tungumál"
 msgid "Continents"
 msgstr "Heimsálfur"
 
-msgid "Could not extract YouTube stream"
-msgstr "Ekki tókst að draga út YouTube straum"
-
 msgid "Could not extract video stream"
 msgstr "Ekki tókst að draga út vídeóstraum"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Meðfylgjandi lagalistar og heimildir:"
 
-msgid "Invalid YouTube URL"
-msgstr "Ógild YouTube vefslóð"
-
 msgid "Language changed to %s"
 msgstr "Tungumáli breytt í %s"
 
@@ -210,6 +204,10 @@ msgstr "Fjarlægt úr eftirlæti"
 
 msgid "Removed from favorites: %s"
 msgstr "Fjarlægt úr eftirlæti: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Ekki tókst að draga út YouTube straum"
 
 msgid "Select"
 msgstr "Veldu"
@@ -274,8 +272,14 @@ msgstr "Þú ert nú þegar að keyra nýjustu útgáfuna: {}"
 msgid "YouTube playback error"
 msgstr "YouTube spilunarvilla"
 
+msgid "YouTube stream not available"
+msgstr "YouTube straumur ekki í boði"
+
 msgid "Your Favorites"
 msgstr "Uppáhaldið þitt"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp fannst ekki. Vinsamlegast settu það upp."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "Ógild YouTube vefslóð"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp fannst ekki. Vinsamlegast settu það upp."

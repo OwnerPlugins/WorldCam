@@ -59,9 +59,6 @@ msgstr "Canvia l'idioma"
 msgid "Continents"
 msgstr ""
 
-msgid "Could not extract YouTube stream"
-msgstr "No s'ha pogut extreure el flux de YouTube"
-
 msgid "Could not extract video stream"
 msgstr "No s'ha pogut extreure el flux de vídeo"
 
@@ -155,9 +152,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Llistes de reproducció i fonts incloses:"
 
-msgid "Invalid YouTube URL"
-msgstr "URL de YouTube no vàlid"
-
 msgid "Language changed to %s"
 msgstr "L'idioma ha canviat a %s"
 
@@ -211,6 +205,10 @@ msgstr "S'ha eliminat dels preferits"
 
 msgid "Removed from favorites: %s"
 msgstr "S'ha eliminat dels preferits: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "No s'ha pogut extreure el flux de YouTube"
 
 msgid "Select"
 msgstr "Seleccioneu"
@@ -275,8 +273,14 @@ msgstr "Ja esteu executant la darrera versió: {}"
 msgid "YouTube playback error"
 msgstr "Error de reproducció de YouTube"
 
+msgid "YouTube stream not available"
+msgstr "El flux de YouTube no està disponible"
+
 msgid "Your Favorites"
 msgstr "Els teus preferits"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp no trobat. Instal·leu-lo."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "URL de YouTube no vàlid"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp no trobat. Instal·leu-lo."

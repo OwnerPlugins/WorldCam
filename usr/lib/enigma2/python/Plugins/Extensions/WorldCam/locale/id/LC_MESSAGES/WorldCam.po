@@ -58,9 +58,6 @@ msgstr "Ganti bahasa"
 msgid "Continents"
 msgstr "benua"
 
-msgid "Could not extract YouTube stream"
-msgstr "Tidak dapat mengekstrak aliran YouTube"
-
 msgid "Could not extract video stream"
 msgstr "Tidak dapat mengekstrak aliran video"
 
@@ -154,9 +151,6 @@ msgstr "Github: %s"
 msgid "Included playlists and sources:"
 msgstr "Daftar putar dan sumber yang disertakan:"
 
-msgid "Invalid YouTube URL"
-msgstr "URL YouTube tidak valid"
-
 msgid "Language changed to %s"
 msgstr "Bahasa diubah menjadi %s"
 
@@ -210,6 +204,10 @@ msgstr "Dihapus dari favorit"
 
 msgid "Removed from favorites: %s"
 msgstr "Dihapus dari favorit: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Tidak dapat mengekstrak aliran YouTube"
 
 msgid "Select"
 msgstr "Memilih"
@@ -274,8 +272,14 @@ msgstr "Anda sudah menjalankan versi terbaru: {}"
 msgid "YouTube playback error"
 msgstr "Kesalahan pemutaran YouTube"
 
+msgid "YouTube stream not available"
+msgstr "Aliran YouTube tidak tersedia"
+
 msgid "Your Favorites"
 msgstr "Favorit Anda"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp tidak ditemukan. Silakan menginstalnya."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "URL YouTube tidak valid"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp tidak ditemukan. Silakan menginstalnya."

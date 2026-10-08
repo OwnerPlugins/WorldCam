@@ -58,9 +58,6 @@ msgstr "Hizkuntza aldatu"
 msgid "Continents"
 msgstr "Kontinenteak"
 
-msgid "Could not extract YouTube stream"
-msgstr "Ezin izan da YouTube-ko korrontea atera"
-
 msgid "Could not extract video stream"
 msgstr "Ezin izan da bideo-korrontea atera"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Sartutako erreprodukzio zerrendak eta iturriak:"
 
-msgid "Invalid YouTube URL"
-msgstr "YouTube URL baliogabea"
-
 msgid "Language changed to %s"
 msgstr "Hizkuntza aldatu da: %s"
 
@@ -210,6 +204,10 @@ msgstr "Gogokoetatik kendu da"
 
 msgid "Removed from favorites: %s"
 msgstr "Gogokoetatik kendu da: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Ezin izan da YouTube-ko korrontea atera"
 
 msgid "Select"
 msgstr "Hautatu"
@@ -274,8 +272,14 @@ msgstr "Dagoeneko azken bertsioa exekutatzen ari zara: {}"
 msgid "YouTube playback error"
 msgstr "YouTube-ren erreprodukzio-errorea"
 
+msgid "YouTube stream not available"
+msgstr "YouTube-ko korrontea ez dago erabilgarri"
+
 msgid "Your Favorites"
 msgstr "Zure gogokoenak"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp ez da aurkitu. Mesedez, instala ezazu."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "YouTube URL baliogabea"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp ez da aurkitu. Mesedez, instala ezazu."

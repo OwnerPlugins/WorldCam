@@ -59,9 +59,6 @@ msgstr "Ŝanĝi lingvon"
 msgid "Continents"
 msgstr "Kontinentoj"
 
-msgid "Could not extract YouTube stream"
-msgstr "Ne eblis ĉerpi jutuban fluon"
-
 msgid "Could not extract video stream"
 msgstr "Ne eblis ĉerpi videofluon"
 
@@ -155,9 +152,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Inkluditaj ludlistoj kaj fontoj:"
 
-msgid "Invalid YouTube URL"
-msgstr "Nevalida YouTube-URL"
-
 msgid "Language changed to %s"
 msgstr "Lingvo ŝanĝita al %s"
 
@@ -211,6 +205,10 @@ msgstr "Forigita el la plej ŝatataj"
 
 msgid "Removed from favorites: %s"
 msgstr "Forigita el la plej ŝatataj: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Ne eblis ĉerpi jutuban fluon"
 
 msgid "Select"
 msgstr "Elektu"
@@ -275,8 +273,14 @@ msgstr "Vi jam funkcias la plej novan version: {}"
 msgid "YouTube playback error"
 msgstr "Jutuba reprodukta eraro"
 
+msgid "YouTube stream not available"
+msgstr "Jutuba rivereto ne havebla"
+
 msgid "Your Favorites"
 msgstr "Viaj Favoritaj"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp ne trovita. Bonvolu instali ĝin."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "Nevalida YouTube-URL"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp ne trovita. Bonvolu instali ĝin."

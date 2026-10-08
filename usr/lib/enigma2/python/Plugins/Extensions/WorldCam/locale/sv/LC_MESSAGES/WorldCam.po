@@ -59,9 +59,6 @@ msgstr "Byt språk"
 msgid "Continents"
 msgstr "Kontinenter"
 
-msgid "Could not extract YouTube stream"
-msgstr "Det gick inte att extrahera YouTube-strömmen"
-
 msgid "Could not extract video stream"
 msgstr "Det gick inte att extrahera videoströmmen"
 
@@ -155,9 +152,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Inkluderade spellistor och källor:"
 
-msgid "Invalid YouTube URL"
-msgstr "Ogiltig YouTube-URL"
-
 msgid "Language changed to %s"
 msgstr "Språket har ändrats till %s"
 
@@ -211,6 +205,10 @@ msgstr "Borttagen från favoriter"
 
 msgid "Removed from favorites: %s"
 msgstr "Borttagen från favoriter: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Det gick inte att extrahera YouTube-strömmen"
 
 msgid "Select"
 msgstr "Välja"
@@ -275,8 +273,14 @@ msgstr "Du kör redan den senaste versionen: {}"
 msgid "YouTube playback error"
 msgstr "YouTube-uppspelningsfel"
 
+msgid "YouTube stream not available"
+msgstr "YouTube-strömmen är inte tillgänglig"
+
 msgid "Your Favorites"
 msgstr "Dina favoriter"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp hittades inte. Installera den."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "Ogiltig YouTube-URL"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp hittades inte. Installera den."

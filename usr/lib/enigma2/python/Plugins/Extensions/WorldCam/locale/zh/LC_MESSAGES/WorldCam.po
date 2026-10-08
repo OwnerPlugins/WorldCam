@@ -58,9 +58,6 @@ msgstr "更改语言"
 msgid "Continents"
 msgstr "大陆"
 
-msgid "Could not extract YouTube stream"
-msgstr "无法提取 YouTube 流"
-
 msgid "Could not extract video stream"
 msgstr "无法提取视频流"
 
@@ -154,9 +151,6 @@ msgstr "GitHub：%s"
 msgid "Included playlists and sources:"
 msgstr "包含的播放列表和来源："
 
-msgid "Invalid YouTube URL"
-msgstr "YouTube 网址无效"
-
 msgid "Language changed to %s"
 msgstr "语言更改为 %s"
 
@@ -210,6 +204,10 @@ msgstr "已从收藏夹中删除"
 
 msgid "Removed from favorites: %s"
 msgstr "已从收藏夹中删除：%s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "无法提取 YouTube 流"
 
 msgid "Select"
 msgstr "选择"
@@ -274,8 +272,14 @@ msgstr "您已经在运行最新版本：{}"
 msgid "YouTube playback error"
 msgstr "YouTube 播放错误"
 
+msgid "YouTube stream not available"
+msgstr "YouTube 流不可用"
+
 msgid "Your Favorites"
 msgstr "您的最爱"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "未找到 yt-dlp。请安装它。"
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "YouTube 网址无效"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "未找到 yt-dlp。请安装它。"

@@ -58,9 +58,6 @@ msgstr "تىلنى ئۆزگەرتىش"
 msgid "Continents"
 msgstr "قىتئەلەر"
 
-msgid "Could not extract YouTube stream"
-msgstr "YouTube ئېقىمىنى چىقىرىۋېتەلمىدى"
-
 msgid "Could not extract video stream"
 msgstr "سىن ئېقىمىنى چىقىرىۋېتەلمىدى"
 
@@ -154,9 +151,6 @@ msgstr "GitHub:% s"
 msgid "Included playlists and sources:"
 msgstr "قويۇش تىزىملىكى ۋە مەنبەلەرنى ئۆز ئىچىگە ئالىدۇ:"
 
-msgid "Invalid YouTube URL"
-msgstr "YouTube ئادرېسى ئىناۋەتسىز"
-
 msgid "Language changed to %s"
 msgstr "تىل% s غا ئۆزگەردى"
 
@@ -210,6 +204,10 @@ msgstr "ياقتۇرىدىغانلاردىن ئۆچۈرۈلدى"
 
 msgid "Removed from favorites: %s"
 msgstr "ياقتۇرىدىغانلاردىن چىقىرىۋېتىلدى:% s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "YouTube ئېقىمىنى چىقىرىۋېتەلمىدى"
 
 msgid "Select"
 msgstr "تاللاڭ"
@@ -274,8 +272,14 @@ msgstr "سىز ئەڭ يېڭى نەشرىنى ئىجرا قىلىۋاتىسىز:
 msgid "YouTube playback error"
 msgstr "YouTube قويۇش خاتالىقى"
 
+msgid "YouTube stream not available"
+msgstr "YouTube ئېقىمى يوق"
+
 msgid "Your Favorites"
 msgstr "ياقتۇرىدىغانلىرىڭىز"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp تېپىلمىدى. ئۇنى قاچىلاڭ."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "YouTube ئادرېسى ئىناۋەتسىز"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp تېپىلمىدى. ئۇنى قاچىلاڭ."

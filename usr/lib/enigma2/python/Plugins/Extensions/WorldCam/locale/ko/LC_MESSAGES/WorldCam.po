@@ -59,9 +59,6 @@ msgstr "언어 변경"
 msgid "Continents"
 msgstr "대륙"
 
-msgid "Could not extract YouTube stream"
-msgstr "YouTube 스트림을 추출할 수 없습니다."
-
 msgid "Could not extract video stream"
 msgstr "비디오 스트림을 추출할 수 없습니다."
 
@@ -155,9 +152,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "포함된 재생목록 및 소스:"
 
-msgid "Invalid YouTube URL"
-msgstr "잘못된 YouTube URL"
-
 msgid "Language changed to %s"
 msgstr "언어가 %s(으)로 변경되었습니다."
 
@@ -211,6 +205,10 @@ msgstr "즐겨찾기에서 삭제됨"
 
 msgid "Removed from favorites: %s"
 msgstr "즐겨찾기에서 제거됨: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "YouTube 스트림을 추출할 수 없습니다."
 
 msgid "Select"
 msgstr "선택하다"
@@ -275,8 +273,14 @@ msgstr "이미 최신 버전을 실행하고 있습니다: {}"
 msgid "YouTube playback error"
 msgstr "유튜브 재생 오류"
 
+msgid "YouTube stream not available"
+msgstr "YouTube 스트림을 사용할 수 없습니다."
+
 msgid "Your Favorites"
 msgstr "즐겨찾기"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp를 찾을 수 없습니다. 설치해 주세요."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "잘못된 YouTube URL"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp를 찾을 수 없습니다. 설치해 주세요."

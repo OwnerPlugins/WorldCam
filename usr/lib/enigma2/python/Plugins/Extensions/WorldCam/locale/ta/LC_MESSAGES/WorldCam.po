@@ -58,9 +58,6 @@ msgstr "மொழியை மாற்றவும்"
 msgid "Continents"
 msgstr "கண்டங்கள்"
 
-msgid "Could not extract YouTube stream"
-msgstr "YouTube ஸ்ட்ரீமைப் பிரித்தெடுக்க முடியவில்லை"
-
 msgid "Could not extract video stream"
 msgstr "வீடியோ ஸ்ட்ரீமைப் பிரித்தெடுக்க முடியவில்லை"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "பிளேலிஸ்ட்கள் மற்றும் ஆதாரங்கள் சேர்க்கப்பட்டுள்ளன:"
 
-msgid "Invalid YouTube URL"
-msgstr "தவறான YouTube URL"
-
 msgid "Language changed to %s"
 msgstr "மொழி %sக்கு மாற்றப்பட்டது"
 
@@ -210,6 +204,10 @@ msgstr "பிடித்தவையிலிருந்து அகற்�
 
 msgid "Removed from favorites: %s"
 msgstr "பிடித்தவையிலிருந்து அகற்றப்பட்டது: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "YouTube ஸ்ட்ரீமைப் பிரித்தெடுக்க முடியவில்லை"
 
 msgid "Select"
 msgstr "தேர்ந்தெடு"
@@ -274,8 +272,14 @@ msgstr "நீங்கள் ஏற்கனவே சமீபத்திய 
 msgid "YouTube playback error"
 msgstr "YouTube பிளேபேக் பிழை"
 
+msgid "YouTube stream not available"
+msgstr "YouTube ஸ்ட்ரீம் கிடைக்கவில்லை"
+
 msgid "Your Favorites"
 msgstr "உங்களுக்கு பிடித்தவை"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp கிடைக்கவில்லை. தயவுசெய்து அதை நிறுவவும்."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "தவறான YouTube URL"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp கிடைக்கவில்லை. தயவுசெய்து அதை நிறுவவும்."

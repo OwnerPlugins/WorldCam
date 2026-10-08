@@ -59,9 +59,6 @@ msgstr "Athraigh teanga"
 msgid "Continents"
 msgstr "Mór-roinne"
 
-msgid "Could not extract YouTube stream"
-msgstr "Níorbh fhéidir sruth YouTube a bhaint as"
-
 msgid "Could not extract video stream"
 msgstr "Níorbh fhéidir sruth físeáin a bhaint as"
 
@@ -155,9 +152,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Seinmliostaí agus foinsí san áireamh:"
 
-msgid "Invalid YouTube URL"
-msgstr "URL YouTube neamhbhailí"
-
 msgid "Language changed to %s"
 msgstr "Athraíodh an teanga go %s"
 
@@ -211,6 +205,10 @@ msgstr "Bainte de cheanáin"
 
 msgid "Removed from favorites: %s"
 msgstr "Bainte de cheanáin: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Níorbh fhéidir sruth YouTube a bhaint as"
 
 msgid "Select"
 msgstr "Roghnaigh"
@@ -275,8 +273,14 @@ msgstr "Tá an leagan is déanaí á rith agat cheana: {}"
 msgid "YouTube playback error"
 msgstr "Earráid athsheinm YouTube"
 
+msgid "YouTube stream not available"
+msgstr "Níl sruth YouTube ar fáil"
+
 msgid "Your Favorites"
 msgstr "Do Cheanáin"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp gan aimsiú. Suiteáil é le do thoil."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "URL YouTube neamhbhailí"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp gan aimsiú. Suiteáil é le do thoil."

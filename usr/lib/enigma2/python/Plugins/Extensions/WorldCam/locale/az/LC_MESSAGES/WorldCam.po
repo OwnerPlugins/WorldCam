@@ -58,9 +58,6 @@ msgstr "Dili dəyişdirin"
 msgid "Continents"
 msgstr "Qitələr"
 
-msgid "Could not extract YouTube stream"
-msgstr "YouTube axınını çıxarmaq mümkün olmadı"
-
 msgid "Could not extract video stream"
 msgstr "Video axını çıxarmaq mümkün olmadı"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Daxil edilmiş pleylistlər və mənbələr:"
 
-msgid "Invalid YouTube URL"
-msgstr "Yanlış YouTube URL"
-
 msgid "Language changed to %s"
 msgstr "Dil %s olaraq dəyişdirildi"
 
@@ -210,6 +204,10 @@ msgstr "Sevimlilərdən silindi"
 
 msgid "Removed from favorites: %s"
 msgstr "Sevimlilərdən silindi: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "YouTube axınını çıxarmaq mümkün olmadı"
 
 msgid "Select"
 msgstr "seçin"
@@ -274,8 +272,14 @@ msgstr "Siz artıq ən son versiyanı işlədirsiniz: {}"
 msgid "YouTube playback error"
 msgstr "YouTube oxutma xətası"
 
+msgid "YouTube stream not available"
+msgstr "YouTube axını mövcud deyil"
+
 msgid "Your Favorites"
 msgstr "Sevimliləriniz"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp tapılmadı. Zəhmət olmasa quraşdırın."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "Yanlış YouTube URL"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp tapılmadı. Zəhmət olmasa quraşdırın."

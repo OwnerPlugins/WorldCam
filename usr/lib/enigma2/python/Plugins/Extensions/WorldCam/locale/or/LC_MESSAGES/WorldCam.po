@@ -58,9 +58,6 @@ msgstr "ଭାଷା ପରିବର୍ତ୍ତନ କରନ୍ତୁ |"
 msgid "Continents"
 msgstr "ମାଳଦ୍ୱୀପ"
 
-msgid "Could not extract YouTube stream"
-msgstr "ୟୁଟ୍ୟୁବ୍ ଷ୍ଟ୍ରିମ୍ ବାହାର କରିପାରିବ ନାହିଁ |"
-
 msgid "Could not extract video stream"
 msgstr "ଭିଡିଓ ଷ୍ଟ୍ରିମ୍ ବାହାର କରିପାରିବ ନାହିଁ |"
 
@@ -154,9 +151,6 @@ msgstr "GitHub:% s"
 msgid "Included playlists and sources:"
 msgstr "ଅନ୍ତର୍ଭୁକ୍ତ ପ୍ଲେଲିଷ୍ଟ ଏବଂ ଉତ୍ସଗୁଡିକ:"
 
-msgid "Invalid YouTube URL"
-msgstr "ଅବ YouTube ଧ ୟୁଟ୍ୟୁବ୍ URL |"
-
 msgid "Language changed to %s"
 msgstr "ଭାଷା% s କୁ ବଦଳିଗଲା |"
 
@@ -210,6 +204,10 @@ msgstr "ପସନ୍ଦଗୁଡିକରୁ ଅପସାରିତ |"
 
 msgid "Removed from favorites: %s"
 msgstr "ପସନ୍ଦଗୁଡିକରୁ ଅପସାରିତ:% s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "ୟୁଟ୍ୟୁବ୍ ଷ୍ଟ୍ରିମ୍ ବାହାର କରିପାରିବ ନାହିଁ |"
 
 msgid "Select"
 msgstr "ଚୟନ କରନ୍ତୁ |"
@@ -274,8 +272,14 @@ msgstr "ଆପଣ ପୂର୍ବରୁ ସର୍ବଶେଷ ସଂସ୍କର
 msgid "YouTube playback error"
 msgstr "ୟୁଟ୍ୟୁବ୍ ପ୍ଲେକ୍ ତ୍ରୁଟି |"
 
+msgid "YouTube stream not available"
+msgstr "ୟୁଟ୍ୟୁବ୍ ଷ୍ଟ୍ରିମ୍ ଉପଲବ୍ଧ ନାହିଁ |"
+
 msgid "Your Favorites"
 msgstr "ତୁମର ପସନ୍ଦ"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp ମିଳିଲା ନାହିଁ | ଦୟାକରି ଏହାକୁ ସଂସ୍ଥାପନ କରନ୍ତୁ |"
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "ଅବ YouTube ଧ ୟୁଟ୍ୟୁବ୍ URL |"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp ମିଳିଲା ନାହିଁ | ଦୟାକରି ଏହାକୁ ସଂସ୍ଥାପନ କରନ୍ତୁ |"

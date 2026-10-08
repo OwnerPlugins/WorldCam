@@ -58,9 +58,6 @@ msgstr "ژبه بدله کړه"
 msgid "Continents"
 msgstr "براعظمونه"
 
-msgid "Could not extract YouTube stream"
-msgstr "د یوټیوب جریان نشي ایستل کیدی"
-
 msgid "Could not extract video stream"
 msgstr "د ویډیو جریان نشي ایستل کیدی"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "شامل شوي پلی لیستونه او سرچینې:"
 
-msgid "Invalid YouTube URL"
-msgstr "ناسم یوټیوب URL"
-
 msgid "Language changed to %s"
 msgstr "ژبه په %s بدله شوه"
 
@@ -210,6 +204,10 @@ msgstr "د خوښې څخه لرې شوی"
 
 msgid "Removed from favorites: %s"
 msgstr "د خوښې څخه لرې شوی: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "د یوټیوب جریان نشي ایستل کیدی"
 
 msgid "Select"
 msgstr "وټاکئ"
@@ -274,8 +272,14 @@ msgstr "تاسو لا دمخه وروستۍ نسخه پرمخ وړئ: {}"
 msgid "YouTube playback error"
 msgstr "د یوټیوب پلې بیک تېروتنه"
 
+msgid "YouTube stream not available"
+msgstr "د یوټیوب جریان شتون نلري"
+
 msgid "Your Favorites"
 msgstr "ستاسو د خوښې وړ"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp ونه موندل شو. مهرباني وکړئ دا نصب کړئ."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "ناسم یوټیوب URL"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp ونه موندل شو. مهرباني وکړئ دا نصب کړئ."

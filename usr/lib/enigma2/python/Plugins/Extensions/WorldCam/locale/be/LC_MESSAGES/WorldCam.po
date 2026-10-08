@@ -59,9 +59,6 @@ msgstr "Змяніць мову"
 msgid "Continents"
 msgstr "Кантыненты"
 
-msgid "Could not extract YouTube stream"
-msgstr "Не атрымалася распакаваць паток YouTube"
-
 msgid "Could not extract video stream"
 msgstr "Не атрымалася распакаваць відэаплынь"
 
@@ -155,9 +152,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Уключаныя плэйлісты і крыніцы:"
 
-msgid "Invalid YouTube URL"
-msgstr "Няправільны URL YouTube"
-
 msgid "Language changed to %s"
 msgstr "Мова зменена на %s"
 
@@ -211,6 +205,10 @@ msgstr "Выдалена з абраных"
 
 msgid "Removed from favorites: %s"
 msgstr "Выдалена з абраных: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Не атрымалася распакаваць паток YouTube"
 
 msgid "Select"
 msgstr "Выберыце"
@@ -275,8 +273,14 @@ msgstr "Вы ўжо выкарыстоўваеце апошнюю версію: 
 msgid "YouTube playback error"
 msgstr "Памылка прайгравання YouTube"
 
+msgid "YouTube stream not available"
+msgstr "Паток YouTube недаступны"
+
 msgid "Your Favorites"
 msgstr "Вашы абраныя"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp не знойдзены. Калі ласка, усталюйце яго."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "Няправільны URL YouTube"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp не знойдзены. Калі ласка, усталюйце яго."

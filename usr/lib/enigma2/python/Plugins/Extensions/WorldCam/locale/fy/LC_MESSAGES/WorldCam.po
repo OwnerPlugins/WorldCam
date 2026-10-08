@@ -58,9 +58,6 @@ msgstr "Feroarje taal"
 msgid "Continents"
 msgstr "Kontininten"
 
-msgid "Could not extract YouTube stream"
-msgstr "Koe YouTube-stream net útpakke"
-
 msgid "Could not extract video stream"
 msgstr "Koe de fideostream net ekstrahearje"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Opnommen playlists en boarnen:"
 
-msgid "Invalid YouTube URL"
-msgstr "Unjildige YouTube URL"
-
 msgid "Language changed to %s"
 msgstr "Taal feroare yn %s"
 
@@ -210,6 +204,10 @@ msgstr "Fuortsmite fan favoriten"
 
 msgid "Removed from favorites: %s"
 msgstr "Fuortsmite fan favoriten: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Koe YouTube-stream net útpakke"
 
 msgid "Select"
 msgstr "Selektearje"
@@ -274,8 +272,14 @@ msgstr "Jo rinne al de lêste ferzje: {}"
 msgid "YouTube playback error"
 msgstr "YouTube-ôfspielflater"
 
+msgid "YouTube stream not available"
+msgstr "YouTube-stream net beskikber"
+
 msgid "Your Favorites"
 msgstr "Jo Favorites"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp net fûn. Ynstallearje it asjebleaft."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "Unjildige YouTube URL"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp net fûn. Ynstallearje it asjebleaft."

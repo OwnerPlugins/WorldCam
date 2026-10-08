@@ -58,9 +58,6 @@ msgstr "Хэлийг өөрчлөх"
 msgid "Continents"
 msgstr "Тивүүд"
 
-msgid "Could not extract YouTube stream"
-msgstr "YouTube дамжуулалтыг задалж чадсангүй"
-
 msgid "Could not extract video stream"
 msgstr "Видео урсгалыг задалж чадсангүй"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Оруулсан тоглуулах жагсаалт болон эх сурвалжууд:"
 
-msgid "Invalid YouTube URL"
-msgstr "Буруу YouTube URL"
-
 msgid "Language changed to %s"
 msgstr "Хэлийг %s болгож өөрчилсөн"
 
@@ -210,6 +204,10 @@ msgstr "Дуртай зүйлсээс хассан"
 
 msgid "Removed from favorites: %s"
 msgstr "Дуртай зүйлсээс хассан: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "YouTube дамжуулалтыг задалж чадсангүй"
 
 msgid "Select"
 msgstr "Сонго"
@@ -274,8 +272,14 @@ msgstr "Та аль хэдийн хамгийн сүүлийн хувилбар�
 msgid "YouTube playback error"
 msgstr "YouTube тоглуулах алдаа"
 
+msgid "YouTube stream not available"
+msgstr "YouTube дамжуулалт боломжгүй байна"
+
 msgid "Your Favorites"
 msgstr "Таны дуртай"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp олдсонгүй. Үүнийг суулгана уу."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "Буруу YouTube URL"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp олдсонгүй. Үүнийг суулгана уу."

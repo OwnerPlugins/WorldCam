@@ -59,9 +59,6 @@ msgstr "Skift sprog"
 msgid "Continents"
 msgstr "Kontinenter"
 
-msgid "Could not extract YouTube stream"
-msgstr "Kunne ikke udtrække YouTube-stream"
-
 msgid "Could not extract video stream"
 msgstr "Kunne ikke udtrække videostream"
 
@@ -155,9 +152,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Inkluderede afspilningslister og kilder:"
 
-msgid "Invalid YouTube URL"
-msgstr "Ugyldig YouTube-URL"
-
 msgid "Language changed to %s"
 msgstr "Sproget blev ændret til %s"
 
@@ -211,6 +205,10 @@ msgstr "Fjernet fra favoritter"
 
 msgid "Removed from favorites: %s"
 msgstr "Fjernet fra favoritter: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Kunne ikke udtrække YouTube-stream"
 
 msgid "Select"
 msgstr "Vælge"
@@ -275,8 +273,14 @@ msgstr "Du kører allerede den seneste version: {}"
 msgid "YouTube playback error"
 msgstr "YouTube-afspilningsfejl"
 
+msgid "YouTube stream not available"
+msgstr "YouTube-stream er ikke tilgængelig"
+
 msgid "Your Favorites"
 msgstr "Dine favoritter"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp ikke fundet. Installer det venligst."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "Ugyldig YouTube-URL"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp ikke fundet. Installer det venligst."

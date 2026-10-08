@@ -58,9 +58,6 @@ msgstr "Badilisha lugha"
 msgid "Continents"
 msgstr "Mabara"
 
-msgid "Could not extract YouTube stream"
-msgstr "Haikuweza kutoa mtiririko wa YouTube"
-
 msgid "Could not extract video stream"
 msgstr "Haikuweza kutoa mtiririko wa video"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Orodha za kucheza na vyanzo vilivyojumuishwa:"
 
-msgid "Invalid YouTube URL"
-msgstr "URL ya YouTube si sahihi"
-
 msgid "Language changed to %s"
 msgstr "Lugha imebadilishwa hadi %s"
 
@@ -210,6 +204,10 @@ msgstr "Imeondolewa kwenye vipendwa"
 
 msgid "Removed from favorites: %s"
 msgstr "Imeondolewa kutoka kwa vipendwa: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Haikuweza kutoa mtiririko wa YouTube"
 
 msgid "Select"
 msgstr "Chagua"
@@ -274,8 +272,14 @@ msgstr "Tayari unatumia toleo jipya zaidi: {}"
 msgid "YouTube playback error"
 msgstr "Hitilafu ya kucheza YouTube"
 
+msgid "YouTube stream not available"
+msgstr "Mtiririko wa YouTube haupatikani"
+
 msgid "Your Favorites"
 msgstr "Vipendwa vyako"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp haipatikani. Tafadhali isakinishe."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "URL ya YouTube si sahihi"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp haipatikani. Tafadhali isakinishe."

@@ -58,9 +58,6 @@ msgstr "Ndrysho gjuhën"
 msgid "Continents"
 msgstr "Kontinentet"
 
-msgid "Could not extract YouTube stream"
-msgstr "Transmetimi në YouTube nuk mund të nxirret"
-
 msgid "Could not extract video stream"
 msgstr "Transmetimi i videos nuk mund të nxirret"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Listat e luajtjes dhe burimet e përfshira:"
 
-msgid "Invalid YouTube URL"
-msgstr "URL e pavlefshme e YouTube"
-
 msgid "Language changed to %s"
 msgstr "Gjuha u ndryshua në %s"
 
@@ -210,6 +204,10 @@ msgstr "U hoq nga të preferuarat"
 
 msgid "Removed from favorites: %s"
 msgstr "U hoq nga të preferuarat: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Transmetimi në YouTube nuk mund të nxirret"
 
 msgid "Select"
 msgstr "Zgjidhni"
@@ -274,8 +272,14 @@ msgstr "Ju tashmë po ekzekutoni versionin më të fundit: {}"
 msgid "YouTube playback error"
 msgstr "Gabim riprodhimi në YouTube"
 
+msgid "YouTube stream not available"
+msgstr "Transmetimi në YouTube nuk ofrohet"
+
 msgid "Your Favorites"
 msgstr "Të preferuarat tuaja"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp nuk u gjet. Ju lutemi instaloni atë."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "URL e pavlefshme e YouTube"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp nuk u gjet. Ju lutemi instaloni atë."

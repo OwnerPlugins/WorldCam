@@ -58,9 +58,6 @@ msgstr "Փոխել լեզուն"
 msgid "Continents"
 msgstr "Մայրցամաքներ"
 
-msgid "Could not extract YouTube stream"
-msgstr "Չհաջողվեց հանել YouTube-ի հոսքը"
-
 msgid "Could not extract video stream"
 msgstr "Չհաջողվեց հանել տեսանյութի հոսքը"
 
@@ -154,9 +151,6 @@ msgstr "GitHub՝ %s"
 msgid "Included playlists and sources:"
 msgstr "Ներառված երգացանկեր և աղբյուրներ."
 
-msgid "Invalid YouTube URL"
-msgstr "Անվավեր YouTube URL"
-
 msgid "Language changed to %s"
 msgstr "Լեզուն փոխվել է %s-ի"
 
@@ -210,6 +204,10 @@ msgstr "Հեռացված է ընտրյալներից"
 
 msgid "Removed from favorites: %s"
 msgstr "Հեռացված է ընտրյալներից՝ %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Չհաջողվեց հանել YouTube-ի հոսքը"
 
 msgid "Select"
 msgstr "Ընտրել"
@@ -274,8 +272,14 @@ msgstr "Դուք արդեն աշխատում եք վերջին տարբերակ�
 msgid "YouTube playback error"
 msgstr "YouTube-ի նվագարկման սխալ"
 
+msgid "YouTube stream not available"
+msgstr "YouTube հոսքը հասանելի չէ"
+
 msgid "Your Favorites"
 msgstr "Ձեր ընտրյալները"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp-ը չի գտնվել: Խնդրում ենք տեղադրել այն:"
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "Անվավեր YouTube URL"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp-ը չի գտնվել: Խնդրում ենք տեղադրել այն:"

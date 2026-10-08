@@ -59,9 +59,6 @@ msgstr "Schimbați limba"
 msgid "Continents"
 msgstr "Continentele"
 
-msgid "Could not extract YouTube stream"
-msgstr "Nu s-a putut extrage fluxul YouTube"
-
 msgid "Could not extract video stream"
 msgstr "Nu s-a putut extrage fluxul video"
 
@@ -155,9 +152,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Liste de redare și surse incluse:"
 
-msgid "Invalid YouTube URL"
-msgstr "Adresă URL YouTube nevalidă"
-
 msgid "Language changed to %s"
 msgstr "Limba a fost schimbată în %s"
 
@@ -211,6 +205,10 @@ msgstr "Eliminat din favorite"
 
 msgid "Removed from favorites: %s"
 msgstr "Eliminat din favorite: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Nu s-a putut extrage fluxul YouTube"
 
 msgid "Select"
 msgstr "Selecta"
@@ -275,8 +273,14 @@ msgstr "Rulați deja cea mai recentă versiune: {}"
 msgid "YouTube playback error"
 msgstr "Eroare de redare YouTube"
 
+msgid "YouTube stream not available"
+msgstr "Fluxul YouTube nu este disponibil"
+
 msgid "Your Favorites"
 msgstr "Favoritele tale"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp nu a fost găsit. Vă rugăm să o instalați."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "Adresă URL YouTube nevalidă"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp nu a fost găsit. Vă rugăm să o instalați."

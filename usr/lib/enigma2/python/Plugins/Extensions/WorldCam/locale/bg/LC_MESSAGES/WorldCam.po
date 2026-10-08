@@ -59,9 +59,6 @@ msgstr "Промяна на езика"
 msgid "Continents"
 msgstr "Континенти"
 
-msgid "Could not extract YouTube stream"
-msgstr "Потокът от YouTube не можа да бъде извлечен"
-
 msgid "Could not extract video stream"
 msgstr "Не можа да се извлече видеопоток"
 
@@ -155,9 +152,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Включени плейлисти и източници:"
 
-msgid "Invalid YouTube URL"
-msgstr "Невалиден URL адрес в YouTube"
-
 msgid "Language changed to %s"
 msgstr "Езикът е променен на %s"
 
@@ -211,6 +205,10 @@ msgstr "Премахнато от любимите"
 
 msgid "Removed from favorites: %s"
 msgstr "Премахнато от любими: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Потокът от YouTube не можа да бъде извлечен"
 
 msgid "Select"
 msgstr "Изберете"
@@ -275,8 +273,14 @@ msgstr "Вече използвате най-новата версия: {}"
 msgid "YouTube playback error"
 msgstr "Грешка при възпроизвеждане в YouTube"
 
+msgid "YouTube stream not available"
+msgstr "Потокът в YouTube не е наличен"
+
 msgid "Your Favorites"
 msgstr "Вашите любими"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp не е намерен. Моля, инсталирайте го."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "Невалиден URL адрес в YouTube"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp не е намерен. Моля, инсталирайте го."

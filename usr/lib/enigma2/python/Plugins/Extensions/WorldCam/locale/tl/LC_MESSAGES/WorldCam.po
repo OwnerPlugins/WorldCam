@@ -58,9 +58,6 @@ msgstr "Baguhin ang wika"
 msgid "Continents"
 msgstr "Mga kontinente"
 
-msgid "Could not extract YouTube stream"
-msgstr "Hindi ma-extract ang stream sa YouTube"
-
 msgid "Could not extract video stream"
 msgstr "Hindi ma-extract ang video stream"
 
@@ -154,9 +151,6 @@ msgstr ""
 msgid "Included playlists and sources:"
 msgstr "Mga kasamang playlist at source:"
 
-msgid "Invalid YouTube URL"
-msgstr "Di-wastong URL ng YouTube"
-
 msgid "Language changed to %s"
 msgstr "Ginawang %s ang wika"
 
@@ -210,6 +204,10 @@ msgstr "Inalis sa mga paborito"
 
 msgid "Removed from favorites: %s"
 msgstr "Inalis sa mga paborito: %s"
+
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Hindi ma-extract ang stream sa YouTube"
 
 msgid "Select"
 msgstr "Pumili"
@@ -274,8 +272,14 @@ msgstr "Pinapatakbo mo na ang pinakabagong bersyon: {}"
 msgid "YouTube playback error"
 msgstr "Error sa pag-playback ng YouTube"
 
+msgid "YouTube stream not available"
+msgstr "Hindi available ang YouTube stream"
+
 msgid "Your Favorites"
 msgstr "Mga Paborito mo"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "hindi nahanap ang yt-dlp. Mangyaring i-install ito."
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "Di-wastong URL ng YouTube"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "hindi nahanap ang yt-dlp. Mangyaring i-install ito."
