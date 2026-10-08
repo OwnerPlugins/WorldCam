@@ -1,7 +1,7 @@
 #!/bin/bash
 
-version='7.0'
-changelog='Bump version to 6.9 and refactor YouTube playback to be non-blocking. player.py now normalizes YouTube URLs, uses twisted.deferToThread to call youtube_helper.resolve_youtube, and handles stale requests and errors. Removed embedded yt-dlp probing/format logic. Added helpers in utils.py (is_youtube_url, convert_youtube_embed_to_watch, has_serviceapp, get_service_type) and improved is_ytdlp_available to detect a working yt-dlp binary. checkdependencies.py now detects yt-dlp as binary or python module and imports os.path.exists. Removed legacy dom_parser.py. Overall improves responsiveness and service selection for YouTube streams.'
+version='7.1'
+changelog='Player no longer closes when zapping, stale YouTube answers ignored, YouTube channel and live links resolved, webcams exported to bouquets play (YouTube via ytdlpwrapper), location export exports its own webcams, M3U playlists no longer duplicated, Top Webcams and Locations open the selected row, lists load without freezing the GUI, no opkg at startup, updates from OwnerPlugins, installer installs yt-dlp on Python 3 images.'
 
 TMPPATH=/tmp/WorldCam-install
 FILEPATH=/tmp/WorldCam-main.tar.gz
