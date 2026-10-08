@@ -20,7 +20,7 @@ try:
 except ImportError:
     from Components.AVSwitch import eAVControl as AVSwitch
 
-from . import _, BASE_URL
+from . import _
 from . import checkdependencies
 
 """
@@ -833,51 +833,6 @@ def get_flag_path(country_code=None):
 # country_name = "Germany"
 # country_code = get_country_code(country_name)  # Returns 'de'
 # flag_path = get_flag_path(country_code)  # Returns .../countries/de.png
-
-
-class VideoURLHelper:
-
-    def __init__(self):
-        self.logger = Logger()
-
-    def get_video_url(self, url):
-        """
-        Extracts the video URL from a webcam page, safely handling errors.
-        """
-        self.logger.info("Fetching video URL for: " + url)
-        headers = {"User-Agent": "Mozilla/5.0", "Referer": BASE_URL}
-
-        try:
-            from . import client
-            content = client.request(url, headers=headers)
-            if not content:
-                self.logger.warning("Empty content received")
-                return None
-
-            if isinstance(content, bytes):
-                content = content.decode("utf-8", errors="ignore")
-
-            # Search for HLS stream
-            hls_match = search(r"source:\s*'livee\.m3u8\?a=([^']+)'", content)
-            if hls_match:
-                video_id = hls_match.group(1)
-                final_url = "https://hd-auth.skylinewebcams.com/live.m3u8?a=" + video_id
-                self.logger.info("Found HLS stream: " + final_url)
-                return final_url
-
-            # Search for YouTube video
-            yt_match = search(r"videoId:\s*'([^']+)'", content)
-            if yt_match:
-                video_id = yt_match.group(1)
-                yt_url = "https://www.youtube.com/watch?v=" + video_id
-                self.logger.info("Found YouTube video: " + yt_url)
-                return yt_url
-
-        except Exception as e:
-            self.logger.error("Error getting video URL: " + str(e))
-
-        self.logger.warning("No video URL found")
-        return None
 
 
 class AspectManager:
