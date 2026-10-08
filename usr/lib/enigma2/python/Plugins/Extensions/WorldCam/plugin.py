@@ -1445,13 +1445,8 @@ class WorldCamWebcamScreen(WebcamBaseScreen):
                 MessageBox.TYPE_INFO,
                 timeout=3
             )
-        if choice[1] == "export_bouquet":
-            success, message = FavoritesManager.export_to_bouquet()
-            self.session.open(
-                MessageBox,
-                message,
-                MessageBox.TYPE_INFO if success else MessageBox.TYPE_ERROR
-            )
+        elif choice[1] == "export_bouquet":
+            self.export_bouquet_direct()
         elif choice[1] == "play":
             # self.session.open(WorldCamPlayer, webcam["name"], webcam["url"])
             index = self["list"].getCurrentIndex()
@@ -1462,8 +1457,9 @@ class WorldCamWebcamScreen(WebcamBaseScreen):
             )
 
     def export_bouquet_direct(self):
-        """Esegue direttamente l'esportazione nel bouquet"""
-        success, message = FavoritesManager.export_to_bouquet()
+        """Export the webcams of this location to their own bouquet"""
+        success, message = FavoritesManager.export_to_bouquet(
+            self.webcams, self.location["name"])
         self.session.open(
             MessageBox,
             message,
