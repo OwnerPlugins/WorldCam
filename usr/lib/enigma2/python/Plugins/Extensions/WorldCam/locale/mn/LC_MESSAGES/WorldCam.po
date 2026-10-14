@@ -133,11 +133,11 @@ msgstr "Бүгдийг Bouquet руу экспортлох"
 msgid "Export failed:"
 msgstr "Экспорт амжилтгүй болсон:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "%d вэбкамерыг '%s' руу экспорт хийсэн"
+
 msgid "Favorites"
 msgstr "Дуртай"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "Дуртай зүйлс амжилттай экспортлогдсон! Тэдгээрийг харахын тулд Enigma2-г дахин эхлүүлнэ үү."
 
 msgid "File not found"
 msgstr "Файл олдсонгүй"
@@ -160,6 +160,14 @@ msgstr "Дэлхийн байршлыг харуулсан шууд вэб ка�
 msgid "Live webcams from around the world"
 msgstr "Дэлхийн өнцөг булан бүрээс шууд вэбкамерууд"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "YouTube дамжуулалтыг задалж чадсангүй"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "Сайжруулж байна..."
+
 msgid "Menu"
 msgstr "Цэс"
 
@@ -175,8 +183,19 @@ msgstr "Тоглуулах жагсаалт байхгүй"
 msgid "No playlists found"
 msgstr "Тоглуулах жагсаалт олдсонгүй"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "Тоглуулах жагсаалт олдсонгүй"
+
 msgid "No valid webcams in playlist"
 msgstr "Тоглуулах жагсаалтад хүчинтэй вэбкамер алга"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "Экспортлох дуртай зүйл байхгүй"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "OK = Мэдээлэл | CH-/CH+ = Өмнөх/Дараагийн | ЦЭНХЭР = Дуртай | PLAY/PAUSE = Унтраах/унтраах | STOP = Зогсоох | EXIT = Гарах | Лулулла"
 
 msgid "Play"
 msgstr "Тоглох"
@@ -236,6 +255,13 @@ msgstr "Тохиргоо"
 msgid "Settings functionality coming soon!"
 msgstr "Тохиргооны функц удахгүй гарна!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "SkylineWebcams оруулгууд нь зөвхөн streamlink wrapper залгаастай (enigma2-plugin-extensions-streamlinkwrapper) баглаанаас тоглодог."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "YouTube дамжуулалт боломжгүй байна"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Webcam.pl дээрх техникийн алдаа"
 
@@ -269,14 +295,17 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "Та аль хэдийн хамгийн сүүлийн хувилбарыг ажиллуулж байна: {}"
 
-msgid "YouTube playback error"
-msgstr "YouTube тоглуулах алдаа"
-
-msgid "YouTube stream not available"
-msgstr "YouTube дамжуулалт боломжгүй байна"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "YouTube-ийн оруулгууд нь баглаанаас зөвхөн yt-dlp ороох залгаас (enigma2-plugin-extensions-ytdlpwrapper)-ээр тоглодог."
 
 msgid "Your Favorites"
 msgstr "Таны дуртай"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "Дуртай зүйлс амжилттай экспортлогдсон! Тэдгээрийг харахын тулд Enigma2-г дахин эхлүүлнэ үү."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "YouTube тоглуулах алдаа"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "Буруу YouTube URL"

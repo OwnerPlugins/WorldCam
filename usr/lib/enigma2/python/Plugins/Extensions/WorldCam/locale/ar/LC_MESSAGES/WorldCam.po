@@ -133,11 +133,11 @@ msgstr "تصدير الكل إلى باقة"
 msgid "Export failed:"
 msgstr "فشل التصدير:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "تم تصدير %d من كاميرات الويب إلى '%s'"
+
 msgid "Favorites"
 msgstr "المفضلة"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "تم تصدير المفضلة بنجاح! أعد تشغيل Enigma2 لرؤيتهم."
 
 msgid "File not found"
 msgstr "لم يتم العثور على الملف"
@@ -160,6 +160,14 @@ msgstr "عارض كاميرا ويب مباشر يضم مواقع عالمية"
 msgid "Live webcams from around the world"
 msgstr "كاميرات الويب الحية من جميع أنحاء العالم"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "تعذر استخراج دفق YouTube"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "جارٍ الترقية..."
+
 msgid "Menu"
 msgstr "قائمة طعام"
 
@@ -175,8 +183,19 @@ msgstr "لا توجد قوائم تشغيل متاحة"
 msgid "No playlists found"
 msgstr "لم يتم العثور على قوائم التشغيل"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "لم يتم العثور على قوائم التشغيل"
+
 msgid "No valid webcams in playlist"
 msgstr "لا توجد كاميرات ويب صالحة في قائمة التشغيل"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "لا توجد مفضلات للتصدير"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "موافق = معلومات | CH-/CH+ = السابق/التالي | أزرق = مفضل | تشغيل/إيقاف مؤقت = تبديل | توقف = توقف | خروج = خروج | بواسطة لولولا"
 
 msgid "Play"
 msgstr "يلعب"
@@ -236,6 +255,13 @@ msgstr "إعدادات"
 msgid "Settings functionality coming soon!"
 msgstr "وظائف الإعدادات قريبا!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "يتم تشغيل إدخالات SkylineWebcams من الباقة فقط باستخدام البرنامج الإضافي Streamlink Wrapper (enigma2-plugin-extensions-streamlinkwrapper)."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "دفق يوتيوب غير متوفر"
+
 msgid "Technical error in Webcam.pl"
 msgstr "خطأ فني في Webcam.pl"
 
@@ -269,14 +295,17 @@ msgstr "وورلد كام ضد {}"
 msgid "You are already running the latest version: {}"
 msgstr "أنت تقوم بالفعل بتشغيل أحدث إصدار: {}"
 
-msgid "YouTube playback error"
-msgstr "خطأ في تشغيل اليوتيوب"
-
-msgid "YouTube stream not available"
-msgstr "دفق يوتيوب غير متوفر"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "يتم تشغيل إدخالات YouTube من الباقة فقط باستخدام المكوّن الإضافي yt-dlp Wrapper (enigma2-plugin-extensions-ytdlpwrapper)."
 
 msgid "Your Favorites"
 msgstr "المفضلة لديك"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "تم تصدير المفضلة بنجاح! أعد تشغيل Enigma2 لرؤيتهم."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "خطأ في تشغيل اليوتيوب"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "عنوان URL لموقع YouTube غير صالح"

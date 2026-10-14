@@ -134,11 +134,11 @@ msgstr "Izvezi sve u Buket"
 msgid "Export failed:"
 msgstr "Izvoz nije uspio:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "%d web kamera izvezeno u '%s'"
+
 msgid "Favorites"
 msgstr "Favoriti"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "Favoriti su uspješno izvezeni! Ponovno pokrenite Enigmu2 da biste ih vidjeli."
 
 msgid "File not found"
 msgstr "Datoteka nije pronađena"
@@ -161,6 +161,14 @@ msgstr "Preglednik web kamere uživo s globalnim lokacijama"
 msgid "Live webcams from around the world"
 msgstr "Web kamere uživo iz cijelog svijeta"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "Nije moguće izdvojiti YouTube stream"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "Nadogradnja..."
+
 msgid "Menu"
 msgstr "Jelovnik"
 
@@ -176,8 +184,19 @@ msgstr "Nema dostupnih popisa za reprodukciju"
 msgid "No playlists found"
 msgstr "Nema pronađenih popisa za reprodukciju"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "Nema pronađenih popisa za reprodukciju"
+
 msgid "No valid webcams in playlist"
 msgstr "Nema valjanih web kamera na popisu za reprodukciju"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "Nema favorita za izvoz"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "OK = Info | CH-/CH+ = Prethodna/Sljedeća | PLAVA = Omiljeno | REPRODUCIRAJ/PAUZIRAJ = Prebaci | STOP = Zaustavi | IZLAZ = Izlaz | od strane Lululle"
 
 msgid "Play"
 msgstr "Igrati"
@@ -237,6 +256,13 @@ msgstr "postavke"
 msgid "Settings functionality coming soon!"
 msgstr "Funkcionalnost postavki uskoro!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "Unosi SkylineWebcams reproduciraju se iz buketa samo pomoću dodatka za omotač streamlink-a (enigma2-plugin-extensions-streamlinkwrapper)."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "YouTube stream nije dostupan"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Tehnička greška u Webcam.pl"
 
@@ -270,14 +296,17 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "Već koristite najnoviju verziju: {}"
 
-msgid "YouTube playback error"
-msgstr "Pogreška reprodukcije YouTubea"
-
-msgid "YouTube stream not available"
-msgstr "YouTube stream nije dostupan"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "YouTube unosi reproduciraju se iz buketa samo pomoću dodatka za omot yt-dlp (enigma2-plugin-extensions-ytdlpwrapper)."
 
 msgid "Your Favorites"
 msgstr "Vaši favoriti"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "Favoriti su uspješno izvezeni! Ponovno pokrenite Enigmu2 da biste ih vidjeli."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "Pogreška reprodukcije YouTubea"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "Nevažeći YouTube URL"

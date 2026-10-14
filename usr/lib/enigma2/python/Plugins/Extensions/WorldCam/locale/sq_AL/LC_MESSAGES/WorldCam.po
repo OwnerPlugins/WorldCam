@@ -133,11 +133,11 @@ msgstr "Eksporto të gjitha në buqetë"
 msgid "Export failed:"
 msgstr "Eksporti dështoi:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "%d uebkamera u eksportuan në \\\"%s\\\""
+
 msgid "Favorites"
 msgstr "Të preferuarat"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "Të preferuarat u eksportuan me sukses! Rinisni Enigma2 për t'i parë ato."
 
 msgid "File not found"
 msgstr "Skedari nuk u gjet"
@@ -160,6 +160,14 @@ msgstr "Shikues i drejtpërdrejtë i kamerës së internetit me vendndodhje glob
 msgid "Live webcams from around the world"
 msgstr "Uebkamera të drejtpërdrejta nga e gjithë bota"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "Transmetimi në YouTube nuk mund të nxirret"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "Po përmirësohet..."
+
 msgid "Menu"
 msgstr "Menyja"
 
@@ -175,8 +183,19 @@ msgstr "Nuk ka lista luajtjeje të disponueshme"
 msgid "No playlists found"
 msgstr "Nuk u gjet asnjë listë luajtjeje"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "Nuk u gjet asnjë listë luajtjeje"
+
 msgid "No valid webcams in playlist"
 msgstr "Nuk ka webkamera të vlefshme në listën e luajtjes"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "Nuk ka të preferuar për eksport"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "OK = Informacion | CH-/CH+ = Para/Tjetër | BLU = Fav | LUAJ/PAUZË = Ndrysho | STOP = Ndal | EXIT = Dalje | nga Lululla"
 
 msgid "Play"
 msgstr "Luaj"
@@ -236,6 +255,13 @@ msgstr "Cilësimet"
 msgid "Settings functionality coming soon!"
 msgstr "Funksionaliteti i cilësimeve vjen së shpejti!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "Regjistrimet e SkylineWebcams luhen nga buqeta vetëm me shtojcën streamlink wrapper (enigma2-plugin-extensions-streamlinkwrapper)."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "Transmetimi në YouTube nuk ofrohet"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Gabim teknik në Webcam.pl"
 
@@ -269,14 +295,17 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "Ju tashmë po ekzekutoni versionin më të fundit: {}"
 
-msgid "YouTube playback error"
-msgstr "Gabim riprodhimi në YouTube"
-
-msgid "YouTube stream not available"
-msgstr "Transmetimi në YouTube nuk ofrohet"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "Regjistrimet në YouTube luhen nga buqeta vetëm me shtesën yt-dlp wrapper (enigma2-plugin-extensions-ytdlpwrapper)."
 
 msgid "Your Favorites"
 msgstr "Të preferuarat tuaja"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "Të preferuarat u eksportuan me sukses! Rinisni Enigma2 për t'i parë ato."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "Gabim riprodhimi në YouTube"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "URL e pavlefshme e YouTube"

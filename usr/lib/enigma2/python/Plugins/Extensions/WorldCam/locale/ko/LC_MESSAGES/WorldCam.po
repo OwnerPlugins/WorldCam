@@ -134,11 +134,11 @@ msgstr "부케로 모두 내보내기"
 msgid "Export failed:"
 msgstr "내보내기 실패:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "%d개의 웹캠을 '%s'(으)로 내보냈습니다."
+
 msgid "Favorites"
 msgstr "즐겨찾기"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "즐겨찾기를 성공적으로 내보냈습니다! Enigma2를 다시 시작하여 확인하세요."
 
 msgid "File not found"
 msgstr "파일을 찾을 수 없습니다"
@@ -161,6 +161,14 @@ msgstr "전 세계 위치를 보여주는 라이브 웹캠 뷰어"
 msgid "Live webcams from around the world"
 msgstr "전 세계의 라이브 웹캠"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "YouTube 스트림을 추출할 수 없습니다."
+
+#, fuzzy
+msgid "Loading..."
+msgstr "업그레이드 중..."
+
 msgid "Menu"
 msgstr "메뉴"
 
@@ -176,8 +184,19 @@ msgstr "사용 가능한 재생목록이 없습니다."
 msgid "No playlists found"
 msgstr "재생목록을 찾을 수 없습니다."
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "재생목록을 찾을 수 없습니다."
+
 msgid "No valid webcams in playlist"
 msgstr "재생목록에 유효한 웹캠이 없습니다."
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "내보낼 즐겨찾기가 없습니다."
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "확인 = 정보 | CH-/CH+ = 이전/다음 | 파란색 = 즐겨찾기 | 재생/일시 중지 = 토글 | 중지 = 중지 | 종료 = 종료 | by 루룰라"
 
 msgid "Play"
 msgstr "놀다"
@@ -237,6 +256,13 @@ msgstr "설정"
 msgid "Settings functionality coming soon!"
 msgstr "설정 기능이 곧 제공될 예정입니다!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "SkylineWebcams 항목은 streamlink 래퍼 플러그인(enigma2-plugin-extensions-streamlinkwrapper)을 통해서만 부케에서 재생됩니다."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "YouTube 스트림을 사용할 수 없습니다."
+
 msgid "Technical error in Webcam.pl"
 msgstr "Webcam.pl의 기술적 오류"
 
@@ -270,14 +296,17 @@ msgstr "월드캠 v{}"
 msgid "You are already running the latest version: {}"
 msgstr "이미 최신 버전을 실행하고 있습니다: {}"
 
-msgid "YouTube playback error"
-msgstr "유튜브 재생 오류"
-
-msgid "YouTube stream not available"
-msgstr "YouTube 스트림을 사용할 수 없습니다."
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "YouTube 항목은 yt-dlp 래퍼 플러그인(enigma2-plugin-extensions-ytdlpwrapper)을 사용하는 경우에만 부케에서 재생됩니다."
 
 msgid "Your Favorites"
 msgstr "즐겨찾기"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "즐겨찾기를 성공적으로 내보냈습니다! Enigma2를 다시 시작하여 확인하세요."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "유튜브 재생 오류"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "잘못된 YouTube URL"

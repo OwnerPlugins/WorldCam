@@ -134,11 +134,11 @@ msgstr "Izvozi vse v šopek"
 msgid "Export failed:"
 msgstr "Izvoz ni uspel:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "Izvožene %d spletne kamere v '%s'"
+
 msgid "Favorites"
 msgstr "Priljubljene"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "Priljubljene so uspešno izvožene! Znova zaženite Enigmo2, da jih vidite."
 
 msgid "File not found"
 msgstr "Datoteke ni mogoče najti"
@@ -161,6 +161,14 @@ msgstr "Pregledovalnik spletnih kamer v živo z globalnimi lokacijami"
 msgid "Live webcams from around the world"
 msgstr "Spletne kamere v živo z vsega sveta"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "YouTubovega toka ni bilo mogoče ekstrahirati"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "Nadgradnja ..."
+
 msgid "Menu"
 msgstr "meni"
 
@@ -176,8 +184,19 @@ msgstr "Na voljo ni noben seznam predvajanja"
 msgid "No playlists found"
 msgstr "Ni seznamov predvajanja"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "Ni seznamov predvajanja"
+
 msgid "No valid webcams in playlist"
 msgstr "Na seznamu predvajanja ni veljavnih spletnih kamer"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "Ni priljubljenih za izvoz"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "OK = Informacije | CH-/CH+ = Prejšnji/Naslednji | MODRA = Priljubljena | PREDVAJAJ/PAVZA = Preklop | STOP = Ustavi | IZHOD = Izhod | od Lululla"
 
 msgid "Play"
 msgstr "Igraj"
@@ -237,6 +256,13 @@ msgstr "nastavitve"
 msgid "Settings functionality coming soon!"
 msgstr "Funkcionalnost nastavitev kmalu na voljo!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "Vnosi SkylineWebcams se predvajajo iz šopka samo z vtičnikom streamlink wrapper (enigma2-plugin-extensions-streamlinkwrapper)."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "YouTube tok ni na voljo"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Tehnična napaka v Webcam.pl"
 
@@ -270,14 +296,17 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "Že uporabljate najnovejšo različico: {}"
 
-msgid "YouTube playback error"
-msgstr "Napaka pri predvajanju YouTube"
-
-msgid "YouTube stream not available"
-msgstr "YouTube tok ni na voljo"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "Vnosi v YouTubu se predvajajo iz šopka samo z vtičnikom za ovoj yt-dlp (enigma2-plugin-extensions-ytdlpwrapper)."
 
 msgid "Your Favorites"
 msgstr "Vaši priljubljeni"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "Priljubljene so uspešno izvožene! Znova zaženite Enigmo2, da jih vidite."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "Napaka pri predvajanju YouTube"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "Neveljaven URL YouTube"

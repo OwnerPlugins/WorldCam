@@ -133,11 +133,11 @@ msgstr "Hemî ji Bouquet re hinarde bikin"
 msgid "Export failed:"
 msgstr "Hinardekirin têk çû:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "%d webkamera ji '%s' re hatin hinartin"
+
 msgid "Favorites"
 msgstr ""
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "Vebijarkên bi serfirazî hatin îxrackirin! Enigma2 ji nû ve bidin destpêkirin da ku wan bibînin."
 
 msgid "File not found"
 msgstr "Pelê nehat dîtin"
@@ -160,6 +160,14 @@ msgstr "Dîmenderê kameraya zindî ya ku cîhên gerdûnî vedihewîne"
 msgid "Live webcams from around the world"
 msgstr "Malperên zindî yên ji çar aliyên cîhanê"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "Nekarî weşana YouTube derxe"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "Nûvekirin..."
+
 msgid "Menu"
 msgstr "Qerta xûrekê"
 
@@ -175,8 +183,19 @@ msgstr "Lîsteyên lîstikê tune"
 msgid "No playlists found"
 msgstr "Lîsteyên lîstikê nehatin dîtin"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "Lîsteyên lîstikê nehatin dîtin"
+
 msgid "No valid webcams in playlist"
 msgstr "Di lîsteya lîstikê de webcamên derbasdar tune"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "No favorites ji bo hinardekirina"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "OK = Agahdarî | CH-/CH+ = Pêşî/Piştre | ŞÎN = Bijarte | LÊZÎN/PAUSE = Veguheztin | STOP = Raweste | DERKET = Derketin | ji aliyê Lululla"
 
 msgid "Play"
 msgstr "Bazî"
@@ -236,6 +255,13 @@ msgstr ""
 msgid "Settings functionality coming soon!"
 msgstr "fonksiyona mîhengan di demek nêzîk de tê!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "Têketinên SkylineWebcams ji bûkê tenê bi pêveka pêça streamlink (enigma2-plugin-extensions-streamlinkwrapper) dilîzin."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "Weşana YouTube peyda nabe"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Çewtiya teknîkî di Webcam.pl"
 
@@ -269,14 +295,17 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "Jixwe tu guhertoya herî dawî dixebitî: {}"
 
-msgid "YouTube playback error"
-msgstr "Çewtiya lîstika YouTube"
-
-msgid "YouTube stream not available"
-msgstr "Weşana YouTube peyda nabe"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "Têketinên YouTube ji bûkê tenê bi pêveka pêçana yt-dlp (enigma2-plugin-extensions-ytdlpwrapper) dilîzin."
 
 msgid "Your Favorites"
 msgstr "Favorites te"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "Vebijarkên bi serfirazî hatin îxrackirin! Enigma2 ji nû ve bidin destpêkirin da ku wan bibînin."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "Çewtiya lîstika YouTube"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "URL-ya YouTube nederbasdar e"

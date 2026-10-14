@@ -133,11 +133,11 @@ msgstr "అన్నింటినీ బొకేకి ఎగుమతి చ
 msgid "Export failed:"
 msgstr "ఎగుమతి విఫలమైంది:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "%d వెబ్‌క్యామ్‌లు '%s'కి ఎగుమతి చేయబడ్డాయి"
+
 msgid "Favorites"
 msgstr "ఇష్టమైనవి"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "ఇష్టమైనవి విజయవంతంగా ఎగుమతి చేయబడ్డాయి! వాటిని చూడటానికి Enigma2ని పునఃప్రారంభించండి."
 
 msgid "File not found"
 msgstr "ఫైల్ కనుగొనబడలేదు"
@@ -160,6 +160,14 @@ msgstr "గ్లోబల్ స్థానాలను ఫీచర్ చే
 msgid "Live webcams from around the world"
 msgstr "ప్రపంచవ్యాప్తంగా ఉన్న లైవ్ వెబ్‌క్యామ్‌లు"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "YouTube స్ట్రీమ్‌ను సంగ్రహించడం సాధ్యపడలేదు"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "అప్‌గ్రేడ్ అవుతోంది..."
+
 msgid "Menu"
 msgstr "మెనూ"
 
@@ -175,8 +183,19 @@ msgstr "ప్లేజాబితాలు అందుబాటులో ల�
 msgid "No playlists found"
 msgstr "ప్లేజాబితాలు ఏవీ కనుగొనబడలేదు"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "ప్లేజాబితాలు ఏవీ కనుగొనబడలేదు"
+
 msgid "No valid webcams in playlist"
 msgstr "ప్లేజాబితాలో చెల్లుబాటు అయ్యే వెబ్‌క్యామ్‌లు లేవు"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "ఎగుమతి చేయడానికి ఇష్టమైనవి లేవు"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "OK = సమాచారం | CH-/CH+ = మునుపటి/తదుపరి | BLUE = ఇష్టమైన | PLAY/PAUSE = టోగుల్ | STOP = ఆపు | EXIT = నిష్క్రమించు | లులుల్లా ద్వారా"
 
 msgid "Play"
 msgstr "ఆడండి"
@@ -236,6 +255,13 @@ msgstr "సెట్టింగ్‌లు"
 msgid "Settings functionality coming soon!"
 msgstr "సెట్టింగ్‌ల కార్యాచరణ త్వరలో వస్తుంది!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "స్కైలైన్‌వెబ్‌క్యామ్‌ల ఎంట్రీలు గుత్తి నుండి స్ట్రీమ్‌లింక్ రేపర్ ప్లగ్ఇన్ (enigma2-plugin-extensions-streamlinkwrapper)తో మాత్రమే ప్లే అవుతాయి."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "YouTube స్ట్రీమ్ అందుబాటులో లేదు"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Webcam.plలో సాంకేతిక లోపం"
 
@@ -269,14 +295,17 @@ msgstr "వరల్డ్‌క్యామ్ v{}"
 msgid "You are already running the latest version: {}"
 msgstr "మీరు ఇప్పటికే తాజా సంస్కరణను అమలు చేస్తున్నారు: {}"
 
-msgid "YouTube playback error"
-msgstr "YouTube ప్లేబ్యాక్ లోపం"
-
-msgid "YouTube stream not available"
-msgstr "YouTube స్ట్రీమ్ అందుబాటులో లేదు"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "YouTube ఎంట్రీలు yt-dlp ర్యాపర్ ప్లగ్ఇన్ (enigma2-plugin-extensions-ytdlpwrapper)తో మాత్రమే బొకే నుండి ప్లే అవుతాయి."
 
 msgid "Your Favorites"
 msgstr "మీ ఇష్టమైనవి"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "ఇష్టమైనవి విజయవంతంగా ఎగుమతి చేయబడ్డాయి! వాటిని చూడటానికి Enigma2ని పునఃప్రారంభించండి."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "YouTube ప్లేబ్యాక్ లోపం"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "చెల్లని YouTube URL"

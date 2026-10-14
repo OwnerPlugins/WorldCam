@@ -133,11 +133,11 @@ msgstr "Allforio Pawb i Bouquet"
 msgid "Export failed:"
 msgstr "Wedi methu allforio:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "Wedi allforio %d gwegamerâu i '%s'"
+
 msgid "Favorites"
 msgstr "Ffefrynnau"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "Ffefrynnau allforio yn llwyddiannus! Ailgychwyn Enigma2 i'w gweld."
 
 msgid "File not found"
 msgstr "Ffeil heb ei chanfod"
@@ -160,6 +160,14 @@ msgstr "Gwyliwr gwe-gamera byw yn cynnwys lleoliadau byd-eang"
 msgid "Live webcams from around the world"
 msgstr "Gwe-gamerâu byw o bob rhan o'r byd"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "Methu echdynnu ffrwd YouTube"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "Wrthi'n uwchraddio..."
+
 msgid "Menu"
 msgstr "Bwydlen"
 
@@ -175,8 +183,19 @@ msgstr "Dim rhestri chwarae ar gael"
 msgid "No playlists found"
 msgstr "Heb ganfod rhestri chwarae"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "Heb ganfod rhestri chwarae"
+
 msgid "No valid webcams in playlist"
 msgstr "Dim gwe-gamerâu dilys yn y rhestr chwarae"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "Dim ffefrynnau i'w hallforio"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "Iawn = Gwybodaeth | CH-/CH+ = Blaenorol/Nesaf | GLAS = Ffav | CHWARAE/SEIBIANT = Toglo | STOPIO = Stop | YMADAEL = Gadael | gan Lululla"
 
 msgid "Play"
 msgstr "Chwarae"
@@ -236,6 +255,13 @@ msgstr "Gosodiadau"
 msgid "Settings functionality coming soon!"
 msgstr "Swyddogaeth gosodiadau yn dod yn fuan!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "Mae cofnodion SkylineWebcams yn chwarae o'r tusw yn unig gyda'r ategyn lapio streamlink (enigma2-plugin-extensions-streamlinkwrapper)."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "Nid yw ffrwd YouTube ar gael"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Gwall technegol yn Webcam.pl"
 
@@ -269,14 +295,17 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "Rydych chi eisoes yn rhedeg y fersiwn diweddaraf: {}"
 
-msgid "YouTube playback error"
-msgstr "Gwall chwarae YouTube"
-
-msgid "YouTube stream not available"
-msgstr "Nid yw ffrwd YouTube ar gael"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "Mae cofnodion YouTube yn chwarae o'r tusw yn unig gyda'r ategyn lapio yt-dlp (enigma2-plugin-extensions-ytdlpwrapper)."
 
 msgid "Your Favorites"
 msgstr "Eich Ffefrynnau"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "Ffefrynnau allforio yn llwyddiannus! Ailgychwyn Enigma2 i'w gweld."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "Gwall chwarae YouTube"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "URL YouTube annilys"

@@ -134,11 +134,11 @@ msgstr "Tümünü Bukete Aktar"
 msgid "Export failed:"
 msgstr "Dışa aktarma başarısız oldu:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "%d web kamerası '%s' hedefine aktarıldı"
+
 msgid "Favorites"
 msgstr "Favoriler"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "Favoriler başarıyla dışa aktarıldı! Bunları görmek için Enigma2'yi yeniden başlatın."
 
 msgid "File not found"
 msgstr "Dosya bulunamadı"
@@ -161,6 +161,14 @@ msgstr "Küresel konumları gösteren canlı web kamerası görüntüleyici"
 msgid "Live webcams from around the world"
 msgstr "Dünyanın dört bir yanından canlı web kameraları"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "YouTube akışı çıkarılamadı"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "Yükseltiliyor..."
+
 msgid "Menu"
 msgstr "Menü"
 
@@ -176,8 +184,19 @@ msgstr "Oynatma listesi yok"
 msgid "No playlists found"
 msgstr "Oynatma listesi bulunamadı"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "Oynatma listesi bulunamadı"
+
 msgid "No valid webcams in playlist"
 msgstr "Çalma listesinde geçerli bir web kamerası yok"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "Dışa aktarılacak favori yok"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "Tamam = Bilgi | CH-/CH+ = Önceki/Sonraki | MAVİ = Favori | OYNAT/DURAKLAT = Geçiş | DUR = Durdur | ÇIKIŞ = Çıkış | tarafından Lululla"
 
 msgid "Play"
 msgstr "Oynamak"
@@ -237,6 +256,13 @@ msgstr "Ayarlar"
 msgid "Settings functionality coming soon!"
 msgstr "Ayarlar işlevi çok yakında!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "SkylineWebcams girişleri buketten yalnızca akış bağlantısı sarmalayıcı eklentisi (enigma2-plugin-extensions-streamlinkwrapper) ile oynatılır."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "YouTube akışı kullanılamıyor"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Webcam.pl'de teknik hata"
 
@@ -270,14 +296,17 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "Zaten en son sürümü çalıştırıyorsunuz: {}"
 
-msgid "YouTube playback error"
-msgstr "YouTube oynatma hatası"
-
-msgid "YouTube stream not available"
-msgstr "YouTube akışı kullanılamıyor"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "YouTube girişleri buketten yalnızca yt-dlp sarmalayıcı eklentisi (enigma2-plugin-extensions-ytdlpwrapper) ile oynatılır."
 
 msgid "Your Favorites"
 msgstr "Favorileriniz"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "Favoriler başarıyla dışa aktarıldı! Bunları görmek için Enigma2'yi yeniden başlatın."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "YouTube oynatma hatası"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "Geçersiz YouTube URL'si"

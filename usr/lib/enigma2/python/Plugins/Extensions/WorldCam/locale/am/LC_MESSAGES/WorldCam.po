@@ -133,11 +133,11 @@ msgstr "ሁሉንም ወደ ቡኬት ላክ"
 msgid "Export failed:"
 msgstr "ወደ ውጭ መላክ አልተሳካም፦"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "%d የድር ካሜራዎችን ወደ '%s' ተልኳል"
+
 msgid "Favorites"
 msgstr "ተወዳጆች"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "ተወዳጆች በተሳካ ሁኔታ ወደ ውጭ ተልከዋል! እነሱን ለማየት Enigma2ን እንደገና ያስጀምሩ።"
 
 msgid "File not found"
 msgstr "ፋይል አልተገኘም።"
@@ -160,6 +160,14 @@ msgstr "አለምአቀፍ አካባቢዎችን የሚያሳይ የቀጥታ �
 msgid "Live webcams from around the world"
 msgstr "የቀጥታ የድር ካሜራዎች ከዓለም ዙሪያ"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "የዩቲዩብ ዥረት ማውጣት አልተቻለም"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "በማሻሻል ላይ..."
+
 msgid "Menu"
 msgstr "ምናሌ"
 
@@ -175,8 +183,19 @@ msgstr "ምንም አጫዋች ዝርዝሮች የሉም"
 msgid "No playlists found"
 msgstr "ምንም አጫዋች ዝርዝሮች አልተገኙም።"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "ምንም አጫዋች ዝርዝሮች አልተገኙም።"
+
 msgid "No valid webcams in playlist"
 msgstr "በአጫዋች ዝርዝር ውስጥ ምንም የሚሰራ የድር ካሜራዎች የሉም"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "ወደ ውጭ ለመላክ ምንም ተወዳጆች የሉም"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "እሺ = መረጃ | CH-/CH+ = ቀዳሚ/ቀጣይ | ሰማያዊ = ተወዳጅ | አጫውት/አፍታ አቁም = ቀያይር | አቁም = አቁም | ውጣ = ውጣ | በሉሉላ"
 
 msgid "Play"
 msgstr "ይጫወቱ"
@@ -236,6 +255,13 @@ msgstr "ቅንብሮች"
 msgid "Settings functionality coming soon!"
 msgstr "የቅንብሮች ተግባር በቅርቡ ይመጣል!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "የSkylineWebcams ግቤቶች የሚጫወቱት ከዕቅፍ አበባው በዥረት ማያያዣ ጥቅል ተሰኪ (enigma2-plugin-extensions-streamlinkwrapper) ብቻ ነው።"
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "የዩቲዩብ ዥረት አይገኝም"
+
 msgid "Technical error in Webcam.pl"
 msgstr "የቴክኒክ ስህተት በ Webcam.pl"
 
@@ -269,14 +295,17 @@ msgstr "ወርልድ ካም ቪ{}"
 msgid "You are already running the latest version: {}"
 msgstr "አስቀድመው የቅርብ ጊዜውን ስሪት እያሄዱ ነው፡ {}"
 
-msgid "YouTube playback error"
-msgstr "የዩቲዩብ መልሶ ማጫወት ስህተት"
-
-msgid "YouTube stream not available"
-msgstr "የዩቲዩብ ዥረት አይገኝም"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "የዩቲዩብ ግቤቶች የሚጫወቱት ከዕቅፍ አበባው በ yt-dlp መጠቅለያ ተሰኪ (enigma2-plugin-extensions-ytdlpwrapper) ብቻ ነው።"
 
 msgid "Your Favorites"
 msgstr "የእርስዎ ተወዳጆች"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "ተወዳጆች በተሳካ ሁኔታ ወደ ውጭ ተልከዋል! እነሱን ለማየት Enigma2ን እንደገና ያስጀምሩ።"
+
+#~ msgid "YouTube playback error"
+#~ msgstr "የዩቲዩብ መልሶ ማጫወት ስህተት"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "ልክ ያልሆነ የዩቲዩብ ዩአርኤል"

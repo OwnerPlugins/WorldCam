@@ -134,11 +134,11 @@ msgstr "Easpórtáil go léir chuig Bouquet"
 msgid "Export failed:"
 msgstr "Theip ar easpórtáil:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "Easpórtáladh %d ceamara gréasáin go '%s'"
+
 msgid "Favorites"
 msgstr "Ceanáin"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "Ceanáin easpórtáilte go rathúil! Atosaigh Enigma2 chun iad a fheiceáil."
 
 msgid "File not found"
 msgstr "Comhad gan aimsiú"
@@ -161,6 +161,14 @@ msgstr "Breathnóir ceamara gréasáin beo le láithreacha domhanda"
 msgid "Live webcams from around the world"
 msgstr "Ceamara gréasáin beo ó ar fud an domhain"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "Níorbh fhéidir sruth YouTube a bhaint as"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "Uasghrádú..."
+
 msgid "Menu"
 msgstr "Roghchlár"
 
@@ -176,8 +184,19 @@ msgstr "Níl aon seinmliostaí ar fáil"
 msgid "No playlists found"
 msgstr "Níor aimsíodh aon seinmliostaí"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "Níor aimsíodh aon seinmliostaí"
+
 msgid "No valid webcams in playlist"
 msgstr "Níl aon cheamara gréasáin bhailí sa seinmliosta"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "Níl aon cheanáin le heaspórtáil"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "OK = Eolas | CH-/CH+ = Roimhe/Ar Aghaidh | GORM = Fav | PLAY/SOS = Scoránaigh | STOP = Stop | EXIT = Scoir | le Lululla"
 
 msgid "Play"
 msgstr "Imirt"
@@ -237,6 +256,13 @@ msgstr "Socruithe"
 msgid "Settings functionality coming soon!"
 msgstr "Feidhmiúlacht socruithe ag teacht go luath!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "Ní imríonn iontrálacha SkylineWebcams ón bouquet ach amháin leis an mbreiseán sruthlasc fillteáin (enigma2-plugin-extensions-streamlinkwrapper)."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "Níl sruth YouTube ar fáil"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Earráid theicniúil i Webcam.pl"
 
@@ -270,14 +296,17 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "Tá an leagan is déanaí á rith agat cheana: {}"
 
-msgid "YouTube playback error"
-msgstr "Earráid athsheinm YouTube"
-
-msgid "YouTube stream not available"
-msgstr "Níl sruth YouTube ar fáil"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "Ní imríonn iontrálacha YouTube ón bouquet ach leis an mbreiseán fillteáin yt-dlp (enigma2-plugin-extensions-ytdlpwrapper)."
 
 msgid "Your Favorites"
 msgstr "Do Cheanáin"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "Ceanáin easpórtáilte go rathúil! Atosaigh Enigma2 chun iad a fheiceáil."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "Earráid athsheinm YouTube"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "URL YouTube neamhbhailí"

@@ -133,10 +133,10 @@ msgstr ""
 msgid "Export failed:"
 msgstr ""
 
-msgid "Favorites"
+msgid "Exported %d webcams to '%s'"
 msgstr ""
 
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
+msgid "Favorites"
 msgstr ""
 
 msgid "File not found"
@@ -160,6 +160,12 @@ msgstr ""
 msgid "Live webcams from around the world"
 msgstr ""
 
+msgid "Loading stream..."
+msgstr ""
+
+msgid "Loading..."
+msgstr ""
+
 msgid "Menu"
 msgstr ""
 
@@ -175,7 +181,16 @@ msgstr ""
 msgid "No playlists found"
 msgstr ""
 
+msgid "No valid streams found"
+msgstr ""
+
 msgid "No valid webcams in playlist"
+msgstr ""
+
+msgid "No webcams to export"
+msgstr ""
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
 msgstr ""
 
 msgid "Play"
@@ -235,6 +250,12 @@ msgstr ""
 msgid "Settings functionality coming soon!"
 msgstr ""
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr ""
+
+msgid "Stream not available"
+msgstr ""
+
 msgid "Technical error in Webcam.pl"
 msgstr ""
 
@@ -268,10 +289,7 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr ""
 
-msgid "YouTube playback error"
-msgstr ""
-
-msgid "YouTube stream not available"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
 msgstr ""
 
 msgid "Your Favorites"

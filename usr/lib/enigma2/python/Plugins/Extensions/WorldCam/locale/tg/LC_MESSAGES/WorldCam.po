@@ -133,11 +133,11 @@ msgstr "Ҳамаро ба Букет содир кунед"
 msgid "Export failed:"
 msgstr "Содирот ноком шуд:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "%d веб-камера ба '%s' содир карда шуд"
+
 msgid "Favorites"
 msgstr "Дӯстдоштаҳо"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "Дӯстдоштаҳо бомуваффақият содир карда шуданд! Барои дидани онҳо Enigma2-ро аз нав оғоз кунед."
 
 msgid "File not found"
 msgstr "Парванда дарёфт нашуд"
@@ -160,6 +160,14 @@ msgstr "Намоишгари веб-камераи зинда, ки дорои �
 msgid "Live webcams from around the world"
 msgstr "Веб-камераҳои зинда аз саросари ҷаҳон"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "Ҷараёни YouTube-ро истихроҷ карда натавонист"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "Навсозӣ..."
+
 msgid "Menu"
 msgstr "Меню"
 
@@ -175,8 +183,19 @@ msgstr "Рӯйхати навозиш дастрас нест"
 msgid "No playlists found"
 msgstr "Ягон рӯйхати навозиш ёфт нашуд"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "Ягон рӯйхати навозиш ёфт нашуд"
+
 msgid "No valid webcams in playlist"
 msgstr "Дар рӯйхати навозиш ягон веб-камераи дуруст нест"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "Ягон дӯстдошта барои содирот"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "Хуб = Маълумот | CH-/CH+ = Пеш/Оянда | КАБУД = Фав | Бозӣ/Таваққуф = Гузариш | STOP = Истеъ | EXIT = Хуруҷ | аз ҷониби Лулулло"
 
 msgid "Play"
 msgstr "Бозӣ"
@@ -236,6 +255,13 @@ msgstr "Танзимотҳо"
 msgid "Settings functionality coming soon!"
 msgstr "Функсияи танзимот ба зудӣ меояд!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "Вурудҳои SkylineWebcams аз гулдастаҳо танҳо бо плагини wrapper streamlink бозӣ мекунанд (enigma2-plugin-extensions-streamlinkwrapper)."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "Ҷараёни YouTube дастрас нест"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Хатои техникӣ дар Webcam.pl"
 
@@ -269,14 +295,17 @@ msgstr "WorldCam в{}"
 msgid "You are already running the latest version: {}"
 msgstr "Шумо аллакай версияи охиринро иҷро карда истодаед: {}"
 
-msgid "YouTube playback error"
-msgstr "Хатогии бозикунии YouTube"
-
-msgid "YouTube stream not available"
-msgstr "Ҷараёни YouTube дастрас нест"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "Вурудҳои YouTube аз гулдаста танҳо бо плагини wrapper yt-dlp бозӣ мекунанд (enigma2-plugin-extensions-ytdlpwrapper)."
 
 msgid "Your Favorites"
 msgstr "Дӯстдоштаи шумо"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "Дӯстдоштаҳо бомуваффақият содир карда шуданд! Барои дидани онҳо Enigma2-ро аз нав оғоз кунед."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "Хатогии бозикунии YouTube"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "URL-и YouTube нодуруст"

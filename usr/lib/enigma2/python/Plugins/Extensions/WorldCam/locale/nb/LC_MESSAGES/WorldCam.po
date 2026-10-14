@@ -134,11 +134,11 @@ msgstr "Eksporter alt til bukett"
 msgid "Export failed:"
 msgstr "Eksport mislyktes:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "Eksporterte %d webkameraer til '%s'"
+
 msgid "Favorites"
 msgstr "Favoritter"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "Favoritter ble eksportert! Start Enigma2 på nytt for å se dem."
 
 msgid "File not found"
 msgstr "Filen ble ikke funnet"
@@ -161,6 +161,14 @@ msgstr "Live webkameravisning med globale steder"
 msgid "Live webcams from around the world"
 msgstr "Live webkameraer fra hele verden"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "Kunne ikke trekke ut YouTube-strømmen"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "Oppgraderer..."
+
 msgid "Menu"
 msgstr "Meny"
 
@@ -176,8 +184,19 @@ msgstr "Ingen spillelister tilgjengelig"
 msgid "No playlists found"
 msgstr "Ingen spillelister funnet"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "Ingen spillelister funnet"
+
 msgid "No valid webcams in playlist"
 msgstr "Ingen gyldige webkameraer i spillelisten"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "Ingen favoritter å eksportere"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "OK = Info | CH-/CH+ = Forrige/Neste | BLÅ = Fav | SPILL/PAUSE = Veksle | STOPP = Stopp | EXIT = Exit | av Lululla"
 
 msgid "Play"
 msgstr "Spille"
@@ -237,6 +256,13 @@ msgstr "Innstillinger"
 msgid "Settings functionality coming soon!"
 msgstr "Innstillingsfunksjonalitet kommer snart!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "SkylineWebcams-oppføringer spilles kun fra buketten med streamlink wrapper-plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "YouTube-strøm er ikke tilgjengelig"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Teknisk feil i Webcam.pl"
 
@@ -270,14 +296,17 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "Du kjører allerede den nyeste versjonen: {}"
 
-msgid "YouTube playback error"
-msgstr "YouTube-avspillingsfeil"
-
-msgid "YouTube stream not available"
-msgstr "YouTube-strøm er ikke tilgjengelig"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "YouTube-oppføringer spilles av kun fra buketten med yt-dlp wrapper-plugin (enigma2-plugin-extensions-ytdlpwrapper)."
 
 msgid "Your Favorites"
 msgstr "Dine favoritter"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "Favoritter ble eksportert! Start Enigma2 på nytt for å se dem."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "YouTube-avspillingsfeil"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "Ugyldig YouTube-URL"

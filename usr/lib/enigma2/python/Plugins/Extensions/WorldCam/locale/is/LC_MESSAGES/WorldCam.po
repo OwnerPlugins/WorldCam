@@ -133,11 +133,11 @@ msgstr "Flytja allt út í vönd"
 msgid "Export failed:"
 msgstr "Útflutningur mistókst:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "Flyttu út %d vefmyndavélar í '%s'"
+
 msgid "Favorites"
 msgstr "Uppáhalds"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "Eftirlæti flutt út! Endurræstu Enigma2 til að sjá þá."
 
 msgid "File not found"
 msgstr "Skrá fannst ekki"
@@ -160,6 +160,14 @@ msgstr "Live vefmyndavélaskoðari með alþjóðlegum stöðum"
 msgid "Live webcams from around the world"
 msgstr "Vefmyndavélar í beinni frá öllum heimshornum"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "Ekki tókst að draga út YouTube straum"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "Uppfærir..."
+
 msgid "Menu"
 msgstr "Matseðill"
 
@@ -175,8 +183,19 @@ msgstr "Engir lagalistar í boði"
 msgid "No playlists found"
 msgstr "Engir spilunarlistar fundust"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "Engir spilunarlistar fundust"
+
 msgid "No valid webcams in playlist"
 msgstr "Engar gildar vefmyndavélar á lagalista"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "Engir eftirlæti til að flytja út"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "OK = Upplýsingar | CH-/CH+ = Fyrri/Næsta | BLÁR = Uppáhald | PLAY/PAUSE = Skipta | STOPPA = Stöðva | EXIT = Hætta | eftir Lululla"
 
 msgid "Play"
 msgstr "Spila"
@@ -236,6 +255,13 @@ msgstr "Stillingar"
 msgid "Settings functionality coming soon!"
 msgstr "Stillingavirkni kemur fljótlega!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "SkylineWebcams færslur spila úr vöndnum aðeins með streamlink wrapper viðbótinni (enigma2-plugin-extensions-streamlinkwrapper)."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "YouTube straumur ekki í boði"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Tæknileg villa í Webcam.pl"
 
@@ -269,14 +295,17 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "Þú ert nú þegar að keyra nýjustu útgáfuna: {}"
 
-msgid "YouTube playback error"
-msgstr "YouTube spilunarvilla"
-
-msgid "YouTube stream not available"
-msgstr "YouTube straumur ekki í boði"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "YouTube færslur spila aðeins úr vöndnum með yt-dlp umbúðir viðbótinni (enigma2-plugin-extensions-ytdlpwrapper)."
 
 msgid "Your Favorites"
 msgstr "Uppáhaldið þitt"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "Eftirlæti flutt út! Endurræstu Enigma2 til að sjá þá."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "YouTube spilunarvilla"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "Ógild YouTube vefslóð"

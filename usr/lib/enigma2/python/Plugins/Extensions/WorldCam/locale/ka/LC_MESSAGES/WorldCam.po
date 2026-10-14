@@ -133,11 +133,11 @@ msgstr "ექსპორტი ყველა ბუკეტში"
 msgid "Export failed:"
 msgstr "ექსპორტი ვერ მოხერხდა:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "ექსპორტირებულია %d ვებკამერა „%s“-ში"
+
 msgid "Favorites"
 msgstr "რჩეულები"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "რჩეულები წარმატებით იქნა ექსპორტირებული! გადატვირთეთ Enigma2 მათი სანახავად."
 
 msgid "File not found"
 msgstr "ფაილი ვერ მოიძებნა"
@@ -160,6 +160,14 @@ msgstr "ცოცხალი ვებკამერის მაყურე�
 msgid "Live webcams from around the world"
 msgstr "ცოცხალი ვებკამერები მთელი მსოფლიოდან"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "YouTube ნაკადის ამოღება ვერ მოხერხდა"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "განახლება..."
+
 msgid "Menu"
 msgstr "მენიუ"
 
@@ -175,8 +183,19 @@ msgstr "დასაკრავი სიები არ არის ხე�
 msgid "No playlists found"
 msgstr "დასაკრავი სიები ვერ მოიძებნა"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "დასაკრავი სიები ვერ მოიძებნა"
+
 msgid "No valid webcams in playlist"
 msgstr "მოქმედი ვებკამერები დასაკრავ სიაში არ არის"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "არ არის ფავორიტები ექსპორტისთვის"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "OK = ინფორმაცია | CH-/CH+ = წინა/შემდეგი | ლურჯი = ფავორიტი | PLAY/PAUSE = გადართვა | STOP = გაჩერება | EXIT = გასვლა | ლულულას მიერ"
 
 msgid "Play"
 msgstr "ითამაშეთ"
@@ -236,6 +255,13 @@ msgstr "პარამეტრები"
 msgid "Settings functionality coming soon!"
 msgstr "პარამეტრების ფუნქციონირება მალე მოვა!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "SkylineWebcams-ის ჩანაწერები თამაშობს ბუკეტიდან მხოლოდ streamlink wrapper დანამატით (enigma2-plugin-extensions-streamlinkwrapper)."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "YouTube ნაკადი მიუწვდომელია"
+
 msgid "Technical error in Webcam.pl"
 msgstr "ტექნიკური შეცდომა Webcam.pl-ში"
 
@@ -269,14 +295,17 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "თქვენ უკვე იყენებთ უახლეს ვერსიას: {}"
 
-msgid "YouTube playback error"
-msgstr "YouTube დაკვრის შეცდომა"
-
-msgid "YouTube stream not available"
-msgstr "YouTube ნაკადი მიუწვდომელია"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "YouTube-ის ჩანაწერები ბუკეტიდან თამაშობს მხოლოდ yt-dlp wrapper დანამატით (enigma2-plugin-extensions-ytdlpwrapper)."
 
 msgid "Your Favorites"
 msgstr "შენი რჩეულები"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "რჩეულები წარმატებით იქნა ექსპორტირებული! გადატვირთეთ Enigma2 მათი სანახავად."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "YouTube დაკვრის შეცდომა"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "არასწორი YouTube URL"

@@ -133,11 +133,11 @@ msgstr "全部导出到花束"
 msgid "Export failed:"
 msgstr "导出失败："
 
+msgid "Exported %d webcams to '%s'"
+msgstr "已将 %d 个网络摄像头导出到“%s”"
+
 msgid "Favorites"
 msgstr "收藏夹"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "收藏夹导出成功！重新启动 Enigma2 即可看到它们。"
 
 msgid "File not found"
 msgstr "找不到文件"
@@ -160,6 +160,14 @@ msgstr "具有全球位置的实时网络摄像头查看器"
 msgid "Live webcams from around the world"
 msgstr "来自世界各地的实时网络摄像头"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "无法提取 YouTube 流"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "正在升级..."
+
 msgid "Menu"
 msgstr "菜单"
 
@@ -175,8 +183,19 @@ msgstr "没有可用的播放列表"
 msgid "No playlists found"
 msgstr "未找到播放列表"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "未找到播放列表"
+
 msgid "No valid webcams in playlist"
 msgstr "播放列表中没有有效的网络摄像头"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "没有可导出的收藏夹"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "确定=信息| CH-/CH+ = 上一个/下一个 |蓝色 = 最爱 |播放/暂停=切换|停止=停止|退出=退出|通过卢卢拉"
 
 msgid "Play"
 msgstr "玩"
@@ -236,6 +255,13 @@ msgstr "设置"
 msgid "Settings functionality coming soon!"
 msgstr "设置功能即将推出！"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "SkylineWebcams 条目仅通过 Streamlink 包装器插件 (enigma2-plugin-extensions-streamlinkwrapper) 从花束中播放。"
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "YouTube 流不可用"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Webcam.pl 中的技术错误"
 
@@ -269,14 +295,17 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "您已经在运行最新版本：{}"
 
-msgid "YouTube playback error"
-msgstr "YouTube 播放错误"
-
-msgid "YouTube stream not available"
-msgstr "YouTube 流不可用"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "YouTube 条目只能通过 yt-dlp 包装器插件 (enigma2-plugin-extensions-ytdlpwrapper) 从花束中播放。"
 
 msgid "Your Favorites"
 msgstr "您的最爱"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "收藏夹导出成功！重新启动 Enigma2 即可看到它们。"
+
+#~ msgid "YouTube playback error"
+#~ msgstr "YouTube 播放错误"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "YouTube 网址无效"

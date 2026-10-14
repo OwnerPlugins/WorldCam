@@ -134,11 +134,11 @@ msgstr "Xuất tất cả sang bó hoa"
 msgid "Export failed:"
 msgstr "Xuất không thành công:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "Đã xuất %d webcam sang '%s'"
+
 msgid "Favorites"
 msgstr "Yêu thích"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "Đã xuất thành công mục yêu thích! Khởi động lại Enigma2 để xem chúng."
 
 msgid "File not found"
 msgstr "Không tìm thấy tập tin"
@@ -161,6 +161,14 @@ msgstr "Trình xem webcam trực tiếp có các vị trí trên toàn cầu"
 msgid "Live webcams from around the world"
 msgstr "Webcam trực tiếp từ khắp nơi trên thế giới"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "Không thể trích xuất luồng YouTube"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "Đang nâng cấp..."
+
 msgid "Menu"
 msgstr "Thực đơn"
 
@@ -176,8 +184,19 @@ msgstr "Không có danh sách phát nào"
 msgid "No playlists found"
 msgstr "Không tìm thấy danh sách phát nào"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "Không tìm thấy danh sách phát nào"
+
 msgid "No valid webcams in playlist"
 msgstr "Không có webcam hợp lệ trong danh sách phát"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "Không có mục yêu thích nào để xuất"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "Được = Thông tin | CH-/CH+ = Trước/Tiếp theo | XANH = Yêu thích | CHƠI/TẠM DỪNG = Chuyển đổi | DỪNG = Dừng lại | THOÁT = Thoát | bởi Lululla"
 
 msgid "Play"
 msgstr "Chơi"
@@ -237,6 +256,13 @@ msgstr "Cài đặt"
 msgid "Settings functionality coming soon!"
 msgstr "Chức năng cài đặt sắp ra mắt!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "Các mục SkylineWebcam chỉ phát từ bó với plugin trình bao bọc liên kết luồng (enigma2-plugin-extensions-streamlinkwrapper)."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "Luồng YouTube không khả dụng"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Lỗi kỹ thuật trong Webcam.pl"
 
@@ -270,14 +296,17 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "Bạn đang chạy phiên bản mới nhất: {}"
 
-msgid "YouTube playback error"
-msgstr "Lỗi phát lại YouTube"
-
-msgid "YouTube stream not available"
-msgstr "Luồng YouTube không khả dụng"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "Các mục trên YouTube chỉ phát từ bó hoa bằng plugin trình bao bọc yt-dlp (enigma2-plugin-extensions-ytdlpwrapper)."
 
 msgid "Your Favorites"
 msgstr "Yêu thích của bạn"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "Đã xuất thành công mục yêu thích! Khởi động lại Enigma2 để xem chúng."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "Lỗi phát lại YouTube"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "URL YouTube không hợp lệ"

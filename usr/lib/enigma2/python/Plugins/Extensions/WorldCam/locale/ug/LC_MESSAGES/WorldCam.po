@@ -133,11 +133,11 @@ msgstr "ھەممىنى گۈلگە چىقىرىش"
 msgid "Export failed:"
 msgstr "ئېكسپورت مەغلۇپ بولدى:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "% D تور كامېراسى '% s' غا چىقىرىلدى"
+
 msgid "Favorites"
 msgstr "ياقتۇرىدىغانلار"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "مۇۋەپپەقىيەتلىك ئېكسپورت قىلىنغان ئامراقلار! ئۇلارنى كۆرۈش ئۈچۈن Enigma2 نى قايتا قوزغىتىڭ."
 
 msgid "File not found"
 msgstr "ھۆججەت تېپىلمىدى"
@@ -160,6 +160,14 @@ msgstr "يەر شارى ئورۇنلىرى بار نەق مەيدان كامېر
 msgid "Live webcams from around the world"
 msgstr "دۇنيانىڭ ھەر قايسى جايلىرىدىكى نەق مەيدان كامېرا"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "YouTube ئېقىمىنى چىقىرىۋېتەلمىدى"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "يېڭىلاش ..."
+
 msgid "Menu"
 msgstr "تىزىملىك"
 
@@ -175,8 +183,19 @@ msgstr "قويغۇچ تىزىملىكى يوق"
 msgid "No playlists found"
 msgstr "قويغۇچ تىزىملىكى تېپىلمىدى"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "قويغۇچ تىزىملىكى تېپىلمىدى"
+
 msgid "No valid webcams in playlist"
 msgstr "قويۇش تىزىملىكىدە ئىناۋەتلىك تور كامېراسى يوق"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "ئېكسپورت قىلىشقا ئامراق ئەمەس"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "ماقۇل = ئۇچۇر | CH- / CH + = ئالدىنقى / كېيىنكى | BLUE = Fav | PLAY / PAUSE = Toggle | STOP = توختى | EXIT = چىقىش | by Lululla"
 
 msgid "Play"
 msgstr "ئويناش"
@@ -236,6 +255,13 @@ msgstr "تەڭشەك"
 msgid "Settings functionality coming soon!"
 msgstr "تەڭشەك ئىقتىدارى پات يېقىندا كېلىدۇ!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "SkylineWebcams تۈرلىرى گۈلدىن پەقەت ئاقما ئورالما قىستۇرما (enigma2-plugin-extensions-streamlinkwrapper) بىلەنلا قويۇلدى."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "YouTube ئېقىمى يوق"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Webcam.pl دىكى تېخنىكىلىق خاتالىق"
 
@@ -269,14 +295,17 @@ msgstr "WorldCam v {}"
 msgid "You are already running the latest version: {}"
 msgstr "سىز ئەڭ يېڭى نەشرىنى ئىجرا قىلىۋاتىسىز: {}"
 
-msgid "YouTube playback error"
-msgstr "YouTube قويۇش خاتالىقى"
-
-msgid "YouTube stream not available"
-msgstr "YouTube ئېقىمى يوق"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "YouTube دىكى مەزمۇنلار گۈلدىن پەقەت yt-dlp ئورالما قىستۇرمىسى (enigma2-plugin-extensions-ytdlpwrapper) بىلەنلا ئوينايدۇ."
 
 msgid "Your Favorites"
 msgstr "ياقتۇرىدىغانلىرىڭىز"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "مۇۋەپپەقىيەتلىك ئېكسپورت قىلىنغان ئامراقلار! ئۇلارنى كۆرۈش ئۈچۈن Enigma2 نى قايتا قوزغىتىڭ."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "YouTube قويۇش خاتالىقى"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "YouTube ئادرېسى ئىناۋەتسىز"

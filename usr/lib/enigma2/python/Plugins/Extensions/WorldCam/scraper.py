@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from enigma import eTimer
+from time import time
 from re import search, escape, findall, DOTALL, IGNORECASE  # , sub
 from os import listdir
 from os.path import (
@@ -39,6 +39,13 @@ from .utils import Logger
 __author__ = "Lululla"
 
 BASE_URL = "https://www.skylinewebcams.com"
+
+# Languages available on skylinewebcams.com (others fall back to English)
+SKYLINE_LANGUAGES = (
+    "en", "it", "es", "de", "fr", "pl", "el", "hr", "sl", "ru", "zh")
+
+# Fetched pages are cached for one hour
+CACHE_TTL = 3600
 
 """
 
@@ -89,12 +96,9 @@ class SkylineScraper:
         """
         self.logger = Logger()
         self.logger.info("Entering __init__")
-        self.lang = lang
+        self.lang = lang if lang in SKYLINE_LANGUAGES else "en"
+        # url -> (time fetched, content); entries expire after CACHE_TTL
         self.cache = {}
-
-        self.timer = eTimer()
-        self.timer.callback.append(self.clear_cache)
-        self.timer.start(3600000)  # Clear cache every hour (3600000 ms)
 
     def clear_cache(self):
         """Clear the internal content cache."""
@@ -144,16 +148,18 @@ class SkylineScraper:
         """
         self.logger.info("Entering get_stream_url")
         try:
-            # Case 1: URL is already a direct stream
+            # Case 1: YouTube URL
+            lower_url = webcam_page_url.lower()
+            if ('youtube.com' in lower_url or 'youtu.be' in lower_url or
+                    'youtube-nocookie.com' in lower_url):
+                self.logger.info(
+                    "Detected direct YouTube URL, returning as is")
+                return webcam_page_url
+
+            # Case 2: URL is already a direct stream
             if self.is_direct_stream(webcam_page_url):
                 self.logger.info(
                     "URL is already a direct stream, returning as is")
-                return webcam_page_url
-
-            # Case 2: YouTube URL
-            if 'youtube.com' in webcam_page_url or 'youtu.be' in webcam_page_url:
-                self.logger.info(
-                    "Detected direct YouTube URL, returning as is")
                 return webcam_page_url
 
             # Case 3: Explore.org direct stream (specific pattern)
@@ -223,8 +229,11 @@ class SkylineScraper:
         safe_url = str(url)
 
         if use_cache and safe_url in self.cache:
-            self.logger.info("Using cached content for: " + safe_url)
-            return self.cache[safe_url]
+            fetched, cached = self.cache[safe_url]
+            if time() - fetched < CACHE_TTL:
+                self.logger.info("Using cached content for: " + safe_url)
+                return cached
+            del self.cache[safe_url]
 
         self.logger.info(f"Fetching URL: {safe_url}")
 
@@ -251,7 +260,7 @@ class SkylineScraper:
                     decoded_content = content.decode("utf-8", errors="ignore")
 
             if use_cache:
-                self.cache[safe_url] = decoded_content
+                self.cache[safe_url] = (time(), decoded_content)
                 self.logger.info("Cached content for URL: " + safe_url)
 
             return decoded_content
@@ -452,75 +461,55 @@ class SkylineScraper:
                 f.seek(0)
                 content = f.read()
 
-            # Processa il contenuto invece di leggere linea per linea
             lines = content.splitlines()
+
+            # M3U format: #EXTINF:-1,Name followed by the URL line
+            if is_m3u:
+                current_name = "Unknown"
+                for line in lines:
+                    line = line.strip()
+                    if not line:
+                        continue
+                    if line.startswith("#EXTINF"):
+                        parts = line.split(',', 1)
+                        current_name = parts[1].strip() if len(
+                            parts) > 1 else "Unknown"
+                        current_name = current_name.split('@')[0].strip()
+                        current_name = current_name.split(' - ')[0].strip()
+                        current_name = current_name or "Unknown"
+                    elif line.startswith("#"):
+                        continue
+                    elif line.startswith(
+                            ("http://", "https://", "rtmp://", "rtsp://")):
+                        webcams.append({
+                            "group": "M3U Playlist",
+                            "name": current_name,
+                            "url": line
+                        })
+                        current_name = "Unknown"
+                    else:
+                        logger.warning(f"Invalid URL in M3U: {line}")
+                logger.info(f"Parsed {len(webcams)} webcams from {path}")
+                return webcams
 
             for line in lines:
                 line = line.strip()
                 if not line or line.startswith("#"):
                     continue
 
-                # M3U format parsing
-                if is_m3u:
-                    current_name = "Unknown"
-                    for line in lines:
-                        line = line.strip()
-
-                        # Salta righe vuote
-                        if not line:
-                            continue
-
-                        # Gestione righe EXTINF
-                        if line.startswith("#EXTINF"):
-                            try:
-                                # Estrai nome da: #EXTINF:-1, Nome Canale
-                                parts = line.split(',', 1)
-                                current_name = parts[1].strip() if len(
-                                    parts) > 1 else "Unknown"
-
-                                # Pulizia aggiuntiva
-                                current_name = current_name.split(
-                                    '@')[0].strip()
-                                current_name = current_name.split(
-                                    ' - ')[0].strip()
-                            except Exception as e:
-                                logger.error(
-                                    f"Error parsing EXTINF line: {line} - {str(e)}")
-                                current_name = "Unknown"
-
-                        # Salta altri commenti
-                        elif line.startswith("#"):
-                            continue
-
-                        # Righe URL
-                        else:
-                            # Verifica che sia un URL valido
-                            if line.startswith(
-                                    ("http://", "https://", "rtmp://", "rtsp://")):
-                                webcams.append({
-                                    "group": "M3U Playlist",
-                                    "name": current_name,
-                                    "url": line
-                                })
-                            else:
-                                logger.warning(f"Invalid URL in M3U: {line}")
-
-                            # Resetta per il prossimo
-                            current_name = "Unknown"
-
-                # Existing formats parsing
+                # Name###URL format
                 if "###" in line:
                     parts = line.split("###")
                     parts = [p.strip() for p in parts if p.strip()]
                     if len(parts) >= 2:
-                        url = parts[-1].replace("###", "").strip()
+                        url = parts[-1]
                         name = " ".join(parts[:-1])
                         webcams.append({
                             "group": "User List",
                             "name": name,
                             "url": url
                         })
-                        continue
+                    continue
 
                 # Traditional formats with separators
                 separators = [":::", ";;", "::", ";"]

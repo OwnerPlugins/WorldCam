@@ -133,11 +133,11 @@ msgstr "ସମସ୍ତଙ୍କୁ ପୁଷ୍ପକୁ ରପ୍ତାନି 
 msgid "Export failed:"
 msgstr "ରପ୍ତାନି ବିଫଳ ହେଲା:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "% D ୱେବକ୍ୟାମକୁ '% s' କୁ ରପ୍ତାନି କରାଯାଇଛି |"
+
 msgid "Favorites"
 msgstr "ପସନ୍ଦଗୁଡିକ"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "ପସନ୍ଦଗୁଡିକ ସଫଳତାର ସହିତ ରପ୍ତାନି ହେଲା! ସେମାନଙ୍କୁ ଦେଖିବା ପାଇଁ Enigma2 କୁ ପୁନ Rest ଆରମ୍ଭ କରନ୍ତୁ |"
 
 msgid "File not found"
 msgstr "ଫାଇଲ ମିଳିଲା ନାହିଁ"
@@ -160,6 +160,14 @@ msgstr "ଗ୍ଲୋବାଲ୍ ଅବସ୍ଥାନଗୁଡିକ ସହି�
 msgid "Live webcams from around the world"
 msgstr "ବିଶ୍ world ର ବିଭିନ୍ନ ସ୍ଥାନରୁ ଲାଇଭ ୱେବକ୍ୟାମ |"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "ୟୁଟ୍ୟୁବ୍ ଷ୍ଟ୍ରିମ୍ ବାହାର କରିପାରିବ ନାହିଁ |"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "ଅପଗ୍ରେଡ୍ ..."
+
 msgid "Menu"
 msgstr "ମେନୁ"
 
@@ -175,8 +183,19 @@ msgstr "କ play ଣସି ପ୍ଲେଲିଷ୍ଟ ଉପଲବ୍ଧ ନା
 msgid "No playlists found"
 msgstr "କ play ଣସି ପ୍ଲେଲିଷ୍ଟ ମିଳିଲା ନାହିଁ |"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "କ play ଣସି ପ୍ଲେଲିଷ୍ଟ ମିଳିଲା ନାହିଁ |"
+
 msgid "No valid webcams in playlist"
 msgstr "ପ୍ଲେ ଲିଷ୍ଟରେ କ valid ଣସି ବ valid ଧ ୱେବକ୍ୟାମ ନାହିଁ |"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "ରପ୍ତାନି କରିବାକୁ କ favorites ଣସି ପସନ୍ଦ ନାହିଁ |"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "ଠିକ ଅଛି = ସୂଚନା | CH- / CH + = ପୂର୍ବ / ପରବର୍ତ୍ତୀ | | ନୀଳ = ଫାଭ | ଖେଳ / PAUSE = ଟୋଗଲ୍ | | STOP = ବନ୍ଦ | | EXIT = ପ୍ରସ୍ଥାନ | ଲୁଲୁଲାଙ୍କ ଦ୍ୱାରା"
 
 msgid "Play"
 msgstr "ଖେଳନ୍ତୁ |"
@@ -236,6 +255,13 @@ msgstr "ସେଟିଂସମୂହ"
 msgid "Settings functionality coming soon!"
 msgstr "ସେଟିଂ କାର୍ଯ୍ୟକାରିତା ଶୀଘ୍ର ଆସିବ!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "ସ୍କାଏଲାଇନ୍ ୱେବକ୍ୟାମ୍ ଏଣ୍ଟ୍ରିଗୁଡିକ ପୁଷ୍ପରୁ କେବଳ ଷ୍ଟ୍ରିମ୍ ଲିଙ୍କ୍ ରାପର୍ ପ୍ଲଗଇନ୍ (enigma2-plugin-extensions-streamlinkwrapper) ସହିତ ଖେଳେ |"
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "ୟୁଟ୍ୟୁବ୍ ଷ୍ଟ୍ରିମ୍ ଉପଲବ୍ଧ ନାହିଁ |"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Webcam.pl ରେ ଯାନ୍ତ୍ରିକ ତ୍ରୁଟି |"
 
@@ -269,14 +295,17 @@ msgstr "WorldCam v {} |"
 msgid "You are already running the latest version: {}"
 msgstr "ଆପଣ ପୂର୍ବରୁ ସର୍ବଶେଷ ସଂସ୍କରଣ ଚଳାଉଛନ୍ତି: {}"
 
-msgid "YouTube playback error"
-msgstr "ୟୁଟ୍ୟୁବ୍ ପ୍ଲେକ୍ ତ୍ରୁଟି |"
-
-msgid "YouTube stream not available"
-msgstr "ୟୁଟ୍ୟୁବ୍ ଷ୍ଟ୍ରିମ୍ ଉପଲବ୍ଧ ନାହିଁ |"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "ୟୁଟ୍ୟୁବ୍ ଏଣ୍ଟ୍ରିଗୁଡ଼ିକ ପୁଷ୍ପରୁ କେବଳ yt-dlp ରାପର୍ ପ୍ଲଗଇନ୍ (enigma2-plugin-extensions-ytdlpwrapper) ସହିତ ଖେଳେ |"
 
 msgid "Your Favorites"
 msgstr "ତୁମର ପସନ୍ଦ"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "ପସନ୍ଦଗୁଡିକ ସଫଳତାର ସହିତ ରପ୍ତାନି ହେଲା! ସେମାନଙ୍କୁ ଦେଖିବା ପାଇଁ Enigma2 କୁ ପୁନ Rest ଆରମ୍ଭ କରନ୍ତୁ |"
+
+#~ msgid "YouTube playback error"
+#~ msgstr "ୟୁଟ୍ୟୁବ୍ ପ୍ଲେକ୍ ତ୍ରୁଟି |"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "ଅବ YouTube ଧ ୟୁଟ୍ୟୁବ୍ URL |"

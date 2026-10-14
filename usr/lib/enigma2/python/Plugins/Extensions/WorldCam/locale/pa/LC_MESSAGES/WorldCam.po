@@ -133,11 +133,11 @@ msgstr "ਸਭ ਨੂੰ ਗੁਲਦਸਤੇ ਵਿੱਚ ਨਿਰਯਾਤ �
 msgid "Export failed:"
 msgstr "ਨਿਰਯਾਤ ਅਸਫਲ:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "'%s' ਵਿੱਚ %d ਵੈਬਕੈਮ ਨਿਰਯਾਤ ਕੀਤੇ ਗਏ"
+
 msgid "Favorites"
 msgstr "ਮਨਪਸੰਦ"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "ਮਨਪਸੰਦ ਨੂੰ ਸਫਲਤਾਪੂਰਵਕ ਨਿਰਯਾਤ ਕੀਤਾ ਗਿਆ! ਉਹਨਾਂ ਨੂੰ ਦੇਖਣ ਲਈ Enigma2 ਨੂੰ ਰੀਸਟਾਰਟ ਕਰੋ।"
 
 msgid "File not found"
 msgstr "ਫਾਇਲ ਨਹੀ ਲ੍ਲ੍ਭੀ"
@@ -160,6 +160,14 @@ msgstr "ਗਲੋਬਲ ਟਿਕਾਣਿਆਂ ਦੀ ਵਿਸ਼ੇਸ਼ਤ
 msgid "Live webcams from around the world"
 msgstr "ਦੁਨੀਆ ਭਰ ਦੇ ਲਾਈਵ ਵੈਬਕੈਮ"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "YouTube ਸਟ੍ਰੀਮ ਨੂੰ ਐਕਸਟਰੈਕਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "ਅੱਪਗ੍ਰੇਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ..."
+
 msgid "Menu"
 msgstr "ਮੀਨੂ"
 
@@ -175,8 +183,19 @@ msgstr "ਕੋਈ ਪਲੇਲਿਸਟ ਉਪਲਬਧ ਨਹੀਂ ਹੈ"
 msgid "No playlists found"
 msgstr "ਕੋਈ ਪਲੇਲਿਸਟ ਨਹੀਂ ਮਿਲੀ"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "ਕੋਈ ਪਲੇਲਿਸਟ ਨਹੀਂ ਮਿਲੀ"
+
 msgid "No valid webcams in playlist"
 msgstr "ਪਲੇਲਿਸਟ ਵਿੱਚ ਕੋਈ ਵੈਧ ਵੈਬਕੈਮ ਨਹੀਂ ਹਨ"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "ਨਿਰਯਾਤ ਕਰਨ ਲਈ ਕੋਈ ਮਨਪਸੰਦ ਨਹੀਂ"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "ਠੀਕ = ਜਾਣਕਾਰੀ | CH-/CH+ = ਪਿਛਲਾ/ਅਗਲਾ | ਨੀਲਾ = ਪਸੰਦ | PLAY/PAUSE = ਟੌਗਲ | STOP = ਰੁਕੋ | EXIT = ਨਿਕਾਸ | Lululla ਦੁਆਰਾ"
 
 msgid "Play"
 msgstr "ਖੇਡੋ"
@@ -236,6 +255,13 @@ msgstr "ਸੈਟਿੰਗਾਂ"
 msgid "Settings functionality coming soon!"
 msgstr "ਸੈਟਿੰਗਾਂ ਦੀ ਕਾਰਜਕੁਸ਼ਲਤਾ ਜਲਦੀ ਆ ਰਹੀ ਹੈ!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "SkylineWebcams ਐਂਟਰੀਆਂ ਗੁਲਦਸਤੇ ਤੋਂ ਸਿਰਫ਼ ਸਟ੍ਰੀਮਲਿੰਕ ਰੈਪਰ ਪਲੱਗਇਨ (enigma2-plugin-extensions-streamlinkwrapper) ਨਾਲ ਚਲਦੀਆਂ ਹਨ।"
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "YouTube ਸਟ੍ਰੀਮ ਉਪਲਬਧ ਨਹੀਂ ਹੈ"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Webcam.pl ਵਿੱਚ ਤਕਨੀਕੀ ਗਲਤੀ"
 
@@ -269,14 +295,17 @@ msgstr "ਵਰਲਡਕੈਮ v{}"
 msgid "You are already running the latest version: {}"
 msgstr "ਤੁਸੀਂ ਪਹਿਲਾਂ ਹੀ ਨਵੀਨਤਮ ਸੰਸਕਰਣ ਚਲਾ ਰਹੇ ਹੋ: {}"
 
-msgid "YouTube playback error"
-msgstr "YouTube ਪਲੇਬੈਕ ਅਸ਼ੁੱਧੀ"
-
-msgid "YouTube stream not available"
-msgstr "YouTube ਸਟ੍ਰੀਮ ਉਪਲਬਧ ਨਹੀਂ ਹੈ"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "YouTube ਐਂਟਰੀਆਂ ਗੁਲਦਸਤੇ ਤੋਂ ਸਿਰਫ਼ yt-dlp ਰੈਪਰ ਪਲੱਗਇਨ (enigma2-plugin-extensions-ytdlpwrapper) ਨਾਲ ਚਲਦੀਆਂ ਹਨ।"
 
 msgid "Your Favorites"
 msgstr "ਤੁਹਾਡੇ ਮਨਪਸੰਦ"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "ਮਨਪਸੰਦ ਨੂੰ ਸਫਲਤਾਪੂਰਵਕ ਨਿਰਯਾਤ ਕੀਤਾ ਗਿਆ! ਉਹਨਾਂ ਨੂੰ ਦੇਖਣ ਲਈ Enigma2 ਨੂੰ ਰੀਸਟਾਰਟ ਕਰੋ।"
+
+#~ msgid "YouTube playback error"
+#~ msgstr "YouTube ਪਲੇਬੈਕ ਅਸ਼ੁੱਧੀ"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "ਅਵੈਧ YouTube URL"

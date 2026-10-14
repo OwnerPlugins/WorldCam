@@ -20,7 +20,7 @@ try:
 except ImportError:
     from Components.AVSwitch import eAVControl as AVSwitch
 
-from . import _, BASE_URL
+from . import _
 from . import checkdependencies
 
 """
@@ -118,26 +118,36 @@ class Logger:
             except Exception as e:
                 print(f"Log write failed: {str(e)}")
 
+    @staticmethod
+    def _format(message, args):
+        """message % args, never raising on a format mismatch"""
+        if not args:
+            return message
+        try:
+            return message % args
+        except (TypeError, ValueError):
+            return " ".join([str(message)] + [str(a) for a in args])
+
     def debug(self, message, *args):
-        self.log(message % args if args else message, "DEBUG")
+        self.log(self._format(message, args), "DEBUG")
 
     def info(self, message, *args):
-        self.log(message % args if args else message, "INFO")
+        self.log(self._format(message, args), "INFO")
 
     def warning(self, message, *args):
-        self.log(message % args if args else message, "WARNING")
+        self.log(self._format(message, args), "WARNING")
 
     def error(self, message, *args):
-        self.log(message % args if args else message, "ERROR")
+        self.log(self._format(message, args), "ERROR")
 
     def critical(self, message, *args):
-        self.log("CRITICAL: " + (message % args if args else message), "ERROR")
+        self.log(self._format(message, args), "CRITICAL")
 
     def exception(self, message, *args):
         exc_info = self._get_exception_info()
         self.log(
-            "ERROR",
-            f"EXCEPTION: {message % args if args else message}\n{exc_info}")
+            "EXCEPTION: %s\n%s" % (self._format(message, args), exc_info),
+            "ERROR")
 
     def _get_exception_info(self):
         """Get formatted exception info"""
@@ -166,9 +176,12 @@ class Logger:
         # self.log(message, "DEBUG")
 
 
-# FAVORITES_FILE = join(PLUGIN_PATH, "favorites.json")
-# FAVORITES_FILE = "/etc/enigma2/favorites.json"
-FAVORITES_FILE = join(eEnv.resolve("${sysconfdir}/enigma2"), "favorites.json")
+# Own file name: the generic favorites.json is used by other plugins too
+FAVORITES_FILE = join(
+    eEnv.resolve("${sysconfdir}/enigma2"), "worldcam_favorites.json")
+# File used by older versions (read once to migrate the favorites)
+OLD_FAVORITES_FILE = join(
+    eEnv.resolve("${sysconfdir}/enigma2"), "favorites.json")
 
 
 # Update the safe_encode_url function
@@ -241,22 +254,74 @@ def clean_html_entities(text):
 # 4097:0:1:46DE:221E:EC:0:0:0:0:streamlink%3a//https%3a//www.skylinewebcams.com/it/webcam/italia/sardegna/sassari/stintino.html:Sassari
 # - Stintino - La Pelosa
 
+def is_skyline_page(url):
+    """True for a skylinewebcams.com webcam page (not a direct stream)"""
+    u = (url or "").lower()
+    return "skylinewebcams.com" in u and u.split("?")[0].endswith(".html")
+
+
+def bouquet_service_lines(url, name):
+    """
+    #SERVICE / #DESCRIPTION lines for a webcam.
+    Returns (lines, kind) with kind 'youtube', 'streamlink' or 'direct'.
+    - YouTube: https://www.youtube.com/watch?v=ID, played from the
+      bouquet by the yt-dlp wrapper plugin
+    - skylinewebcams pages: streamlink:// (streamlink wrapper plugin)
+    - anything else is a direct stream
+    """
+    url = str(url or "").replace("\r", " ").replace("\n", " ").strip()
+    name = str(name or "").replace("\r", " ").replace("\n", " ").strip()
+    if is_youtube_url(url):
+        kind = "youtube"
+        url = convert_youtube_embed_to_watch(url)
+        service_url = url.replace(":", "%3a")
+    elif is_skyline_page(url):
+        kind = "streamlink"
+        service_url = "streamlink%3a//" + url.replace(":", "%3a")
+    else:
+        kind = "direct"
+        service_url = url.replace(":", "%3a")
+    lines = "#SERVICE 4097:0:1:0:0:0:0:0:0:0:%s:%s\n#DESCRIPTION %s\n" % (
+        service_url, name.replace(":", "%3a"), name)
+    return lines, kind
+
+
 class FavoritesManager:
     @staticmethod
+    def _migrate_old_file():
+        """Copy WorldCam favorites from the old generic favorites.json"""
+        if exists(FAVORITES_FILE) or not exists(OLD_FAVORITES_FILE):
+            return
+        try:
+            with open(OLD_FAVORITES_FILE, "r", encoding="utf-8") as f:
+                data = load(f)
+            # Only a WorldCam list: [{"name": ..., "url": ...}, ...]
+            if isinstance(data, list) and all(
+                    isinstance(x, dict) and set(x) == {"name", "url"}
+                    for x in data):
+                with open(FAVORITES_FILE, "w", encoding="utf-8") as f:
+                    dump(data, f, indent=4, ensure_ascii=False)
+                Logger().info("Favorites migrated to " + FAVORITES_FILE)
+        except Exception as e:
+            Logger().warning("Favorites migration skipped: %s" % str(e))
+
+    @staticmethod
     def load_favorites():
-        """Carica i preferiti dal file JSON"""
+        """Load favorites from the JSON file"""
+        FavoritesManager._migrate_old_file()
         if not exists(FAVORITES_FILE):
             return []
         try:
             with open(FAVORITES_FILE, "r", encoding="utf-8") as f:
-                return load(f)
+                data = load(f)
+            return data if isinstance(data, list) else []
         except Exception as e:
             Logger().error(f"Error loading favorites: {str(e)}")
             return []
 
     @staticmethod
     def save_favorites(favorites):
-        """Salva i preferiti nel file JSON"""
+        """Save favorites to the JSON file"""
         try:
             with open(FAVORITES_FILE, "w", encoding="utf-8") as f:
                 dump(favorites, f, indent=4, ensure_ascii=False)
@@ -267,10 +332,10 @@ class FavoritesManager:
 
     @staticmethod
     def add_favorite(name, url):
-        """Aggiunge un webcam ai preferiti"""
+        """Add a webcam to favorites"""
         favorites = FavoritesManager.load_favorites()
 
-        # Controlla se esiste già
+        # Already there
         if any(fav["url"] == url for fav in favorites):
             return False
 
@@ -279,77 +344,103 @@ class FavoritesManager:
 
     @staticmethod
     def remove_favorite(url):
-        """Rimuove un webcam dai preferiti"""
+        """Remove a webcam from favorites"""
         favorites = FavoritesManager.load_favorites()
         new_favorites = [fav for fav in favorites if fav["url"] != url]
 
         if len(new_favorites) == len(favorites):
-            return False  # Non trovato
+            return False  # Not found
 
         return FavoritesManager.save_favorites(new_favorites)
 
     @staticmethod
     def is_favorite(url):
-        """Controlla se un URL è nei preferiti"""
+        """Check whether a URL is in favorites"""
         return any(
             fav["url"] == url for fav in FavoritesManager.load_favorites())
 
     @staticmethod
-    def export_to_bouquet():
-        """Export favorites to Enigma2 bouquet"""
+    def export_to_bouquet(webcams=None, title=None):
+        """
+        Export webcams to an Enigma2 bouquet.
+        Without arguments the favorites are exported to
+        'WorldCam Favorites'; otherwise the given webcams go to their
+        own bouquet named after title.
+        """
         try:
-            favorites = FavoritesManager.load_favorites()
-            if not favorites:
-                return False, _("No favorites to export")
+            if webcams is None:
+                webcams = FavoritesManager.load_favorites()
+                display_name = "WorldCam Favorites"
+                bouquet_name = "userbouquet.worldcam_favorites.tv"
+                if not webcams:
+                    return False, _("No favorites to export")
+            else:
+                title = title or "Webcams"
+                display_name = "WorldCam - %s" % title
+                safe = "".join(
+                    c for c in title.lower() if c.isalnum() or c == "_")[:30]
+                bouquet_name = "userbouquet.worldcam_%s.tv" % (
+                    safe or "webcams")
+                if not webcams:
+                    return False, _("No webcams to export")
 
-            # Create bouquet directory if needed
             bouquet_dir = eEnv.resolve("${sysconfdir}/enigma2")
             if not exists(bouquet_dir):
                 makedirs(bouquet_dir)
-
-            # Create bouquet file
-            bouquet_name = "userbouquet.worldcam_favorites.tv"
             bouquet_path = join(bouquet_dir, bouquet_name)
 
+            exported = 0
+            kinds = set()
             with open(bouquet_path, "w", encoding="utf-8") as f:
-                f.write("#NAME WorldCam Favorites\n")
-                for fav in favorites:
-                    # Create service reference
-                    if "youtube.com" in fav["url"] or "youtu.be" in fav["url"]:
-                        # YouTube streams require special handling
-                        service_type = 5001  # HLS
-                        service_url = "http://localhost:8000/proxy.m3u8?url={0}".format(
-                            quote(fav["url"]))
-                    else:
-                        service_type = 4097  # HTTP
-                        encoded_url = quote(fav["url"], safe="")
-                        service_url = "streamlink%3a//{0}".format(encoded_url)
+                f.write("#NAME %s\n" % display_name)
+                for cam in webcams:
+                    url = cam.get("url")
+                    if not url:
+                        continue
+                    lines, kind = bouquet_service_lines(
+                        url, cam.get("name", ""))
+                    f.write(lines)
+                    kinds.add(kind)
+                    exported += 1
 
-                    # Create service line
-                    service_line = "#SERVICE {0}:0:1:0:0:0:0:0:0:0:{1}\n".format(
-                        service_type, service_url)
-                    f.write(service_line)
-                    f.write("#DESCRIPTION {0}\n".format(fav["name"]))
+            if not exported:
+                try:
+                    remove(bouquet_path)
+                except Exception:
+                    pass
+                return False, _("No valid streams found")
 
-            # Add to bouquet list
+            # Add to the bouquet list (once)
             bouquets_path = join(bouquet_dir, "bouquets.tv")
             if not exists(bouquets_path):
                 with open(bouquets_path, "w") as f:
                     f.write("#NAME Bouquets (TV)\n")
 
-            # Check if already exists in bouquets
             with open(bouquets_path, "r") as f:
                 content = f.read()
 
-            bouquet_ref = f"#SERVICE 1:7:1:0:0:0:0:0:0:0:FROM BOUQUET \"{bouquet_name}\" ORDER BY bouquet"
+            bouquet_ref = '#SERVICE 1:7:1:0:0:0:0:0:0:0:FROM BOUQUET "%s" ORDER BY bouquet' % bouquet_name
             if bouquet_ref not in content:
                 with open(bouquets_path, "a") as f:
-                    f.write(f"{bouquet_ref}\n")
+                    if content and not content.endswith("\n"):
+                        f.write("\n")
+                    f.write(bouquet_ref + "\n")
 
-            from twisted.internet import reactor
-            reactor.callFromThread(reload_services)
-            return True, _(
-                "Favorites exported successfully! Restart Enigma2 to see them.")
+            reload_services()
+
+            message = _("Exported %d webcams to '%s'") % (
+                exported, display_name)
+            if "youtube" in kinds:
+                message += "\n\n" + _(
+                    "YouTube entries play from the bouquet only with the "
+                    "yt-dlp wrapper plugin "
+                    "(enigma2-plugin-extensions-ytdlpwrapper).")
+            if "streamlink" in kinds:
+                message += "\n\n" + _(
+                    "SkylineWebcams entries play from the bouquet only with "
+                    "the streamlink wrapper plugin "
+                    "(enigma2-plugin-extensions-streamlinkwrapper).")
+            return True, message
         except Exception as e:
             Logger().error(f"Export error: {str(e)}")
             return False, _("Export failed: ") + str(e)
@@ -481,15 +572,13 @@ def safe_cleanup(screen_instance):
         else:
             logger.debug(
                 "No cleanup method for " +
-                screen_instance.__class__.__name__,
-                "SAFE_CLEANUP")
+                screen_instance.__class__.__name__)
     except Exception as e:
         logger.error(
             "Cleanup error in " +
             screen_instance.__class__.__name__ +
             ": " +
-            str(e),
-            "SAFE_CLEANUP")
+            str(e))
 
 
 def _sort_by_name(items):
@@ -746,51 +835,6 @@ def get_flag_path(country_code=None):
 # flag_path = get_flag_path(country_code)  # Returns .../countries/de.png
 
 
-class VideoURLHelper:
-
-    def __init__(self):
-        self.logger = Logger()
-
-    def get_video_url(self, url):
-        """
-        Extracts the video URL from a webcam page, safely handling errors.
-        """
-        self.logger.info("Fetching video URL for: " + url)
-        headers = {"User-Agent": "Mozilla/5.0", "Referer": BASE_URL}
-
-        try:
-            from . import client
-            content = client.request(url, headers=headers)
-            if not content:
-                self.logger.warning("Empty content received")
-                return None
-
-            if isinstance(content, bytes):
-                content = content.decode("utf-8", errors="ignore")
-
-            # Search for HLS stream
-            hls_match = search(r"source:\s*'livee\.m3u8\?a=([^']+)'", content)
-            if hls_match:
-                video_id = hls_match.group(1)
-                final_url = "https://hd-auth.skylinewebcams.com/live.m3u8?a=" + video_id
-                self.logger.info("Found HLS stream: " + final_url)
-                return final_url
-
-            # Search for YouTube video
-            yt_match = search(r"videoId:\s*'([^']+)'", content)
-            if yt_match:
-                video_id = yt_match.group(1)
-                yt_url = "https://www.youtube.com/watch?v=" + video_id
-                self.logger.info("Found YouTube video: " + yt_url)
-                return yt_url
-
-        except Exception as e:
-            self.logger.error("Error getting video URL: " + str(e))
-
-        self.logger.warning("No video URL found")
-        return None
-
-
 class AspectManager:
     """Manages aspect ratio settings for the plugin"""
 
@@ -903,6 +947,10 @@ def convert_youtube_embed_to_watch(url):
     """
     if not is_youtube_url(url):
         return url
+    # Channel live embed: keep it a channel URL (resolved as /live)
+    m = search(r'/embed/live_stream\?(?:.*&)?channel=([^&#]+)', url)
+    if m:
+        return "https://www.youtube.com/channel/%s/live" % m.group(1)
     patterns = [
         r'(?:youtube-nocookie\.com|youtube\.com)/embed/([^/?#&]+)',
         r'youtube\.com/live/([^/?#&]+)',
@@ -931,7 +979,7 @@ def get_service_type(preferred=None):
     Return the best eServiceReference type for playback.
 
     preferred: 'auto' (default), 'exteplayer3', 'gstplayer', 'mp3'.
-    Falls back to 4097 if ServiceApp is missing.
+    exteplayer3/gstplayer need ServiceApp, otherwise 4097 is used.
     """
     if preferred in ("exteplayer3", "gstplayer"):
         if has_serviceapp():
@@ -940,7 +988,19 @@ def get_service_type(preferred=None):
         Logger().warning(
             "Player '%s' requires ServiceApp, falling back to 4097"
             % preferred)
-    if has_serviceapp():
-        # gstplayer is generally safer than exteplayer3 for HLS
-        return SERVICE_GSTPLAYER
+    # 4097 by default: with ServiceApp installed, 4097 already follows
+    # the player chosen in the ServiceApp settings
     return SERVICE_MP3
+
+
+def timer_connect(timer, callback):
+    """
+    Connect an eTimer callback on both DreamOS and OE images.
+    The returned connection object (DreamOS) MUST be kept alive by the
+    caller, otherwise the callback is disconnected immediately.
+    """
+    try:
+        return timer.timeout.connect(callback)
+    except AttributeError:
+        timer.callback.append(callback)
+        return None

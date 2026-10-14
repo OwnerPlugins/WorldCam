@@ -35,10 +35,17 @@ def _make_logger():
                 line = msg
             print("[WorldCam YouTube][%s] %s" % (lvl, line))
 
-        def debug(self, msg, *a):   self._p("DEBUG", msg, *a)
-        def info(self, msg, *a):    self._p("INFO",  msg, *a)
-        def warning(self, msg, *a): self._p("WARN",  msg, *a)
-        def error(self, msg, *a):   self._p("ERROR", msg, *a)
+        def debug(self, msg, *a):
+            self._p("DEBUG", msg, *a)
+
+        def info(self, msg, *a):
+            self._p("INFO", msg, *a)
+
+        def warning(self, msg, *a):
+            self._p("WARN", msg, *a)
+
+        def error(self, msg, *a):
+            self._p("ERROR", msg, *a)
 
     return _StdoutLogger()
 
@@ -131,17 +138,48 @@ def extract_video_id(url):
         decoded = unquote(url)
         for pattern in patterns:
             match = re.search(pattern, decoded, re.IGNORECASE)
-            if match:
+            # embed/live_stream?channel=ID is a channel, not a video
+            if match and match.group(1).lower() != "live_stream":
                 return match.group(1)
     except Exception as e:
         log.error("Error extracting video ID: %s" % e)
     return None
 
 
+def youtube_target_url(url):
+    """
+    URL to pass to yt-dlp: watch?v=ID for videos, /live for channel
+    links (live_stream embeds, /channel/, /c/, /user/, /@name) and the
+    playlist URL for playlists. None if the URL is not usable.
+    """
+    video_id = extract_video_id(url)
+    if video_id:
+        return "https://www.youtube.com/watch?v=" + video_id
+    try:
+        decoded = unquote(url)
+    except Exception:
+        decoded = url
+    match = re.search(r'/embed/live_stream\?(?:.*&)?channel=([^&#]+)',
+                      decoded, re.IGNORECASE)
+    if match:
+        return "https://www.youtube.com/channel/%s/live" % match.group(1)
+    match = re.search(
+        r'youtube\.com/(channel/[^/?&#]+|c/[^/?&#]+|user/[^/?&#]+|@[^/?&#]+)',
+        decoded, re.IGNORECASE)
+    if match:
+        return "https://www.youtube.com/%s/live" % match.group(1)
+    match = re.search(r'youtube\.com/playlist\?(?:.*&)?list=([^&#]+)',
+                      decoded, re.IGNORECASE)
+    if match:
+        return "https://www.youtube.com/playlist?list=%s" % match.group(1)
+    return None
+
+
 def _short_error(stderr):
     """Last meaningful yt-dlp error line."""
-    lines = [l.strip() for l in (stderr or "").splitlines() if l.strip()]
-    errors = [l for l in lines if l.startswith("ERROR")]
+    lines = [line.strip() for line in (stderr or "").splitlines()
+             if line.strip()]
+    errors = [line for line in lines if line.startswith("ERROR")]
     text = (errors or lines or ["unknown error"])[-1]
     text = text.replace("ERROR: ", "")
     return text[:160]
@@ -172,11 +210,17 @@ def _run_ytdlp(cmd):
     return None, _short_error(result.stderr)
 
 
-def get_stream_with_ytdlp(ytdlp_cmd, video_id):
-    """Resolve video_id; return (stream_url, error_message)."""
-    youtube_url = "https://www.youtube.com/watch?v=" + video_id
+def get_stream_with_ytdlp(ytdlp_cmd, video):
+    """
+    Resolve a video ID or a YouTube URL;
+    return (stream_url, error_message).
+    """
+    if video.startswith(("http://", "https://")):
+        youtube_url = video
+    else:
+        youtube_url = "https://www.youtube.com/watch?v=" + video
     base = ytdlp_cmd + [
-        "-g", "--no-playlist", "--no-warnings",
+        "-g", "--no-playlist", "--playlist-items", "1", "--no-warnings",
         "--socket-timeout", "20",
         "-f", FORMAT_CHAIN,
     ] + find_js_runtime_args()
@@ -193,8 +237,8 @@ def get_stream_with_ytdlp(ytdlp_cmd, video_id):
 
 def resolve_youtube(url):
     """Resolve a YouTube URL; return (stream_url, error_message)."""
-    video_id = extract_video_id(url)
-    if not video_id:
+    target = youtube_target_url(url)
+    if not target:
         log.error("Cannot extract video ID from: %s" % url)
         return None, "invalid YouTube URL"
 
@@ -202,7 +246,7 @@ def resolve_youtube(url):
     if not ytdlp:
         return None, "yt-dlp is not installed"
 
-    return get_stream_with_ytdlp(ytdlp, video_id)
+    return get_stream_with_ytdlp(ytdlp, target)
 
 
 def get_youtube_stream(url):

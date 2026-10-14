@@ -133,11 +133,11 @@ msgstr "I-export ang Lahat sa Bouquet"
 msgid "Export failed:"
 msgstr "Nabigo ang pag-export:"
 
+msgid "Exported %d webcams to '%s'"
+msgstr "Nag-export ng %d webcam sa '%s'"
+
 msgid "Favorites"
 msgstr "Mga paborito"
-
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "Matagumpay na na-export ang mga paborito! I-restart ang Enigma2 para makita sila."
 
 msgid "File not found"
 msgstr "Hindi nahanap ang file"
@@ -160,6 +160,14 @@ msgstr "Live na webcam viewer na nagtatampok ng mga pandaigdigang lokasyon"
 msgid "Live webcams from around the world"
 msgstr "Mga live na webcam mula sa buong mundo"
 
+#, fuzzy
+msgid "Loading stream..."
+msgstr "Hindi ma-extract ang stream sa YouTube"
+
+#, fuzzy
+msgid "Loading..."
+msgstr "Ina-upgrade..."
+
 msgid "Menu"
 msgstr ""
 
@@ -175,8 +183,19 @@ msgstr "Walang available na playlist"
 msgid "No playlists found"
 msgstr "Walang nakitang mga playlist"
 
+#, fuzzy
+msgid "No valid streams found"
+msgstr "Walang nakitang mga playlist"
+
 msgid "No valid webcams in playlist"
 msgstr "Walang wastong webcam sa playlist"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "Walang mga paboritong i-export"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "OK = Impormasyon | CH-/CH+ = Nakaraan/Susunod | BLUE = Paborito | PLAY/PAUSE = I-toggle | STOP = Tumigil | EXIT = Lumabas | ni Lululla"
 
 msgid "Play"
 msgstr "Maglaro"
@@ -236,6 +255,13 @@ msgstr "Mga setting"
 msgid "Settings functionality coming soon!"
 msgstr "Paparating na ang functionality ng mga setting!"
 
+msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "Ang mga entry sa SkylineWebcams ay naglalaro mula sa bouquet lamang gamit ang streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+
+#, fuzzy
+msgid "Stream not available"
+msgstr "Hindi available ang YouTube stream"
+
 msgid "Technical error in Webcam.pl"
 msgstr "Teknikal na error sa Webcam.pl"
 
@@ -269,14 +295,17 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "Pinapatakbo mo na ang pinakabagong bersyon: {}"
 
-msgid "YouTube playback error"
-msgstr "Error sa pag-playback ng YouTube"
-
-msgid "YouTube stream not available"
-msgstr "Hindi available ang YouTube stream"
+msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+msgstr "Naglalaro lang ang mga entry sa YouTube mula sa bouquet gamit ang yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
 
 msgid "Your Favorites"
 msgstr "Mga Paborito mo"
+
+#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
+#~ msgstr "Matagumpay na na-export ang mga paborito! I-restart ang Enigma2 para makita sila."
+
+#~ msgid "YouTube playback error"
+#~ msgstr "Error sa pag-playback ng YouTube"
 
 #~ msgid "Invalid YouTube URL"
 #~ msgstr "Di-wastong URL ng YouTube"
