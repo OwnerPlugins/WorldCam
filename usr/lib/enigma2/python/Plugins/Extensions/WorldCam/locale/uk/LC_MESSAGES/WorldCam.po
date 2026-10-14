@@ -135,7 +135,7 @@ msgid "Export failed:"
 msgstr "Помилка експорту:"
 
 msgid "Exported %d webcams to '%s'"
-msgstr "Експортовано %d веб-камери в \\\"%s\\\""
+msgstr "Експортовано %d веб-камери в \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"%s\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\""
 
 msgid "Favorites"
 msgstr "Вибране"
