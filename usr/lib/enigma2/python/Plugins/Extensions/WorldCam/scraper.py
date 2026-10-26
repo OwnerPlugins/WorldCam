@@ -657,8 +657,9 @@ class SkylineScraper:
         Get countries from a category page or homepage.
         """
         self.logger.info("Entering get_countries")
-        url = category_url or self.BASE_URL
+        url = category_url or (self.BASE_URL + "/" + self.lang)
         html = self.fetch(url)
+
         countries = []
         try:
             for path, name in self.parse_countries(html, self.lang):
