@@ -353,6 +353,51 @@ class SkylineScraper:
             self.logger.error(f"Error reading playlists directory: {str(e)}")
             return user_lists
 
+    def parse_local_playlist_file(self, path):
+        """Legge le liste utente locali (txt) separate da :::, ;;, ###, ::, ;"""
+        webcams = []
+        try:
+            with open(path, "r", encoding="utf-8", errors="replace") as f:
+                for line in f:
+                    line = line.strip()
+                    if not line or line.startswith("#"): 
+                        continue
+                    
+                    # Trova il delimitatore corretto
+                    for delim in (":::", ";;", "###", "::", ";"):
+                        if delim in line:
+                            parts = line.split(delim, 1)
+                            name = parts[0].strip()
+                            url = parts[1].strip()
+                            if url:
+                                webcams.append({"name": name, "url": url, "thumbnail": ""})
+                            break
+        except Exception as e:
+            self.logger.error(f"Error parsing local playlist {path}: {e}")
+        return webcams
+
+    def get_continents(self):
+        """Estrae i continenti e i loro paesi dal file JSON locale"""
+        import json
+        from os.path import dirname, join
+        continents = []
+        try:
+            json_path = join(dirname(__file__), "cowntry_code.json")
+            with open(json_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            
+            groups = data.get("continent_groups", {})
+            for cont_name, countries_dict in groups.items():
+                c_list = []
+                for c_name, c_code in countries_dict.items():
+                    c_url = f"{self.BASE_URL}/{self.lang}/webcam/{c_code}.html"
+                    c_list.append({"name": c_name, "url": c_url})
+                continents.append({"name": cont_name, "countries": c_list})
+        except Exception as e:
+            self.logger.error(f"Error loading continents: {e}")
+            
+        return sorted(continents, key=lambda x: x["name"])
+
 
 def _normalize_thumbnail_url(url):
     if not url:

@@ -851,7 +851,7 @@ class WorldCamFavoritesScreen(WebcamBaseScreen):
                 self["key_yellow"].setText("")
                 return
 
-            # Pass full dicts so thumbnails are used when stored in favorites
+            # Passa is_category=False e force_thumb=True per il layout grande
             showlist(self.favorites, self["list"], is_category=False, force_thumb=True)
             self["list"].setCurrentIndex(0)
             self["title"].setText(_("Your Favorites"))

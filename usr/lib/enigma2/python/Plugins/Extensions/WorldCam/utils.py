@@ -391,6 +391,11 @@ class FavoritesManager:
                 makedirs(bouquet_dir)
             bouquet_path = join(bouquet_dir, bouquet_name)
 
+            # --- FIX: Import corretto (senza is_direct_stream) ---
+            from .scraper import SkylineScraper
+            scraper = SkylineScraper()
+            # -----------------------------------------------------
+
             exported = 0
             kinds = set()
             with open(bouquet_path, "w", encoding="utf-8") as f:
@@ -399,8 +404,17 @@ class FavoritesManager:
                     url = cam.get("url")
                     if not url:
                         continue
+                    
+                    play_url = url
+                    
+                    # Se è una pagina di Skyline, estrai il vero link .m3u8
+                    if is_skyline_page(url):
+                        resolved = scraper.get_stream_url(url)
+                        if resolved:
+                            play_url = resolved
+                    
                     lines, kind = bouquet_service_lines(
-                        url, cam.get("name", ""))
+                        play_url, cam.get("name", ""))
                     f.write(lines)
                     kinds.add(kind)
                     exported += 1
@@ -437,11 +451,6 @@ class FavoritesManager:
                     "YouTube entries play from the bouquet only with the "
                     "yt-dlp wrapper plugin "
                     "(enigma2-plugin-extensions-ytdlpwrapper).")
-            if "streamlink" in kinds:
-                message += "\n\n" + _(
-                    "SkylineWebcams entries play from the bouquet only with "
-                    "the streamlink wrapper plugin "
-                    "(enigma2-plugin-extensions-streamlinkwrapper).")
             return True, message
         except Exception as e:
             Logger().error(f"Export error: {str(e)}")
