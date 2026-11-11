@@ -336,7 +336,8 @@ class WorldCamPlayer(InfoBarBase, InfoBarMenu, InfoBarSeek, InfoBarAudioSelectio
                 "Error removing favorite")
         else:
             success = FavoritesManager.add_favorite(
-                current_webcam["name"], current_webcam["url"])
+                current_webcam["name"], current_webcam["url"],
+                current_webcam.get("thumbnail"))
             message = _("Added to favorites!") if success else _(
                 "Error adding favorite")
 

@@ -1,8 +1,7 @@
 #!/bin/bash
 
-version='7.1'
-changelog='Player no longer closes when zapping, stale YouTube answers ignored, YouTube channel and live links resolved, webcams exported to bouquets play (YouTube via ytdlpwrapper), location export exports its own webcams, M3U playlists no longer duplicated, Top Webcams and Locations open the selected row, lists load without freezing the GUI, no opkg at startup, updates from OwnerPlugins, installer installs yt-dlp on Python 3 images.'
-
+version='7.2'
+changelog='Added webcam visual previews (thumbnails) with background downloading and caching. Fixed player crash caused by custom skins (Agp renderer error) using a clean internal skin. Removed duplicated countries. Protected VRAM/memory to prevent accel alloc crashes. Added native JPG support (LoadPixmap).'
 TMPPATH=/tmp/WorldCam-install
 FILEPATH=/tmp/WorldCam-main.tar.gz
 

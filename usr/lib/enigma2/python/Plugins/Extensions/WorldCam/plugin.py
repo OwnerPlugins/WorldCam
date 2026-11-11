@@ -26,6 +26,7 @@ from Components.Label import Label
 from Components.MenuList import MenuList
 from Components.MultiContent import MultiContentEntryPixmapAlphaTest, MultiContentEntryText
 from Components.Pixmap import Pixmap
+from Tools.LoadPixmap import LoadPixmap
 
 # Enigma2 screens
 from Screens.ChoiceBox import ChoiceBox
@@ -44,7 +45,13 @@ from . import (
     DEFAULT_ICON
 )
 from .player import WorldCamPlayer
-from .scraper import SKYLINE_LANGUAGES, SkylineScraper
+from .scraper import (
+    SKYLINE_LANGUAGES,
+    SkylineScraper,
+    get_thumbnail_path,
+    download_thumbnail,
+)
+
 from .utils import (
     CATEGORY_ICONS,
     FavoritesManager,
@@ -92,6 +99,19 @@ if current_language not in SKYLINE_LANGUAGES:
     current_language = "en"
 set_current_language(current_language)
 screen_width = getDesktop(0).size().width()
+
+# =========================================================
+# Row heights (module-level: used by wcListEntry and showlist)
+# =========================================================
+if screen_width == 2560:
+    ROW_HEIGHT_ICON = 70
+    ROW_HEIGHT_THUMB = 130
+elif screen_width == 1920:
+    ROW_HEIGHT_ICON = 70
+    ROW_HEIGHT_THUMB = 110
+else:
+    ROW_HEIGHT_ICON = 60
+    ROW_HEIGHT_THUMB = 90
 
 
 def version_tuple(version):
@@ -143,47 +163,58 @@ class WebcamList(MenuList):
         if hasattr(self, "items"):
             del self.items
 
+_failed_thumbs = set()
 
-def wcListEntry(name, idx, is_category=False, is_country=False, icon=None):
-    """
-    Create a list entry with icon and text
-    Returns: List of MultiContent components
-    """
+
+def wcListEntry(name, idx, is_category=False, is_country=False,
+                icon=None, image_path=None, force_thumb=False):
     res = [name]
     lname = name.lower()
-    print("NAME Category:", lname)
 
-    # FIRST define row size based on screen resolution
-    if screen_width == 2560:
-        row_height = 100
-        text_pos, text_size = (110, -12), (1000, 90)
-    elif screen_width == 1920:
-        row_height = 100
-        text_pos, text_size = (110, -12), (950, 90)
-    else:
-        row_height = 100
-        text_pos, text_size = (100, 4), (500, 50)
+    if force_thumb or (image_path and exists(image_path)):
+        png = None
+        # LIMITE VRAM: Carica in memoria solo le prime 50 immagini per evitare il crash
+        if image_path and exists(image_path) and idx < 50:
+            try:
+                png = LoadPixmap(image_path)
+            except Exception:
+                png = None
+        
+        # Se la foto non c'è, usa il logo generico MA NEL FORMATO GRANDE
+        if not png:
+            try:
+                png = LoadPixmap(DEFAULT_ICON)
+            except Exception:
+                png = None
 
-    # Determine appropriate icon
+        if png:
+            if screen_width == 2560:
+                thumb_pos, thumb_size = (10, 11), (192, 108)
+                text_pos, text_size = (215, 0), (1000, ROW_HEIGHT_THUMB)
+            elif screen_width == 1920:
+                thumb_pos, thumb_size = (10, 10), (160, 90)
+                text_pos, text_size = (185, 0), (690, ROW_HEIGHT_THUMB)
+            else:
+                thumb_pos, thumb_size = (8, 11), (120, 68)
+                text_pos, text_size = (145, 0), (470, ROW_HEIGHT_THUMB)
+
+            res.append(MultiContentEntryPixmapAlphaTest(pos=thumb_pos, size=thumb_size, png=png))
+            res.append(MultiContentEntryText(pos=text_pos, size=text_size, font=0, text=name, color=0xA6D1FE, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER))
+            return res
+
+    # --- LAYOUT PICCOLO (Paesi/Categorie) ---
     if is_category:
         if icon is not None:
             pngx = get_category_icon(icon)
         else:
-            # Old logic (string matching) preserved for backward compatibility
-            if "youtube" in lname:
-                pngx = get_category_icon("youtube.png")
-            elif "hasbahca" in lname:
-                pngx = get_category_icon("hasbahca.png")
-            elif "userlist" in lname:
-                pngx = get_category_icon("user_lists.png")
-            elif "americas" in lname:
-                pngx = get_category_icon("americas.png")
-            elif "europe" in lname:
-                pngx = get_category_icon("europe.png")
-            elif "africa" in lname:
-                pngx = get_category_icon("africa.png")
-            elif "favorite" in lname:
-                pngx = get_category_icon("favorite.png")
+            # (lascia la logica delle icone originale)
+            if "youtube" in lname: pngx = get_category_icon("youtube.png")
+            elif "hasbahca" in lname: pngx = get_category_icon("hasbahca.png")
+            elif "userlist" in lname: pngx = get_category_icon("user_lists.png")
+            elif "americas" in lname: pngx = get_category_icon("americas.png")
+            elif "europe" in lname: pngx = get_category_icon("europe.png")
+            elif "africa" in lname: pngx = get_category_icon("africa.png")
+            elif "favorite" in lname: pngx = get_category_icon("favorite.png")
             else:
                 for k, v in CATEGORY_ICONS.items():
                     if k.lower() in lname:
@@ -191,87 +222,96 @@ def wcListEntry(name, idx, is_category=False, is_country=False, icon=None):
                         break
                 else:
                     pngx = DEFAULT_ICON
-
-        # ADD THESE LINES FOR CATEGORIES
-        icon_size = (60, 60)
-        icon_pos = (10, 10)  # Higher position
-
+        icon_size = (60, 60) if screen_width >= 1920 else (50, 50)
+        icon_pos = (10, (ROW_HEIGHT_ICON - icon_size[1]) // 2)
     else:
+        # (lascia la logica delle bandiere originale)
         country_code = get_country_code(name)
-        print(
-            "DEBUG: Country name = '%s', country_code = '%s'" %
-            (name, country_code))
+        if "martinique" in lname: pngx = get_category_icon("mart.png")
+        elif "guadeloupe" in lname: pngx = get_category_icon("guad.png")
+        elif "belize" in lname: pngx = get_category_icon("bel.png")
+        elif "luxembourg" in lname: pngx = get_category_icon("lux.png")
+        elif country_code: pngx = get_flag_path(country_code)
+        else: pngx = DEFAULT_ICON
 
-        if "martinique" in lname:
-            pngx = get_category_icon("mart.png")
-            icon_size = (60, 45)
-            icon_pos = (10, 10)  # Higher position
-        elif "guadeloupe" in lname:
-            pngx = get_category_icon("guad.png")
-            icon_size = (60, 45)
-            icon_pos = (10, 10)  # Higher position
-        elif "belize" in lname:
-            pngx = get_category_icon("bel.png")
-            icon_size = (60, 45)
-            icon_pos = (10, 10)  # Higher position
-        elif "luxembourg" in lname:
-            pngx = get_category_icon("lux.png")
-            icon_size = (60, 45)
-            icon_pos = (10, 10)  # Higher position
-        elif country_code:
-            pngx = get_flag_path(country_code)
-            # FORCE all flags to 60x45
-            icon_size = (60, 45)  # All flags 60x45
-            # FLAGS HIGHER - fixed upper position
-            icon_pos = (10, 10)  # Higher position
+        if "martinique" in lname or "guadeloupe" in lname or "belize" in lname or "luxembourg" in lname or country_code:
+            icon_size = (60, 45) if screen_width >= 1920 else (50, 38)
         else:
-            pngx = DEFAULT_ICON
-            icon_size = (80, 80)
-            icon_pos = (10, (row_height - icon_size[1]) // 2)
+            icon_size = (60, 60) if screen_width >= 1920 else (50, 50)
+        icon_pos = (10, (ROW_HEIGHT_ICON - icon_size[1]) // 2)
 
-    if not exists(pngx):
-        print("Icon file %s not found for name %s" % (pngx, name))
-        pngx = DEFAULT_ICON
+    if not exists(pngx): pngx = DEFAULT_ICON
 
-    res.append(
-        MultiContentEntryPixmapAlphaTest(
-            pos=icon_pos, size=icon_size, png=loadPNG(pngx)
-        )
-    )
-    res.append(
-        MultiContentEntryText(
-            pos=text_pos,
-            size=text_size,
-            font=0,
-            text=name,
-            color=0xA6D1FE,
-            flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER,
-        )
-    )
+    text_pos = (icon_pos[0] + icon_size[0] + 10, 0)
+    text_size = (800, ROW_HEIGHT_ICON) if screen_width >= 1920 else (540, ROW_HEIGHT_ICON)
+
+    try:
+        png_icon = LoadPixmap(pngx)
+    except Exception:
+        png_icon = None
+
+    if png_icon:
+        res.append(MultiContentEntryPixmapAlphaTest(pos=icon_pos, size=icon_size, png=png_icon))
+    res.append(MultiContentEntryText(pos=text_pos, size=text_size, font=0, text=name, color=0xA6D1FE, flags=RT_HALIGN_LEFT | RT_VALIGN_CENTER))
     return res
 
 
-def showlist(data, list_widget, is_category=False, is_country=False):
+def showlist(data, list_widget, is_category=False, is_country=False, force_thumb=False, _retry=False):
+    has_thumbnails = force_thumb or any(isinstance(i, dict) and i.get("thumbnail") for i in data)
+
+    current_idx = 0
+    try: current_idx = list_widget.getCurrentIndex()
+    except Exception: pass
+
+    try:
+        list_widget.l.setItemHeight(ROW_HEIGHT_THUMB if has_thumbnails else ROW_HEIGHT_ICON)
+    except Exception: pass
+
     plist = []
+    pending_thumbs = []
+
     for idx, item in enumerate(data):
-        if isinstance(item, dict):
-            name = item.get("name", "")
-            icon = item.get("icon")
-        else:
-            name = item
-            icon = None
-        plist.append(
-            wcListEntry(
-                name,
-                idx,
-                is_category,
-                is_country,
-                icon=icon))
+        name = item.get("name", "") if isinstance(item, dict) else item
+        icon = item.get("icon") if isinstance(item, dict) else None
+        thumbnail = item.get("thumbnail") if isinstance(item, dict) else None
+
+        image_path = None
+        if thumbnail:
+            image_path = get_thumbnail_path(thumbnail)
+            # Scarica in background solo le prime 50 per non saturare
+            if image_path is None and thumbnail not in _failed_thumbs and idx < 50:
+                pending_thumbs.append(thumbnail)
+
+        plist.append(wcListEntry(name, idx, is_category, is_country, icon=icon, image_path=image_path, force_thumb=has_thumbnails))
+
+    # Svuota la lista per liberare la VRAM prima di ricaricarla
+    try: list_widget.l.setList([])
+    except Exception: pass
+
     try:
         list_widget.setList(plist)
+        if hasattr(list_widget, "instance"):
+            list_widget.instance.invalidate()
     except Exception:
         if hasattr(list_widget, "l") and hasattr(list_widget.l, "setList"):
             list_widget.l.setList(plist)
+
+    if _retry and 0 < current_idx < len(plist):
+        try: list_widget.setCurrentIndex(current_idx)
+        except Exception: pass
+
+    if pending_thumbs and not _retry:
+        def on_done(_res=None):
+            if not list_widget or not hasattr(list_widget, "instance"): return
+            try:
+                showlist(data, list_widget, is_category, is_country, force_thumb, _retry=True)
+            except Exception: pass
+
+        from twisted.internet import threads
+        from .scraper import download_all_thumbnails
+        d = threads.deferToThread(download_all_thumbnails, pending_thumbs)
+        d.addCallback(on_done)
+        d.addErrback(lambda _f: None)
 
 
 class WebcamBaseScreen(Screen):
@@ -803,18 +843,16 @@ class WorldCamFavoritesScreen(WebcamBaseScreen):
         self.onLayoutFinish.append(self.set_flag_icon)
 
     def load_favorites(self):
-        """Carica e mostra i preferiti"""
         try:
             self.favorites = FavoritesManager.load_favorites()
             if not self.favorites:
-                # Clear the list (the last favorite may just be removed)
                 showlist([], self["list"], is_category=True)
                 self["title"].setText(_("No favorites yet"))
                 self["key_yellow"].setText("")
                 return
 
-            webcam_names = [fav["name"] for fav in self.favorites]
-            showlist(webcam_names, self["list"], is_category=True)
+            # Pass full dicts so thumbnails are used when stored in favorites
+            showlist(self.favorites, self["list"], is_category=False, force_thumb=True)
             self["list"].setCurrentIndex(0)
             self["title"].setText(_("Your Favorites"))
             self["key_yellow"].setText(_("Remove"))
@@ -1302,17 +1340,15 @@ class WorldCamTopScreen(WebcamBaseScreen):
         try:
             if top_webcams is None:
                 raise ValueError("no data")
-            # Filter the list itself, so list rows and webcams match
             self.top_webcams = sorted(
                 [w for w in top_webcams
                  if w["name"].strip().lower() != "top live cams"],
                 key=lambda c: c["name"].lower())
             webcam_names = [w["name"] for w in self.top_webcams]
             self.logger.info(
-                "Loaded and sorted top webcams: %s" %
-                webcam_names)
+                "Loaded and sorted top webcams: %s" % webcam_names)
             if webcam_names:
-                showlist(webcam_names, self["list"], is_country=True)
+                showlist(self.top_webcams, self["list"], is_country=False, force_thumb=True)
                 self["list"].setCurrentIndex(0)
         except Exception as e:
             self.logger.error("Error loading top webcams: %s" % str(e))
@@ -1389,7 +1425,7 @@ class WorldCamLocationScreen(WebcamBaseScreen):
                 "Loaded locations for country %s: %s" %
                 (self.country["name"], location_names))
             if location_names:
-                showlist(location_names, self["list"], is_category=True)
+                showlist(self.locations, self["list"], is_category=False, force_thumb=True)
                 self["list"].setCurrentIndex(0)
         except Exception as e:
             self.logger.error(
@@ -1499,7 +1535,8 @@ class WorldCamWebcamScreen(WebcamBaseScreen):
                 timeout=3
             )
         else:
-            FavoritesManager.add_favorite(webcam["name"], webcam["url"])
+            FavoritesManager.add_favorite(
+                webcam["name"], webcam["url"], webcam.get("thumbnail"))
             self.session.open(
                 MessageBox,
                 _("Added to favorites!"),
@@ -1513,7 +1550,8 @@ class WorldCamWebcamScreen(WebcamBaseScreen):
             return
 
         if choice[1] == "add_fav":
-            FavoritesManager.add_favorite(webcam["name"], webcam["url"])
+            FavoritesManager.add_favorite(
+                webcam["name"], webcam["url"], webcam.get("thumbnail"))
             self.session.open(
                 MessageBox,
                 _("Added to favorites!"),
@@ -1567,7 +1605,8 @@ class WorldCamWebcamScreen(WebcamBaseScreen):
                 "Loaded webcams for location %s: %s" %
                 (self.location["name"], webcam_names))
             if webcam_names:
-                showlist(webcam_names, self["list"], is_category=True)
+                # Pass full dicts so thumbnails are used when available
+                showlist(self.webcams, self["list"], is_category=False, force_thumb=True)
                 self["list"].setCurrentIndex(0)
         except Exception as e:
             self.logger.error(

@@ -331,15 +331,17 @@ class FavoritesManager:
             return False
 
     @staticmethod
-    def add_favorite(name, url):
-        """Add a webcam to favorites"""
+    def add_favorite(name, url, thumbnail=None):
+        """Add a webcam to favorites (thumbnail is optional)."""
         favorites = FavoritesManager.load_favorites()
 
-        # Already there
         if any(fav["url"] == url for fav in favorites):
             return False
 
-        favorites.append({"name": name, "url": url})
+        entry = {"name": name, "url": url}
+        if thumbnail:
+            entry["thumbnail"] = thumbnail
+        favorites.append(entry)
         return FavoritesManager.save_favorites(favorites)
 
     @staticmethod

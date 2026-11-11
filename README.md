@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/Belfagor2005/WorldCam">
-    <img src="https://img.shields.io/badge/Version-6.9-blue.svg" alt="Version">
+    <img src="https://img.shields.io/badge/Version-7.0-blue.svg" alt="Version">
   </a>
   <a href="https://www.enigma2.net">
     <img src="https://img.shields.io/badge/Enigma2-Plugin-ff6600.svg" alt="Enigma2">
@@ -36,12 +36,35 @@
 </p>
 
 <h1 align="center">
-**WorldCam** is an Enigma2 plugin that allows you to view live webcams from around the world,  with a simple, fast, and stable interface.  
-Completely rewritten and optimized in version **6.0**,  the plugin now offers new features and greater reliability.
+
+**WorldCam** is an Enigma2 plugin that allows you to view live webcams from around the world, with a simple, fast, and stable interface.  
+Completely rewritten and optimized in version **7.0**, the plugin now offers visual previews, new features, and greater reliability.
 </h1>
+
 ---
 
-🚀 **What's new from version > 5.0**
+🚀 **What's new from version 7.0**
+
+🖼️ **Webcam Thumbnails / Previews**
+Visual previews of the webcams are now displayed directly inside the lists (Top Webcams, Locations, Favorites). Images are downloaded in the background and cached locally, making the UI much more beautiful.
+
+⚡️ **Async Image Downloading & Caching**
+Thumbnails are fetched in parallel using a thread pool and cached in `/tmp/worldcam_thumbs/`. The UI remains smooth and responsive, preventing UI freezes during list loading.
+
+🛡️ **VRAM / Memory Protection**
+Enigma2 can crash (`gAccel accel alloc failed`) if it loads too many high-res images at once. We implemented a smart limitation (only the first 50 visible items load real images into VRAM) and forced list-clearing to prevent memory exhaustion.
+
+🔍 **Lazy-Loading Image Support**
+Updated the SkylineWebcams scraper to support `data-src` attributes, correctly parsing images that are lazily loaded by the website.
+
+🔄 **Native JPEG Support (`LoadPixmap`)**
+Switched from `loadPNG` to `LoadPixmap` to natively support `.jpg` files without generating `[ePNG] header size mismatch` errors.
+
+🎨 **Player Skin Crash Fix**
+Fixed a critical crash (`Agp... renderer not found`) caused by system skins on certain receivers. The player now uses a clean, internal, minimal skin to ensure seamless video playback without dependencies on external custom skins.
+
+🌐 **Duplicate Country Fix**
+Removed duplicated entries in the Country selection screen by implementing a unique URL filter (`set()`).
 
 ⚡️ **Fast and interactive UI management**
 Asynchronous webcam loading and smooth navigation between categories.
@@ -65,8 +88,7 @@ Automatic memory cleanup to prevent leaks or crashes.
 Stores and restores the correct aspect ratio for each video stream.
 
 📁 **Favorites list now available**
-You can now manage your favorite webcams from the main menu.
-While watching a webcam, just press the **Blue button** to add or remove it from your **Favorites**.
+You can now manage your favorite webcams from the main menu. While watching a webcam, just press the **Blue button** to add or remove it from your **Favorites**.
 
 🟩 **Favorites toggle shortcut (Green button)**  
 Quickly add or remove the selected webcam from your favorites list while browsing.
@@ -160,6 +182,7 @@ Place your local list file (for example, named `worldcam_list.txt`) inside the f
 - Active internet connection  
 - Python ≥ 3.8  
 - **`yt-dlp`** (binary preferred, module also works):
+
 ---
 
 ## 🧪 Debug & Log
@@ -171,6 +194,7 @@ Logs are saved at:
 
 You can check internal events and requested video streams directly.  
 If errors or malfunctions occur, please send this file for support.
+
 ---
 
 ## 📌 Notes
@@ -189,5 +213,3 @@ If errors or malfunctions occur, please send this file for support.
 - Graphic support: Public flags and icons
 
 ---
-```
-
