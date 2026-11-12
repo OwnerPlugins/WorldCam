@@ -17,27 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "- Local YouTube playlist"
-msgstr "- Yerel YouTube oynatma listesi"
-
-msgid "- Local webcam list"
-msgstr "- Yerel web kamerası listesi"
-
-msgid "- Online Direct and YouTube webcams"
-msgstr "- Çevrimiçi Doğrudan ve YouTube web kameraları"
-
-msgid "- Online webcam list"
-msgstr "- Çevrimiçi web kamerası listesi"
-
-msgid "- Other sources"
-msgstr "- Diğer kaynaklar"
-
-msgid "AFRICA"
-msgstr "AFRİKA"
-
-msgid "AMERICAS"
-msgstr "AMERİKA KITALARI"
-
 msgid "About"
 msgstr "Hakkında"
 
@@ -68,53 +47,12 @@ msgstr "Ülkeler"
 msgid "Country"
 msgstr "Ülke"
 
-msgid "Developed by Lululla"
-msgstr "Lululla tarafından geliştirildi"
-
-msgid "EUROPE"
-msgstr "AVRUPA"
-
-msgid "Empty playlist file"
-msgstr "Çalma listesi dosyasını boşalt"
+#, fuzzy
+msgid "Empty or missing playlist"
+msgstr "Oynatma listesi yüklenirken hata oluştu"
 
 msgid "Error adding favorite"
 msgstr "Favori eklenirken hata oluştu"
-
-msgid "Error changing language"
-msgstr "Dil değiştirilirken hata oluştu"
-
-msgid "Error loading categories"
-msgstr "Kategoriler yüklenirken hata oluştu"
-
-msgid "Error loading continents"
-msgstr "Kıtalar yüklenirken hata oluştu"
-
-msgid "Error loading countries"
-msgstr "Ülkeler yüklenirken hata oluştu"
-
-msgid "Error loading favorites"
-msgstr "Favoriler yüklenirken hata oluştu"
-
-msgid "Error loading locations"
-msgstr "Konumlar yüklenirken hata oluştu"
-
-msgid "Error loading playlist"
-msgstr "Oynatma listesi yüklenirken hata oluştu"
-
-msgid "Error loading playlists"
-msgstr "Oynatma listeleri yüklenirken hata oluştu"
-
-msgid "Error loading top webcams"
-msgstr "En iyi web kameraları yüklenirken hata oluştu"
-
-msgid "Error loading webcams"
-msgstr "Web kameraları yüklenirken hata oluştu"
-
-msgid "Error opening language selection"
-msgstr "Dil seçimi açılırken hata oluştu"
-
-msgid "Error opening playlist"
-msgstr "Oynatma listesi açılırken hata oluştu"
 
 msgid "Error removing favorite"
 msgstr "Favori kaldırılırken hata oluştu"
@@ -140,23 +78,8 @@ msgstr "%d web kamerası '%s' hedefine aktarıldı"
 msgid "Favorites"
 msgstr "Favoriler"
 
-msgid "File not found"
-msgstr "Dosya bulunamadı"
-
-msgid "Forum support: www.corvoboys.org"
-msgstr "Forum desteği: www.corvoboys.org"
-
-msgid "GitHub: %s"
-msgstr ""
-
-msgid "Included playlists and sources:"
-msgstr "Dahil edilen çalma listeleri ve kaynaklar:"
-
 msgid "Language changed to %s"
 msgstr "Dil %s olarak değiştirildi"
-
-msgid "Live webcam viewer featuring global locations"
-msgstr "Küresel konumları gösteren canlı web kamerası görüntüleyici"
 
 msgid "Live webcams from around the world"
 msgstr "Dünyanın dört bir yanından canlı web kameraları"
@@ -177,9 +100,6 @@ msgstr "Dışa aktarılacak favori yok"
 
 msgid "No favorites yet"
 msgstr "Henüz favori yok"
-
-msgid "No playlists available"
-msgstr "Oynatma listesi yok"
 
 msgid "No playlists found"
 msgstr "Oynatma listesi bulunamadı"
@@ -210,9 +130,6 @@ msgstr "Oynatma hatası"
 msgid "Playback failed!"
 msgstr "Oynatma başarısız oldu!"
 
-msgid "Powered by Enigma2 and Python"
-msgstr "Enigma2 ve Python tarafından desteklenmektedir"
-
 msgid "Remove"
 msgstr "Kaldırmak"
 
@@ -222,27 +139,12 @@ msgstr "Favorilerden kaldır"
 msgid "Removed from favorites"
 msgstr "Favorilerden kaldırıldı"
 
-msgid "Removed from favorites: %s"
-msgstr "Favorilerden kaldırıldı: %s"
-
 #, fuzzy
 msgid "Resolving YouTube stream..."
 msgstr "YouTube akışı çıkarılamadı"
 
 msgid "Select"
 msgstr "Seçme"
-
-msgid "Select a valid category"
-msgstr "Geçerli bir kategori seçin"
-
-msgid "Select a valid location"
-msgstr "Geçerli bir konum seçin"
-
-msgid "Select a valid playlist"
-msgstr "Geçerli bir oynatma listesi seçin"
-
-msgid "Select a valid webcam"
-msgstr "Geçerli bir web kamerası seçin"
 
 msgid "Select an option"
 msgstr "Bir seçenek seçin"
@@ -262,9 +164,6 @@ msgstr "SkylineWebcams girişleri buketten yalnızca akış bağlantısı sarmal
 #, fuzzy
 msgid "Stream not available"
 msgstr "YouTube akışı kullanılamıyor"
-
-msgid "Technical error in Webcam.pl"
-msgstr "Webcam.pl'de teknik hata"
 
 msgid "Top Webcams"
 msgstr "En İyi Web Kameraları"
@@ -287,9 +186,6 @@ msgstr "Yükseltiliyor..."
 msgid "User Lists"
 msgstr "Kullanıcı Listeleri"
 
-msgid "WorldCam v%s"
-msgstr ""
-
 msgid "WorldCam v{}"
 msgstr ""
 
@@ -301,6 +197,105 @@ msgstr "YouTube girişleri buketten yalnızca yt-dlp sarmalayıcı eklentisi (en
 
 msgid "Your Favorites"
 msgstr "Favorileriniz"
+
+#~ msgid "- Local YouTube playlist"
+#~ msgstr "- Yerel YouTube oynatma listesi"
+
+#~ msgid "- Local webcam list"
+#~ msgstr "- Yerel web kamerası listesi"
+
+#~ msgid "- Online Direct and YouTube webcams"
+#~ msgstr "- Çevrimiçi Doğrudan ve YouTube web kameraları"
+
+#~ msgid "- Online webcam list"
+#~ msgstr "- Çevrimiçi web kamerası listesi"
+
+#~ msgid "- Other sources"
+#~ msgstr "- Diğer kaynaklar"
+
+#~ msgid "AFRICA"
+#~ msgstr "AFRİKA"
+
+#~ msgid "AMERICAS"
+#~ msgstr "AMERİKA KITALARI"
+
+#~ msgid "Developed by Lululla"
+#~ msgstr "Lululla tarafından geliştirildi"
+
+#~ msgid "EUROPE"
+#~ msgstr "AVRUPA"
+
+#~ msgid "Empty playlist file"
+#~ msgstr "Çalma listesi dosyasını boşalt"
+
+#~ msgid "Error changing language"
+#~ msgstr "Dil değiştirilirken hata oluştu"
+
+#~ msgid "Error loading categories"
+#~ msgstr "Kategoriler yüklenirken hata oluştu"
+
+#~ msgid "Error loading continents"
+#~ msgstr "Kıtalar yüklenirken hata oluştu"
+
+#~ msgid "Error loading countries"
+#~ msgstr "Ülkeler yüklenirken hata oluştu"
+
+#~ msgid "Error loading favorites"
+#~ msgstr "Favoriler yüklenirken hata oluştu"
+
+#~ msgid "Error loading locations"
+#~ msgstr "Konumlar yüklenirken hata oluştu"
+
+#~ msgid "Error loading playlists"
+#~ msgstr "Oynatma listeleri yüklenirken hata oluştu"
+
+#~ msgid "Error loading top webcams"
+#~ msgstr "En iyi web kameraları yüklenirken hata oluştu"
+
+#~ msgid "Error loading webcams"
+#~ msgstr "Web kameraları yüklenirken hata oluştu"
+
+#~ msgid "Error opening language selection"
+#~ msgstr "Dil seçimi açılırken hata oluştu"
+
+#~ msgid "Error opening playlist"
+#~ msgstr "Oynatma listesi açılırken hata oluştu"
+
+#~ msgid "File not found"
+#~ msgstr "Dosya bulunamadı"
+
+#~ msgid "Forum support: www.corvoboys.org"
+#~ msgstr "Forum desteği: www.corvoboys.org"
+
+#~ msgid "Included playlists and sources:"
+#~ msgstr "Dahil edilen çalma listeleri ve kaynaklar:"
+
+#~ msgid "Live webcam viewer featuring global locations"
+#~ msgstr "Küresel konumları gösteren canlı web kamerası görüntüleyici"
+
+#~ msgid "No playlists available"
+#~ msgstr "Oynatma listesi yok"
+
+#~ msgid "Powered by Enigma2 and Python"
+#~ msgstr "Enigma2 ve Python tarafından desteklenmektedir"
+
+#~ msgid "Removed from favorites: %s"
+#~ msgstr "Favorilerden kaldırıldı: %s"
+
+#~ msgid "Select a valid category"
+#~ msgstr "Geçerli bir kategori seçin"
+
+#~ msgid "Select a valid location"
+#~ msgstr "Geçerli bir konum seçin"
+
+#~ msgid "Select a valid playlist"
+#~ msgstr "Geçerli bir oynatma listesi seçin"
+
+#~ msgid "Select a valid webcam"
+#~ msgstr "Geçerli bir web kamerası seçin"
+
+#~ msgid "Technical error in Webcam.pl"
+#~ msgstr "Webcam.pl'de teknik hata"
 
 #~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
 #~ msgstr "Favoriler başarıyla dışa aktarıldı! Bunları görmek için Enigma2'yi yeniden başlatın."

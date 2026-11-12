@@ -16,27 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "- Local YouTube playlist"
-msgstr "- เพลย์ลิสต์ YouTube ท้องถิ่น"
-
-msgid "- Local webcam list"
-msgstr "- รายการเว็บแคมท้องถิ่น"
-
-msgid "- Online Direct and YouTube webcams"
-msgstr "- เว็บแคมออนไลน์โดยตรงและ YouTube"
-
-msgid "- Online webcam list"
-msgstr "- รายการเว็บแคมออนไลน์"
-
-msgid "- Other sources"
-msgstr "- แหล่งอื่นๆ"
-
-msgid "AFRICA"
-msgstr "แอฟริกา"
-
-msgid "AMERICAS"
-msgstr "อเมริกา"
-
 msgid "About"
 msgstr "เกี่ยวกับ"
 
@@ -67,53 +46,12 @@ msgstr "ประเทศ"
 msgid "Country"
 msgstr "ประเทศ"
 
-msgid "Developed by Lululla"
-msgstr "พัฒนาโดย Lululla"
-
-msgid "EUROPE"
-msgstr "ยุโรป"
-
-msgid "Empty playlist file"
-msgstr "ไฟล์เพลย์ลิสต์ว่างเปล่า"
+#, fuzzy
+msgid "Empty or missing playlist"
+msgstr "เกิดข้อผิดพลาดในการโหลดเพลย์ลิสต์"
 
 msgid "Error adding favorite"
 msgstr "เกิดข้อผิดพลาดในการเพิ่มรายการโปรด"
-
-msgid "Error changing language"
-msgstr "เกิดข้อผิดพลาดในการเปลี่ยนภาษา"
-
-msgid "Error loading categories"
-msgstr "เกิดข้อผิดพลาดในการโหลดหมวดหมู่"
-
-msgid "Error loading continents"
-msgstr "เกิดข้อผิดพลาดในการโหลดทวีป"
-
-msgid "Error loading countries"
-msgstr "เกิดข้อผิดพลาดในการโหลดประเทศ"
-
-msgid "Error loading favorites"
-msgstr "เกิดข้อผิดพลาดในการโหลดรายการโปรด"
-
-msgid "Error loading locations"
-msgstr "เกิดข้อผิดพลาดในการโหลดสถานที่"
-
-msgid "Error loading playlist"
-msgstr "เกิดข้อผิดพลาดในการโหลดเพลย์ลิสต์"
-
-msgid "Error loading playlists"
-msgstr "เกิดข้อผิดพลาดในการโหลดเพลย์ลิสต์"
-
-msgid "Error loading top webcams"
-msgstr "เกิดข้อผิดพลาดในการโหลดเว็บแคมยอดนิยม"
-
-msgid "Error loading webcams"
-msgstr "เกิดข้อผิดพลาดในการโหลดเว็บแคม"
-
-msgid "Error opening language selection"
-msgstr "เกิดข้อผิดพลาดในการเปิดการเลือกภาษา"
-
-msgid "Error opening playlist"
-msgstr "เกิดข้อผิดพลาดในการเปิดเพลย์ลิสต์"
 
 msgid "Error removing favorite"
 msgstr "เกิดข้อผิดพลาดในการลบรายการโปรด"
@@ -139,23 +77,8 @@ msgstr "ส่งออกเว็บแคม %d รายการไปย�
 msgid "Favorites"
 msgstr "รายการโปรด"
 
-msgid "File not found"
-msgstr "ไม่พบไฟล์"
-
-msgid "Forum support: www.corvoboys.org"
-msgstr "การสนับสนุนฟอรั่ม: www.corvoboys.org"
-
-msgid "GitHub: %s"
-msgstr ""
-
-msgid "Included playlists and sources:"
-msgstr "เพลย์ลิสต์และแหล่งที่มาที่รวมไว้:"
-
 msgid "Language changed to %s"
 msgstr "ภาษาเปลี่ยนเป็น %s"
-
-msgid "Live webcam viewer featuring global locations"
-msgstr "โปรแกรมดูเว็บแคมสดที่มีสถานที่ทั่วโลก"
 
 msgid "Live webcams from around the world"
 msgstr "เว็บแคมถ่ายทอดสดจากทั่วโลก"
@@ -176,9 +99,6 @@ msgstr "ไม่มีรายการโปรดที่จะส่งอ
 
 msgid "No favorites yet"
 msgstr "ยังไม่มีรายการโปรด"
-
-msgid "No playlists available"
-msgstr "ไม่มีเพลย์ลิสต์"
 
 msgid "No playlists found"
 msgstr "ไม่พบเพลย์ลิสต์"
@@ -209,9 +129,6 @@ msgstr "ข้อผิดพลาดในการเล่น"
 msgid "Playback failed!"
 msgstr "การเล่นล้มเหลว!"
 
-msgid "Powered by Enigma2 and Python"
-msgstr "ขับเคลื่อนโดย Enigma2 และ Python"
-
 msgid "Remove"
 msgstr "ลบ"
 
@@ -221,27 +138,12 @@ msgstr "ลบออกจากรายการโปรด"
 msgid "Removed from favorites"
 msgstr "ลบออกจากรายการโปรดแล้ว"
 
-msgid "Removed from favorites: %s"
-msgstr "ลบออกจากรายการโปรด: %s"
-
 #, fuzzy
 msgid "Resolving YouTube stream..."
 msgstr "ไม่สามารถแยกสตรีม YouTube ได้"
 
 msgid "Select"
 msgstr "เลือก"
-
-msgid "Select a valid category"
-msgstr "เลือกหมวดหมู่ที่ถูกต้อง"
-
-msgid "Select a valid location"
-msgstr "เลือกสถานที่ที่ถูกต้อง"
-
-msgid "Select a valid playlist"
-msgstr "เลือกเพลย์ลิสต์ที่ถูกต้อง"
-
-msgid "Select a valid webcam"
-msgstr "เลือกเว็บแคมที่ถูกต้อง"
 
 msgid "Select an option"
 msgstr "เลือกตัวเลือก"
@@ -261,9 +163,6 @@ msgstr "รายการ SkylineWebcams จะเล่นจากช่อ�
 #, fuzzy
 msgid "Stream not available"
 msgstr "สตรีม YouTube ไม่พร้อมใช้งาน"
-
-msgid "Technical error in Webcam.pl"
-msgstr "ข้อผิดพลาดทางเทคนิคใน Webcam.pl"
 
 msgid "Top Webcams"
 msgstr "เว็บแคมยอดนิยม"
@@ -286,9 +185,6 @@ msgstr "กำลังอัปเกรด..."
 msgid "User Lists"
 msgstr "รายชื่อผู้ใช้"
 
-msgid "WorldCam v%s"
-msgstr "เวิลด์แคม v%s"
-
 msgid "WorldCam v{}"
 msgstr "เวิลด์แคม วี{}"
 
@@ -300,6 +196,108 @@ msgstr "รายการ YouTube จะเล่นจากช่อดอก
 
 msgid "Your Favorites"
 msgstr "รายการโปรดของคุณ"
+
+#~ msgid "- Local YouTube playlist"
+#~ msgstr "- เพลย์ลิสต์ YouTube ท้องถิ่น"
+
+#~ msgid "- Local webcam list"
+#~ msgstr "- รายการเว็บแคมท้องถิ่น"
+
+#~ msgid "- Online Direct and YouTube webcams"
+#~ msgstr "- เว็บแคมออนไลน์โดยตรงและ YouTube"
+
+#~ msgid "- Online webcam list"
+#~ msgstr "- รายการเว็บแคมออนไลน์"
+
+#~ msgid "- Other sources"
+#~ msgstr "- แหล่งอื่นๆ"
+
+#~ msgid "AFRICA"
+#~ msgstr "แอฟริกา"
+
+#~ msgid "AMERICAS"
+#~ msgstr "อเมริกา"
+
+#~ msgid "Developed by Lululla"
+#~ msgstr "พัฒนาโดย Lululla"
+
+#~ msgid "EUROPE"
+#~ msgstr "ยุโรป"
+
+#~ msgid "Empty playlist file"
+#~ msgstr "ไฟล์เพลย์ลิสต์ว่างเปล่า"
+
+#~ msgid "Error changing language"
+#~ msgstr "เกิดข้อผิดพลาดในการเปลี่ยนภาษา"
+
+#~ msgid "Error loading categories"
+#~ msgstr "เกิดข้อผิดพลาดในการโหลดหมวดหมู่"
+
+#~ msgid "Error loading continents"
+#~ msgstr "เกิดข้อผิดพลาดในการโหลดทวีป"
+
+#~ msgid "Error loading countries"
+#~ msgstr "เกิดข้อผิดพลาดในการโหลดประเทศ"
+
+#~ msgid "Error loading favorites"
+#~ msgstr "เกิดข้อผิดพลาดในการโหลดรายการโปรด"
+
+#~ msgid "Error loading locations"
+#~ msgstr "เกิดข้อผิดพลาดในการโหลดสถานที่"
+
+#~ msgid "Error loading playlists"
+#~ msgstr "เกิดข้อผิดพลาดในการโหลดเพลย์ลิสต์"
+
+#~ msgid "Error loading top webcams"
+#~ msgstr "เกิดข้อผิดพลาดในการโหลดเว็บแคมยอดนิยม"
+
+#~ msgid "Error loading webcams"
+#~ msgstr "เกิดข้อผิดพลาดในการโหลดเว็บแคม"
+
+#~ msgid "Error opening language selection"
+#~ msgstr "เกิดข้อผิดพลาดในการเปิดการเลือกภาษา"
+
+#~ msgid "Error opening playlist"
+#~ msgstr "เกิดข้อผิดพลาดในการเปิดเพลย์ลิสต์"
+
+#~ msgid "File not found"
+#~ msgstr "ไม่พบไฟล์"
+
+#~ msgid "Forum support: www.corvoboys.org"
+#~ msgstr "การสนับสนุนฟอรั่ม: www.corvoboys.org"
+
+#~ msgid "Included playlists and sources:"
+#~ msgstr "เพลย์ลิสต์และแหล่งที่มาที่รวมไว้:"
+
+#~ msgid "Live webcam viewer featuring global locations"
+#~ msgstr "โปรแกรมดูเว็บแคมสดที่มีสถานที่ทั่วโลก"
+
+#~ msgid "No playlists available"
+#~ msgstr "ไม่มีเพลย์ลิสต์"
+
+#~ msgid "Powered by Enigma2 and Python"
+#~ msgstr "ขับเคลื่อนโดย Enigma2 และ Python"
+
+#~ msgid "Removed from favorites: %s"
+#~ msgstr "ลบออกจากรายการโปรด: %s"
+
+#~ msgid "Select a valid category"
+#~ msgstr "เลือกหมวดหมู่ที่ถูกต้อง"
+
+#~ msgid "Select a valid location"
+#~ msgstr "เลือกสถานที่ที่ถูกต้อง"
+
+#~ msgid "Select a valid playlist"
+#~ msgstr "เลือกเพลย์ลิสต์ที่ถูกต้อง"
+
+#~ msgid "Select a valid webcam"
+#~ msgstr "เลือกเว็บแคมที่ถูกต้อง"
+
+#~ msgid "Technical error in Webcam.pl"
+#~ msgstr "ข้อผิดพลาดทางเทคนิคใน Webcam.pl"
+
+#~ msgid "WorldCam v%s"
+#~ msgstr "เวิลด์แคม v%s"
 
 #~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
 #~ msgstr "ส่งออกรายการโปรดเรียบร้อยแล้ว! รีสตาร์ท Enigma2 เพื่อดูพวกเขา"

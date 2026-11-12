@@ -16,27 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "- Local YouTube playlist"
-msgstr "- لیست پخش محلی YouTube"
-
-msgid "- Local webcam list"
-msgstr "- لیست وب کم محلی"
-
-msgid "- Online Direct and YouTube webcams"
-msgstr "- وب کم مستقیم آنلاین و یوتیوب"
-
-msgid "- Online webcam list"
-msgstr "- لیست وب کم آنلاین"
-
-msgid "- Other sources"
-msgstr "- منابع دیگر"
-
-msgid "AFRICA"
-msgstr "آفریقا"
-
-msgid "AMERICAS"
-msgstr "آمریکا"
-
 msgid "About"
 msgstr "درباره"
 
@@ -67,53 +46,12 @@ msgstr "کشورها"
 msgid "Country"
 msgstr "کشور"
 
-msgid "Developed by Lululla"
-msgstr "توسعه یافته توسط Lululla"
-
-msgid "EUROPE"
-msgstr "اروپا"
-
-msgid "Empty playlist file"
-msgstr "فایل لیست پخش خالی"
+#, fuzzy
+msgid "Empty or missing playlist"
+msgstr "خطا در بارگیری لیست پخش"
 
 msgid "Error adding favorite"
 msgstr "خطا در افزودن موارد دلخواه"
-
-msgid "Error changing language"
-msgstr "خطا در تغییر زبان"
-
-msgid "Error loading categories"
-msgstr "خطا در بارگیری دسته‌ها"
-
-msgid "Error loading continents"
-msgstr "خطا در بارگیری قاره ها"
-
-msgid "Error loading countries"
-msgstr "خطا در بارگیری کشورها"
-
-msgid "Error loading favorites"
-msgstr "خطا در بارگیری موارد دلخواه"
-
-msgid "Error loading locations"
-msgstr "خطا در بارگیری مکان‌ها"
-
-msgid "Error loading playlist"
-msgstr "خطا در بارگیری لیست پخش"
-
-msgid "Error loading playlists"
-msgstr "خطا در بارگیری لیست های پخش"
-
-msgid "Error loading top webcams"
-msgstr "خطا در بارگیری وب کم های برتر"
-
-msgid "Error loading webcams"
-msgstr "خطا در بارگیری وب کم"
-
-msgid "Error opening language selection"
-msgstr "خطا در باز کردن انتخاب زبان"
-
-msgid "Error opening playlist"
-msgstr "خطا در باز کردن لیست پخش"
 
 msgid "Error removing favorite"
 msgstr "خطا در حذف موارد دلخواه"
@@ -139,23 +77,8 @@ msgstr "%d وب‌کم به «%s» صادر شد"
 msgid "Favorites"
 msgstr "موارد دلخواه"
 
-msgid "File not found"
-msgstr "فایل پیدا نشد"
-
-msgid "Forum support: www.corvoboys.org"
-msgstr "پشتیبانی انجمن: www.corvoboys.org"
-
-msgid "GitHub: %s"
-msgstr ""
-
-msgid "Included playlists and sources:"
-msgstr "فهرست‌های پخش و منابع موجود:"
-
 msgid "Language changed to %s"
 msgstr "زبان به %s تغییر کرد"
-
-msgid "Live webcam viewer featuring global locations"
-msgstr "نمایشگر وب کم زنده با مکان های جهانی"
 
 msgid "Live webcams from around the world"
 msgstr "وب کم های زنده از سراسر جهان"
@@ -176,9 +99,6 @@ msgstr "هیچ مورد دلخواه برای صادرات وجود ندارد"
 
 msgid "No favorites yet"
 msgstr "هنوز موارد دلخواه وجود ندارد"
-
-msgid "No playlists available"
-msgstr "هیچ لیست پخشی در دسترس نیست"
 
 msgid "No playlists found"
 msgstr "هیچ لیست پخشی یافت نشد"
@@ -209,9 +129,6 @@ msgstr "خطای پخش"
 msgid "Playback failed!"
 msgstr "پخش نشد!"
 
-msgid "Powered by Enigma2 and Python"
-msgstr "ارائه شده توسط Enigma2 و Python"
-
 msgid "Remove"
 msgstr "حذف کنید"
 
@@ -221,27 +138,12 @@ msgstr "حذف از موارد دلخواه"
 msgid "Removed from favorites"
 msgstr "از موارد دلخواه حذف شد"
 
-msgid "Removed from favorites: %s"
-msgstr "از موارد دلخواه حذف شد: %s"
-
 #, fuzzy
 msgid "Resolving YouTube stream..."
 msgstr "پخش جریانی YouTube استخراج نشد"
 
 msgid "Select"
 msgstr "انتخاب کنید"
-
-msgid "Select a valid category"
-msgstr "یک دسته معتبر انتخاب کنید"
-
-msgid "Select a valid location"
-msgstr "یک مکان معتبر انتخاب کنید"
-
-msgid "Select a valid playlist"
-msgstr "یک لیست پخش معتبر انتخاب کنید"
-
-msgid "Select a valid webcam"
-msgstr "یک وب کم معتبر انتخاب کنید"
 
 msgid "Select an option"
 msgstr "یک گزینه را انتخاب کنید"
@@ -261,9 +163,6 @@ msgstr "ورودی‌های SkylineWebcams فقط با افزونه streamlink w
 #, fuzzy
 msgid "Stream not available"
 msgstr "پخش جریانی YouTube در دسترس نیست"
-
-msgid "Technical error in Webcam.pl"
-msgstr "خطای فنی در Webcam.pl"
 
 msgid "Top Webcams"
 msgstr "وب کم های برتر"
@@ -286,9 +185,6 @@ msgstr "در حال ارتقاء..."
 msgid "User Lists"
 msgstr "لیست های کاربر"
 
-msgid "WorldCam v%s"
-msgstr ""
-
 msgid "WorldCam v{}"
 msgstr ""
 
@@ -300,6 +196,105 @@ msgstr "ورودی‌های YouTube از دسته گل فقط با افزونه 
 
 msgid "Your Favorites"
 msgstr "موارد دلخواه شما"
+
+#~ msgid "- Local YouTube playlist"
+#~ msgstr "- لیست پخش محلی YouTube"
+
+#~ msgid "- Local webcam list"
+#~ msgstr "- لیست وب کم محلی"
+
+#~ msgid "- Online Direct and YouTube webcams"
+#~ msgstr "- وب کم مستقیم آنلاین و یوتیوب"
+
+#~ msgid "- Online webcam list"
+#~ msgstr "- لیست وب کم آنلاین"
+
+#~ msgid "- Other sources"
+#~ msgstr "- منابع دیگر"
+
+#~ msgid "AFRICA"
+#~ msgstr "آفریقا"
+
+#~ msgid "AMERICAS"
+#~ msgstr "آمریکا"
+
+#~ msgid "Developed by Lululla"
+#~ msgstr "توسعه یافته توسط Lululla"
+
+#~ msgid "EUROPE"
+#~ msgstr "اروپا"
+
+#~ msgid "Empty playlist file"
+#~ msgstr "فایل لیست پخش خالی"
+
+#~ msgid "Error changing language"
+#~ msgstr "خطا در تغییر زبان"
+
+#~ msgid "Error loading categories"
+#~ msgstr "خطا در بارگیری دسته‌ها"
+
+#~ msgid "Error loading continents"
+#~ msgstr "خطا در بارگیری قاره ها"
+
+#~ msgid "Error loading countries"
+#~ msgstr "خطا در بارگیری کشورها"
+
+#~ msgid "Error loading favorites"
+#~ msgstr "خطا در بارگیری موارد دلخواه"
+
+#~ msgid "Error loading locations"
+#~ msgstr "خطا در بارگیری مکان‌ها"
+
+#~ msgid "Error loading playlists"
+#~ msgstr "خطا در بارگیری لیست های پخش"
+
+#~ msgid "Error loading top webcams"
+#~ msgstr "خطا در بارگیری وب کم های برتر"
+
+#~ msgid "Error loading webcams"
+#~ msgstr "خطا در بارگیری وب کم"
+
+#~ msgid "Error opening language selection"
+#~ msgstr "خطا در باز کردن انتخاب زبان"
+
+#~ msgid "Error opening playlist"
+#~ msgstr "خطا در باز کردن لیست پخش"
+
+#~ msgid "File not found"
+#~ msgstr "فایل پیدا نشد"
+
+#~ msgid "Forum support: www.corvoboys.org"
+#~ msgstr "پشتیبانی انجمن: www.corvoboys.org"
+
+#~ msgid "Included playlists and sources:"
+#~ msgstr "فهرست‌های پخش و منابع موجود:"
+
+#~ msgid "Live webcam viewer featuring global locations"
+#~ msgstr "نمایشگر وب کم زنده با مکان های جهانی"
+
+#~ msgid "No playlists available"
+#~ msgstr "هیچ لیست پخشی در دسترس نیست"
+
+#~ msgid "Powered by Enigma2 and Python"
+#~ msgstr "ارائه شده توسط Enigma2 و Python"
+
+#~ msgid "Removed from favorites: %s"
+#~ msgstr "از موارد دلخواه حذف شد: %s"
+
+#~ msgid "Select a valid category"
+#~ msgstr "یک دسته معتبر انتخاب کنید"
+
+#~ msgid "Select a valid location"
+#~ msgstr "یک مکان معتبر انتخاب کنید"
+
+#~ msgid "Select a valid playlist"
+#~ msgstr "یک لیست پخش معتبر انتخاب کنید"
+
+#~ msgid "Select a valid webcam"
+#~ msgstr "یک وب کم معتبر انتخاب کنید"
+
+#~ msgid "Technical error in Webcam.pl"
+#~ msgstr "خطای فنی در Webcam.pl"
 
 #~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
 #~ msgstr "موارد دلخواه با موفقیت صادر شد! Enigma2 را مجددا راه اندازی کنید تا آنها را ببینید."

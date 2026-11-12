@@ -17,27 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-msgid "- Local YouTube playlist"
-msgstr "- 로컬 YouTube 재생목록"
-
-msgid "- Local webcam list"
-msgstr "- 로컬 웹캠 목록"
-
-msgid "- Online Direct and YouTube webcams"
-msgstr "- 온라인 다이렉트 및 YouTube 웹캠"
-
-msgid "- Online webcam list"
-msgstr "- 온라인 웹캠 목록"
-
-msgid "- Other sources"
-msgstr "- 기타 소스"
-
-msgid "AFRICA"
-msgstr "아프리카"
-
-msgid "AMERICAS"
-msgstr "아메리카"
-
 msgid "About"
 msgstr "에 대한"
 
@@ -68,53 +47,12 @@ msgstr "국가"
 msgid "Country"
 msgstr "국가"
 
-msgid "Developed by Lululla"
-msgstr "룰룰라(Lululla)에서 개발한"
-
-msgid "EUROPE"
-msgstr "유럽"
-
-msgid "Empty playlist file"
-msgstr "빈 재생 목록 파일"
+#, fuzzy
+msgid "Empty or missing playlist"
+msgstr "재생목록을 로드하는 중에 오류가 발생했습니다."
 
 msgid "Error adding favorite"
 msgstr "즐겨찾기를 추가하는 중에 오류가 발생했습니다."
-
-msgid "Error changing language"
-msgstr "언어 변경 중 오류 발생"
-
-msgid "Error loading categories"
-msgstr "카테고리를 로드하는 중에 오류가 발생했습니다."
-
-msgid "Error loading continents"
-msgstr "대륙을 로드하는 중 오류가 발생했습니다."
-
-msgid "Error loading countries"
-msgstr "국가를 로드하는 중에 오류가 발생했습니다."
-
-msgid "Error loading favorites"
-msgstr "즐겨찾기를 로드하는 중에 오류가 발생했습니다."
-
-msgid "Error loading locations"
-msgstr "위치를 로드하는 중에 오류가 발생했습니다."
-
-msgid "Error loading playlist"
-msgstr "재생목록을 로드하는 중에 오류가 발생했습니다."
-
-msgid "Error loading playlists"
-msgstr "재생목록을 로드하는 중에 오류가 발생했습니다."
-
-msgid "Error loading top webcams"
-msgstr "최고의 웹캠을 로드하는 중에 오류가 발생했습니다."
-
-msgid "Error loading webcams"
-msgstr "웹캠을 로드하는 중에 오류가 발생했습니다."
-
-msgid "Error opening language selection"
-msgstr "언어 선택을 여는 중에 오류가 발생했습니다."
-
-msgid "Error opening playlist"
-msgstr "재생목록을 여는 중에 오류가 발생했습니다."
 
 msgid "Error removing favorite"
 msgstr "즐겨찾기를 삭제하는 중에 오류가 발생했습니다."
@@ -140,23 +78,8 @@ msgstr "%d개의 웹캠을 '%s'(으)로 내보냈습니다."
 msgid "Favorites"
 msgstr "즐겨찾기"
 
-msgid "File not found"
-msgstr "파일을 찾을 수 없습니다"
-
-msgid "Forum support: www.corvoboys.org"
-msgstr "포럼 지원: www.corvoboys.org"
-
-msgid "GitHub: %s"
-msgstr ""
-
-msgid "Included playlists and sources:"
-msgstr "포함된 재생목록 및 소스:"
-
 msgid "Language changed to %s"
 msgstr "언어가 %s(으)로 변경되었습니다."
-
-msgid "Live webcam viewer featuring global locations"
-msgstr "전 세계 위치를 보여주는 라이브 웹캠 뷰어"
 
 msgid "Live webcams from around the world"
 msgstr "전 세계의 라이브 웹캠"
@@ -177,9 +100,6 @@ msgstr "내보낼 즐겨찾기가 없습니다."
 
 msgid "No favorites yet"
 msgstr "아직 즐겨찾기가 없습니다."
-
-msgid "No playlists available"
-msgstr "사용 가능한 재생목록이 없습니다."
 
 msgid "No playlists found"
 msgstr "재생목록을 찾을 수 없습니다."
@@ -210,9 +130,6 @@ msgstr "재생 오류"
 msgid "Playback failed!"
 msgstr "재생에 실패했습니다!"
 
-msgid "Powered by Enigma2 and Python"
-msgstr "Enigma2 및 Python으로 구동"
-
 msgid "Remove"
 msgstr "제거하다"
 
@@ -222,27 +139,12 @@ msgstr "즐겨찾기에서 제거"
 msgid "Removed from favorites"
 msgstr "즐겨찾기에서 삭제됨"
 
-msgid "Removed from favorites: %s"
-msgstr "즐겨찾기에서 제거됨: %s"
-
 #, fuzzy
 msgid "Resolving YouTube stream..."
 msgstr "YouTube 스트림을 추출할 수 없습니다."
 
 msgid "Select"
 msgstr "선택하다"
-
-msgid "Select a valid category"
-msgstr "유효한 카테고리를 선택하세요."
-
-msgid "Select a valid location"
-msgstr "유효한 위치를 선택하세요."
-
-msgid "Select a valid playlist"
-msgstr "유효한 재생목록을 선택하세요."
-
-msgid "Select a valid webcam"
-msgstr "유효한 웹캠을 선택하세요"
 
 msgid "Select an option"
 msgstr "옵션을 선택하세요"
@@ -262,9 +164,6 @@ msgstr "SkylineWebcams 항목은 streamlink 래퍼 플러그인(enigma2-plugin-e
 #, fuzzy
 msgid "Stream not available"
 msgstr "YouTube 스트림을 사용할 수 없습니다."
-
-msgid "Technical error in Webcam.pl"
-msgstr "Webcam.pl의 기술적 오류"
 
 msgid "Top Webcams"
 msgstr "인기 웹캠"
@@ -287,9 +186,6 @@ msgstr "업그레이드 중..."
 msgid "User Lists"
 msgstr "사용자 목록"
 
-msgid "WorldCam v%s"
-msgstr ""
-
 msgid "WorldCam v{}"
 msgstr "월드캠 v{}"
 
@@ -301,6 +197,105 @@ msgstr "YouTube 항목은 yt-dlp 래퍼 플러그인(enigma2-plugin-extensions-y
 
 msgid "Your Favorites"
 msgstr "즐겨찾기"
+
+#~ msgid "- Local YouTube playlist"
+#~ msgstr "- 로컬 YouTube 재생목록"
+
+#~ msgid "- Local webcam list"
+#~ msgstr "- 로컬 웹캠 목록"
+
+#~ msgid "- Online Direct and YouTube webcams"
+#~ msgstr "- 온라인 다이렉트 및 YouTube 웹캠"
+
+#~ msgid "- Online webcam list"
+#~ msgstr "- 온라인 웹캠 목록"
+
+#~ msgid "- Other sources"
+#~ msgstr "- 기타 소스"
+
+#~ msgid "AFRICA"
+#~ msgstr "아프리카"
+
+#~ msgid "AMERICAS"
+#~ msgstr "아메리카"
+
+#~ msgid "Developed by Lululla"
+#~ msgstr "룰룰라(Lululla)에서 개발한"
+
+#~ msgid "EUROPE"
+#~ msgstr "유럽"
+
+#~ msgid "Empty playlist file"
+#~ msgstr "빈 재생 목록 파일"
+
+#~ msgid "Error changing language"
+#~ msgstr "언어 변경 중 오류 발생"
+
+#~ msgid "Error loading categories"
+#~ msgstr "카테고리를 로드하는 중에 오류가 발생했습니다."
+
+#~ msgid "Error loading continents"
+#~ msgstr "대륙을 로드하는 중 오류가 발생했습니다."
+
+#~ msgid "Error loading countries"
+#~ msgstr "국가를 로드하는 중에 오류가 발생했습니다."
+
+#~ msgid "Error loading favorites"
+#~ msgstr "즐겨찾기를 로드하는 중에 오류가 발생했습니다."
+
+#~ msgid "Error loading locations"
+#~ msgstr "위치를 로드하는 중에 오류가 발생했습니다."
+
+#~ msgid "Error loading playlists"
+#~ msgstr "재생목록을 로드하는 중에 오류가 발생했습니다."
+
+#~ msgid "Error loading top webcams"
+#~ msgstr "최고의 웹캠을 로드하는 중에 오류가 발생했습니다."
+
+#~ msgid "Error loading webcams"
+#~ msgstr "웹캠을 로드하는 중에 오류가 발생했습니다."
+
+#~ msgid "Error opening language selection"
+#~ msgstr "언어 선택을 여는 중에 오류가 발생했습니다."
+
+#~ msgid "Error opening playlist"
+#~ msgstr "재생목록을 여는 중에 오류가 발생했습니다."
+
+#~ msgid "File not found"
+#~ msgstr "파일을 찾을 수 없습니다"
+
+#~ msgid "Forum support: www.corvoboys.org"
+#~ msgstr "포럼 지원: www.corvoboys.org"
+
+#~ msgid "Included playlists and sources:"
+#~ msgstr "포함된 재생목록 및 소스:"
+
+#~ msgid "Live webcam viewer featuring global locations"
+#~ msgstr "전 세계 위치를 보여주는 라이브 웹캠 뷰어"
+
+#~ msgid "No playlists available"
+#~ msgstr "사용 가능한 재생목록이 없습니다."
+
+#~ msgid "Powered by Enigma2 and Python"
+#~ msgstr "Enigma2 및 Python으로 구동"
+
+#~ msgid "Removed from favorites: %s"
+#~ msgstr "즐겨찾기에서 제거됨: %s"
+
+#~ msgid "Select a valid category"
+#~ msgstr "유효한 카테고리를 선택하세요."
+
+#~ msgid "Select a valid location"
+#~ msgstr "유효한 위치를 선택하세요."
+
+#~ msgid "Select a valid playlist"
+#~ msgstr "유효한 재생목록을 선택하세요."
+
+#~ msgid "Select a valid webcam"
+#~ msgstr "유효한 웹캠을 선택하세요"
+
+#~ msgid "Technical error in Webcam.pl"
+#~ msgstr "Webcam.pl의 기술적 오류"
 
 #~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
 #~ msgstr "즐겨찾기를 성공적으로 내보냈습니다! Enigma2를 다시 시작하여 확인하세요."

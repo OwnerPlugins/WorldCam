@@ -4,27 +4,6 @@
 # [lululla] <ekekaz@gmail.com>, 2025.
 #
 
-msgid "- Local YouTube playlist"
-msgstr ""
-
-msgid "- Local webcam list"
-msgstr ""
-
-msgid "- Online Direct and YouTube webcams"
-msgstr ""
-
-msgid "- Online webcam list"
-msgstr ""
-
-msgid "- Other sources"
-msgstr ""
-
-msgid "AFRICA"
-msgstr ""
-
-msgid "AMERICAS"
-msgstr ""
-
 msgid "About"
 msgstr ""
 
@@ -55,52 +34,10 @@ msgstr ""
 msgid "Country"
 msgstr ""
 
-msgid "Developed by Lululla"
-msgstr ""
-
-msgid "EUROPE"
-msgstr ""
-
-msgid "Empty playlist file"
+msgid "Empty or missing playlist"
 msgstr ""
 
 msgid "Error adding favorite"
-msgstr ""
-
-msgid "Error changing language"
-msgstr ""
-
-msgid "Error loading categories"
-msgstr ""
-
-msgid "Error loading continents"
-msgstr ""
-
-msgid "Error loading countries"
-msgstr ""
-
-msgid "Error loading favorites"
-msgstr ""
-
-msgid "Error loading locations"
-msgstr ""
-
-msgid "Error loading playlist"
-msgstr ""
-
-msgid "Error loading playlists"
-msgstr ""
-
-msgid "Error loading top webcams"
-msgstr ""
-
-msgid "Error loading webcams"
-msgstr ""
-
-msgid "Error opening language selection"
-msgstr ""
-
-msgid "Error opening playlist"
 msgstr ""
 
 msgid "Error removing favorite"
@@ -127,22 +64,7 @@ msgstr ""
 msgid "Favorites"
 msgstr ""
 
-msgid "File not found"
-msgstr ""
-
-msgid "Forum support: www.corvoboys.org"
-msgstr ""
-
-msgid "GitHub: %s"
-msgstr ""
-
-msgid "Included playlists and sources:"
-msgstr ""
-
 msgid "Language changed to %s"
-msgstr ""
-
-msgid "Live webcam viewer featuring global locations"
 msgstr ""
 
 msgid "Live webcams from around the world"
@@ -161,9 +83,6 @@ msgid "No favorites to export"
 msgstr ""
 
 msgid "No favorites yet"
-msgstr ""
-
-msgid "No playlists available"
 msgstr ""
 
 msgid "No playlists found"
@@ -193,9 +112,6 @@ msgstr ""
 msgid "Playback failed!"
 msgstr ""
 
-msgid "Powered by Enigma2 and Python"
-msgstr ""
-
 msgid "Remove"
 msgstr ""
 
@@ -205,25 +121,10 @@ msgstr ""
 msgid "Removed from favorites"
 msgstr ""
 
-msgid "Removed from favorites: %s"
-msgstr ""
-
 msgid "Resolving YouTube stream..."
 msgstr ""
 
 msgid "Select"
-msgstr ""
-
-msgid "Select a valid category"
-msgstr ""
-
-msgid "Select a valid location"
-msgstr ""
-
-msgid "Select a valid playlist"
-msgstr ""
-
-msgid "Select a valid webcam"
 msgstr ""
 
 msgid "Select an option"
@@ -242,9 +143,6 @@ msgid "SkylineWebcams entries play from the bouquet only with the streamlink wra
 msgstr ""
 
 msgid "Stream not available"
-msgstr ""
-
-msgid "Technical error in Webcam.pl"
 msgstr ""
 
 msgid "Top Webcams"
@@ -266,9 +164,6 @@ msgid "Upgrading..."
 msgstr ""
 
 msgid "User Lists"
-msgstr ""
-
-msgid "WorldCam v%s"
 msgstr ""
 
 msgid "WorldCam v{}"

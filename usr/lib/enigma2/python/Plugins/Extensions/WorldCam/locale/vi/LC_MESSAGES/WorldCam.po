@@ -17,27 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-msgid "- Local YouTube playlist"
-msgstr "- Danh sách phát YouTube địa phương"
-
-msgid "- Local webcam list"
-msgstr "- Danh sách webcam cục bộ"
-
-msgid "- Online Direct and YouTube webcams"
-msgstr "- Webcam trực tuyến và YouTube trực tuyến"
-
-msgid "- Online webcam list"
-msgstr "- Danh sách webcam trực tuyến"
-
-msgid "- Other sources"
-msgstr "- Các nguồn khác"
-
-msgid "AFRICA"
-msgstr "CHÂU PHI"
-
-msgid "AMERICAS"
-msgstr "CHÂU MỸ"
-
 msgid "About"
 msgstr "Về"
 
@@ -68,53 +47,12 @@ msgstr "Quốc gia"
 msgid "Country"
 msgstr "Quốc gia"
 
-msgid "Developed by Lululla"
-msgstr "Được phát triển bởi Lululla"
-
-msgid "EUROPE"
-msgstr "CHÂU ÂU"
-
-msgid "Empty playlist file"
-msgstr "Tệp danh sách phát trống"
+#, fuzzy
+msgid "Empty or missing playlist"
+msgstr "Lỗi tải danh sách phát"
 
 msgid "Error adding favorite"
 msgstr "Lỗi thêm mục yêu thích"
-
-msgid "Error changing language"
-msgstr "Lỗi thay đổi ngôn ngữ"
-
-msgid "Error loading categories"
-msgstr "Lỗi tải danh mục"
-
-msgid "Error loading continents"
-msgstr "Lỗi tải lục địa"
-
-msgid "Error loading countries"
-msgstr "Lỗi tải quốc gia"
-
-msgid "Error loading favorites"
-msgstr "Lỗi tải mục yêu thích"
-
-msgid "Error loading locations"
-msgstr "Lỗi tải vị trí"
-
-msgid "Error loading playlist"
-msgstr "Lỗi tải danh sách phát"
-
-msgid "Error loading playlists"
-msgstr "Lỗi tải danh sách phát"
-
-msgid "Error loading top webcams"
-msgstr "Lỗi tải webcam hàng đầu"
-
-msgid "Error loading webcams"
-msgstr "Lỗi tải webcam"
-
-msgid "Error opening language selection"
-msgstr "Lỗi mở lựa chọn ngôn ngữ"
-
-msgid "Error opening playlist"
-msgstr "Lỗi mở danh sách phát"
 
 msgid "Error removing favorite"
 msgstr "Lỗi xóa mục yêu thích"
@@ -140,23 +78,8 @@ msgstr "Đã xuất %d webcam sang '%s'"
 msgid "Favorites"
 msgstr "Yêu thích"
 
-msgid "File not found"
-msgstr "Không tìm thấy tập tin"
-
-msgid "Forum support: www.corvoboys.org"
-msgstr "Hỗ trợ diễn đàn: www.corvoboys.org"
-
-msgid "GitHub: %s"
-msgstr ""
-
-msgid "Included playlists and sources:"
-msgstr "Danh sách phát và nguồn bao gồm:"
-
 msgid "Language changed to %s"
 msgstr "Ngôn ngữ đã thay đổi thành %s"
-
-msgid "Live webcam viewer featuring global locations"
-msgstr "Trình xem webcam trực tiếp có các vị trí trên toàn cầu"
 
 msgid "Live webcams from around the world"
 msgstr "Webcam trực tiếp từ khắp nơi trên thế giới"
@@ -177,9 +100,6 @@ msgstr "Không có mục yêu thích nào để xuất"
 
 msgid "No favorites yet"
 msgstr "Chưa có mục yêu thích nào"
-
-msgid "No playlists available"
-msgstr "Không có danh sách phát nào"
 
 msgid "No playlists found"
 msgstr "Không tìm thấy danh sách phát nào"
@@ -210,9 +130,6 @@ msgstr "Lỗi phát lại"
 msgid "Playback failed!"
 msgstr "Phát lại không thành công!"
 
-msgid "Powered by Enigma2 and Python"
-msgstr "Được cung cấp bởi Enigma2 và Python"
-
 msgid "Remove"
 msgstr "Di dời"
 
@@ -222,27 +139,12 @@ msgstr "Xóa khỏi mục yêu thích"
 msgid "Removed from favorites"
 msgstr "Đã xóa khỏi mục yêu thích"
 
-msgid "Removed from favorites: %s"
-msgstr "Đã xóa khỏi mục yêu thích: %s"
-
 #, fuzzy
 msgid "Resolving YouTube stream..."
 msgstr "Không thể trích xuất luồng YouTube"
 
 msgid "Select"
 msgstr "Lựa chọn"
-
-msgid "Select a valid category"
-msgstr "Chọn danh mục hợp lệ"
-
-msgid "Select a valid location"
-msgstr "Chọn vị trí hợp lệ"
-
-msgid "Select a valid playlist"
-msgstr "Chọn danh sách phát hợp lệ"
-
-msgid "Select a valid webcam"
-msgstr "Chọn một webcam hợp lệ"
 
 msgid "Select an option"
 msgstr "Chọn một tùy chọn"
@@ -262,9 +164,6 @@ msgstr "Các mục SkylineWebcam chỉ phát từ bó với plugin trình bao b�
 #, fuzzy
 msgid "Stream not available"
 msgstr "Luồng YouTube không khả dụng"
-
-msgid "Technical error in Webcam.pl"
-msgstr "Lỗi kỹ thuật trong Webcam.pl"
 
 msgid "Top Webcams"
 msgstr "Webcam hàng đầu"
@@ -287,9 +186,6 @@ msgstr "Đang nâng cấp..."
 msgid "User Lists"
 msgstr "Danh sách người dùng"
 
-msgid "WorldCam v%s"
-msgstr ""
-
 msgid "WorldCam v{}"
 msgstr ""
 
@@ -301,6 +197,105 @@ msgstr "Các mục trên YouTube chỉ phát từ bó hoa bằng plugin trình b
 
 msgid "Your Favorites"
 msgstr "Yêu thích của bạn"
+
+#~ msgid "- Local YouTube playlist"
+#~ msgstr "- Danh sách phát YouTube địa phương"
+
+#~ msgid "- Local webcam list"
+#~ msgstr "- Danh sách webcam cục bộ"
+
+#~ msgid "- Online Direct and YouTube webcams"
+#~ msgstr "- Webcam trực tuyến và YouTube trực tuyến"
+
+#~ msgid "- Online webcam list"
+#~ msgstr "- Danh sách webcam trực tuyến"
+
+#~ msgid "- Other sources"
+#~ msgstr "- Các nguồn khác"
+
+#~ msgid "AFRICA"
+#~ msgstr "CHÂU PHI"
+
+#~ msgid "AMERICAS"
+#~ msgstr "CHÂU MỸ"
+
+#~ msgid "Developed by Lululla"
+#~ msgstr "Được phát triển bởi Lululla"
+
+#~ msgid "EUROPE"
+#~ msgstr "CHÂU ÂU"
+
+#~ msgid "Empty playlist file"
+#~ msgstr "Tệp danh sách phát trống"
+
+#~ msgid "Error changing language"
+#~ msgstr "Lỗi thay đổi ngôn ngữ"
+
+#~ msgid "Error loading categories"
+#~ msgstr "Lỗi tải danh mục"
+
+#~ msgid "Error loading continents"
+#~ msgstr "Lỗi tải lục địa"
+
+#~ msgid "Error loading countries"
+#~ msgstr "Lỗi tải quốc gia"
+
+#~ msgid "Error loading favorites"
+#~ msgstr "Lỗi tải mục yêu thích"
+
+#~ msgid "Error loading locations"
+#~ msgstr "Lỗi tải vị trí"
+
+#~ msgid "Error loading playlists"
+#~ msgstr "Lỗi tải danh sách phát"
+
+#~ msgid "Error loading top webcams"
+#~ msgstr "Lỗi tải webcam hàng đầu"
+
+#~ msgid "Error loading webcams"
+#~ msgstr "Lỗi tải webcam"
+
+#~ msgid "Error opening language selection"
+#~ msgstr "Lỗi mở lựa chọn ngôn ngữ"
+
+#~ msgid "Error opening playlist"
+#~ msgstr "Lỗi mở danh sách phát"
+
+#~ msgid "File not found"
+#~ msgstr "Không tìm thấy tập tin"
+
+#~ msgid "Forum support: www.corvoboys.org"
+#~ msgstr "Hỗ trợ diễn đàn: www.corvoboys.org"
+
+#~ msgid "Included playlists and sources:"
+#~ msgstr "Danh sách phát và nguồn bao gồm:"
+
+#~ msgid "Live webcam viewer featuring global locations"
+#~ msgstr "Trình xem webcam trực tiếp có các vị trí trên toàn cầu"
+
+#~ msgid "No playlists available"
+#~ msgstr "Không có danh sách phát nào"
+
+#~ msgid "Powered by Enigma2 and Python"
+#~ msgstr "Được cung cấp bởi Enigma2 và Python"
+
+#~ msgid "Removed from favorites: %s"
+#~ msgstr "Đã xóa khỏi mục yêu thích: %s"
+
+#~ msgid "Select a valid category"
+#~ msgstr "Chọn danh mục hợp lệ"
+
+#~ msgid "Select a valid location"
+#~ msgstr "Chọn vị trí hợp lệ"
+
+#~ msgid "Select a valid playlist"
+#~ msgstr "Chọn danh sách phát hợp lệ"
+
+#~ msgid "Select a valid webcam"
+#~ msgstr "Chọn một webcam hợp lệ"
+
+#~ msgid "Technical error in Webcam.pl"
+#~ msgstr "Lỗi kỹ thuật trong Webcam.pl"
 
 #~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
 #~ msgstr "Đã xuất thành công mục yêu thích! Khởi động lại Enigma2 để xem chúng."

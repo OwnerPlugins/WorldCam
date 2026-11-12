@@ -17,27 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-msgid "- Local YouTube playlist"
-msgstr "- Liste de lecture YouTube locale"
-
-msgid "- Local webcam list"
-msgstr "- Liste des webcams locales"
-
-msgid "- Online Direct and YouTube webcams"
-msgstr "- Webcams en ligne directe et YouTube"
-
-msgid "- Online webcam list"
-msgstr "- Liste des webcams en ligne"
-
-msgid "- Other sources"
-msgstr "- Autres sources"
-
-msgid "AFRICA"
-msgstr "AFRIQUE"
-
-msgid "AMERICAS"
-msgstr "AMÉRIQUES"
-
 msgid "About"
 msgstr "À propos"
 
@@ -68,53 +47,12 @@ msgstr "Pays"
 msgid "Country"
 msgstr "Pays"
 
-msgid "Developed by Lululla"
-msgstr "Développé par Lululla"
-
-msgid "EUROPE"
-msgstr ""
-
-msgid "Empty playlist file"
-msgstr "Fichier de liste de lecture vide"
+#, fuzzy
+msgid "Empty or missing playlist"
+msgstr "Erreur lors du chargement de la playlist"
 
 msgid "Error adding favorite"
 msgstr "Erreur lors de l'ajout du favori"
-
-msgid "Error changing language"
-msgstr "Erreur lors du changement de langue"
-
-msgid "Error loading categories"
-msgstr "Erreur lors du chargement des catégories"
-
-msgid "Error loading continents"
-msgstr "Erreur lors du chargement des continents"
-
-msgid "Error loading countries"
-msgstr "Erreur lors du chargement des pays"
-
-msgid "Error loading favorites"
-msgstr "Erreur lors du chargement des favoris"
-
-msgid "Error loading locations"
-msgstr "Erreur de chargement des emplacements"
-
-msgid "Error loading playlist"
-msgstr "Erreur lors du chargement de la playlist"
-
-msgid "Error loading playlists"
-msgstr "Erreur lors du chargement des listes de lecture"
-
-msgid "Error loading top webcams"
-msgstr "Erreur lors du chargement des principales webcams"
-
-msgid "Error loading webcams"
-msgstr "Erreur lors du chargement des webcams"
-
-msgid "Error opening language selection"
-msgstr "Erreur lors de l'ouverture de la sélection de la langue"
-
-msgid "Error opening playlist"
-msgstr "Erreur lors de l'ouverture de la playlist"
 
 msgid "Error removing favorite"
 msgstr "Erreur lors de la suppression du favori"
@@ -140,23 +78,8 @@ msgstr "%d webcams exportées vers '%s'"
 msgid "Favorites"
 msgstr "Favoris"
 
-msgid "File not found"
-msgstr "Fichier introuvable"
-
-msgid "Forum support: www.corvoboys.org"
-msgstr "Assistance du forum : www.corvoboys.org"
-
-msgid "GitHub: %s"
-msgstr "GitHub : %s"
-
-msgid "Included playlists and sources:"
-msgstr "Listes de lecture et sources incluses :"
-
 msgid "Language changed to %s"
 msgstr "Langue modifiée en %s"
-
-msgid "Live webcam viewer featuring global locations"
-msgstr "Visionneuse de webcam en direct présentant des emplacements dans le monde entier"
 
 msgid "Live webcams from around the world"
 msgstr "Webcams en direct du monde entier"
@@ -177,9 +100,6 @@ msgstr "Aucun favori à exporter"
 
 msgid "No favorites yet"
 msgstr "Pas encore de favoris"
-
-msgid "No playlists available"
-msgstr "Aucune playlist disponible"
 
 msgid "No playlists found"
 msgstr "Aucune playlist trouvée"
@@ -210,9 +130,6 @@ msgstr "Erreur de lecture"
 msgid "Playback failed!"
 msgstr "La lecture a échoué !"
 
-msgid "Powered by Enigma2 and Python"
-msgstr "Propulsé par Enigma2 et Python"
-
 msgid "Remove"
 msgstr "Retirer"
 
@@ -222,27 +139,12 @@ msgstr "Supprimer des favoris"
 msgid "Removed from favorites"
 msgstr "Supprimé des favoris"
 
-msgid "Removed from favorites: %s"
-msgstr "Supprimé des favoris : %s"
-
 #, fuzzy
 msgid "Resolving YouTube stream..."
 msgstr "Impossible d'extraire le flux YouTube"
 
 msgid "Select"
 msgstr "Sélectionner"
-
-msgid "Select a valid category"
-msgstr "Sélectionnez une catégorie valide"
-
-msgid "Select a valid location"
-msgstr "Sélectionnez un emplacement valide"
-
-msgid "Select a valid playlist"
-msgstr "Sélectionnez une playlist valide"
-
-msgid "Select a valid webcam"
-msgstr "Sélectionnez une webcam valide"
 
 msgid "Select an option"
 msgstr "Sélectionnez une option"
@@ -262,9 +164,6 @@ msgstr "Les entrées SkylineWebcams sont lues à partir du bouquet uniquement av
 #, fuzzy
 msgid "Stream not available"
 msgstr "Flux YouTube non disponible"
-
-msgid "Technical error in Webcam.pl"
-msgstr "Erreur technique dans Webcam.pl"
 
 msgid "Top Webcams"
 msgstr "Meilleures webcams"
@@ -287,9 +186,6 @@ msgstr "Mise à niveau..."
 msgid "User Lists"
 msgstr "Listes d'utilisateurs"
 
-msgid "WorldCam v%s"
-msgstr ""
-
 msgid "WorldCam v{}"
 msgstr ""
 
@@ -301,6 +197,105 @@ msgstr "Les entrées YouTube sont lues à partir du bouquet uniquement avec le p
 
 msgid "Your Favorites"
 msgstr "Vos favoris"
+
+#~ msgid "- Local YouTube playlist"
+#~ msgstr "- Liste de lecture YouTube locale"
+
+#~ msgid "- Local webcam list"
+#~ msgstr "- Liste des webcams locales"
+
+#~ msgid "- Online Direct and YouTube webcams"
+#~ msgstr "- Webcams en ligne directe et YouTube"
+
+#~ msgid "- Online webcam list"
+#~ msgstr "- Liste des webcams en ligne"
+
+#~ msgid "- Other sources"
+#~ msgstr "- Autres sources"
+
+#~ msgid "AFRICA"
+#~ msgstr "AFRIQUE"
+
+#~ msgid "AMERICAS"
+#~ msgstr "AMÉRIQUES"
+
+#~ msgid "Developed by Lululla"
+#~ msgstr "Développé par Lululla"
+
+#~ msgid "Empty playlist file"
+#~ msgstr "Fichier de liste de lecture vide"
+
+#~ msgid "Error changing language"
+#~ msgstr "Erreur lors du changement de langue"
+
+#~ msgid "Error loading categories"
+#~ msgstr "Erreur lors du chargement des catégories"
+
+#~ msgid "Error loading continents"
+#~ msgstr "Erreur lors du chargement des continents"
+
+#~ msgid "Error loading countries"
+#~ msgstr "Erreur lors du chargement des pays"
+
+#~ msgid "Error loading favorites"
+#~ msgstr "Erreur lors du chargement des favoris"
+
+#~ msgid "Error loading locations"
+#~ msgstr "Erreur de chargement des emplacements"
+
+#~ msgid "Error loading playlists"
+#~ msgstr "Erreur lors du chargement des listes de lecture"
+
+#~ msgid "Error loading top webcams"
+#~ msgstr "Erreur lors du chargement des principales webcams"
+
+#~ msgid "Error loading webcams"
+#~ msgstr "Erreur lors du chargement des webcams"
+
+#~ msgid "Error opening language selection"
+#~ msgstr "Erreur lors de l'ouverture de la sélection de la langue"
+
+#~ msgid "Error opening playlist"
+#~ msgstr "Erreur lors de l'ouverture de la playlist"
+
+#~ msgid "File not found"
+#~ msgstr "Fichier introuvable"
+
+#~ msgid "Forum support: www.corvoboys.org"
+#~ msgstr "Assistance du forum : www.corvoboys.org"
+
+#~ msgid "GitHub: %s"
+#~ msgstr "GitHub : %s"
+
+#~ msgid "Included playlists and sources:"
+#~ msgstr "Listes de lecture et sources incluses :"
+
+#~ msgid "Live webcam viewer featuring global locations"
+#~ msgstr "Visionneuse de webcam en direct présentant des emplacements dans le monde entier"
+
+#~ msgid "No playlists available"
+#~ msgstr "Aucune playlist disponible"
+
+#~ msgid "Powered by Enigma2 and Python"
+#~ msgstr "Propulsé par Enigma2 et Python"
+
+#~ msgid "Removed from favorites: %s"
+#~ msgstr "Supprimé des favoris : %s"
+
+#~ msgid "Select a valid category"
+#~ msgstr "Sélectionnez une catégorie valide"
+
+#~ msgid "Select a valid location"
+#~ msgstr "Sélectionnez un emplacement valide"
+
+#~ msgid "Select a valid playlist"
+#~ msgstr "Sélectionnez une playlist valide"
+
+#~ msgid "Select a valid webcam"
+#~ msgstr "Sélectionnez une webcam valide"
+
+#~ msgid "Technical error in Webcam.pl"
+#~ msgstr "Erreur technique dans Webcam.pl"
 
 #~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
 #~ msgstr "Favoris exportés avec succès ! Redémarrez Enigma2 pour les voir."

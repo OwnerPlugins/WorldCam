@@ -17,27 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-msgid "- Local YouTube playlist"
-msgstr "- ローカル YouTube プレイリスト"
-
-msgid "- Local webcam list"
-msgstr "- ローカルウェブカメラリスト"
-
-msgid "- Online Direct and YouTube webcams"
-msgstr "- オンライン ダイレクトと YouTube ウェブカメラ"
-
-msgid "- Online webcam list"
-msgstr "- オンラインウェブカメラリスト"
-
-msgid "- Other sources"
-msgstr "- その他の情報源"
-
-msgid "AFRICA"
-msgstr "アフリカ"
-
-msgid "AMERICAS"
-msgstr "アメリカ"
-
 msgid "About"
 msgstr "について"
 
@@ -68,53 +47,12 @@ msgstr "国"
 msgid "Country"
 msgstr "国"
 
-msgid "Developed by Lululla"
-msgstr "ルルラが開発した"
-
-msgid "EUROPE"
-msgstr "ヨーロッパ"
-
-msgid "Empty playlist file"
-msgstr "空のプレイリスト ファイル"
+#, fuzzy
+msgid "Empty or missing playlist"
+msgstr "プレイリストの読み込みエラー"
 
 msgid "Error adding favorite"
 msgstr "お気に入りの追加中にエラーが発生しました"
-
-msgid "Error changing language"
-msgstr "言語変更時のエラー"
-
-msgid "Error loading categories"
-msgstr "カテゴリの読み込みエラー"
-
-msgid "Error loading continents"
-msgstr "大陸の読み込みエラー"
-
-msgid "Error loading countries"
-msgstr "国の読み込みエラー"
-
-msgid "Error loading favorites"
-msgstr "お気に入りの読み込みエラー"
-
-msgid "Error loading locations"
-msgstr "場所の読み込みエラー"
-
-msgid "Error loading playlist"
-msgstr "プレイリストの読み込みエラー"
-
-msgid "Error loading playlists"
-msgstr "プレイリストの読み込みエラー"
-
-msgid "Error loading top webcams"
-msgstr "トップ Web カメラの読み込みエラー"
-
-msgid "Error loading webcams"
-msgstr "ウェブカメラの読み込みエラー"
-
-msgid "Error opening language selection"
-msgstr "言語選択を開くときにエラーが発生しました"
-
-msgid "Error opening playlist"
-msgstr "プレイリストを開くときにエラーが発生しました"
 
 msgid "Error removing favorite"
 msgstr "お気に入りの削除中にエラーが発生しました"
@@ -140,23 +78,8 @@ msgstr "%d 個の Web カメラを '%s' にエクスポートしました"
 msgid "Favorites"
 msgstr "お気に入り"
 
-msgid "File not found"
-msgstr "ファイルが見つかりません"
-
-msgid "Forum support: www.corvoboys.org"
-msgstr "フォーラムのサポート: www.corvoboys.org"
-
-msgid "GitHub: %s"
-msgstr ""
-
-msgid "Included playlists and sources:"
-msgstr "含まれるプレイリストとソース:"
-
 msgid "Language changed to %s"
 msgstr "言語が %s に変更されました"
-
-msgid "Live webcam viewer featuring global locations"
-msgstr "世界中の場所を表示するライブ Web カメラ ビューア"
 
 msgid "Live webcams from around the world"
 msgstr "世界中からのライブウェブカメラ"
@@ -177,9 +100,6 @@ msgstr "エクスポートするお気に入りがありません"
 
 msgid "No favorites yet"
 msgstr "まだお気に入りはありません"
-
-msgid "No playlists available"
-msgstr "利用可能なプレイリストがありません"
 
 msgid "No playlists found"
 msgstr "プレイリストが見つかりません"
@@ -210,9 +130,6 @@ msgstr "再生エラー"
 msgid "Playback failed!"
 msgstr "再生に失敗しました!"
 
-msgid "Powered by Enigma2 and Python"
-msgstr "Enigma2 と Python を利用"
-
 msgid "Remove"
 msgstr "取り除く"
 
@@ -222,27 +139,12 @@ msgstr "お気に入りから削除"
 msgid "Removed from favorites"
 msgstr "お気に入りから削除されました"
 
-msgid "Removed from favorites: %s"
-msgstr "お気に入りから削除されました: %s"
-
 #, fuzzy
 msgid "Resolving YouTube stream..."
 msgstr "YouTube ストリームを抽出できませんでした"
 
 msgid "Select"
 msgstr "選択"
-
-msgid "Select a valid category"
-msgstr "有効なカテゴリを選択してください"
-
-msgid "Select a valid location"
-msgstr "有効な場所を選択してください"
-
-msgid "Select a valid playlist"
-msgstr "有効なプレイリストを選択してください"
-
-msgid "Select a valid webcam"
-msgstr "有効な Web カメラを選択してください"
 
 msgid "Select an option"
 msgstr "オプションを選択してください"
@@ -262,9 +164,6 @@ msgstr "SkylineWebcams エントリは、streamlink ラッパー プラグイン
 #, fuzzy
 msgid "Stream not available"
 msgstr "YouTube ストリームは利用できません"
-
-msgid "Technical error in Webcam.pl"
-msgstr "Webcam.pl の技術的エラー"
 
 msgid "Top Webcams"
 msgstr "人気のウェブカメラ"
@@ -287,9 +186,6 @@ msgstr "アップグレード中..."
 msgid "User Lists"
 msgstr "ユーザーリスト"
 
-msgid "WorldCam v%s"
-msgstr ""
-
 msgid "WorldCam v{}"
 msgstr "ワールドカメラ v{}"
 
@@ -301,6 +197,105 @@ msgstr "YouTube エントリは、yt-dlp ラッパー プラグイン (enigma2-p
 
 msgid "Your Favorites"
 msgstr "お気に入り"
+
+#~ msgid "- Local YouTube playlist"
+#~ msgstr "- ローカル YouTube プレイリスト"
+
+#~ msgid "- Local webcam list"
+#~ msgstr "- ローカルウェブカメラリスト"
+
+#~ msgid "- Online Direct and YouTube webcams"
+#~ msgstr "- オンライン ダイレクトと YouTube ウェブカメラ"
+
+#~ msgid "- Online webcam list"
+#~ msgstr "- オンラインウェブカメラリスト"
+
+#~ msgid "- Other sources"
+#~ msgstr "- その他の情報源"
+
+#~ msgid "AFRICA"
+#~ msgstr "アフリカ"
+
+#~ msgid "AMERICAS"
+#~ msgstr "アメリカ"
+
+#~ msgid "Developed by Lululla"
+#~ msgstr "ルルラが開発した"
+
+#~ msgid "EUROPE"
+#~ msgstr "ヨーロッパ"
+
+#~ msgid "Empty playlist file"
+#~ msgstr "空のプレイリスト ファイル"
+
+#~ msgid "Error changing language"
+#~ msgstr "言語変更時のエラー"
+
+#~ msgid "Error loading categories"
+#~ msgstr "カテゴリの読み込みエラー"
+
+#~ msgid "Error loading continents"
+#~ msgstr "大陸の読み込みエラー"
+
+#~ msgid "Error loading countries"
+#~ msgstr "国の読み込みエラー"
+
+#~ msgid "Error loading favorites"
+#~ msgstr "お気に入りの読み込みエラー"
+
+#~ msgid "Error loading locations"
+#~ msgstr "場所の読み込みエラー"
+
+#~ msgid "Error loading playlists"
+#~ msgstr "プレイリストの読み込みエラー"
+
+#~ msgid "Error loading top webcams"
+#~ msgstr "トップ Web カメラの読み込みエラー"
+
+#~ msgid "Error loading webcams"
+#~ msgstr "ウェブカメラの読み込みエラー"
+
+#~ msgid "Error opening language selection"
+#~ msgstr "言語選択を開くときにエラーが発生しました"
+
+#~ msgid "Error opening playlist"
+#~ msgstr "プレイリストを開くときにエラーが発生しました"
+
+#~ msgid "File not found"
+#~ msgstr "ファイルが見つかりません"
+
+#~ msgid "Forum support: www.corvoboys.org"
+#~ msgstr "フォーラムのサポート: www.corvoboys.org"
+
+#~ msgid "Included playlists and sources:"
+#~ msgstr "含まれるプレイリストとソース:"
+
+#~ msgid "Live webcam viewer featuring global locations"
+#~ msgstr "世界中の場所を表示するライブ Web カメラ ビューア"
+
+#~ msgid "No playlists available"
+#~ msgstr "利用可能なプレイリストがありません"
+
+#~ msgid "Powered by Enigma2 and Python"
+#~ msgstr "Enigma2 と Python を利用"
+
+#~ msgid "Removed from favorites: %s"
+#~ msgstr "お気に入りから削除されました: %s"
+
+#~ msgid "Select a valid category"
+#~ msgstr "有効なカテゴリを選択してください"
+
+#~ msgid "Select a valid location"
+#~ msgstr "有効な場所を選択してください"
+
+#~ msgid "Select a valid playlist"
+#~ msgstr "有効なプレイリストを選択してください"
+
+#~ msgid "Select a valid webcam"
+#~ msgstr "有効な Web カメラを選択してください"
+
+#~ msgid "Technical error in Webcam.pl"
+#~ msgstr "Webcam.pl の技術的エラー"
 
 #~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
 #~ msgstr "お気に入りが正常にエクスポートされました。 Enigma2 を再起動してそれらを表示します。"

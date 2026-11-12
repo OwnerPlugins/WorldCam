@@ -16,27 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "- Local YouTube playlist"
-msgstr "- স্থানীয় ইউটিউব প্লেলিস্ট"
-
-msgid "- Local webcam list"
-msgstr "- স্থানীয় ওয়েবক্যাম তালিকা"
-
-msgid "- Online Direct and YouTube webcams"
-msgstr "- অনলাইন সরাসরি এবং YouTube ওয়েবক্যাম"
-
-msgid "- Online webcam list"
-msgstr "- অনলাইন ওয়েবক্যাম তালিকা"
-
-msgid "- Other sources"
-msgstr "- অন্যান্য উত্স"
-
-msgid "AFRICA"
-msgstr "আফ্রিকা"
-
-msgid "AMERICAS"
-msgstr "আমেরিকা"
-
 msgid "About"
 msgstr "সম্পর্কে"
 
@@ -67,53 +46,12 @@ msgstr "দেশগুলো"
 msgid "Country"
 msgstr "দেশ"
 
-msgid "Developed by Lululla"
-msgstr "লুলুল্লা দ্বারা বিকশিত"
-
-msgid "EUROPE"
-msgstr "ইউরোপ"
-
-msgid "Empty playlist file"
-msgstr "খালি প্লেলিস্ট ফাইল"
+#, fuzzy
+msgid "Empty or missing playlist"
+msgstr "প্লেলিস্ট লোড করার সময় ত্রুটি৷"
 
 msgid "Error adding favorite"
 msgstr "প্রিয় যোগ করার সময় ত্রুটি"
-
-msgid "Error changing language"
-msgstr "ভাষা পরিবর্তনে ত্রুটি"
-
-msgid "Error loading categories"
-msgstr "বিভাগগুলি লোড করার সময় ত্রুটি৷"
-
-msgid "Error loading continents"
-msgstr "মহাদেশগুলি লোড করার সময় ত্রুটি৷"
-
-msgid "Error loading countries"
-msgstr "দেশগুলি লোড করতে ত্রুটি৷"
-
-msgid "Error loading favorites"
-msgstr "প্রিয় লোড করার সময় ত্রুটি"
-
-msgid "Error loading locations"
-msgstr "অবস্থানগুলি লোড করার সময় ত্রুটি৷"
-
-msgid "Error loading playlist"
-msgstr "প্লেলিস্ট লোড করার সময় ত্রুটি৷"
-
-msgid "Error loading playlists"
-msgstr "প্লেলিস্ট লোড করার সময় ত্রুটি৷"
-
-msgid "Error loading top webcams"
-msgstr "শীর্ষ ওয়েবক্যাম লোড করার সময় ত্রুটি৷"
-
-msgid "Error loading webcams"
-msgstr "ওয়েবক্যাম লোড করার সময় ত্রুটি৷"
-
-msgid "Error opening language selection"
-msgstr "ভাষা নির্বাচন খোলার সময় ত্রুটি"
-
-msgid "Error opening playlist"
-msgstr "প্লেলিস্ট খোলার সময় ত্রুটি৷"
 
 msgid "Error removing favorite"
 msgstr "প্রিয় সরানোর সময় ত্রুটি৷"
@@ -139,23 +77,8 @@ msgstr "'%s' এ %d ওয়েবক্যাম রপ্তানি কর�
 msgid "Favorites"
 msgstr "প্রিয়"
 
-msgid "File not found"
-msgstr "ফাইল পাওয়া যায়নি"
-
-msgid "Forum support: www.corvoboys.org"
-msgstr "ফোরাম সমর্থন: www.corvoboys.org"
-
-msgid "GitHub: %s"
-msgstr "গিটহাব: %s"
-
-msgid "Included playlists and sources:"
-msgstr "অন্তর্ভুক্ত প্লেলিস্ট এবং উত্স:"
-
 msgid "Language changed to %s"
 msgstr "ভাষা %s এ পরিবর্তিত হয়েছে"
-
-msgid "Live webcam viewer featuring global locations"
-msgstr "বিশ্বব্যাপী অবস্থান সমন্বিত লাইভ ওয়েবক্যাম দর্শক"
 
 msgid "Live webcams from around the world"
 msgstr "সারা বিশ্ব থেকে লাইভ ওয়েবক্যাম"
@@ -176,9 +99,6 @@ msgstr "রপ্তানি করার জন্য কোন পছন্�
 
 msgid "No favorites yet"
 msgstr "এখনও কোন প্রিয়"
-
-msgid "No playlists available"
-msgstr "কোনো প্লেলিস্ট উপলব্ধ নেই৷"
 
 msgid "No playlists found"
 msgstr "কোনো প্লেলিস্ট পাওয়া যায়নি"
@@ -209,9 +129,6 @@ msgstr "প্লেব্যাক ত্রুটি"
 msgid "Playback failed!"
 msgstr "প্লেব্যাক ব্যর্থ!"
 
-msgid "Powered by Enigma2 and Python"
-msgstr "Enigma2 এবং Python দ্বারা চালিত"
-
 msgid "Remove"
 msgstr "সরান"
 
@@ -221,27 +138,12 @@ msgstr "প্রিয় থেকে সরান"
 msgid "Removed from favorites"
 msgstr "প্রিয় থেকে সরানো হয়েছে"
 
-msgid "Removed from favorites: %s"
-msgstr "পছন্দসই থেকে সরানো হয়েছে: %s"
-
 #, fuzzy
 msgid "Resolving YouTube stream..."
 msgstr "YouTube স্ট্রীম বের করা যায়নি"
 
 msgid "Select"
 msgstr "নির্বাচন করুন"
-
-msgid "Select a valid category"
-msgstr "একটি বৈধ বিভাগ নির্বাচন করুন"
-
-msgid "Select a valid location"
-msgstr "একটি বৈধ অবস্থান নির্বাচন করুন"
-
-msgid "Select a valid playlist"
-msgstr "একটি বৈধ প্লেলিস্ট নির্বাচন করুন৷"
-
-msgid "Select a valid webcam"
-msgstr "একটি বৈধ ওয়েবক্যাম নির্বাচন করুন৷"
 
 msgid "Select an option"
 msgstr "একটি বিকল্প নির্বাচন করুন"
@@ -261,9 +163,6 @@ msgstr "SkylineWebcams এন্ট্রিগুলি শুধুমাত�
 #, fuzzy
 msgid "Stream not available"
 msgstr "YouTube স্ট্রীম উপলব্ধ নয়"
-
-msgid "Technical error in Webcam.pl"
-msgstr "Webcam.pl-এ প্রযুক্তিগত ত্রুটি"
 
 msgid "Top Webcams"
 msgstr "শীর্ষ ওয়েবক্যাম"
@@ -286,9 +185,6 @@ msgstr "আপগ্রেড হচ্ছে..."
 msgid "User Lists"
 msgstr "ব্যবহারকারীর তালিকা"
 
-msgid "WorldCam v%s"
-msgstr "ওয়ার্ল্ডক্যাম বনাম%s"
-
 msgid "WorldCam v{}"
 msgstr "ওয়ার্ল্ডক্যাম বনাম{}"
 
@@ -300,6 +196,111 @@ msgstr "ইউটিউব এন্ট্রিগুলি তোড়া থ
 
 msgid "Your Favorites"
 msgstr "আপনার প্রিয়"
+
+#~ msgid "- Local YouTube playlist"
+#~ msgstr "- স্থানীয় ইউটিউব প্লেলিস্ট"
+
+#~ msgid "- Local webcam list"
+#~ msgstr "- স্থানীয় ওয়েবক্যাম তালিকা"
+
+#~ msgid "- Online Direct and YouTube webcams"
+#~ msgstr "- অনলাইন সরাসরি এবং YouTube ওয়েবক্যাম"
+
+#~ msgid "- Online webcam list"
+#~ msgstr "- অনলাইন ওয়েবক্যাম তালিকা"
+
+#~ msgid "- Other sources"
+#~ msgstr "- অন্যান্য উত্স"
+
+#~ msgid "AFRICA"
+#~ msgstr "আফ্রিকা"
+
+#~ msgid "AMERICAS"
+#~ msgstr "আমেরিকা"
+
+#~ msgid "Developed by Lululla"
+#~ msgstr "লুলুল্লা দ্বারা বিকশিত"
+
+#~ msgid "EUROPE"
+#~ msgstr "ইউরোপ"
+
+#~ msgid "Empty playlist file"
+#~ msgstr "খালি প্লেলিস্ট ফাইল"
+
+#~ msgid "Error changing language"
+#~ msgstr "ভাষা পরিবর্তনে ত্রুটি"
+
+#~ msgid "Error loading categories"
+#~ msgstr "বিভাগগুলি লোড করার সময় ত্রুটি৷"
+
+#~ msgid "Error loading continents"
+#~ msgstr "মহাদেশগুলি লোড করার সময় ত্রুটি৷"
+
+#~ msgid "Error loading countries"
+#~ msgstr "দেশগুলি লোড করতে ত্রুটি৷"
+
+#~ msgid "Error loading favorites"
+#~ msgstr "প্রিয় লোড করার সময় ত্রুটি"
+
+#~ msgid "Error loading locations"
+#~ msgstr "অবস্থানগুলি লোড করার সময় ত্রুটি৷"
+
+#~ msgid "Error loading playlists"
+#~ msgstr "প্লেলিস্ট লোড করার সময় ত্রুটি৷"
+
+#~ msgid "Error loading top webcams"
+#~ msgstr "শীর্ষ ওয়েবক্যাম লোড করার সময় ত্রুটি৷"
+
+#~ msgid "Error loading webcams"
+#~ msgstr "ওয়েবক্যাম লোড করার সময় ত্রুটি৷"
+
+#~ msgid "Error opening language selection"
+#~ msgstr "ভাষা নির্বাচন খোলার সময় ত্রুটি"
+
+#~ msgid "Error opening playlist"
+#~ msgstr "প্লেলিস্ট খোলার সময় ত্রুটি৷"
+
+#~ msgid "File not found"
+#~ msgstr "ফাইল পাওয়া যায়নি"
+
+#~ msgid "Forum support: www.corvoboys.org"
+#~ msgstr "ফোরাম সমর্থন: www.corvoboys.org"
+
+#~ msgid "GitHub: %s"
+#~ msgstr "গিটহাব: %s"
+
+#~ msgid "Included playlists and sources:"
+#~ msgstr "অন্তর্ভুক্ত প্লেলিস্ট এবং উত্স:"
+
+#~ msgid "Live webcam viewer featuring global locations"
+#~ msgstr "বিশ্বব্যাপী অবস্থান সমন্বিত লাইভ ওয়েবক্যাম দর্শক"
+
+#~ msgid "No playlists available"
+#~ msgstr "কোনো প্লেলিস্ট উপলব্ধ নেই৷"
+
+#~ msgid "Powered by Enigma2 and Python"
+#~ msgstr "Enigma2 এবং Python দ্বারা চালিত"
+
+#~ msgid "Removed from favorites: %s"
+#~ msgstr "পছন্দসই থেকে সরানো হয়েছে: %s"
+
+#~ msgid "Select a valid category"
+#~ msgstr "একটি বৈধ বিভাগ নির্বাচন করুন"
+
+#~ msgid "Select a valid location"
+#~ msgstr "একটি বৈধ অবস্থান নির্বাচন করুন"
+
+#~ msgid "Select a valid playlist"
+#~ msgstr "একটি বৈধ প্লেলিস্ট নির্বাচন করুন৷"
+
+#~ msgid "Select a valid webcam"
+#~ msgstr "একটি বৈধ ওয়েবক্যাম নির্বাচন করুন৷"
+
+#~ msgid "Technical error in Webcam.pl"
+#~ msgstr "Webcam.pl-এ প্রযুক্তিগত ত্রুটি"
+
+#~ msgid "WorldCam v%s"
+#~ msgstr "ওয়ার্ল্ডক্যাম বনাম%s"
 
 #~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
 #~ msgstr "প্রিয় রপ্তানি সফলভাবে! সেগুলি দেখতে Enigma2 পুনরায় চালু করুন।"
