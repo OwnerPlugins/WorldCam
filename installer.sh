@@ -1,8 +1,7 @@
 #!/bin/bash
 
-version='7.2'
-changelog='Added webcam visual previews (thumbnails) with background downloading and caching. Fixed player crash caused by custom skins (Agp renderer error) using a clean internal skin. Removed duplicated countries. Protected VRAM/memory to prevent accel alloc crashes. Added native JPG support (LoadPixmap).'
-TMPPATH=/tmp/WorldCam-install
+version='7.4'
+changelog='Unified UI with PNG thumbnails (via ffmpeg) 120x70/160x90 for all screens, fixed image cropping and missing flags (Belize, Guadeloupe, Martinique, Zanzibar). Fixed player crash (AgpCEMC skin), VRAM crash (gAccel), empty continents, HLS/YouTube streams, and bouquet export.'
 FILEPATH=/tmp/WorldCam-main.tar.gz
 
 echo "Starting WorldCam installation..."

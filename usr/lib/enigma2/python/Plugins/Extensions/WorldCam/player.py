@@ -1,6 +1,24 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-
+"""
+#########################################################
+#                                                       #
+#  Worldcam Player from Plugin                          #
+#  Completely rewritten and optimized in version *5.0*  #
+#  Version: 5.8                                         #
+#  Created by Lululla (https://github.com/Belfagor2005) #
+#  License: CC BY-NC-SA 4.0                             #
+#  https://creativecommons.org/licenses/by-nc-sa/4.0    #
+#  Last Modified: "18:30 - 20250703"                    #
+#                                                       #
+#  Credits:                                             #
+#  - Original concept Lululla                           #
+#  Usage of this code without proper attribution        #
+#  is strictly prohibited.                              #
+#  For modifications and redistribution,                #
+#  please maintain this credit header.                  #
+#########################################################
+"""
 import sys
 from os import remove
 from os.path import abspath, dirname, exists
@@ -34,26 +52,6 @@ from .utils import (
 )
 from .youtube_helper import resolve_youtube
 
-
-"""
-#########################################################
-#                                                       #
-#  Worldcam Player from Plugin                          #
-#  Completely rewritten and optimized in version *5.0*  #
-#  Version: 5.8                                         #
-#  Created by Lululla (https://github.com/Belfagor2005) #
-#  License: CC BY-NC-SA 4.0                             #
-#  https://creativecommons.org/licenses/by-nc-sa/4.0    #
-#  Last Modified: "18:30 - 20250703"                    #
-#                                                       #
-#  Credits:                                             #
-#  - Original concept Lululla                           #
-#  Usage of this code without proper attribution        #
-#  is strictly prohibited.                              #
-#  For modifications and redistribution,                #
-#  please maintain this credit header.                  #
-#########################################################
-"""
 __author__ = "Lululla"
 
 PLUGIN_PATH = dirname(__file__)
@@ -63,15 +61,9 @@ plugin_dir = dirname(abspath(__file__))
 if plugin_dir not in sys.path:
     sys.path.append(plugin_dir)
 
-
-HELP_TEXT = _(
-    "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | "
-    "PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla")
-
+HELP_TEXT = _("OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla")
 
 class WorldCamOverlay(Screen):
-    """Text bar on top of the video (status and key help)"""
-
     def __init__(self, session):
         if screen_width >= 1920:
             width, height, font = screen_width, 70, 34
@@ -83,17 +75,14 @@ class WorldCamOverlay(Screen):
             '<widget name="text" position="0,0" size="%d,%d" '
             'font="Regular;%d" halign="center" valign="center" '
             'foregroundColor="#ffffff" backgroundColor="#50000000" '
-            'transparent="1" /></screen>' % (
-                width, height, width, height, font))
+            'transparent="1" /></screen>' % (width, height, width, height, font))
         Screen.__init__(self, session)
         self["text"] = Label("")
 
     def setText(self, text):
         self["text"].setText(text)
 
-
 class TvInfoBarShowHide():
-    """InfoBar show/hide control"""
     STATE_HIDDEN = 0
     STATE_HIDING = 1
     STATE_SHOWING = 2
@@ -101,24 +90,14 @@ class TvInfoBarShowHide():
     skipToggleShow = False
 
     def __init__(self):
-        self["ShowHideActions"] = ActionMap(
-            ["InfobarShowHideActions"],
-            {
-                "toggleShow": self.OkPressed,
-                "hide": self.hide
-            },
-            0
-        )
-        self.__event_tracker = ServiceEventTracker(
-            screen=self, eventmap={
-                iPlayableService.evStart: self.serviceStarted})
+        self["ShowHideActions"] = ActionMap(["InfobarShowHideActions"], {"toggleShow": self.OkPressed, "hide": self.hide}, 0)
+        self.__event_tracker = ServiceEventTracker(screen=self, eventmap={iPlayableService.evStart: self.serviceStarted})
         self.__state = self.STATE_SHOWN
         self.__locked = 0
 
         self.overlay = self.session.instantiateDialog(WorldCamOverlay)
         self.overlay_timer = eTimer()
-        self.overlay_timer_conn = timer_connect(
-            self.overlay_timer, self.hide_overlay)
+        self.overlay_timer_conn = timer_connect(self.overlay_timer, self.hide_overlay)
 
         self.hideTimer = eTimer()
         self.hideTimer_conn = timer_connect(self.hideTimer, self.doTimerHide)
@@ -127,19 +106,15 @@ class TvInfoBarShowHide():
         self.onHide.append(self.__onHide)
 
     def show_overlay_text(self, text, timeout=0):
-        """Show text on top of the video (timeout in ms, 0 = keep)"""
         self.overlay_timer.stop()
-        if self.overlay is None:
-            return
+        if self.overlay is None: return
         self.overlay.setText(text)
         self.overlay.show()
-        if timeout:
-            self.overlay_timer.start(timeout, True)
+        if timeout: self.overlay_timer.start(timeout, True)
 
     def hide_overlay(self):
         self.overlay_timer.stop()
-        if self.overlay is not None:
-            self.overlay.hide()
+        if self.overlay is not None: self.overlay.hide()
 
     def show_help_overlay(self):
         self.show_overlay_text(HELP_TEXT, 5000)
@@ -165,8 +140,7 @@ class TvInfoBarShowHide():
         self.startHideTimer()
 
     def serviceStarted(self):
-        if self.execing and config.usage.show_infobar_on_zap.value:
-            self.doShow()
+        if self.execing and config.usage.show_infobar_on_zap.value: self.doShow()
 
     def startHideTimer(self):
         if self.__state == self.STATE_SHOWN and not self.__locked:
@@ -175,8 +149,7 @@ class TvInfoBarShowHide():
 
     def doTimerHide(self):
         self.hideTimer.stop()
-        if self.__state == self.STATE_SHOWN:
-            self.hide()
+        if self.__state == self.STATE_SHOWN: self.hide()
 
     def toggleShow(self):
         if not self.skipToggleShow:
@@ -190,28 +163,18 @@ class TvInfoBarShowHide():
             self.skipToggleShow = False
 
     def lockShow(self):
-        try:
-            self.__locked += 1
-        except BaseException:
-            self.__locked = 0
+        try: self.__locked += 1
+        except BaseException: self.__locked = 0
         if self.execing:
             self.show()
             self.hideTimer.stop()
             self.skipToggleShow = False
 
     def unlockShow(self):
-        try:
-            self.__locked -= 1
-        except BaseException:
-            self.__locked = 0
-        if self.__locked < 0:
-            self.__locked = 0
-        if self.execing:
-            self.startHideTimer()
-
-    def debug(self, obj, text=""):
-        print(text + " %s\n" % obj)
-
+        try: self.__locked -= 1
+        except BaseException: self.__locked = 0
+        if self.__locked < 0: self.__locked = 0
+        if self.execing: self.startHideTimer()
 
 class WorldCamPlayer(InfoBarBase, InfoBarMenu, InfoBarSeek, InfoBarAudioSelection, InfoBarSubtitleSupport, InfoBarNotifications, TvInfoBarShowHide, Screen):
     STATE_IDLE = 0
@@ -221,10 +184,25 @@ class WorldCamPlayer(InfoBarBase, InfoBarMenu, InfoBarSeek, InfoBarAudioSelectio
     ALLOW_SUSPEND = True
 
     def __init__(self, session, webcams, current_index=0):
+        # --- FIX CRASH SKIN AGP: Forza lo skin PRIMA di Screen.__init__ ---
+        self.skin = """
+            <screen name="WorldCamPlayer" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+                <widget name="state" position="0,0" size="0,0" />
+                <widget name="eventname" position="0,0" size="0,0" />
+                <widget name="speed" position="0,0" size="0,0" />
+                <widget name="statusicon" position="0,0" size="0,0" />
+                <widget name="key_green" position="0,0" size="0,0" />
+                <widget name="key_yellow" position="0,0" size="0,0" />
+                <widget name="key_blue" position="0,0" size="0,0" />
+                <widget source="session.VideoPicture" render="Pig" position="0,0" size="1920,1080" backgroundColor="transparent" transparent="1" />
+            </screen>
+        """
+        self.skinName = "WorldCamPlayer"
+        # ------------------------------------------------------------------
+
         Screen.__init__(self, session)
         disable_summary(self)
         self.session = session
-        self.skinName = "MoviePlayer"
         self.logger = Logger()
 
         self.webcams = webcams or []
@@ -232,20 +210,11 @@ class WorldCamPlayer(InfoBarBase, InfoBarMenu, InfoBarSeek, InfoBarAudioSelectio
             current_index = 0
         self.current_index = current_index
         self.state = self.STATE_PLAYING
-        # Bumped on every play: results of older requests are ignored
         self.play_request = 0
         self.closing = False
         self._cleaned_up = False
 
-        for base_class in (
-            InfoBarBase,
-            InfoBarMenu,
-            InfoBarSeek,
-            InfoBarAudioSelection,
-            InfoBarSubtitleSupport,
-            InfoBarNotifications,
-            TvInfoBarShowHide
-        ):
+        for base_class in (InfoBarBase, InfoBarMenu, InfoBarSeek, InfoBarAudioSelection, InfoBarSubtitleSupport, InfoBarNotifications, TvInfoBarShowHide):
             base_class.__init__(self)
 
         self.aspect_manager = AspectManager()
@@ -258,19 +227,13 @@ class WorldCamPlayer(InfoBarBase, InfoBarMenu, InfoBarSeek, InfoBarAudioSelectio
         self["key_green"] = Label("")
         self["key_yellow"] = Label("")
         self["key_blue"] = Label("")
+        
         self["actions"] = ActionMap(
-            [
-                "ColorActions",
-                "OkCancelActions",
-                "WorldCamPlayer",
-                "MediaPlayerActions",
-            ],
-
+            ["ColorActions", "OkCancelActions", "WorldCamPlayer", "MediaPlayerActions"],
             {
                 "cancel": self.cancel,
                 "back": self.cancel,
                 "red": self.cancel,
-
                 "prevBouquet": self.previous_webcam,
                 "nextBouquet": self.next_webcam,
                 "channelDown": self.previous_webcam,
@@ -321,44 +284,28 @@ class WorldCamPlayer(InfoBarBase, InfoBarMenu, InfoBarSeek, InfoBarAudioSelectio
             self.show_error(_("Error switching webcam"))
 
     def __serviceStarted(self):
-        """Service started playing"""
-        self.logger.info("Playback started successfully")
         self.state = self.STATE_PLAYING
 
     def toggle_favorite(self):
-        """Add or remove from favorites"""
-        if not self.webcams:
-            return
+        if not self.webcams: return
         current_webcam = self.get_current_webcam()
         if FavoritesManager.is_favorite(current_webcam["url"]):
             success = FavoritesManager.remove_favorite(current_webcam["url"])
-            message = _("Removed from favorites") if success else _(
-                "Error removing favorite")
+            message = _("Removed from favorites") if success else _("Error removing favorite")
         else:
-            success = FavoritesManager.add_favorite(
-                current_webcam["name"], current_webcam["url"],
-                current_webcam.get("thumbnail"))
-            message = _("Added to favorites!") if success else _(
-                "Error adding favorite")
+            success = FavoritesManager.add_favorite(current_webcam["name"], current_webcam["url"], current_webcam.get("thumbnail"))
+            message = _("Added to favorites!") if success else _("Error adding favorite")
 
-        self.session.open(
-            MessageBox,
-            message,
-            MessageBox.TYPE_INFO,
-            timeout=3
-        )
+        self.session.open(MessageBox, message, MessageBox.TYPE_INFO, timeout=3)
 
     def __evEOF(self):
-        self.logger.info("Playback completed")
         self.leavePlayer()
 
     def __evStopped(self):
-        # Also fired while zapping to another webcam: do not close here
-        self.logger.info("Playback stopped")
+        pass
 
     def leavePlayer(self, *args):
-        if self.closing:
-            return
+        if self.closing: return
         self.closing = True
         self.close()
 
@@ -366,18 +313,9 @@ class WorldCamPlayer(InfoBarBase, InfoBarMenu, InfoBarSeek, InfoBarAudioSelectio
         self.leavePlayer()
 
     def start_playback(self):
-        """Resolve the current webcam off the GUI thread, then play it"""
-        if self.closing or not self.webcams:
-            return
+        if self.closing or not self.webcams: return
         try:
             current_webcam = self.get_current_webcam()
-            self.logger.info(
-                "Starting playback for: {0}".format(current_webcam["name"])
-            )
-            self.logger.info(
-                "URL: {0}".format(current_webcam["url"])
-            )
-
             self.play_request += 1
             request_id = self.play_request
 
@@ -386,21 +324,15 @@ class WorldCamPlayer(InfoBarBase, InfoBarMenu, InfoBarSeek, InfoBarAudioSelectio
             else:
                 self.show_overlay_text(_("Loading stream..."))
 
-            # Page scraping and yt-dlp can be slow (yt-dlp 20-60s on
-            # receivers): run them in a worker thread to keep the GUI alive
             from twisted.internet import threads
-            d = threads.deferToThread(
-                self._resolve_stream, current_webcam["url"])
-            d.addCallback(
-                self._stream_resolved, request_id, current_webcam["name"])
-            d.addErrback(
-                self._resolve_failed, request_id, current_webcam["name"])
+            d = threads.deferToThread(self._resolve_stream, current_webcam["url"])
+            d.addCallback(self._stream_resolved, request_id, current_webcam["name"])
+            d.addErrback(self._resolve_failed, request_id, current_webcam["name"])
         except Exception as e:
             self.logger.error("Playback error: " + str(e))
             self.show_error(_("Playback error"))
 
     def _resolve_stream(self, url):
-        """Worker thread: return (stream_url, error_message)"""
         if is_youtube_url(url):
             return resolve_youtube(convert_youtube_embed_to_watch(url))
 
@@ -408,94 +340,67 @@ class WorldCamPlayer(InfoBarBase, InfoBarMenu, InfoBarSeek, InfoBarAudioSelectio
         if not stream_url:
             return None, _("Could not extract video stream")
         if is_youtube_url(stream_url):
-            self.logger.info("Detected YouTube stream")
             return resolve_youtube(convert_youtube_embed_to_watch(stream_url))
         return stream_url, None
 
     def _stream_resolved(self, result, request_id, title):
-        """Runs on the GUI thread once the stream URL is known"""
-        if self.closing or request_id != self.play_request:
-            # Player closed or a newer webcam selected: drop the answer
-            self.logger.info("Stale stream answer ignored")
-            return
+        if self.closing or request_id != self.play_request: return
 
         self.hide_overlay()
         resolved, error = result
         if resolved:
-            self.logger.info("Stream URL: %s..." % resolved[:80])
             self.play_stream(resolved, title)
             return
 
-        self.logger.error("Stream resolve failed: %s" % error)
         msg = _("Stream not available")
         if error:
             msg += "\n\n%s" % error
         if error == "yt-dlp is not installed":
-            msg += "\n\n" + _(
-                "Install it with:\nopkg install python3-yt-dlp")
+            msg += "\n\n" + _("Install it with:\nopkg install python3-yt-dlp")
         self.show_error(msg)
 
     def _resolve_failed(self, failure, request_id, title):
-        self.logger.error("Resolver error: %s" % failure)
-        self._stream_resolved(
-            (None, failure.getErrorMessage()), request_id, title)
+        self._stream_resolved((None, failure.getErrorMessage()), request_id, title)
 
     def start_service_playback(self, service):
-        """Start playback with special handling"""
         if self.session.nav.getCurrentlyPlayingServiceReference():
             self.session.nav.stopService()
-
         self.session.nav.playService(service)
         self.show()
         self.state = self.STATE_PLAYING
         self.show_help_overlay()
 
     def play_stream(self, stream_url, title=""):
-        """
-        Play a media stream using the best available service type.
-        """
         try:
             if isinstance(stream_url, (tuple, list)):
                 stream_url = str(stream_url[0])
             else:
                 stream_url = str(stream_url)
 
-            self.logger.info("[Player] Final URL: %s..." % stream_url[:200])
-
             service_type = get_service_type()
-            self.logger.info("[Player] service_type=%d" % service_type)
-
             service = eServiceReference(service_type, 0, stream_url)
             service.setName(title)
             self.start_service_playback(service)
-            self.logger.info("[Player] playback started")
         except Exception as e:
             self.logger.error("[Player] error playing stream: %s" % str(e))
             self.show_error(_("Playback failed!"))
 
     def playpauseService(self):
-        """Toggle play/pause"""
         service = self.session.nav.getCurrentService()
-        if not service:
-            self.logger.warning("No current service")
-            return
+        if not service: return
 
         pauseable = service.pause()
         if pauseable is None:
-            self.logger.warning("Service is not pauseable")
-            # Instead of failing, just stop and restart the service
             if self.state == self.STATE_PLAYING:
                 current_ref = self.session.nav.getCurrentlyPlayingServiceReference()
                 if current_ref:
                     self.session.nav.stopService()
                     self.state = self.STATE_PAUSED
-                    self.logger.info("Playback stopped (pause not supported)")
             elif self.state == self.STATE_PAUSED:
                 current_ref = self.session.nav.getCurrentlyPlayingServiceReference()
                 if current_ref:
                     self.session.nav.playService(current_ref)
                     self.state = self.STATE_PLAYING
-                    self.logger.info("Playback resumed (pause not supported)")
             return
 
         try:
@@ -503,32 +408,20 @@ class WorldCamPlayer(InfoBarBase, InfoBarMenu, InfoBarSeek, InfoBarAudioSelectio
                 if hasattr(pauseable, 'pause'):
                     pauseable.pause()
                     self.state = self.STATE_PAUSED
-                    self.logger.info("Playback paused")
             elif self.state == self.STATE_PAUSED:
                 if hasattr(pauseable, 'play'):
                     pauseable.play()
                     self.state = self.STATE_PLAYING
-                    self.logger.info("Playback resumed")
         except Exception as e:
-            self.logger.error("Play/pause error: " + str(e))
             self.show_error(_("Play/pause not supported for this stream"))
 
     def show_error(self, message):
-        """Show error message and close player"""
-        if self.closing:
-            return
+        if self.closing: return
         self.hide_overlay()
-        self.session.openWithCallback(
-            self.leavePlayer,
-            MessageBox,
-            message,
-            MessageBox.TYPE_ERROR
-        )
+        self.session.openWithCallback(self.leavePlayer, MessageBox, message, MessageBox.TYPE_ERROR)
 
     def cleanup(self):
-        """Cleanup resources on close (runs once)"""
-        if self._cleaned_up:
-            return
+        if self._cleaned_up: return
         self._cleaned_up = True
         self.closing = True
         self.hideTimer.stop()
@@ -537,21 +430,16 @@ class WorldCamPlayer(InfoBarBase, InfoBarMenu, InfoBarSeek, InfoBarAudioSelectio
             try:
                 self.overlay.hide()
                 self.session.deleteDialog(self.overlay)
-            except Exception:
-                pass
+            except Exception: pass
             self.overlay = None
 
         if exists('/tmp/hls.avi'):
-            try:
-                remove('/tmp/hls.avi')
-            except BaseException:
-                pass
+            try: remove('/tmp/hls.avi')
+            except BaseException: pass
 
         self.aspect_manager.restore_aspect()
         self.session.nav.stopService()
 
         if self.srefInit:
-            try:
-                self.session.nav.playService(self.srefInit)
-            except BaseException:
-                pass
+            try: self.session.nav.playService(self.srefInit)
+            except BaseException: pass

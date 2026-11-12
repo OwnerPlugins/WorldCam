@@ -2,10 +2,10 @@
     <!-- Graph -->
     <widget name="title" position="979,38" size="784,40" font="Regular;32" halign="center" zPosition="5" transparent="1" />
     <widget name="paypal" position="256,760" size="580,200" font="Regular; 32" cornerRadius="26" foregroundColor="#ffb75b" backgroundColor="#101010" halign="left" transparent="1" zPosition="5" valign="top" />
-    <widget name="flag_icon" position="1778,40" size="88,40" zPosition="5" />
-    <widget name="language_label" position="1679,40" size="89,40" font="Regular;24" halign="right" valign="center" transparent="1" zPosition="6" />
-    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WorldCam/pics/ft.png" position="1725,107" size="100,100" zPosition="4" scale="1" alphatest="blend" />
-    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WorldCam/plugin.png" position="950,130" size="200,80" scale="1" zPosition="5" alphatest="blend" />
+    <widget name="flag_icon" position="1773,40" size="88,40" scale="1" zPosition="5" />
+    <widget name="language_label" position="1669,40" size="89,40" font="Regular;24" halign="right" valign="center" transparent="1" zPosition="6" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WorldCam/pics/ft.png" position="1725,102" size="100,100" zPosition="4" scale="1" alphatest="blend" />
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WorldCam/plugin.png" position="950,102" size="252,100" scale="1" zPosition="5" alphatest="blend" />
     <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WorldCam/pics/logo.png" position="903,33" size="50,50" scale="1" zPosition="5" alphatest="blend" />
     <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WorldCam/pics/PayPal.png" position="686,946" size="156,75" scale="1" zPosition="5" alphatest="on" />
     <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WorldCam/pics/qr-code.png" position="48,762" size="200,200" scale="1" zPosition="2" alphatest="on" />

@@ -2,7 +2,7 @@
     <!-- Graph -->
     <widget name="title" position="639,21" size="604,35" font="Regular; 28" halign="center" zPosition="5" transparent="1" />
     <widget name="paypal" position="166,496" size="399,181" font="Regular;24" halign="center" foregroundColor="#ffffff" backgroundColor="#101010" transparent="1" zPosition="2" />   
-    <widget name="flag_icon" position="616,509" size="50,40" zPosition="4" />
+    <widget name="flag_icon" position="616,509" size="50,40" scale="1" zPosition="4" />
     <widget name="language_label" position="615,509" size="50,40" font="Regular;24" halign="center" valign="center" zPosition="5" />    
     
     <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WorldCam/pics/ft.png" position="1105,508" size="120,120" scale="1" zPosition="4" alphatest="blend" />

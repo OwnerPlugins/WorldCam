@@ -1,5 +1,23 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+"""
+#########################################################
+#                                                       #
+#  Worldcam Utils for Plugin                            #
+#  Version: 5.0                                         #
+#  Created by Lululla (https://github.com/Belfagor2005) #
+#  License: CC BY-NC-SA 4.0                             #
+#  https://creativecommons.org/licenses/by-nc-sa/4.0    #
+#  Last Modified: "18:30 - 20250703"                    #
+#                                                       #
+#  Credits:                                             #
+#  - Original concept Lululla                           #
+#  Usage of this code without proper attribution        #
+#  is strictly prohibited.                              #
+#  For modifications and redistribution,                #
+#  please maintain this credit header.                  #
+#########################################################
+"""
 
 from json import load, dump
 from os import makedirs, remove, listdir
@@ -23,24 +41,7 @@ except ImportError:
 from . import _
 from . import checkdependencies
 
-"""
-#########################################################
-#                                                       #
-#  Worldcam Utils for Plugin                            #
-#  Version: 5.0                                         #
-#  Created by Lululla (https://github.com/Belfagor2005) #
-#  License: CC BY-NC-SA 4.0                             #
-#  https://creativecommons.org/licenses/by-nc-sa/4.0    #
-#  Last Modified: "18:30 - 20250703"                    #
-#                                                       #
-#  Credits:                                             #
-#  - Original concept Lululla                           #
-#  Usage of this code without proper attribution        #
-#  is strictly prohibited.                              #
-#  For modifications and redistribution,                #
-#  please maintain this credit header.                  #
-#########################################################
-"""
+
 __author__ = "Lululla"
 
 # Python 3 runtime
@@ -160,21 +161,6 @@ class Logger:
                 exc_value,
                 exc_traceback))
 
-    # def info(self, message, *args):
-        # self.log(message, "INFO")
-
-    # def warning(self, message, *args):
-        # self.log(message, "WARNING")
-
-    # def error(self, message, *args):
-        # self.log(message, "ERROR")
-
-    # def critical(self, message, *args):
-        # self.log(message, "CRITICAL")
-
-    # def debug(self, message, *args):
-        # self.log(message, "DEBUG")
-
 
 # Own file name: the generic favorites.json is used by other plugins too
 FAVORITES_FILE = join(
@@ -184,7 +170,6 @@ OLD_FAVORITES_FILE = join(
     eEnv.resolve("${sysconfdir}/enigma2"), "favorites.json")
 
 
-# Update the safe_encode_url function
 def safe_encode_url(url):
     """Safely encode URLs with non-ASCII characters"""
     if isinstance(url, str):
@@ -247,12 +232,6 @@ def clean_html_entities(text):
         Logger().error(f"Error cleaning HTML entities: {str(e)}")
         return text
 
-
-# try export with#
-# DESCRIPTION Alghero - Mugoni Beach
-# SERVICE
-# 4097:0:1:46DE:221E:EC:0:0:0:0:streamlink%3a//https%3a//www.skylinewebcams.com/it/webcam/italia/sardegna/sassari/stintino.html:Sassari
-# - Stintino - La Pelosa
 
 def is_skyline_page(url):
     """True for a skylinewebcams.com webcam page (not a direct stream)"""
@@ -391,11 +370,6 @@ class FavoritesManager:
                 makedirs(bouquet_dir)
             bouquet_path = join(bouquet_dir, bouquet_name)
 
-            # --- FIX: Import corretto (senza is_direct_stream) ---
-            from .scraper import SkylineScraper
-            scraper = SkylineScraper()
-            # -----------------------------------------------------
-
             exported = 0
             kinds = set()
             with open(bouquet_path, "w", encoding="utf-8") as f:
@@ -405,16 +379,8 @@ class FavoritesManager:
                     if not url:
                         continue
                     
-                    play_url = url
-                    
-                    # Se è una pagina di Skyline, estrai il vero link .m3u8
-                    if is_skyline_page(url):
-                        resolved = scraper.get_stream_url(url)
-                        if resolved:
-                            play_url = resolved
-                    
-                    lines, kind = bouquet_service_lines(
-                        play_url, cam.get("name", ""))
+                    # Lasciamo che bouquet_service_lines decida (streamlink:// per Skyline)
+                    lines, kind = bouquet_service_lines(url, cam.get("name", ""))
                     f.write(lines)
                     kinds.add(kind)
                     exported += 1
@@ -451,6 +417,11 @@ class FavoritesManager:
                     "YouTube entries play from the bouquet only with the "
                     "yt-dlp wrapper plugin "
                     "(enigma2-plugin-extensions-ytdlpwrapper).")
+            if "streamlink" in kinds:
+                message += "\n\n" + _(
+                    "SkylineWebcams entries play from the bouquet only with "
+                    "the streamlink wrapper plugin "
+                    "(enigma2-plugin-extensions-streamlinkwrapper).")
             return True, message
         except Exception as e:
             Logger().error(f"Export error: {str(e)}")
@@ -755,14 +726,17 @@ language_flag_mapping = {
 
 
 CATEGORY_ICONS = {
-    _("User Lists"): "user_lists.png",
-    _("Continents"): "continents.png",
-    _("Countries"): "countries.png",
-    _("Categories"): "categories.png",
-    _("Top Webcams"): "top_webcams.png",
-    _("AMERICAS"): "americas.png",
-    _("EUROPE"): "europe.png",
-    _("AFRICA"): "africa.png",
+    "User Lists": "user_lists.png",
+    "Continents": "continents.png",
+    "Countries": "countries.png",
+    "Categories": "categories.png",
+    "Top Webcams": "top_webcams.png",
+    "AMERICAS": "americas.png",
+    "AMERICA": "americas.png",
+    "EUROPE": "europe.png",
+    "AFRICA": "africa.png",
+    "ASIA": "asia.png",
+    "OCEANIA": "oceania.png",
 }
 
 
@@ -804,6 +778,26 @@ def get_country_code(country_name):
     # Normalize the input
     name_clean = country_name.strip().lower()
     name_no_punct = sub(r'\W', '', name_clean)
+
+    # FIX: Aggiungiamo i nomi esatti che il sito usa per queste bandiere
+    special_cases = {
+        "zanzibar": "zanzibar",
+        "belize": "bel",
+        "guadeloupe": "guad",
+        "guadalupa": "guad",
+        "martinique": "mart",
+        "martinica": "mart",
+        "lituania": "lt",
+        "lithuania": "lt",
+        "lussemburgo": "lu",
+        "luxembourg": "lu",
+        "repubblica di san marino": "sm",
+        "san marino": "sm",
+    }
+    
+    if name_clean in special_cases:
+        return special_cases[name_clean]
+
     # Search by accuracy
     return (
         country_map.get(name_clean) or
@@ -838,12 +832,6 @@ def get_flag_path(country_code=None):
             return path
 
     return paths_to_check[-1]  # Default icon
-
-
-# Example usage
-# country_name = "Germany"
-# country_code = get_country_code(country_name)  # Returns 'de'
-# flag_path = get_flag_path(country_code)  # Returns .../countries/de.png
 
 
 class AspectManager:
