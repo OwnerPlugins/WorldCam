@@ -3,6 +3,7 @@
 version='7.4'
 changelog='Unified UI with PNG thumbnails (via ffmpeg) 120x70/160x90 for all screens, fixed image cropping and missing flags (Belize, Guadeloupe, Martinique, Zanzibar). Fixed player crash (AgpCEMC skin), VRAM crash (gAccel), empty continents, HLS/YouTube streams, and bouquet export.'
 FILEPATH=/tmp/WorldCam-main.tar.gz
+TMPPATH=/tmp/worldcam_extract
 
 echo "Starting WorldCam installation..."
 
