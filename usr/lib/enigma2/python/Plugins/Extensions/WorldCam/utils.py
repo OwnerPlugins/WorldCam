@@ -250,6 +250,10 @@ def bouquet_service_lines(url, name):
     """
     url = str(url or "").replace("\r", " ").replace("\n", " ").strip()
     name = str(name or "").replace("\r", " ").replace("\n", " ").strip()
+    
+    # AGGIUNTA: Decodifica le entità HTML (es. &#039; diventa ')
+    name = html.unescape(name)
+    
     if is_youtube_url(url):
         kind = "youtube"
         url = convert_youtube_embed_to_watch(url)
@@ -260,6 +264,7 @@ def bouquet_service_lines(url, name):
     else:
         kind = "direct"
         service_url = url.replace(":", "%3a")
+        
     lines = "#SERVICE 4097:0:1:0:0:0:0:0:0:0:%s:%s\n#DESCRIPTION %s\n" % (
         service_url, name.replace(":", "%3a"), name)
     return lines, kind
