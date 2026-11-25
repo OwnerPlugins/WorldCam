@@ -243,8 +243,9 @@ def bouquet_service_lines(url, name):
     """
     #SERVICE / #DESCRIPTION lines for a webcam.
     Returns (lines, kind) with kind 'youtube', 'streamlink' or 'direct'.
-    - YouTube: https://www.youtube.com/watch?v=ID, played from the
-      bouquet by the yt-dlp wrapper plugin
+    - YouTube: streamlink://https://www.youtube.com/watch?v=ID
+      (streamlink wrapper plugin; a plain https YouTube link is not
+      handled by any wrapper and gives a black screen)
     - skylinewebcams pages: streamlink:// (streamlink wrapper plugin)
     - anything else is a direct stream
     """
@@ -257,7 +258,7 @@ def bouquet_service_lines(url, name):
     if is_youtube_url(url):
         kind = "youtube"
         url = convert_youtube_embed_to_watch(url)
-        service_url = url.replace(":", "%3a")
+        service_url = "streamlink%3a//" + url.replace(":", "%3a")
     elif is_skyline_page(url):
         kind = "streamlink"
         service_url = "streamlink%3a//" + url.replace(":", "%3a")
@@ -270,7 +271,7 @@ def bouquet_service_lines(url, name):
     return lines, kind
 
 
-def resolve_skyline_youtube(urls, workers=8):
+def resolve_skyline_youtube(urls, workers=2):
     """
     Open the given SkylineWebcams pages (in parallel) and return
     {page_url: youtube_watch_url} for the cams streamed through YouTube.
@@ -409,8 +410,9 @@ class FavoritesManager:
             bouquet_path = join(bouquet_dir, bouquet_name)
 
             # SkylineWebcams cams streamed through YouTube are exported
-            # as YouTube links (yt-dlp wrapper): Streamlink's YouTube
-            # plugin is blocked by YouTube (403). HLS cams stay streamlink://
+            # as streamlink://<YouTube link>: the SkylineWebcams streamlink
+            # plugin in the images handles HLS cams only. HLS cams stay
+            # streamlink://<SkylineWebcams page>
             try:
                 youtube_map = resolve_skyline_youtube(
                     [cam.get("url") for cam in webcams if cam.get("url")])
@@ -461,15 +463,11 @@ class FavoritesManager:
 
             message = _("Exported %d webcams to '%s'") % (
                 exported, display_name)
-            if "youtube" in kinds:
+            if kinds & {"youtube", "streamlink"}:
                 message += "\n\n" + _(
-                    "YouTube entries play from the bouquet only with the "
-                    "yt-dlp wrapper plugin "
-                    "(enigma2-plugin-extensions-ytdlpwrapper).")
-            if "streamlink" in kinds:
-                message += "\n\n" + _(
-                    "SkylineWebcams entries play from the bouquet only with "
-                    "the streamlink wrapper plugin "
+                    "SkylineWebcams and YouTube entries play from the "
+                    "bouquet only with streamlink and the streamlink "
+                    "wrapper plugin "
                     "(enigma2-plugin-extensions-streamlinkwrapper).")
             return True, message
         except Exception as e:

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-version='7.5'
-changelog='SkylineWebcams cams streamed through YouTube are now exported to bouquets as YouTube links (played by the yt-dlp wrapper) instead of streamlink:// (blocked by YouTube with 403); HLS cams stay streamlink://. Bouquet export runs in background. Installer installs python3-youtube-dl.'
+version='7.6'
+changelog='Bouquet export fix: YouTube cams (e.g. SkylineWebcams Thailand) are now exported as streamlink://https://www.youtube.com/... (streamlink wrapper) instead of a plain https link that gave a black screen. HLS cams unchanged. Bouquets exported with 7.5 must be exported again.'
 FILEPATH=/tmp/WorldCam-main.tar.gz
 TMPPATH=/tmp/worldcam_extract
 
@@ -166,9 +166,8 @@ else
 fi
 
 if [ "$OSTYPE" = "OE" ]; then
-    # Exported bouquets: SkylineWebcams HLS entries play through
-    # streamlink (streamlink wrapper), YouTube entries through yt-dlp
-    # (ytdlp wrapper)
+    # Exported bouquets: SkylineWebcams and YouTube entries play
+    # through streamlink (streamlink wrapper)
     echo "Installing streaming dependencies..."
     for pkg in \
         streamlink \

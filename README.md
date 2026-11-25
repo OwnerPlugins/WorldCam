@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/Belfagor2005/WorldCam">
-    <img src="https://img.shields.io/badge/Version-7.5-blue.svg" alt="Version">
+    <img src="https://img.shields.io/badge/Version-7.6-blue.svg" alt="Version">
   </a>
   <a href="https://www.enigma2.net">
     <img src="https://img.shields.io/badge/Enigma2-Plugin-ff6600.svg" alt="Enigma2">
@@ -40,12 +40,21 @@ Completely rewritten and optimized since version **7.3**, the plugin now offers 
 
 ---
 
+🚀 **What's new in version 7.6**
+
+🛠️ **Fix: YouTube cams in exported bouquets (black screen)**
+In 7.5 the YouTube cams were exported as a plain `https%3a//www.youtube.com/...` link, which no wrapper handles: the result was a black screen.
+They are now exported as `streamlink%3a//https%3a//www.youtube.com/watch?v=…`, so the **streamlink wrapper** plays them, like the SkylineWebcams HLS cams.
+Thanks to the forum user who found it. Bouquets exported with 7.5 must be **exported again**.
+
+---
+
 🚀 **What's new in version 7.5**
 
 📺 **YouTube cams in exported bouquets**
-Many SkylineWebcams cams (e.g. Thailand) are streamed through YouTube. These used to be exported as `streamlink://` entries and failed outside the plugin, because Streamlink's YouTube plugin is blocked by YouTube (`403 Forbidden` on `youtubei/v1/player`).
+Many SkylineWebcams cams (e.g. Thailand) are streamed through YouTube. These used to be exported as `streamlink://<SkylineWebcams page>` entries and failed outside the plugin, because the SkylineWebcams Streamlink plugin shipped in the images handles HLS cams only.
 On export, WorldCam now checks every SkylineWebcams page:
-- **YouTube cams** → exported as `https://www.youtube.com/watch?v=…`, played by the **yt-dlp wrapper** (the same yt-dlp method used inside the plugin)
+- **YouTube cams** → exported as YouTube links (`streamlink://https://www.youtube.com/watch?v=…` since 7.6)
 - **HLS cams** → still exported as `streamlink://…`, played by the **streamlink wrapper**
 - pages that cannot be read stay `streamlink://`, so no cam is lost
 
@@ -200,8 +209,7 @@ Place your local list file (for example, named `worldcam_list.txt`) inside the f
 - Python ≥ 3.8  
 - **`yt-dlp`** (binary preferred, module also works)
 - To play **exported bouquets** outside the plugin:
-  - `streamlink` + `enigma2-plugin-extensions-streamlinkwrapper` (SkylineWebcams HLS cams)
-  - `enigma2-plugin-extensions-ytdlpwrapper` (YouTube cams)
+  - `streamlink` + `enigma2-plugin-extensions-streamlinkwrapper` (SkylineWebcams HLS cams and YouTube cams)
 
 The installer checks these packages and installs the missing ones.
 
