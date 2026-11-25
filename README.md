@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/Belfagor2005/WorldCam">
-    <img src="https://img.shields.io/badge/Version-7.3-blue.svg" alt="Version">
+    <img src="https://img.shields.io/badge/Version-7.5-blue.svg" alt="Version">
   </a>
   <a href="https://www.enigma2.net">
     <img src="https://img.shields.io/badge/Enigma2-Plugin-ff6600.svg" alt="Enigma2">
@@ -35,8 +35,27 @@
 <h1 align="center">
 
 **WorldCam** is an Enigma2 plugin that allows you to view live webcams from around the world, with a simple, fast, and stable interface.  
-Completely rewritten and optimized in version **7.3**, the plugin now offers visual previews, new features, and greater reliability.
+Completely rewritten and optimized since version **7.3**, the plugin now offers visual previews, new features, and greater reliability.
 </h1>
+
+---
+
+🚀 **What's new in version 7.5**
+
+📺 **YouTube cams in exported bouquets**
+Many SkylineWebcams cams (e.g. Thailand) are streamed through YouTube. These used to be exported as `streamlink://` entries and failed outside the plugin, because Streamlink's YouTube plugin is blocked by YouTube (`403 Forbidden` on `youtubei/v1/player`).
+On export, WorldCam now checks every SkylineWebcams page:
+- **YouTube cams** → exported as `https://www.youtube.com/watch?v=…`, played by the **yt-dlp wrapper** (the same yt-dlp method used inside the plugin)
+- **HLS cams** → still exported as `streamlink://…`, played by the **streamlink wrapper**
+- pages that cannot be read stay `streamlink://`, so no cam is lost
+
+Bouquets exported with older versions must be **exported again** to get the YouTube links.
+
+⏳ **Non-blocking bouquet export**
+Export (locations and favorites) now runs in the background with a "Loading..." indicator; the Enigma2 service list is reloaded in the main thread when it ends.
+
+📦 **Installer**
+Also installs `python3-youtube-dl` together with the streaming dependencies (streamlink, streamlink/ytdlp/ytdl wrappers).
 
 ---
 
@@ -179,7 +198,12 @@ Place your local list file (for example, named `worldcam_list.txt`) inside the f
 - Enigma2 STB (Dreambox, Vu+, Zgemma, Ustym, Octagon, …)  
 - Active internet connection  
 - Python ≥ 3.8  
-- **`yt-dlp`** (binary preferred, module also works):
+- **`yt-dlp`** (binary preferred, module also works)
+- To play **exported bouquets** outside the plugin:
+  - `streamlink` + `enigma2-plugin-extensions-streamlinkwrapper` (SkylineWebcams HLS cams)
+  - `enigma2-plugin-extensions-ytdlpwrapper` (YouTube cams)
+
+The installer checks these packages and installs the missing ones.
 
 ---
 

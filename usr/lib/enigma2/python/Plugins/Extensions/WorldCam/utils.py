@@ -270,6 +270,37 @@ def bouquet_service_lines(url, name):
     return lines, kind
 
 
+def resolve_skyline_youtube(urls, workers=8):
+    """
+    Open the given SkylineWebcams pages (in parallel) and return
+    {page_url: youtube_watch_url} for the cams streamed through YouTube.
+    HLS cams and pages that cannot be read are left out (they stay
+    streamlink:// in the bouquet).
+    """
+    urls = [u for u in dict.fromkeys(urls) if is_skyline_page(u)]
+    if not urls:
+        return {}
+    from concurrent.futures import ThreadPoolExecutor
+    from .scraper import SkylineScraper   # lazy: scraper imports utils
+    scraper = SkylineScraper()
+
+    def check(page_url):
+        try:
+            stream = scraper.get_stream_url(page_url)
+        except Exception:
+            stream = None
+        return page_url, stream
+
+    found = {}
+    with ThreadPoolExecutor(max_workers=min(workers, len(urls))) as pool:
+        for page_url, stream in pool.map(check, urls):
+            if stream and is_youtube_url(stream):
+                found[page_url] = stream
+    Logger().info("Export: %d of %d SkylineWebcams cams are YouTube" %
+                  (len(found), len(urls)))
+    return found
+
+
 class FavoritesManager:
     @staticmethod
     def _migrate_old_file():
@@ -346,9 +377,11 @@ class FavoritesManager:
             fav["url"] == url for fav in FavoritesManager.load_favorites())
 
     @staticmethod
-    def export_to_bouquet(webcams=None, title=None):
+    def export_to_bouquet(webcams=None, title=None, reload=True):
         """
         Export webcams to an Enigma2 bouquet.
+        reload=False skips reload_services(): pass it when exporting
+        from a thread and reload from the main thread afterwards.
         Without arguments the favorites are exported to
         'WorldCam Favorites'; otherwise the given webcams go to their
         own bouquet named after title.
@@ -375,6 +408,16 @@ class FavoritesManager:
                 makedirs(bouquet_dir)
             bouquet_path = join(bouquet_dir, bouquet_name)
 
+            # SkylineWebcams cams streamed through YouTube are exported
+            # as YouTube links (yt-dlp wrapper): Streamlink's YouTube
+            # plugin is blocked by YouTube (403). HLS cams stay streamlink://
+            try:
+                youtube_map = resolve_skyline_youtube(
+                    [cam.get("url") for cam in webcams if cam.get("url")])
+            except Exception as e:
+                Logger().warning("YouTube check skipped: %s" % str(e))
+                youtube_map = {}
+
             exported = 0
             kinds = set()
             with open(bouquet_path, "w", encoding="utf-8") as f:
@@ -384,7 +427,7 @@ class FavoritesManager:
                     if not url:
                         continue
                     
-                    # Lasciamo che bouquet_service_lines decida (streamlink:// per Skyline)
+                    url = youtube_map.get(url, url)
                     lines, kind = bouquet_service_lines(url, cam.get("name", ""))
                     f.write(lines)
                     kinds.add(kind)
@@ -413,7 +456,8 @@ class FavoritesManager:
                         f.write("\n")
                     f.write(bouquet_ref + "\n")
 
-            reload_services()
+            if reload:
+                reload_services()
 
             message = _("Exported %d webcams to '%s'") % (
                 exported, display_name)

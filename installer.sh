@@ -1,7 +1,7 @@
 #!/bin/bash
 
-version='7.4'
-changelog='Unified UI with PNG thumbnails (via ffmpeg) 120x70/160x90 for all screens, fixed image cropping and missing flags (Belize, Guadeloupe, Martinique, Zanzibar). Fixed player crash (AgpCEMC skin), VRAM crash (gAccel), empty continents, HLS/YouTube streams, and bouquet export.'
+version='7.5'
+changelog='SkylineWebcams cams streamed through YouTube are now exported to bouquets as YouTube links (played by the yt-dlp wrapper) instead of streamlink:// (blocked by YouTube with 403); HLS cams stay streamlink://. Bouquet export runs in background. Installer installs python3-youtube-dl.'
 FILEPATH=/tmp/WorldCam-main.tar.gz
 TMPPATH=/tmp/worldcam_extract
 
@@ -166,6 +166,9 @@ else
 fi
 
 if [ "$OSTYPE" = "OE" ]; then
+    # Exported bouquets: SkylineWebcams HLS entries play through
+    # streamlink (streamlink wrapper), YouTube entries through yt-dlp
+    # (ytdlp wrapper)
     echo "Installing streaming dependencies..."
     for pkg in \
         streamlink \
@@ -173,6 +176,7 @@ if [ "$OSTYPE" = "OE" ]; then
         enigma2-plugin-extensions-streamlinkproxy \
         enigma2-plugin-extensions-ytdlpwrapper \
         enigma2-plugin-extensions-ytdlwrapper \
+        python3-youtube-dl \
         python3-re \
         gstreamer1.0-plugins-bad \
         gstreamer1.0-plugins-ugly \

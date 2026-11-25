@@ -56,7 +56,7 @@ from .scraper import (
 from .utils import (
     CATEGORY_ICONS, FavoritesManager, Logger, b64decoder, disable_summary, get_category_icon,
     get_country_code, get_current_language, get_flag_path, get_system_language,
-    language_flag_mapping, set_current_language, timer_connect,
+    language_flag_mapping, reload_services, set_current_language, timer_connect,
 )
 
 logger = Logger()
@@ -474,7 +474,13 @@ class WorldCamFavoritesScreen(WebcamBaseScreen):
         if FavoritesManager.remove_favorite(webcam["url"]): self.load_favorites()
 
     def export_favorites(self):
-        success, message = FavoritesManager.export_to_bouquet()
+        # in a thread: the export opens every SkylineWebcams page
+        self.run_async(lambda: FavoritesManager.export_to_bouquet(reload=False), self._export_done, self["title"].getText())
+
+    def _export_done(self, result):
+        success, message = result or (False, _("Export failed"))
+        if success:
+            reload_services()   # main thread: eDVBDB is not thread-safe
         self.session.open(MessageBox, message, MessageBox.TYPE_INFO if success else MessageBox.TYPE_ERROR)
 
     def on_item_selected(self):
@@ -908,7 +914,14 @@ class WorldCamWebcamScreen(WebcamBaseScreen):
             self.session.open(WorldCamPlayer, webcams=self.webcams, current_index=index)
 
     def export_bouquet_direct(self):
-        success, message = FavoritesManager.export_to_bouquet(self.webcams, self.location["name"])
+        # in a thread: the export opens every SkylineWebcams page
+        webcams, name = list(self.webcams), self.location["name"]
+        self.run_async(lambda: FavoritesManager.export_to_bouquet(webcams, name, reload=False), self._export_done, name)
+
+    def _export_done(self, result):
+        success, message = result or (False, _("Export failed"))
+        if success:
+            reload_services()   # main thread: eDVBDB is not thread-safe
         self.session.open(MessageBox, message, MessageBox.TYPE_INFO if success else MessageBox.TYPE_ERROR)
 
     def load_webcams(self): self.run_async(lambda: self.scraper.get_webcams(self.location["url"]), self._webcams_loaded, self.location["name"])
