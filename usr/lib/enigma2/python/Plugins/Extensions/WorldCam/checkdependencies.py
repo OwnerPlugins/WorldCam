@@ -59,7 +59,7 @@ def _has_ytdlp():
 
 def check_requirements(logger=None):
     """
-    Check optional dependencies needed for YouTube playback.
+    Check optional dependencies needed for YouTube/Streamlink playback.
     Returns a list of missing component names (str).
     """
     missing = []
@@ -68,9 +68,15 @@ def check_requirements(logger=None):
     if not _has_ytdlp():
         missing.append("yt-dlp")
 
-    # streamlink (binary)
-    if which("streamlink") is None:
-        missing.append("streamlink")
+    # streamlink: verifichiamo se il modulo Python è presente
+    # (evita falsi positivi se l'eseguibile non è nel PATH di Enigma2)
+    try:
+        import importlib.util
+        if importlib.util.find_spec("streamlink") is None:
+            missing.append("streamlink")
+    except Exception:
+        if which("streamlink") is None:
+            missing.append("streamlink")
 
     if logger and missing:
         logger.warning("Missing optional components: " + ", ".join(missing))
