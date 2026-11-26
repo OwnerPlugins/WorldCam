@@ -564,9 +564,13 @@ class WorldCamLocal(WebcamBaseScreen):
         self["paypal"] = Label(paypal())
         self["key_red"] = Button(_("Exit"))
         self["key_green"] = Button()
-        self["key_yellow"] = Button()
+        self["key_yellow"] = Button(_("Export"))
         self["key_blue"] = Button()
-        self["actions"] = HelpableActionMap(self, "WorldCamActions", {"ok": self.on_item_selected, "cancel": self.close})
+        self["actions"] = HelpableActionMap(self, "WorldCamActions", {
+            "ok": self.on_item_selected, 
+            "cancel": self.close,
+            "yellow": self.export_local_webcams
+        })
         self.onLayoutFinish.append(self.load_webcams)
         self.onLayoutFinish.append(self.set_flag_icon)
 
@@ -577,16 +581,33 @@ class WorldCamLocal(WebcamBaseScreen):
                 self["title"].setText(_("Empty or missing playlist"))
                 return
             self.webcams = self.scraper.parse_local_playlist_file(path) or []
-            if not self.webcams: self["title"].setText(_("No valid webcams in playlist"))
+            if not self.webcams: 
+                self["title"].setText(_("No valid webcams in playlist"))
             else:
                 showlist(self.webcams, self["list"])
                 self["list"].setCurrentIndex(0)
-        except Exception as e: self.logger.error(f"Error loading playlist: {str(e)}")
+        except Exception as e: 
+            self.logger.error(f"Error loading playlist: {str(e)}")
 
     def on_item_selected(self):
         index = self["list"].getCurrentIndex()
         if index is None or index < 0 or index >= len(self.webcams): return
         self.session.open(WorldCamPlayer, webcams=self.webcams, current_index=index)
+
+    def export_local_webcams(self):
+        if not self.webcams: return
+        title = splitext(self.category)[0]
+        self.run_async(
+            lambda: FavoritesManager.export_to_bouquet(self.webcams, title, reload=False), 
+            self._export_done, 
+            _("Exporting...")
+        )
+
+    def _export_done(self, result):
+        success, message = result or (False, _("Export failed"))
+        if success:
+            reload_services()
+        self.session.open(MessageBox, message, MessageBox.TYPE_INFO if success else MessageBox.TYPE_ERROR)
 
 
 class WorldCamContinentScreen(WebcamBaseScreen):
@@ -803,14 +824,19 @@ class WorldCamTopScreen(WebcamBaseScreen):
         self["paypal"] = Label(paypal())
         self["key_red"] = Button(_("Exit"))
         self["key_green"] = Button()
-        self["key_yellow"] = Button()
+        self["key_yellow"] = Button(_("Export"))
         self["key_blue"] = Button()
-        self["actions"] = HelpableActionMap(self, "WorldCamActions", {"ok": self.on_item_selected, "cancel": self.close})
+        self["actions"] = HelpableActionMap(self, "WorldCamActions", {
+            "ok": self.on_item_selected, 
+            "cancel": self.close,
+            "yellow": self.export_top_webcams
+        })
         self.top_webcams = []
         self.onLayoutFinish.append(self.load_top_webcams)
         self.onLayoutFinish.append(self.set_flag_icon)
 
-    def load_top_webcams(self): self.run_async(self.scraper.get_top_webcams, self._top_loaded, _("Top Webcams"))
+    def load_top_webcams(self): 
+        self.run_async(self.scraper.get_top_webcams, self._top_loaded, _("Top Webcams"))
 
     def _top_loaded(self, top_webcams):
         try:
@@ -819,12 +845,27 @@ class WorldCamTopScreen(WebcamBaseScreen):
             if self.top_webcams:
                 showlist(self.top_webcams, self["list"])
                 self["list"].setCurrentIndex(0)
-        except Exception as e: self.logger.error("Error loading top webcams: %s" % str(e))
+        except Exception as e: 
+            self.logger.error("Error loading top webcams: %s" % str(e))
 
     def on_item_selected(self):
         index = self["list"].getCurrentIndex()
         if index is None or index < 0 or index >= len(self.top_webcams): return
         self.session.open(WorldCamPlayer, webcams=self.top_webcams, current_index=index)
+
+    def export_top_webcams(self):
+        if not self.top_webcams: return
+        self.run_async(
+            lambda: FavoritesManager.export_to_bouquet(self.top_webcams, "Top Webcams", reload=False), 
+            self._export_done, 
+            _("Exporting...")
+        )
+
+    def _export_done(self, result):
+        success, message = result or (False, _("Export failed"))
+        if success:
+            reload_services()
+        self.session.open(MessageBox, message, MessageBox.TYPE_INFO if success else MessageBox.TYPE_ERROR)
 
 
 class WorldCamLocationScreen(WebcamBaseScreen):
