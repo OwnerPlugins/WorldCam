@@ -68,17 +68,36 @@ msgstr "ส่งออก"
 msgid "Export All to Bouquet"
 msgstr "ส่งออกทั้งหมดไปยังช่อดอกไม้"
 
+#, fuzzy
+msgid "Export failed"
+msgstr "การส่งออกล้มเหลว:"
+
 msgid "Export failed:"
 msgstr "การส่งออกล้มเหลว:"
 
 msgid "Exported %d webcams to '%s'"
 msgstr "ส่งออกเว็บแคม %d รายการไปยัง '%s'"
 
+#, fuzzy
+msgid "Exporting..."
+msgstr "ส่งออก"
+
 msgid "Favorites"
 msgstr "รายการโปรด"
 
+msgid ""
+"Install it with:\n"
+"opkg install python3-yt-dlp"
+msgstr "ติดตั้งด้วย:\nopkg ติดตั้ง python3-yt-dlp"
+
 msgid "Language changed to %s"
 msgstr "ภาษาเปลี่ยนเป็น %s"
+
+msgid ""
+"Like this plugin?\n"
+"Buy me a coffee by scanning QR code.\n"
+"Your support keeps development alive!"
+msgstr "ชอบปลั๊กอินนี้หรือไม่?\nซื้อกาแฟให้ฉันโดยสแกนรหัส QR\nการสนับสนุนของคุณช่วยให้การพัฒนายังคงอยู่!"
 
 msgid "Live webcams from around the world"
 msgstr "เว็บแคมถ่ายทอดสดจากทั่วโลก"
@@ -93,6 +112,15 @@ msgstr "กำลังอัปเกรด..."
 
 msgid "Menu"
 msgstr "เมนู"
+
+msgid ""
+"New version %(version)s available\n"
+"\n"
+"Changelog:\n"
+"%(changelog)s\n"
+"\n"
+"Do you want to install it now?"
+msgstr "มีเวอร์ชันใหม่ %(version)s แล้ว\n\nบันทึกการเปลี่ยนแปลง:\n%(changelog)s\n\nคุณต้องการติดตั้งตอนนี้หรือไม่?"
 
 msgid "No favorites to export"
 msgstr "ไม่มีรายการโปรดที่จะส่งออก"
@@ -157,7 +185,8 @@ msgstr "การตั้งค่า"
 msgid "Settings functionality coming soon!"
 msgstr "ฟังก์ชั่นการตั้งค่าจะมาเร็ว ๆ นี้!"
 
-msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+#, fuzzy
+msgid "SkylineWebcams and YouTube entries play from the bouquet only with streamlink and the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
 msgstr "รายการ SkylineWebcams จะเล่นจากช่อดอกไม้ด้วยปลั๊กอิน streamlink wrapper เท่านั้น (enigma2-plugin-extensions-streamlinkwrapper)"
 
 #, fuzzy
@@ -167,14 +196,32 @@ msgstr "สตรีม YouTube ไม่พร้อมใช้งาน"
 msgid "Top Webcams"
 msgstr "เว็บแคมยอดนิยม"
 
+msgid ""
+"Unable to fetch version info:\n"
+"{}"
+msgstr "ไม่สามารถดึงข้อมูลเวอร์ชันได้:\n{}"
+
 msgid "Update"
 msgstr "อัปเดต"
 
 msgid "Update Aborted!"
 msgstr "การอัปเดตถูกยกเลิก!"
 
+#, fuzzy
+msgid ""
+"Update completed successfully!\n"
+"\n"
+"Restart Enigma2 to use the new version."
+msgstr "ส่งออกรายการโปรดเรียบร้อยแล้ว! รีสตาร์ท Enigma2 เพื่อดูพวกเขา"
+
 msgid "Update encountered an error (code: %s)"
 msgstr "การอัปเดตพบข้อผิดพลาด (รหัส: %s)"
+
+#, fuzzy
+msgid ""
+"Update failed:\n"
+"%s"
+msgstr "การส่งออกล้มเหลว:"
 
 msgid "Update plugin"
 msgstr "อัปเดตปลั๊กอิน"
@@ -185,17 +232,26 @@ msgstr "กำลังอัปเกรด..."
 msgid "User Lists"
 msgstr "รายชื่อผู้ใช้"
 
+#, fuzzy
+msgid ""
+"WorldCam v%s\n"
+"\n"
+"Live webcam viewer featuring global locations\n"
+"\n"
+"Developed by Lululla"
+msgstr "โปรแกรมดูเว็บแคมสดที่มีสถานที่ทั่วโลก"
+
 msgid "WorldCam v{}"
 msgstr "เวิลด์แคม วี{}"
 
 msgid "You are already running the latest version: {}"
 msgstr "คุณกำลังใช้งานเวอร์ชันล่าสุดอยู่แล้ว: {}"
 
-msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
-msgstr "รายการ YouTube จะเล่นจากช่อดอกไม้ด้วยปลั๊กอิน yt-dlp wrapper เท่านั้น (enigma2-plugin-extensions-ytdlpwrapper)"
-
 msgid "Your Favorites"
 msgstr "รายการโปรดของคุณ"
+
+#~ msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+#~ msgstr "รายการ YouTube จะเล่นจากช่อดอกไม้ด้วยปลั๊กอิน yt-dlp wrapper เท่านั้น (enigma2-plugin-extensions-ytdlpwrapper)"
 
 #~ msgid "- Local YouTube playlist"
 #~ msgstr "- เพลย์ลิสต์ YouTube ท้องถิ่น"
@@ -269,9 +325,6 @@ msgstr "รายการโปรดของคุณ"
 #~ msgid "Included playlists and sources:"
 #~ msgstr "เพลย์ลิสต์และแหล่งที่มาที่รวมไว้:"
 
-#~ msgid "Live webcam viewer featuring global locations"
-#~ msgstr "โปรแกรมดูเว็บแคมสดที่มีสถานที่ทั่วโลก"
-
 #~ msgid "No playlists available"
 #~ msgstr "ไม่มีเพลย์ลิสต์"
 
@@ -298,9 +351,6 @@ msgstr "รายการโปรดของคุณ"
 
 #~ msgid "WorldCam v%s"
 #~ msgstr "เวิลด์แคม v%s"
-
-#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
-#~ msgstr "ส่งออกรายการโปรดเรียบร้อยแล้ว! รีสตาร์ท Enigma2 เพื่อดูพวกเขา"
 
 #~ msgid "YouTube playback error"
 #~ msgstr "ข้อผิดพลาดในการเล่น YouTube"

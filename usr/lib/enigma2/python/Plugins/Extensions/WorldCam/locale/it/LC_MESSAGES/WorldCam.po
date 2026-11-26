@@ -7,7 +7,7 @@ msgstr ""
 "Language-Team: \n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.8\n"
 "X-Poedit-Basepath: ../../..\n"
@@ -16,27 +16,6 @@ msgstr ""
 "X-Poedit-SearchPath-2: player.py\n"
 "X-Poedit-SearchPath-3: scraper.py\n"
 "X-Poedit-SearchPath-4: utils.py\n"
-
-msgid "- Local YouTube playlist"
-msgstr "- Playlist YouTube locale (test)"
-
-msgid "- Local webcam list"
-msgstr "- Elenco webcam locali"
-
-msgid "- Online Direct and YouTube webcams"
-msgstr "- Playlist di webcam online di YouTube"
-
-msgid "- Online webcam list"
-msgstr "- Elenco webcam online"
-
-msgid "- Other sources"
-msgstr "- Altre fonti"
-
-msgid "AFRICA"
-msgstr "AFRICA"
-
-msgid "AMERICAS"
-msgstr "AMERICA"
 
 msgid "About"
 msgstr "Informazioni"
@@ -59,9 +38,6 @@ msgstr "Cambia Lingua"
 msgid "Continents"
 msgstr "Continenti"
 
-msgid "Could not extract YouTube stream"
-msgstr "Impossibile estrarre il flusso YouTube"
-
 msgid "Could not extract video stream"
 msgstr "Impossibile estrarre il flusso video"
 
@@ -71,53 +47,12 @@ msgstr "Paesi"
 msgid "Country"
 msgstr "Paese"
 
-msgid "Developed by Lululla"
-msgstr "Sviluppato da Lululla"
-
-msgid "EUROPE"
-msgstr "EUROPA"
-
-msgid "Empty playlist file"
-msgstr "File della Playlist vuota"
+#, fuzzy
+msgid "Empty or missing playlist"
+msgstr "Errore durante il caricamento della Playlist"
 
 msgid "Error adding favorite"
 msgstr "Errore durante l'aggiunta dei preferiti"
-
-msgid "Error changing language"
-msgstr "Errore durante il cambio lingua"
-
-msgid "Error loading categories"
-msgstr "Errore durante il caricamento delle categorie"
-
-msgid "Error loading continents"
-msgstr "Errore durante il caricamento dei Continenti"
-
-msgid "Error loading countries"
-msgstr "Errore durante il caricamento dei Paesi"
-
-msgid "Error loading favorites"
-msgstr "Errore durante il caricamento delle categorie"
-
-msgid "Error loading locations"
-msgstr "Errore durante il caricamento delle Localit‡"
-
-msgid "Error loading playlist"
-msgstr "Errore durante il caricamento della Playlist"
-
-msgid "Error loading playlists"
-msgstr "Errore durante il caricamento delle Playlists"
-
-msgid "Error loading top webcams"
-msgstr "Errore durante il caricamento delle Top Webcams"
-
-msgid "Error loading webcams"
-msgstr "Errore durante il caricamento delle Webcams"
-
-msgid "Error opening language selection"
-msgstr "Error opening language selection"
-
-msgid "Error opening playlist"
-msgstr "Errore durante l'apertura della Playlist"
 
 msgid "Error removing favorite"
 msgstr "Errore durante la rimozione dei preferiti"
@@ -134,41 +69,68 @@ msgstr "Esporta"
 msgid "Export All to Bouquet"
 msgstr "Esporta tutto in Bouquet"
 
+#, fuzzy
+msgid "Export failed"
+msgstr "Esportazione Fallita:"
+
 msgid "Export failed:"
 msgstr "Esportazione Fallita:"
+
+msgid "Exported %d webcams to '%s'"
+msgstr "%d webcam esportate in '%s'"
+
+#, fuzzy
+msgid "Exporting..."
+msgstr "Esporta"
 
 msgid "Favorites"
 msgstr "Preferiti"
 
-msgid "Favorites exported successfully! Restart Enigma2 to see them."
-msgstr "Preferiti esportati con successo! Riavvia Enigma2 per visualizzarli."
-
-msgid "File not found"
-msgstr "File non trovato"
-
-msgid "Forum support: www.corvoboys.org"
-msgstr ""
-
-msgid "GitHub: %s"
-msgstr ""
-
-msgid "Included playlists and sources:"
-msgstr "Playlist e fonti incluse:"
-
-msgid "Invalid YouTube URL"
-msgstr "URL di YouTube non valido"
+msgid ""
+"Install it with:\n"
+"opkg install python3-yt-dlp"
+msgstr "Installalo con:\nopkg installa python3-yt-dlp"
 
 msgid "Language changed to %s"
 msgstr "Lingua modificata in %s"
 
-msgid "Live webcam viewer featuring global locations"
-msgstr "Visualizzatore di webcam in diretta con posizioni globali"
+#, fuzzy
+msgid ""
+"Like this plugin?\n"
+"Buy me a coffee by scanning QR code.\n"
+"Your support keeps development alive!"
+msgstr ""
+"Ti piace questo plugin?\n"
+"Offrimi un caff√® scansionando il codice QR.\n"
+"Il tuo supporto mantiene vivo lo sviluppo!\n"
 
 msgid "Live webcams from around the world"
 msgstr "Webcam in diretta da tutto il mondo"
 
+msgid "Loading stream..."
+msgstr "Caricamento flusso..."
+
+#, fuzzy
+msgid "Loading..."
+msgstr "Aggiornamento..."
+
 msgid "Menu"
 msgstr ""
+
+msgid ""
+"New version %(version)s available\n"
+"\n"
+"Changelog:\n"
+"%(changelog)s\n"
+"\n"
+"Do you want to install it now?"
+msgstr ""
+"Nuova versione %(version)s disponibile\n"
+"\n"
+"Changelog:\n"
+"%(changelog)s\n"
+"\n"
+"Vuoi installarla subito?"
 
 msgid "No favorites to export"
 msgstr "Nessun preferito da esportare"
@@ -176,14 +138,22 @@ msgstr "Nessun preferito da esportare"
 msgid "No favorites yet"
 msgstr "Nessun preferito ancora"
 
-msgid "No playlists available"
-msgstr "Nessuna playlist disponibile"
-
 msgid "No playlists found"
+msgstr "Nessuna playlist trovata"
+
+#, fuzzy
+msgid "No valid streams found"
 msgstr "Nessuna playlist trovata"
 
 msgid "No valid webcams in playlist"
 msgstr "Nessuna webcam valida nella playlist"
+
+#, fuzzy
+msgid "No webcams to export"
+msgstr "Nessun preferito da esportare"
+
+msgid "OK = Info | CH-/CH+ = Prev/Next | BLUE = Fav | PLAY/PAUSE = Toggle | STOP = Stop | EXIT = Exit | by Lululla"
+msgstr "OK = Informazioni | CH-/CH+ = Precedente/Successivo | BLU = Fav | RIPRODUCI/PAUSA = Attiva/disattiva | STOP = Ferma | ESCI = Esci | di Lululla"
 
 msgid "Play"
 msgstr "Riproduci"
@@ -197,9 +167,6 @@ msgstr "Riproduzione fallita"
 msgid "Playback failed!"
 msgstr "Riproduzione fallita!"
 
-msgid "Powered by Enigma2 and Python"
-msgstr ""
-
 msgid "Remove"
 msgstr "Rimuovi"
 
@@ -209,23 +176,12 @@ msgstr "Rimuovi dai preferiti"
 msgid "Removed from favorites"
 msgstr "Rimosso dai preferiti"
 
-msgid "Removed from favorites: %s"
-msgstr "Rimosso dai preferiti: %s"
+#, fuzzy
+msgid "Resolving YouTube stream..."
+msgstr "Impossibile estrarre il flusso YouTube"
 
 msgid "Select"
 msgstr "Seleziona"
-
-msgid "Select a valid category"
-msgstr "Seleziona una categoria valida"
-
-msgid "Select a valid location"
-msgstr "Seleziona una localit‡ valida"
-
-msgid "Select a valid playlist"
-msgstr "Seleziona una playlist valida"
-
-msgid "Select a valid webcam"
-msgstr "Seleziona una webcam valida"
 
 msgid "Select an option"
 msgstr "Seleziona un opzione"
@@ -237,13 +193,23 @@ msgid "Settings"
 msgstr "Configurazione"
 
 msgid "Settings functionality coming soon!"
-msgstr "Presto arriveranno le funzionalit‡ delle impostazioni!"
+msgstr "Presto arriveranno le funzionalit√† delle impostazioni!"
 
-msgid "Technical error in Webcam.pl"
-msgstr "Errore tecnico in Webcam.pl"
+msgid "SkylineWebcams and YouTube entries play from the bouquet only with streamlink and the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "Le voci SkylineWebcam e YouTube vengono riprodotte dal bouquet solo con streamlink e il plug-in wrapper streamlink (enigma2-plugin-extensions-streamlinkwrapper)."
+
+msgid "Stream not available"
+msgstr "Flusso non disponibile"
 
 msgid "Top Webcams"
+msgstr "Le migliori webcam"
+
+msgid ""
+"Unable to fetch version info:\n"
+"{}"
 msgstr ""
+"Impossibile recuperare le informazioni sulla versione:\n"
+"{}"
 
 msgid "Update"
 msgstr "Aggiornamento"
@@ -251,8 +217,22 @@ msgstr "Aggiornamento"
 msgid "Update Aborted!"
 msgstr "Aggiornamento Annullato!"
 
+#, fuzzy
+msgid ""
+"Update completed successfully!\n"
+"\n"
+"Restart Enigma2 to use the new version."
+msgstr "Preferiti esportati con successo! Riavvia Enigma2 per visualizzarli."
+
 msgid "Update encountered an error (code: %s)"
 msgstr "L'aggiornamento ha riscontrato un errore (codice: %s)"
+
+msgid ""
+"Update failed:\n"
+"%s"
+msgstr ""
+"Aggiornamento Fallito:\n"
+"%s"
 
 msgid "Update plugin"
 msgstr "Aggiornamento Plugin"
@@ -263,23 +243,122 @@ msgstr "Aggiornamento..."
 msgid "User Lists"
 msgstr "Lista Utente"
 
-msgid "WorldCam v%s"
-msgstr ""
+#, fuzzy
+msgid ""
+"WorldCam v%s\n"
+"\n"
+"Live webcam viewer featuring global locations\n"
+"\n"
+"Developed by Lululla"
+msgstr "Visualizzatore di webcam in diretta con posizioni globali"
 
 msgid "WorldCam v{}"
 msgstr ""
 
 msgid "You are already running the latest version: {}"
-msgstr "Stai gi‡ utilizzando l'ultima versione: {}"
-
-msgid "YouTube playback error"
-msgstr "Riproduzione YouTube fallita"
+msgstr "Stai gi√† utilizzando l'ultima versione: {}"
 
 msgid "Your Favorites"
 msgstr "I tuoi preferiti"
 
-msgid "yt-dlp not found. Please install it."
-msgstr "yt-dlp non trovato. Installalo."
+#~ msgid "- Local YouTube playlist"
+#~ msgstr "- Playlist YouTube locale (test)"
+
+#~ msgid "- Local webcam list"
+#~ msgstr "- Elenco webcam locali"
+
+#~ msgid "- Online Direct and YouTube webcams"
+#~ msgstr "- Playlist di webcam online di YouTube"
+
+#~ msgid "- Online webcam list"
+#~ msgstr "- Elenco webcam online"
+
+#~ msgid "- Other sources"
+#~ msgstr "- Altre fonti"
+
+#~ msgid "AFRICA"
+#~ msgstr "AFRICA"
+
+#~ msgid "AMERICAS"
+#~ msgstr "AMERICA"
+
+#~ msgid "Developed by Lululla"
+#~ msgstr "Sviluppato da Lululla"
+
+#~ msgid "EUROPE"
+#~ msgstr "EUROPA"
+
+#~ msgid "Empty playlist file"
+#~ msgstr "File della Playlist vuota"
+
+#~ msgid "Error changing language"
+#~ msgstr "Errore durante il cambio lingua"
+
+#~ msgid "Error loading categories"
+#~ msgstr "Errore durante il caricamento delle categorie"
+
+#~ msgid "Error loading continents"
+#~ msgstr "Errore durante il caricamento dei Continenti"
+
+#~ msgid "Error loading countries"
+#~ msgstr "Errore durante il caricamento dei Paesi"
+
+#~ msgid "Error loading favorites"
+#~ msgstr "Errore durante il caricamento delle categorie"
+
+#~ msgid "Error loading locations"
+#~ msgstr "Errore durante il caricamento delle Localit√†"
+
+#~ msgid "Error loading playlists"
+#~ msgstr "Errore durante il caricamento delle Playlists"
+
+#~ msgid "Error loading top webcams"
+#~ msgstr "Errore durante il caricamento delle Top Webcams"
+
+#~ msgid "Error loading webcams"
+#~ msgstr "Errore durante il caricamento delle Webcams"
+
+#~ msgid "Error opening language selection"
+#~ msgstr "Error opening language selection"
+
+#~ msgid "Error opening playlist"
+#~ msgstr "Errore durante l'apertura della Playlist"
+
+#~ msgid "File not found"
+#~ msgstr "File non trovato"
+
+#~ msgid "Included playlists and sources:"
+#~ msgstr "Playlist e fonti incluse:"
+
+#~ msgid "Invalid YouTube URL"
+#~ msgstr "URL di YouTube non valido"
+
+#~ msgid "No playlists available"
+#~ msgstr "Nessuna playlist disponibile"
+
+#~ msgid "Removed from favorites: %s"
+#~ msgstr "Rimosso dai preferiti: %s"
+
+#~ msgid "Select a valid category"
+#~ msgstr "Seleziona una categoria valida"
+
+#~ msgid "Select a valid location"
+#~ msgstr "Seleziona una localit√† valida"
+
+#~ msgid "Select a valid playlist"
+#~ msgstr "Seleziona una playlist valida"
+
+#~ msgid "Select a valid webcam"
+#~ msgstr "Seleziona una webcam valida"
+
+#~ msgid "Technical error in Webcam.pl"
+#~ msgstr "Errore tecnico in Webcam.pl"
+
+#~ msgid "YouTube playback error"
+#~ msgstr "Riproduzione YouTube fallita"
+
+#~ msgid "yt-dlp not found. Please install it."
+#~ msgstr "yt-dlp non trovato. Installalo."
 
 #~ msgid "Update yt-dlp"
 #~ msgstr "Aggiornamento modulo yt-dl"
@@ -304,51 +383,10 @@ msgstr "yt-dlp non trovato. Installalo."
 #~ "%s"
 
 #~ msgid ""
-#~ "Like this plugin?\n"
-#~ "Buy me a coffee by scanning QR code.\n"
-#~ "Your support keeps development alive!\n"
-#~ msgstr ""
-#~ "Ti piace questo plugin?\n"
-#~ "Offrimi un caffË scansionando il codice QR.\n"
-#~ "Il tuo supporto mantiene vivo lo sviluppo!\n"
-
-#, python-format
-#~ msgid ""
-#~ "New version %(version)s available\n"
-#~ "\n"
-#~ "Changelog:\n"
-#~ "%(changelog)s\n"
-#~ "\n"
-#~ "Do you want to install it now?"
-#~ msgstr ""
-#~ "Nuova versione %(version)s disponibile\n"
-#~ "\n"
-#~ "Changelog:\n"
-#~ "%(changelog)s\n"
-#~ "\n"
-#~ "Vuoi installarla subito?"
-
-#, python-brace-format
-#~ msgid ""
-#~ "Unable to fetch version info:\n"
-#~ "{}"
-#~ msgstr ""
-#~ "Impossibile recuperare le informazioni sulla versione:\n"
-#~ "{}"
-
-#~ msgid ""
 #~ "Update completed successfully!\n"
 #~ "\n"
 #~ "The plugin will now close."
 #~ msgstr ""
 #~ "Aggiornamento completato con successo!\n"
 #~ "\n"
-#~ "Il plugin verr‡ chiuso."
-
-#, python-format
-#~ msgid ""
-#~ "Update failed:\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Aggiornamento Fallito:\n"
-#~ "%s"
+#~ "Il plugin verr√† chiuso."

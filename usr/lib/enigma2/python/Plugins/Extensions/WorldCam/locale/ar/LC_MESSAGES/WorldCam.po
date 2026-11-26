@@ -68,17 +68,36 @@ msgstr "يصدّر"
 msgid "Export All to Bouquet"
 msgstr "تصدير الكل إلى باقة"
 
+#, fuzzy
+msgid "Export failed"
+msgstr "فشل التصدير:"
+
 msgid "Export failed:"
 msgstr "فشل التصدير:"
 
 msgid "Exported %d webcams to '%s'"
 msgstr "تم تصدير %d من كاميرات الويب إلى '%s'"
 
+#, fuzzy
+msgid "Exporting..."
+msgstr "يصدّر"
+
 msgid "Favorites"
 msgstr "المفضلة"
 
+msgid ""
+"Install it with:\n"
+"opkg install python3-yt-dlp"
+msgstr "تثبيته مع:\nopkg تثبيت python3-yt-dlp"
+
 msgid "Language changed to %s"
 msgstr "تم تغيير اللغة إلى %s"
+
+msgid ""
+"Like this plugin?\n"
+"Buy me a coffee by scanning QR code.\n"
+"Your support keeps development alive!"
+msgstr "مثل هذا البرنامج المساعد؟\nاشتر لي قهوة عن طريق مسح رمز الاستجابة السريعة.\nدعمكم يبقي التنمية على قيد الحياة!"
 
 msgid "Live webcams from around the world"
 msgstr "كاميرات الويب الحية من جميع أنحاء العالم"
@@ -93,6 +112,15 @@ msgstr "جارٍ الترقية..."
 
 msgid "Menu"
 msgstr "قائمة طعام"
+
+msgid ""
+"New version %(version)s available\n"
+"\n"
+"Changelog:\n"
+"%(changelog)s\n"
+"\n"
+"Do you want to install it now?"
+msgstr "الإصدار الجديد %(version)s متاح\n\nسجل التغيير:\n%(changelog)s\n\nهل تريد تثبيته الآن؟"
 
 msgid "No favorites to export"
 msgstr "لا توجد مفضلات للتصدير"
@@ -157,7 +185,8 @@ msgstr "إعدادات"
 msgid "Settings functionality coming soon!"
 msgstr "وظائف الإعدادات قريبا!"
 
-msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+#, fuzzy
+msgid "SkylineWebcams and YouTube entries play from the bouquet only with streamlink and the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
 msgstr "يتم تشغيل إدخالات SkylineWebcams من الباقة فقط باستخدام البرنامج الإضافي Streamlink Wrapper (enigma2-plugin-extensions-streamlinkwrapper)."
 
 #, fuzzy
@@ -167,14 +196,32 @@ msgstr "دفق يوتيوب غير متوفر"
 msgid "Top Webcams"
 msgstr "أعلى كاميرات الويب"
 
+msgid ""
+"Unable to fetch version info:\n"
+"{}"
+msgstr "غير قادر على جلب معلومات الإصدار:\n{}"
+
 msgid "Update"
 msgstr "تحديث"
 
 msgid "Update Aborted!"
 msgstr "تم إحباط التحديث!"
 
+#, fuzzy
+msgid ""
+"Update completed successfully!\n"
+"\n"
+"Restart Enigma2 to use the new version."
+msgstr "تم تصدير المفضلة بنجاح! أعد تشغيل Enigma2 لرؤيتهم."
+
 msgid "Update encountered an error (code: %s)"
 msgstr "واجه التحديث خطأ (الرمز: %s)"
+
+#, fuzzy
+msgid ""
+"Update failed:\n"
+"%s"
+msgstr "فشل التصدير:"
 
 msgid "Update plugin"
 msgstr "تحديث البرنامج المساعد"
@@ -185,17 +232,26 @@ msgstr "جارٍ الترقية..."
 msgid "User Lists"
 msgstr "قوائم المستخدمين"
 
+#, fuzzy
+msgid ""
+"WorldCam v%s\n"
+"\n"
+"Live webcam viewer featuring global locations\n"
+"\n"
+"Developed by Lululla"
+msgstr "عارض كاميرا ويب مباشر يضم مواقع عالمية"
+
 msgid "WorldCam v{}"
 msgstr "وورلد كام ضد {}"
 
 msgid "You are already running the latest version: {}"
 msgstr "أنت تقوم بالفعل بتشغيل أحدث إصدار: {}"
 
-msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
-msgstr "يتم تشغيل إدخالات YouTube من الباقة فقط باستخدام المكوّن الإضافي yt-dlp Wrapper (enigma2-plugin-extensions-ytdlpwrapper)."
-
 msgid "Your Favorites"
 msgstr "المفضلة لديك"
+
+#~ msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+#~ msgstr "يتم تشغيل إدخالات YouTube من الباقة فقط باستخدام المكوّن الإضافي yt-dlp Wrapper (enigma2-plugin-extensions-ytdlpwrapper)."
 
 #~ msgid "- Local YouTube playlist"
 #~ msgstr "- قائمة تشغيل يوتيوب المحلية"
@@ -272,9 +328,6 @@ msgstr "المفضلة لديك"
 #~ msgid "Included playlists and sources:"
 #~ msgstr "قوائم التشغيل والمصادر المضمنة:"
 
-#~ msgid "Live webcam viewer featuring global locations"
-#~ msgstr "عارض كاميرا ويب مباشر يضم مواقع عالمية"
-
 #~ msgid "No playlists available"
 #~ msgstr "لا توجد قوائم تشغيل متاحة"
 
@@ -301,9 +354,6 @@ msgstr "المفضلة لديك"
 
 #~ msgid "WorldCam v%s"
 #~ msgstr "وورلد كام v%s"
-
-#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
-#~ msgstr "تم تصدير المفضلة بنجاح! أعد تشغيل Enigma2 لرؤيتهم."
 
 #~ msgid "YouTube playback error"
 #~ msgstr "خطأ في تشغيل اليوتيوب"

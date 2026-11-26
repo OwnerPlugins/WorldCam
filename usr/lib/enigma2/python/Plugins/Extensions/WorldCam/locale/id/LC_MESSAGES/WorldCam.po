@@ -68,17 +68,36 @@ msgstr "Ekspor"
 msgid "Export All to Bouquet"
 msgstr "Ekspor Semua ke Buket"
 
+#, fuzzy
+msgid "Export failed"
+msgstr "Ekspor gagal:"
+
 msgid "Export failed:"
 msgstr "Ekspor gagal:"
 
 msgid "Exported %d webcams to '%s'"
 msgstr "Mengekspor %d webcam ke '%s'"
 
+#, fuzzy
+msgid "Exporting..."
+msgstr "Ekspor"
+
 msgid "Favorites"
 msgstr "Favorit"
 
+msgid ""
+"Install it with:\n"
+"opkg install python3-yt-dlp"
+msgstr "Instal dengan:\nopkg instal python3-yt-dlp"
+
 msgid "Language changed to %s"
 msgstr "Bahasa diubah menjadi %s"
+
+msgid ""
+"Like this plugin?\n"
+"Buy me a coffee by scanning QR code.\n"
+"Your support keeps development alive!"
+msgstr "Suka plugin ini?\nBelikan saya kopi dengan memindai kode QR.\nDukungan Anda membuat pembangunan tetap berjalan!"
 
 msgid "Live webcams from around the world"
 msgstr "Webcam langsung dari seluruh dunia"
@@ -93,6 +112,15 @@ msgstr "Perbaikan..."
 
 msgid "Menu"
 msgstr ""
+
+msgid ""
+"New version %(version)s available\n"
+"\n"
+"Changelog:\n"
+"%(changelog)s\n"
+"\n"
+"Do you want to install it now?"
+msgstr "Versi baru %(version)s tersedia\n\nCatatan Perubahan:\n%(changelog)s\n\nApakah Anda ingin menginstalnya sekarang?"
 
 msgid "No favorites to export"
 msgstr "Tidak ada favorit untuk diekspor"
@@ -157,7 +185,8 @@ msgstr "Pengaturan"
 msgid "Settings functionality coming soon!"
 msgstr "Fungsi pengaturan segera hadir!"
 
-msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+#, fuzzy
+msgid "SkylineWebcams and YouTube entries play from the bouquet only with streamlink and the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
 msgstr "Entri SkylineWebcams diputar dari buket hanya dengan plugin streamlink wrapper (enigma2-plugin-extensions-streamlinkwrapper)."
 
 #, fuzzy
@@ -167,14 +196,32 @@ msgstr "Aliran YouTube tidak tersedia"
 msgid "Top Webcams"
 msgstr "Webcam Teratas"
 
+msgid ""
+"Unable to fetch version info:\n"
+"{}"
+msgstr "Tidak dapat mengambil info versi:\n{}"
+
 msgid "Update"
 msgstr "Memperbarui"
 
 msgid "Update Aborted!"
 msgstr "Pembaruan Dibatalkan!"
 
+#, fuzzy
+msgid ""
+"Update completed successfully!\n"
+"\n"
+"Restart Enigma2 to use the new version."
+msgstr "Favorit berhasil diekspor! Mulai ulang Enigma2 untuk melihatnya."
+
 msgid "Update encountered an error (code: %s)"
 msgstr "Pembaruan mengalami kesalahan (kode: %s)"
+
+#, fuzzy
+msgid ""
+"Update failed:\n"
+"%s"
+msgstr "Ekspor gagal:"
 
 msgid "Update plugin"
 msgstr "Perbarui plugin"
@@ -185,17 +232,26 @@ msgstr "Perbaikan..."
 msgid "User Lists"
 msgstr "Daftar Pengguna"
 
+#, fuzzy
+msgid ""
+"WorldCam v%s\n"
+"\n"
+"Live webcam viewer featuring global locations\n"
+"\n"
+"Developed by Lululla"
+msgstr "Penampil webcam langsung yang menampilkan lokasi global"
+
 msgid "WorldCam v{}"
 msgstr "Kamera Dunia v{}"
 
 msgid "You are already running the latest version: {}"
 msgstr "Anda sudah menjalankan versi terbaru: {}"
 
-msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
-msgstr "Entri YouTube diputar dari buket hanya dengan plugin pembungkus yt-dlp (enigma2-plugin-extensions-ytdlpwrapper)."
-
 msgid "Your Favorites"
 msgstr "Favorit Anda"
+
+#~ msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+#~ msgstr "Entri YouTube diputar dari buket hanya dengan plugin pembungkus yt-dlp (enigma2-plugin-extensions-ytdlpwrapper)."
 
 #~ msgid "- Local YouTube playlist"
 #~ msgstr "- Daftar putar YouTube lokal"
@@ -272,9 +328,6 @@ msgstr "Favorit Anda"
 #~ msgid "Included playlists and sources:"
 #~ msgstr "Daftar putar dan sumber yang disertakan:"
 
-#~ msgid "Live webcam viewer featuring global locations"
-#~ msgstr "Penampil webcam langsung yang menampilkan lokasi global"
-
 #~ msgid "No playlists available"
 #~ msgstr "Tidak ada daftar putar yang tersedia"
 
@@ -298,9 +351,6 @@ msgstr "Favorit Anda"
 
 #~ msgid "Technical error in Webcam.pl"
 #~ msgstr "Kesalahan teknis di Webcam.pl"
-
-#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
-#~ msgstr "Favorit berhasil diekspor! Mulai ulang Enigma2 untuk melihatnya."
 
 #~ msgid "YouTube playback error"
 #~ msgstr "Kesalahan pemutaran YouTube"

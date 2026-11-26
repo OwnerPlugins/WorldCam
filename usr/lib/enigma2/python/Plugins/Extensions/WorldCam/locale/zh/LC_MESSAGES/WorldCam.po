@@ -68,17 +68,36 @@ msgstr "出口"
 msgid "Export All to Bouquet"
 msgstr "全部导出到花束"
 
+#, fuzzy
+msgid "Export failed"
+msgstr "导出失败："
+
 msgid "Export failed:"
 msgstr "导出失败："
 
 msgid "Exported %d webcams to '%s'"
 msgstr "已将 %d 个网络摄像头导出到“%s”"
 
+#, fuzzy
+msgid "Exporting..."
+msgstr "出口"
+
 msgid "Favorites"
 msgstr "收藏夹"
 
+msgid ""
+"Install it with:\n"
+"opkg install python3-yt-dlp"
+msgstr "安装它：\nopkg 安装 python3-yt-dlp"
+
 msgid "Language changed to %s"
 msgstr "语言更改为 %s"
+
+msgid ""
+"Like this plugin?\n"
+"Buy me a coffee by scanning QR code.\n"
+"Your support keeps development alive!"
+msgstr "喜欢这个插件吗？\n扫描二维码给我买杯咖啡。\n您的支持让发展充满生机！"
 
 msgid "Live webcams from around the world"
 msgstr "来自世界各地的实时网络摄像头"
@@ -93,6 +112,15 @@ msgstr "正在升级..."
 
 msgid "Menu"
 msgstr "菜单"
+
+msgid ""
+"New version %(version)s available\n"
+"\n"
+"Changelog:\n"
+"%(changelog)s\n"
+"\n"
+"Do you want to install it now?"
+msgstr "新版本 %(version)s 可用\n\n变更日志：\n%(changelog)s\n\n您想现在安装吗？"
 
 msgid "No favorites to export"
 msgstr "没有可导出的收藏夹"
@@ -157,7 +185,8 @@ msgstr "设置"
 msgid "Settings functionality coming soon!"
 msgstr "设置功能即将推出！"
 
-msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+#, fuzzy
+msgid "SkylineWebcams and YouTube entries play from the bouquet only with streamlink and the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
 msgstr "SkylineWebcams 条目仅通过 Streamlink 包装器插件 (enigma2-plugin-extensions-streamlinkwrapper) 从花束中播放。"
 
 #, fuzzy
@@ -167,14 +196,32 @@ msgstr "YouTube 流不可用"
 msgid "Top Webcams"
 msgstr "热门网络摄像头"
 
+msgid ""
+"Unable to fetch version info:\n"
+"{}"
+msgstr "无法获取版本信息：\n{}"
+
 msgid "Update"
 msgstr "更新"
 
 msgid "Update Aborted!"
 msgstr "更新中止！"
 
+#, fuzzy
+msgid ""
+"Update completed successfully!\n"
+"\n"
+"Restart Enigma2 to use the new version."
+msgstr "收藏夹导出成功！重新启动 Enigma2 即可看到它们。"
+
 msgid "Update encountered an error (code: %s)"
 msgstr "更新遇到错误（代码：%s）"
+
+#, fuzzy
+msgid ""
+"Update failed:\n"
+"%s"
+msgstr "导出失败："
 
 msgid "Update plugin"
 msgstr "更新插件"
@@ -185,17 +232,26 @@ msgstr "正在升级..."
 msgid "User Lists"
 msgstr "用户列表"
 
+#, fuzzy
+msgid ""
+"WorldCam v%s\n"
+"\n"
+"Live webcam viewer featuring global locations\n"
+"\n"
+"Developed by Lululla"
+msgstr "具有全球位置的实时网络摄像头查看器"
+
 msgid "WorldCam v{}"
 msgstr ""
 
 msgid "You are already running the latest version: {}"
 msgstr "您已经在运行最新版本：{}"
 
-msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
-msgstr "YouTube 条目只能通过 yt-dlp 包装器插件 (enigma2-plugin-extensions-ytdlpwrapper) 从花束中播放。"
-
 msgid "Your Favorites"
 msgstr "您的最爱"
+
+#~ msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+#~ msgstr "YouTube 条目只能通过 yt-dlp 包装器插件 (enigma2-plugin-extensions-ytdlpwrapper) 从花束中播放。"
 
 #~ msgid "- Local YouTube playlist"
 #~ msgstr "- 本地 YouTube 播放列表"
@@ -272,9 +328,6 @@ msgstr "您的最爱"
 #~ msgid "Included playlists and sources:"
 #~ msgstr "包含的播放列表和来源："
 
-#~ msgid "Live webcam viewer featuring global locations"
-#~ msgstr "具有全球位置的实时网络摄像头查看器"
-
 #~ msgid "No playlists available"
 #~ msgstr "没有可用的播放列表"
 
@@ -298,9 +351,6 @@ msgstr "您的最爱"
 
 #~ msgid "Technical error in Webcam.pl"
 #~ msgstr "Webcam.pl 中的技术错误"
-
-#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
-#~ msgstr "收藏夹导出成功！重新启动 Enigma2 即可看到它们。"
 
 #~ msgid "YouTube playback error"
 #~ msgstr "YouTube 播放错误"

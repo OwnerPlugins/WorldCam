@@ -69,17 +69,36 @@ msgstr "Exporter"
 msgid "Export All to Bouquet"
 msgstr "Tout exporter vers Bouquet"
 
+#, fuzzy
+msgid "Export failed"
+msgstr "Échec de l'exportation :"
+
 msgid "Export failed:"
 msgstr "Échec de l'exportation :"
 
 msgid "Exported %d webcams to '%s'"
 msgstr "%d webcams exportées vers '%s'"
 
+#, fuzzy
+msgid "Exporting..."
+msgstr "Exporter"
+
 msgid "Favorites"
 msgstr "Favoris"
 
+msgid ""
+"Install it with:\n"
+"opkg install python3-yt-dlp"
+msgstr "Installez-le avec :\nopkg installe python3-yt-dlp"
+
 msgid "Language changed to %s"
 msgstr "Langue modifiée en %s"
+
+msgid ""
+"Like this plugin?\n"
+"Buy me a coffee by scanning QR code.\n"
+"Your support keeps development alive!"
+msgstr "Vous aimez ce plugin ?\nAchetez-moi un café en scannant le code QR.\nVotre soutien maintient le développement en vie !"
 
 msgid "Live webcams from around the world"
 msgstr "Webcams en direct du monde entier"
@@ -94,6 +113,15 @@ msgstr "Mise à niveau..."
 
 msgid "Menu"
 msgstr ""
+
+msgid ""
+"New version %(version)s available\n"
+"\n"
+"Changelog:\n"
+"%(changelog)s\n"
+"\n"
+"Do you want to install it now?"
+msgstr "Nouvelle version %(version)s disponible\n\nJournal des modifications :\n%(changelog)s\n\nVoulez-vous l'installer maintenant ?"
 
 msgid "No favorites to export"
 msgstr "Aucun favori à exporter"
@@ -158,7 +186,8 @@ msgstr "Paramètres"
 msgid "Settings functionality coming soon!"
 msgstr "Fonctionnalité de paramètres à venir !"
 
-msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+#, fuzzy
+msgid "SkylineWebcams and YouTube entries play from the bouquet only with streamlink and the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
 msgstr "Les entrées SkylineWebcams sont lues à partir du bouquet uniquement avec le plugin streamlink wrapper (enigma2-plugin-extensions-streamlinkwrapper)."
 
 #, fuzzy
@@ -168,14 +197,32 @@ msgstr "Flux YouTube non disponible"
 msgid "Top Webcams"
 msgstr "Meilleures webcams"
 
+msgid ""
+"Unable to fetch version info:\n"
+"{}"
+msgstr "Impossible de récupérer les informations de version :\n{}"
+
 msgid "Update"
 msgstr "Mise à jour"
 
 msgid "Update Aborted!"
 msgstr "Mise à jour abandonnée !"
 
+#, fuzzy
+msgid ""
+"Update completed successfully!\n"
+"\n"
+"Restart Enigma2 to use the new version."
+msgstr "Favoris exportés avec succès ! Redémarrez Enigma2 pour les voir."
+
 msgid "Update encountered an error (code: %s)"
 msgstr "La mise à jour a rencontré une erreur (code : %s)"
+
+#, fuzzy
+msgid ""
+"Update failed:\n"
+"%s"
+msgstr "Échec de l'exportation :"
 
 msgid "Update plugin"
 msgstr "Plugin de mise à jour"
@@ -186,17 +233,26 @@ msgstr "Mise à niveau..."
 msgid "User Lists"
 msgstr "Listes d'utilisateurs"
 
+#, fuzzy
+msgid ""
+"WorldCam v%s\n"
+"\n"
+"Live webcam viewer featuring global locations\n"
+"\n"
+"Developed by Lululla"
+msgstr "Visionneuse de webcam en direct présentant des emplacements dans le monde entier"
+
 msgid "WorldCam v{}"
 msgstr ""
 
 msgid "You are already running the latest version: {}"
 msgstr "Vous utilisez déjà la dernière version : {}"
 
-msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
-msgstr "Les entrées YouTube sont lues à partir du bouquet uniquement avec le plugin wrapper yt-dlp (enigma2-plugin-extensions-ytdlpwrapper)."
-
 msgid "Your Favorites"
 msgstr "Vos favoris"
+
+#~ msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+#~ msgstr "Les entrées YouTube sont lues à partir du bouquet uniquement avec le plugin wrapper yt-dlp (enigma2-plugin-extensions-ytdlpwrapper)."
 
 #~ msgid "- Local YouTube playlist"
 #~ msgstr "- Liste de lecture YouTube locale"
@@ -270,9 +326,6 @@ msgstr "Vos favoris"
 #~ msgid "Included playlists and sources:"
 #~ msgstr "Listes de lecture et sources incluses :"
 
-#~ msgid "Live webcam viewer featuring global locations"
-#~ msgstr "Visionneuse de webcam en direct présentant des emplacements dans le monde entier"
-
 #~ msgid "No playlists available"
 #~ msgstr "Aucune playlist disponible"
 
@@ -296,9 +349,6 @@ msgstr "Vos favoris"
 
 #~ msgid "Technical error in Webcam.pl"
 #~ msgstr "Erreur technique dans Webcam.pl"
-
-#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
-#~ msgstr "Favoris exportés avec succès ! Redémarrez Enigma2 pour les voir."
 
 #~ msgid "YouTube playback error"
 #~ msgstr "Erreur de lecture YouTube"

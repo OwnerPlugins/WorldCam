@@ -69,17 +69,36 @@ msgstr "İhracat"
 msgid "Export All to Bouquet"
 msgstr "Tümünü Bukete Aktar"
 
+#, fuzzy
+msgid "Export failed"
+msgstr "Dışa aktarma başarısız oldu:"
+
 msgid "Export failed:"
 msgstr "Dışa aktarma başarısız oldu:"
 
 msgid "Exported %d webcams to '%s'"
 msgstr "%d web kamerası '%s' hedefine aktarıldı"
 
+#, fuzzy
+msgid "Exporting..."
+msgstr "İhracat"
+
 msgid "Favorites"
 msgstr "Favoriler"
 
+msgid ""
+"Install it with:\n"
+"opkg install python3-yt-dlp"
+msgstr "Şununla yükleyin:\nopkg python3-yt-dlp'yi yükleyin"
+
 msgid "Language changed to %s"
 msgstr "Dil %s olarak değiştirildi"
+
+msgid ""
+"Like this plugin?\n"
+"Buy me a coffee by scanning QR code.\n"
+"Your support keeps development alive!"
+msgstr "Bu eklentiyi beğendiniz mi?\nQR kodunu tarayarak bana bir kahve ısmarla.\nDesteğiniz gelişimi canlı tutuyor!"
 
 msgid "Live webcams from around the world"
 msgstr "Dünyanın dört bir yanından canlı web kameraları"
@@ -94,6 +113,15 @@ msgstr "Yükseltiliyor..."
 
 msgid "Menu"
 msgstr "Menü"
+
+msgid ""
+"New version %(version)s available\n"
+"\n"
+"Changelog:\n"
+"%(changelog)s\n"
+"\n"
+"Do you want to install it now?"
+msgstr "Yeni sürüm %(version)s mevcut\n\nDeğişiklik günlüğü:\n%(changelog)s\n\nŞimdi yüklemek istiyor musunuz?"
 
 msgid "No favorites to export"
 msgstr "Dışa aktarılacak favori yok"
@@ -158,7 +186,8 @@ msgstr "Ayarlar"
 msgid "Settings functionality coming soon!"
 msgstr "Ayarlar işlevi çok yakında!"
 
-msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+#, fuzzy
+msgid "SkylineWebcams and YouTube entries play from the bouquet only with streamlink and the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
 msgstr "SkylineWebcams girişleri buketten yalnızca akış bağlantısı sarmalayıcı eklentisi (enigma2-plugin-extensions-streamlinkwrapper) ile oynatılır."
 
 #, fuzzy
@@ -168,14 +197,32 @@ msgstr "YouTube akışı kullanılamıyor"
 msgid "Top Webcams"
 msgstr "En İyi Web Kameraları"
 
+msgid ""
+"Unable to fetch version info:\n"
+"{}"
+msgstr "Sürüm bilgisi getirilemiyor:\n{}"
+
 msgid "Update"
 msgstr "Güncelleme"
 
 msgid "Update Aborted!"
 msgstr "Güncelleme İptal Edildi!"
 
+#, fuzzy
+msgid ""
+"Update completed successfully!\n"
+"\n"
+"Restart Enigma2 to use the new version."
+msgstr "Favoriler başarıyla dışa aktarıldı! Bunları görmek için Enigma2'yi yeniden başlatın."
+
 msgid "Update encountered an error (code: %s)"
 msgstr "Güncelleme bir hatayla karşılaştı (kod: %s)"
+
+#, fuzzy
+msgid ""
+"Update failed:\n"
+"%s"
+msgstr "Dışa aktarma başarısız oldu:"
 
 msgid "Update plugin"
 msgstr "Eklentiyi güncelle"
@@ -186,17 +233,26 @@ msgstr "Yükseltiliyor..."
 msgid "User Lists"
 msgstr "Kullanıcı Listeleri"
 
+#, fuzzy
+msgid ""
+"WorldCam v%s\n"
+"\n"
+"Live webcam viewer featuring global locations\n"
+"\n"
+"Developed by Lululla"
+msgstr "Küresel konumları gösteren canlı web kamerası görüntüleyici"
+
 msgid "WorldCam v{}"
 msgstr ""
 
 msgid "You are already running the latest version: {}"
 msgstr "Zaten en son sürümü çalıştırıyorsunuz: {}"
 
-msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
-msgstr "YouTube girişleri buketten yalnızca yt-dlp sarmalayıcı eklentisi (enigma2-plugin-extensions-ytdlpwrapper) ile oynatılır."
-
 msgid "Your Favorites"
 msgstr "Favorileriniz"
+
+#~ msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+#~ msgstr "YouTube girişleri buketten yalnızca yt-dlp sarmalayıcı eklentisi (enigma2-plugin-extensions-ytdlpwrapper) ile oynatılır."
 
 #~ msgid "- Local YouTube playlist"
 #~ msgstr "- Yerel YouTube oynatma listesi"
@@ -270,9 +326,6 @@ msgstr "Favorileriniz"
 #~ msgid "Included playlists and sources:"
 #~ msgstr "Dahil edilen çalma listeleri ve kaynaklar:"
 
-#~ msgid "Live webcam viewer featuring global locations"
-#~ msgstr "Küresel konumları gösteren canlı web kamerası görüntüleyici"
-
 #~ msgid "No playlists available"
 #~ msgstr "Oynatma listesi yok"
 
@@ -296,9 +349,6 @@ msgstr "Favorileriniz"
 
 #~ msgid "Technical error in Webcam.pl"
 #~ msgstr "Webcam.pl'de teknik hata"
-
-#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
-#~ msgstr "Favoriler başarıyla dışa aktarıldı! Bunları görmek için Enigma2'yi yeniden başlatın."
 
 #~ msgid "YouTube playback error"
 #~ msgstr "YouTube oynatma hatası"

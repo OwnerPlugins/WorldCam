@@ -69,17 +69,36 @@ msgstr "Xuất khẩu"
 msgid "Export All to Bouquet"
 msgstr "Xuất tất cả sang bó hoa"
 
+#, fuzzy
+msgid "Export failed"
+msgstr "Xuất không thành công:"
+
 msgid "Export failed:"
 msgstr "Xuất không thành công:"
 
 msgid "Exported %d webcams to '%s'"
 msgstr "Đã xuất %d webcam sang '%s'"
 
+#, fuzzy
+msgid "Exporting..."
+msgstr "Xuất khẩu"
+
 msgid "Favorites"
 msgstr "Yêu thích"
 
+msgid ""
+"Install it with:\n"
+"opkg install python3-yt-dlp"
+msgstr "Cài đặt nó với:\nopkg cài đặt python3-yt-dlp"
+
 msgid "Language changed to %s"
 msgstr "Ngôn ngữ đã thay đổi thành %s"
+
+msgid ""
+"Like this plugin?\n"
+"Buy me a coffee by scanning QR code.\n"
+"Your support keeps development alive!"
+msgstr "Thích plugin này?\nMua cho tôi một ly cà phê bằng cách quét mã QR.\nSự hỗ trợ của bạn giúp duy trì sự phát triển!"
 
 msgid "Live webcams from around the world"
 msgstr "Webcam trực tiếp từ khắp nơi trên thế giới"
@@ -94,6 +113,15 @@ msgstr "Đang nâng cấp..."
 
 msgid "Menu"
 msgstr "Thực đơn"
+
+msgid ""
+"New version %(version)s available\n"
+"\n"
+"Changelog:\n"
+"%(changelog)s\n"
+"\n"
+"Do you want to install it now?"
+msgstr "Đã có phiên bản mới %(version)s\n\nNhật ký thay đổi:\n%(changelog)s\n\nBạn có muốn cài đặt nó ngay bây giờ không?"
 
 msgid "No favorites to export"
 msgstr "Không có mục yêu thích nào để xuất"
@@ -158,7 +186,8 @@ msgstr "Cài đặt"
 msgid "Settings functionality coming soon!"
 msgstr "Chức năng cài đặt sắp ra mắt!"
 
-msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+#, fuzzy
+msgid "SkylineWebcams and YouTube entries play from the bouquet only with streamlink and the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
 msgstr "Các mục SkylineWebcam chỉ phát từ bó với plugin trình bao bọc liên kết luồng (enigma2-plugin-extensions-streamlinkwrapper)."
 
 #, fuzzy
@@ -168,14 +197,32 @@ msgstr "Luồng YouTube không khả dụng"
 msgid "Top Webcams"
 msgstr "Webcam hàng đầu"
 
+msgid ""
+"Unable to fetch version info:\n"
+"{}"
+msgstr "Không thể tìm nạp thông tin phiên bản:\n{}"
+
 msgid "Update"
 msgstr "Cập nhật"
 
 msgid "Update Aborted!"
 msgstr "Cập nhật bị hủy bỏ!"
 
+#, fuzzy
+msgid ""
+"Update completed successfully!\n"
+"\n"
+"Restart Enigma2 to use the new version."
+msgstr "Đã xuất thành công mục yêu thích! Khởi động lại Enigma2 để xem chúng."
+
 msgid "Update encountered an error (code: %s)"
 msgstr "Cập nhật gặp lỗi (mã: %s)"
+
+#, fuzzy
+msgid ""
+"Update failed:\n"
+"%s"
+msgstr "Xuất không thành công:"
 
 msgid "Update plugin"
 msgstr "Cập nhật plugin"
@@ -186,17 +233,26 @@ msgstr "Đang nâng cấp..."
 msgid "User Lists"
 msgstr "Danh sách người dùng"
 
+#, fuzzy
+msgid ""
+"WorldCam v%s\n"
+"\n"
+"Live webcam viewer featuring global locations\n"
+"\n"
+"Developed by Lululla"
+msgstr "Trình xem webcam trực tiếp có các vị trí trên toàn cầu"
+
 msgid "WorldCam v{}"
 msgstr ""
 
 msgid "You are already running the latest version: {}"
 msgstr "Bạn đang chạy phiên bản mới nhất: {}"
 
-msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
-msgstr "Các mục trên YouTube chỉ phát từ bó hoa bằng plugin trình bao bọc yt-dlp (enigma2-plugin-extensions-ytdlpwrapper)."
-
 msgid "Your Favorites"
 msgstr "Yêu thích của bạn"
+
+#~ msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+#~ msgstr "Các mục trên YouTube chỉ phát từ bó hoa bằng plugin trình bao bọc yt-dlp (enigma2-plugin-extensions-ytdlpwrapper)."
 
 #~ msgid "- Local YouTube playlist"
 #~ msgstr "- Danh sách phát YouTube địa phương"
@@ -270,9 +326,6 @@ msgstr "Yêu thích của bạn"
 #~ msgid "Included playlists and sources:"
 #~ msgstr "Danh sách phát và nguồn bao gồm:"
 
-#~ msgid "Live webcam viewer featuring global locations"
-#~ msgstr "Trình xem webcam trực tiếp có các vị trí trên toàn cầu"
-
 #~ msgid "No playlists available"
 #~ msgstr "Không có danh sách phát nào"
 
@@ -296,9 +349,6 @@ msgstr "Yêu thích của bạn"
 
 #~ msgid "Technical error in Webcam.pl"
 #~ msgstr "Lỗi kỹ thuật trong Webcam.pl"
-
-#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
-#~ msgstr "Đã xuất thành công mục yêu thích! Khởi động lại Enigma2 để xem chúng."
 
 #~ msgid "YouTube playback error"
 #~ msgstr "Lỗi phát lại YouTube"

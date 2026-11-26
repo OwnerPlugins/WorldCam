@@ -69,17 +69,36 @@ msgstr "輸出"
 msgid "Export All to Bouquet"
 msgstr "すべてを Bouquet にエクスポート"
 
+#, fuzzy
+msgid "Export failed"
+msgstr "エクスポートに失敗しました:"
+
 msgid "Export failed:"
 msgstr "エクスポートに失敗しました:"
 
 msgid "Exported %d webcams to '%s'"
 msgstr "%d 個の Web カメラを '%s' にエクスポートしました"
 
+#, fuzzy
+msgid "Exporting..."
+msgstr "輸出"
+
 msgid "Favorites"
 msgstr "お気に入り"
 
+msgid ""
+"Install it with:\n"
+"opkg install python3-yt-dlp"
+msgstr "以下を使用してインストールします。\nopkg インストール python3-yt-dlp"
+
 msgid "Language changed to %s"
 msgstr "言語が %s に変更されました"
+
+msgid ""
+"Like this plugin?\n"
+"Buy me a coffee by scanning QR code.\n"
+"Your support keeps development alive!"
+msgstr "このプラグインが気に入りましたか?\nQRコードをスキャンしてコーヒーを買ってください。\nあなたのサポートが開発を継続させます!"
 
 msgid "Live webcams from around the world"
 msgstr "世界中からのライブウェブカメラ"
@@ -94,6 +113,15 @@ msgstr "アップグレード中..."
 
 msgid "Menu"
 msgstr "メニュー"
+
+msgid ""
+"New version %(version)s available\n"
+"\n"
+"Changelog:\n"
+"%(changelog)s\n"
+"\n"
+"Do you want to install it now?"
+msgstr "新しいバージョン %(version)s が利用可能になりました\n\n変更履歴:\n%(changelog)s\n\n今すぐインストールしますか?"
 
 msgid "No favorites to export"
 msgstr "エクスポートするお気に入りがありません"
@@ -158,7 +186,8 @@ msgstr "設定"
 msgid "Settings functionality coming soon!"
 msgstr "設定機能は近日公開予定です。"
 
-msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+#, fuzzy
+msgid "SkylineWebcams and YouTube entries play from the bouquet only with streamlink and the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
 msgstr "SkylineWebcams エントリは、streamlink ラッパー プラグイン (enigma2-plugin-extensions-streamlinkwrapper) を使用してのみブーケから再生されます。"
 
 #, fuzzy
@@ -168,14 +197,32 @@ msgstr "YouTube ストリームは利用できません"
 msgid "Top Webcams"
 msgstr "人気のウェブカメラ"
 
+msgid ""
+"Unable to fetch version info:\n"
+"{}"
+msgstr "バージョン情報を取得できません:\n{}"
+
 msgid "Update"
 msgstr "アップデート"
 
 msgid "Update Aborted!"
 msgstr "アップデートが中止されました!"
 
+#, fuzzy
+msgid ""
+"Update completed successfully!\n"
+"\n"
+"Restart Enigma2 to use the new version."
+msgstr "お気に入りが正常にエクスポートされました。 Enigma2 を再起動してそれらを表示します。"
+
 msgid "Update encountered an error (code: %s)"
 msgstr "更新でエラーが発生しました (コード: %s)"
+
+#, fuzzy
+msgid ""
+"Update failed:\n"
+"%s"
+msgstr "エクスポートに失敗しました:"
 
 msgid "Update plugin"
 msgstr "プラグインを更新する"
@@ -186,17 +233,26 @@ msgstr "アップグレード中..."
 msgid "User Lists"
 msgstr "ユーザーリスト"
 
+#, fuzzy
+msgid ""
+"WorldCam v%s\n"
+"\n"
+"Live webcam viewer featuring global locations\n"
+"\n"
+"Developed by Lululla"
+msgstr "世界中の場所を表示するライブ Web カメラ ビューア"
+
 msgid "WorldCam v{}"
 msgstr "ワールドカメラ v{}"
 
 msgid "You are already running the latest version: {}"
 msgstr "すでに最新バージョンを実行しています: {}"
 
-msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
-msgstr "YouTube エントリは、yt-dlp ラッパー プラグイン (enigma2-plugin-extensions-ytdlpwrapper) を使用してのみブーケから再生されます。"
-
 msgid "Your Favorites"
 msgstr "お気に入り"
+
+#~ msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+#~ msgstr "YouTube エントリは、yt-dlp ラッパー プラグイン (enigma2-plugin-extensions-ytdlpwrapper) を使用してのみブーケから再生されます。"
 
 #~ msgid "- Local YouTube playlist"
 #~ msgstr "- ローカル YouTube プレイリスト"
@@ -270,9 +326,6 @@ msgstr "お気に入り"
 #~ msgid "Included playlists and sources:"
 #~ msgstr "含まれるプレイリストとソース:"
 
-#~ msgid "Live webcam viewer featuring global locations"
-#~ msgstr "世界中の場所を表示するライブ Web カメラ ビューア"
-
 #~ msgid "No playlists available"
 #~ msgstr "利用可能なプレイリストがありません"
 
@@ -296,9 +349,6 @@ msgstr "お気に入り"
 
 #~ msgid "Technical error in Webcam.pl"
 #~ msgstr "Webcam.pl の技術的エラー"
-
-#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
-#~ msgstr "お気に入りが正常にエクスポートされました。 Enigma2 を再起動してそれらを表示します。"
 
 #~ msgid "YouTube playback error"
 #~ msgstr "YouTube 再生エラー"

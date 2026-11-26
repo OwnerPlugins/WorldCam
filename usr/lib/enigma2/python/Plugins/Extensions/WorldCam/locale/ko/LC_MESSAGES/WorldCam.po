@@ -69,17 +69,36 @@ msgstr "내보내다"
 msgid "Export All to Bouquet"
 msgstr "부케로 모두 내보내기"
 
+#, fuzzy
+msgid "Export failed"
+msgstr "내보내기 실패:"
+
 msgid "Export failed:"
 msgstr "내보내기 실패:"
 
 msgid "Exported %d webcams to '%s'"
 msgstr "%d개의 웹캠을 '%s'(으)로 내보냈습니다."
 
+#, fuzzy
+msgid "Exporting..."
+msgstr "내보내다"
+
 msgid "Favorites"
 msgstr "즐겨찾기"
 
+msgid ""
+"Install it with:\n"
+"opkg install python3-yt-dlp"
+msgstr "다음을 사용하여 설치하세요.\nopkg는 python3-yt-dlp를 설치합니다."
+
 msgid "Language changed to %s"
 msgstr "언어가 %s(으)로 변경되었습니다."
+
+msgid ""
+"Like this plugin?\n"
+"Buy me a coffee by scanning QR code.\n"
+"Your support keeps development alive!"
+msgstr "이 플러그인이 마음에 드시나요?\nQR코드를 스캔해서 커피를 사주세요.\n여러분의 지원으로 개발이 살아있게 됩니다!"
 
 msgid "Live webcams from around the world"
 msgstr "전 세계의 라이브 웹캠"
@@ -94,6 +113,15 @@ msgstr "업그레이드 중..."
 
 msgid "Menu"
 msgstr "메뉴"
+
+msgid ""
+"New version %(version)s available\n"
+"\n"
+"Changelog:\n"
+"%(changelog)s\n"
+"\n"
+"Do you want to install it now?"
+msgstr "새 버전 %(version)s 사용 가능\n\n변경 내역:\n%(changelog)s\n\n지금 설치하시겠습니까?"
 
 msgid "No favorites to export"
 msgstr "내보낼 즐겨찾기가 없습니다."
@@ -158,7 +186,8 @@ msgstr "설정"
 msgid "Settings functionality coming soon!"
 msgstr "설정 기능이 곧 제공될 예정입니다!"
 
-msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+#, fuzzy
+msgid "SkylineWebcams and YouTube entries play from the bouquet only with streamlink and the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
 msgstr "SkylineWebcams 항목은 streamlink 래퍼 플러그인(enigma2-plugin-extensions-streamlinkwrapper)을 통해서만 부케에서 재생됩니다."
 
 #, fuzzy
@@ -168,14 +197,32 @@ msgstr "YouTube 스트림을 사용할 수 없습니다."
 msgid "Top Webcams"
 msgstr "인기 웹캠"
 
+msgid ""
+"Unable to fetch version info:\n"
+"{}"
+msgstr "버전 정보를 가져올 수 없습니다.\n{}"
+
 msgid "Update"
 msgstr "업데이트"
 
 msgid "Update Aborted!"
 msgstr "업데이트가 중단되었습니다!"
 
+#, fuzzy
+msgid ""
+"Update completed successfully!\n"
+"\n"
+"Restart Enigma2 to use the new version."
+msgstr "즐겨찾기를 성공적으로 내보냈습니다! Enigma2를 다시 시작하여 확인하세요."
+
 msgid "Update encountered an error (code: %s)"
 msgstr "업데이트 중에 오류가 발생했습니다(코드: %s)."
+
+#, fuzzy
+msgid ""
+"Update failed:\n"
+"%s"
+msgstr "내보내기 실패:"
 
 msgid "Update plugin"
 msgstr "플러그인 업데이트"
@@ -186,17 +233,26 @@ msgstr "업그레이드 중..."
 msgid "User Lists"
 msgstr "사용자 목록"
 
+#, fuzzy
+msgid ""
+"WorldCam v%s\n"
+"\n"
+"Live webcam viewer featuring global locations\n"
+"\n"
+"Developed by Lululla"
+msgstr "전 세계 위치를 보여주는 라이브 웹캠 뷰어"
+
 msgid "WorldCam v{}"
 msgstr "월드캠 v{}"
 
 msgid "You are already running the latest version: {}"
 msgstr "이미 최신 버전을 실행하고 있습니다: {}"
 
-msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
-msgstr "YouTube 항목은 yt-dlp 래퍼 플러그인(enigma2-plugin-extensions-ytdlpwrapper)을 사용하는 경우에만 부케에서 재생됩니다."
-
 msgid "Your Favorites"
 msgstr "즐겨찾기"
+
+#~ msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
+#~ msgstr "YouTube 항목은 yt-dlp 래퍼 플러그인(enigma2-plugin-extensions-ytdlpwrapper)을 사용하는 경우에만 부케에서 재생됩니다."
 
 #~ msgid "- Local YouTube playlist"
 #~ msgstr "- 로컬 YouTube 재생목록"
@@ -270,9 +326,6 @@ msgstr "즐겨찾기"
 #~ msgid "Included playlists and sources:"
 #~ msgstr "포함된 재생목록 및 소스:"
 
-#~ msgid "Live webcam viewer featuring global locations"
-#~ msgstr "전 세계 위치를 보여주는 라이브 웹캠 뷰어"
-
 #~ msgid "No playlists available"
 #~ msgstr "사용 가능한 재생목록이 없습니다."
 
@@ -296,9 +349,6 @@ msgstr "즐겨찾기"
 
 #~ msgid "Technical error in Webcam.pl"
 #~ msgstr "Webcam.pl의 기술적 오류"
-
-#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
-#~ msgstr "즐겨찾기를 성공적으로 내보냈습니다! Enigma2를 다시 시작하여 확인하세요."
 
 #~ msgid "YouTube playback error"
 #~ msgstr "유튜브 재생 오류"

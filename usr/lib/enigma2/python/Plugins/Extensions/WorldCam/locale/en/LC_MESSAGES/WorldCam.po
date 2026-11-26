@@ -69,17 +69,36 @@ msgstr "Export"
 msgid "Export All to Bouquet"
 msgstr "Export All to Bouquet"
 
+#, fuzzy
+msgid "Export failed"
+msgstr "Export failed:"
+
 msgid "Export failed:"
 msgstr "Export failed:"
 
 msgid "Exported %d webcams to '%s'"
 msgstr ""
 
+#, fuzzy
+msgid "Exporting..."
+msgstr "Export"
+
 msgid "Favorites"
 msgstr "Favorites"
 
+msgid ""
+"Install it with:\n"
+"opkg install python3-yt-dlp"
+msgstr ""
+
 msgid "Language changed to %s"
 msgstr "Language changed to %s"
+
+msgid ""
+"Like this plugin?\n"
+"Buy me a coffee by scanning QR code.\n"
+"Your support keeps development alive!"
+msgstr ""
 
 msgid "Live webcams from around the world"
 msgstr "Live webcams from around the world"
@@ -94,6 +113,15 @@ msgstr "Upgrading..."
 
 msgid "Menu"
 msgstr "Menu"
+
+msgid ""
+"New version %(version)s available\n"
+"\n"
+"Changelog:\n"
+"%(changelog)s\n"
+"\n"
+"Do you want to install it now?"
+msgstr ""
 
 msgid "No favorites to export"
 msgstr "No favorites to export"
@@ -158,7 +186,7 @@ msgstr "Settings"
 msgid "Settings functionality coming soon!"
 msgstr "Settings functionality coming soon!"
 
-msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgid "SkylineWebcams and YouTube entries play from the bouquet only with streamlink and the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
 msgstr ""
 
 msgid "Stream not available"
@@ -167,14 +195,32 @@ msgstr ""
 msgid "Top Webcams"
 msgstr "Top Webcams"
 
+msgid ""
+"Unable to fetch version info:\n"
+"{}"
+msgstr ""
+
 msgid "Update"
 msgstr "Update"
 
 msgid "Update Aborted!"
 msgstr "Update Aborted!"
 
+#, fuzzy
+msgid ""
+"Update completed successfully!\n"
+"\n"
+"Restart Enigma2 to use the new version."
+msgstr "Favorites exported successfully! Restart Enigma2 to see them."
+
 msgid "Update encountered an error (code: %s)"
 msgstr "Update encountered an error (code: %s)"
+
+#, fuzzy
+msgid ""
+"Update failed:\n"
+"%s"
+msgstr "Export failed:"
 
 msgid "Update plugin"
 msgstr "Update plugin"
@@ -185,14 +231,20 @@ msgstr "Upgrading..."
 msgid "User Lists"
 msgstr "User Lists"
 
+#, fuzzy
+msgid ""
+"WorldCam v%s\n"
+"\n"
+"Live webcam viewer featuring global locations\n"
+"\n"
+"Developed by Lululla"
+msgstr "Live webcam viewer featuring global locations"
+
 msgid "WorldCam v{}"
 msgstr "WorldCam v{}"
 
 msgid "You are already running the latest version: {}"
 msgstr "You are already running the latest version: {}"
-
-msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
-msgstr ""
 
 msgid "Your Favorites"
 msgstr "Your Favorites"
@@ -272,9 +324,6 @@ msgstr "Your Favorites"
 #~ msgid "Included playlists and sources:"
 #~ msgstr "Included playlists and sources:"
 
-#~ msgid "Live webcam viewer featuring global locations"
-#~ msgstr "Live webcam viewer featuring global locations"
-
 #~ msgid "No playlists available"
 #~ msgstr "No playlists available"
 
@@ -301,9 +350,6 @@ msgstr "Your Favorites"
 
 #~ msgid "WorldCam v%s"
 #~ msgstr "WorldCam v%s"
-
-#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
-#~ msgstr "Favorites exported successfully! Restart Enigma2 to see them."
 
 #~ msgid "YouTube playback error"
 #~ msgstr "YouTube playback error"
