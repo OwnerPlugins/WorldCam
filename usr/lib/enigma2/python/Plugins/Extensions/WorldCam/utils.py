@@ -271,34 +271,39 @@ def bouquet_service_lines(url, name):
     return lines, kind
 
 
-def resolve_skyline_youtube(urls, workers=2):
+def resolve_skyline_youtube(urls, workers=1):
     """
-    Open the given SkylineWebcams pages (in parallel) and return
+    Open the given SkylineWebcams pages (sequentially) and return
     {page_url: youtube_watch_url} for the cams streamed through YouTube.
-    HLS cams and pages that cannot be read are left out (they stay
-    streamlink:// in the bouquet).
+    We removed the parallel download to avoid HTTP 429 Too Many Requests.
     """
     urls = [u for u in dict.fromkeys(urls) if is_skyline_page(u)]
     if not urls:
         return {}
-    from concurrent.futures import ThreadPoolExecutor
+        
+    import time
     from .scraper import SkylineScraper   # lazy: scraper imports utils
     scraper = SkylineScraper()
 
-    def check(page_url):
+    found = {}
+    total = len(urls)
+    
+    for i, page_url in enumerate(urls):
+        # PAUSA DI SICUREZZA: 1.5 secondi tra una pagina e l'altra
+        time.sleep(1.5)
+        
         try:
             stream = scraper.get_stream_url(page_url)
-        except Exception:
-            stream = None
-        return page_url, stream
-
-    found = {}
-    with ThreadPoolExecutor(max_workers=min(workers, len(urls))) as pool:
-        for page_url, stream in pool.map(check, urls):
             if stream and is_youtube_url(stream):
                 found[page_url] = stream
-    Logger().info("Export: %d of %d SkylineWebcams cams are YouTube" %
-                  (len(found), len(urls)))
+        except Exception:
+            pass
+            
+        # Log di avanzamento (utile per vedere che non si è bloccato)
+        if (i + 1) % 5 == 0:
+            Logger().info("Export progress: %d/%d pages checked..." % (i + 1, total))
+
+    Logger().info("Export: %d of %d SkylineWebcams cams are YouTube" % (len(found), len(urls)))
     return found
 
 
