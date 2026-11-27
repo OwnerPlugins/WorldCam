@@ -69,17 +69,25 @@ msgid "Export All to Bouquet"
 msgstr "Ekspor Semua ke Buket"
 
 #, fuzzy
+msgid "Export delay"
+msgstr "Ekspor"
+
+#, fuzzy
 msgid "Export failed"
 msgstr "Ekspor gagal:"
 
 msgid "Export failed:"
 msgstr "Ekspor gagal:"
 
+#, fuzzy
+msgid "Export workers"
+msgstr "Ekspor"
+
 msgid "Exported %d webcams to '%s'"
 msgstr "Mengekspor %d webcam ke '%s'"
 
 #, fuzzy
-msgid "Exporting..."
+msgid "Exporting... Please wait"
 msgstr "Ekspor"
 
 msgid "Favorites"
@@ -88,7 +96,9 @@ msgstr "Favorit"
 msgid ""
 "Install it with:\n"
 "opkg install python3-yt-dlp"
-msgstr "Instal dengan:\nopkg instal python3-yt-dlp"
+msgstr ""
+"Instal dengan:\n"
+"opkg instal python3-yt-dlp"
 
 msgid "Language changed to %s"
 msgstr "Bahasa diubah menjadi %s"
@@ -97,7 +107,10 @@ msgid ""
 "Like this plugin?\n"
 "Buy me a coffee by scanning QR code.\n"
 "Your support keeps development alive!"
-msgstr "Suka plugin ini?\nBelikan saya kopi dengan memindai kode QR.\nDukungan Anda membuat pembangunan tetap berjalan!"
+msgstr ""
+"Suka plugin ini?\n"
+"Belikan saya kopi dengan memindai kode QR.\n"
+"Dukungan Anda membuat pembangunan tetap berjalan!"
 
 msgid "Live webcams from around the world"
 msgstr "Webcam langsung dari seluruh dunia"
@@ -120,7 +133,13 @@ msgid ""
 "%(changelog)s\n"
 "\n"
 "Do you want to install it now?"
-msgstr "Versi baru %(version)s tersedia\n\nCatatan Perubahan:\n%(changelog)s\n\nApakah Anda ingin menginstalnya sekarang?"
+msgstr ""
+"Versi baru %(version)s tersedia\n"
+"\n"
+"Catatan Perubahan:\n"
+"%(changelog)s\n"
+"\n"
+"Apakah Anda ingin menginstalnya sekarang?"
 
 msgid "No favorites to export"
 msgstr "Tidak ada favorit untuk diekspor"
@@ -182,8 +201,8 @@ msgstr "Pilih bahasa"
 msgid "Settings"
 msgstr "Pengaturan"
 
-msgid "Settings functionality coming soon!"
-msgstr "Fungsi pengaturan segera hadir!"
+msgid "Skyline wrapper"
+msgstr "Pembungkus cakrawala"
 
 #, fuzzy
 msgid "SkylineWebcams and YouTube entries play from the bouquet only with streamlink and the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
@@ -199,7 +218,9 @@ msgstr "Webcam Teratas"
 msgid ""
 "Unable to fetch version info:\n"
 "{}"
-msgstr "Tidak dapat mengambil info versi:\n{}"
+msgstr ""
+"Tidak dapat mengambil info versi:\n"
+"{}"
 
 msgid "Update"
 msgstr "Memperbarui"
@@ -233,6 +254,10 @@ msgid "User Lists"
 msgstr "Daftar Pengguna"
 
 #, fuzzy
+msgid "WorldCam Settings"
+msgstr "Pengaturan"
+
+#, fuzzy
 msgid ""
 "WorldCam v%s\n"
 "\n"
@@ -247,8 +272,14 @@ msgstr "Kamera Dunia v{}"
 msgid "You are already running the latest version: {}"
 msgstr "Anda sudah menjalankan versi terbaru: {}"
 
+msgid "YouTube wrapper"
+msgstr "pembungkus YouTube"
+
 msgid "Your Favorites"
 msgstr "Favorit Anda"
+
+#~ msgid "Settings functionality coming soon!"
+#~ msgstr "Fungsi pengaturan segera hadir!"
 
 #~ msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
 #~ msgstr "Entri YouTube diputar dari buket hanya dengan plugin pembungkus yt-dlp (enigma2-plugin-extensions-ytdlpwrapper)."

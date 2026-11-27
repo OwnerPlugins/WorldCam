@@ -70,17 +70,25 @@ msgid "Export All to Bouquet"
 msgstr "Xuất tất cả sang bó hoa"
 
 #, fuzzy
+msgid "Export delay"
+msgstr "Xuất khẩu"
+
+#, fuzzy
 msgid "Export failed"
 msgstr "Xuất không thành công:"
 
 msgid "Export failed:"
 msgstr "Xuất không thành công:"
 
+#, fuzzy
+msgid "Export workers"
+msgstr "Xuất khẩu"
+
 msgid "Exported %d webcams to '%s'"
 msgstr "Đã xuất %d webcam sang '%s'"
 
 #, fuzzy
-msgid "Exporting..."
+msgid "Exporting... Please wait"
 msgstr "Xuất khẩu"
 
 msgid "Favorites"
@@ -89,7 +97,9 @@ msgstr "Yêu thích"
 msgid ""
 "Install it with:\n"
 "opkg install python3-yt-dlp"
-msgstr "Cài đặt nó với:\nopkg cài đặt python3-yt-dlp"
+msgstr ""
+"Cài đặt nó với:\n"
+"opkg cài đặt python3-yt-dlp"
 
 msgid "Language changed to %s"
 msgstr "Ngôn ngữ đã thay đổi thành %s"
@@ -98,7 +108,10 @@ msgid ""
 "Like this plugin?\n"
 "Buy me a coffee by scanning QR code.\n"
 "Your support keeps development alive!"
-msgstr "Thích plugin này?\nMua cho tôi một ly cà phê bằng cách quét mã QR.\nSự hỗ trợ của bạn giúp duy trì sự phát triển!"
+msgstr ""
+"Thích plugin này?\n"
+"Mua cho tôi một ly cà phê bằng cách quét mã QR.\n"
+"Sự hỗ trợ của bạn giúp duy trì sự phát triển!"
 
 msgid "Live webcams from around the world"
 msgstr "Webcam trực tiếp từ khắp nơi trên thế giới"
@@ -121,7 +134,13 @@ msgid ""
 "%(changelog)s\n"
 "\n"
 "Do you want to install it now?"
-msgstr "Đã có phiên bản mới %(version)s\n\nNhật ký thay đổi:\n%(changelog)s\n\nBạn có muốn cài đặt nó ngay bây giờ không?"
+msgstr ""
+"Đã có phiên bản mới %(version)s\n"
+"\n"
+"Nhật ký thay đổi:\n"
+"%(changelog)s\n"
+"\n"
+"Bạn có muốn cài đặt nó ngay bây giờ không?"
 
 msgid "No favorites to export"
 msgstr "Không có mục yêu thích nào để xuất"
@@ -183,8 +202,8 @@ msgstr "Chọn ngôn ngữ"
 msgid "Settings"
 msgstr "Cài đặt"
 
-msgid "Settings functionality coming soon!"
-msgstr "Chức năng cài đặt sắp ra mắt!"
+msgid "Skyline wrapper"
+msgstr "Trình bao bọc đường chân trời"
 
 #, fuzzy
 msgid "SkylineWebcams and YouTube entries play from the bouquet only with streamlink and the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
@@ -200,7 +219,9 @@ msgstr "Webcam hàng đầu"
 msgid ""
 "Unable to fetch version info:\n"
 "{}"
-msgstr "Không thể tìm nạp thông tin phiên bản:\n{}"
+msgstr ""
+"Không thể tìm nạp thông tin phiên bản:\n"
+"{}"
 
 msgid "Update"
 msgstr "Cập nhật"
@@ -234,6 +255,10 @@ msgid "User Lists"
 msgstr "Danh sách người dùng"
 
 #, fuzzy
+msgid "WorldCam Settings"
+msgstr "Cài đặt"
+
+#, fuzzy
 msgid ""
 "WorldCam v%s\n"
 "\n"
@@ -248,8 +273,14 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "Bạn đang chạy phiên bản mới nhất: {}"
 
+msgid "YouTube wrapper"
+msgstr "Trình bao bọc YouTube"
+
 msgid "Your Favorites"
 msgstr "Yêu thích của bạn"
+
+#~ msgid "Settings functionality coming soon!"
+#~ msgstr "Chức năng cài đặt sắp ra mắt!"
 
 #~ msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
 #~ msgstr "Các mục trên YouTube chỉ phát từ bó hoa bằng plugin trình bao bọc yt-dlp (enigma2-plugin-extensions-ytdlpwrapper)."

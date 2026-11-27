@@ -69,17 +69,25 @@ msgid "Export All to Bouquet"
 msgstr "全部导出到花束"
 
 #, fuzzy
+msgid "Export delay"
+msgstr "出口"
+
+#, fuzzy
 msgid "Export failed"
 msgstr "导出失败："
 
 msgid "Export failed:"
 msgstr "导出失败："
 
+#, fuzzy
+msgid "Export workers"
+msgstr "出口"
+
 msgid "Exported %d webcams to '%s'"
 msgstr "已将 %d 个网络摄像头导出到“%s”"
 
 #, fuzzy
-msgid "Exporting..."
+msgid "Exporting... Please wait"
 msgstr "出口"
 
 msgid "Favorites"
@@ -88,7 +96,9 @@ msgstr "收藏夹"
 msgid ""
 "Install it with:\n"
 "opkg install python3-yt-dlp"
-msgstr "安装它：\nopkg 安装 python3-yt-dlp"
+msgstr ""
+"安装它：\n"
+"opkg 安装 python3-yt-dlp"
 
 msgid "Language changed to %s"
 msgstr "语言更改为 %s"
@@ -97,7 +107,10 @@ msgid ""
 "Like this plugin?\n"
 "Buy me a coffee by scanning QR code.\n"
 "Your support keeps development alive!"
-msgstr "喜欢这个插件吗？\n扫描二维码给我买杯咖啡。\n您的支持让发展充满生机！"
+msgstr ""
+"喜欢这个插件吗？\n"
+"扫描二维码给我买杯咖啡。\n"
+"您的支持让发展充满生机！"
 
 msgid "Live webcams from around the world"
 msgstr "来自世界各地的实时网络摄像头"
@@ -120,7 +133,13 @@ msgid ""
 "%(changelog)s\n"
 "\n"
 "Do you want to install it now?"
-msgstr "新版本 %(version)s 可用\n\n变更日志：\n%(changelog)s\n\n您想现在安装吗？"
+msgstr ""
+"新版本 %(version)s 可用\n"
+"\n"
+"变更日志：\n"
+"%(changelog)s\n"
+"\n"
+"您想现在安装吗？"
 
 msgid "No favorites to export"
 msgstr "没有可导出的收藏夹"
@@ -182,8 +201,8 @@ msgstr "选择语言"
 msgid "Settings"
 msgstr "设置"
 
-msgid "Settings functionality coming soon!"
-msgstr "设置功能即将推出！"
+msgid "Skyline wrapper"
+msgstr "天际线包装纸"
 
 #, fuzzy
 msgid "SkylineWebcams and YouTube entries play from the bouquet only with streamlink and the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
@@ -199,7 +218,9 @@ msgstr "热门网络摄像头"
 msgid ""
 "Unable to fetch version info:\n"
 "{}"
-msgstr "无法获取版本信息：\n{}"
+msgstr ""
+"无法获取版本信息：\n"
+"{}"
 
 msgid "Update"
 msgstr "更新"
@@ -233,6 +254,10 @@ msgid "User Lists"
 msgstr "用户列表"
 
 #, fuzzy
+msgid "WorldCam Settings"
+msgstr "设置"
+
+#, fuzzy
 msgid ""
 "WorldCam v%s\n"
 "\n"
@@ -247,8 +272,14 @@ msgstr ""
 msgid "You are already running the latest version: {}"
 msgstr "您已经在运行最新版本：{}"
 
+msgid "YouTube wrapper"
+msgstr "YouTube 包装器"
+
 msgid "Your Favorites"
 msgstr "您的最爱"
+
+#~ msgid "Settings functionality coming soon!"
+#~ msgstr "设置功能即将推出！"
 
 #~ msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
 #~ msgstr "YouTube 条目只能通过 yt-dlp 包装器插件 (enigma2-plugin-extensions-ytdlpwrapper) 从花束中播放。"

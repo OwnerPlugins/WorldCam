@@ -70,7 +70,7 @@ msgstr ""
 msgid "Export failed"
 msgstr ""
 
-msgid "Export failed: "
+msgid "Export failed:"
 msgstr ""
 
 msgid "Export workers"
@@ -91,7 +91,7 @@ msgstr ""
 msgid "Language changed to %s"
 msgstr ""
 
-msgid "Like this plugin?\nBuy me a coffee by scanning QR code.\nYour support keeps development alive!\n"
+msgid "Like this plugin?\nBuy me a coffee by scanning QR code.\nYour support keeps development alive!"
 msgstr ""
 
 msgid "Live webcams from around the world"
@@ -208,18 +208,18 @@ msgstr ""
 msgid "WorldCam Settings"
 msgstr ""
 
-msgid "WorldCam v{}"
+msgid "WorldCam v%s\n\nLive webcam viewer featuring global locations\n\nDeveloped by Lululla"
 msgstr ""
 
-msgid "WorldCam v%s\n\nLive webcam viewer featuring global locations\n\nDeveloped by Lululla"
+msgid "WorldCam v{}"
 msgstr ""
 
 msgid "You are already running the latest version: {}"
 msgstr ""
 
-msgid "Your Favorites"
+msgid "YouTube wrapper"
 msgstr ""
 
-msgid "YouTube wrapper"
+msgid "Your Favorites"
 msgstr ""
 

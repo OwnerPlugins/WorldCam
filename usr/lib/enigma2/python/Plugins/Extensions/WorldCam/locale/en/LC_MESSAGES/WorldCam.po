@@ -70,17 +70,25 @@ msgid "Export All to Bouquet"
 msgstr "Export All to Bouquet"
 
 #, fuzzy
+msgid "Export delay"
+msgstr "Export"
+
+#, fuzzy
 msgid "Export failed"
 msgstr "Export failed:"
 
 msgid "Export failed:"
 msgstr "Export failed:"
 
+#, fuzzy
+msgid "Export workers"
+msgstr "Export"
+
 msgid "Exported %d webcams to '%s'"
 msgstr ""
 
 #, fuzzy
-msgid "Exporting..."
+msgid "Exporting... Please wait"
 msgstr "Export"
 
 msgid "Favorites"
@@ -183,8 +191,8 @@ msgstr "Select language"
 msgid "Settings"
 msgstr "Settings"
 
-msgid "Settings functionality coming soon!"
-msgstr "Settings functionality coming soon!"
+msgid "Skyline wrapper"
+msgstr ""
 
 msgid "SkylineWebcams and YouTube entries play from the bouquet only with streamlink and the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
 msgstr ""
@@ -232,6 +240,10 @@ msgid "User Lists"
 msgstr "User Lists"
 
 #, fuzzy
+msgid "WorldCam Settings"
+msgstr "WorldCam v%s"
+
+#, fuzzy
 msgid ""
 "WorldCam v%s\n"
 "\n"
@@ -246,8 +258,14 @@ msgstr "WorldCam v{}"
 msgid "You are already running the latest version: {}"
 msgstr "You are already running the latest version: {}"
 
+msgid "YouTube wrapper"
+msgstr ""
+
 msgid "Your Favorites"
 msgstr "Your Favorites"
+
+#~ msgid "Settings functionality coming soon!"
+#~ msgstr "Settings functionality coming soon!"
 
 #~ msgid "- Local YouTube playlist"
 #~ msgstr "- Local YouTube playlist"
@@ -347,9 +365,6 @@ msgstr "Your Favorites"
 
 #~ msgid "Technical error in Webcam.pl"
 #~ msgstr "Technical error in Webcam.pl"
-
-#~ msgid "WorldCam v%s"
-#~ msgstr "WorldCam v%s"
 
 #~ msgid "YouTube playback error"
 #~ msgstr "YouTube playback error"

@@ -70,17 +70,25 @@ msgid "Export All to Bouquet"
 msgstr "すべてを Bouquet にエクスポート"
 
 #, fuzzy
+msgid "Export delay"
+msgstr "輸出"
+
+#, fuzzy
 msgid "Export failed"
 msgstr "エクスポートに失敗しました:"
 
 msgid "Export failed:"
 msgstr "エクスポートに失敗しました:"
 
+#, fuzzy
+msgid "Export workers"
+msgstr "輸出"
+
 msgid "Exported %d webcams to '%s'"
 msgstr "%d 個の Web カメラを '%s' にエクスポートしました"
 
 #, fuzzy
-msgid "Exporting..."
+msgid "Exporting... Please wait"
 msgstr "輸出"
 
 msgid "Favorites"
@@ -89,7 +97,9 @@ msgstr "お気に入り"
 msgid ""
 "Install it with:\n"
 "opkg install python3-yt-dlp"
-msgstr "以下を使用してインストールします。\nopkg インストール python3-yt-dlp"
+msgstr ""
+"以下を使用してインストールします。\n"
+"opkg インストール python3-yt-dlp"
 
 msgid "Language changed to %s"
 msgstr "言語が %s に変更されました"
@@ -98,7 +108,10 @@ msgid ""
 "Like this plugin?\n"
 "Buy me a coffee by scanning QR code.\n"
 "Your support keeps development alive!"
-msgstr "このプラグインが気に入りましたか?\nQRコードをスキャンしてコーヒーを買ってください。\nあなたのサポートが開発を継続させます!"
+msgstr ""
+"このプラグインが気に入りましたか?\n"
+"QRコードをスキャンしてコーヒーを買ってください。\n"
+"あなたのサポートが開発を継続させます!"
 
 msgid "Live webcams from around the world"
 msgstr "世界中からのライブウェブカメラ"
@@ -121,7 +134,13 @@ msgid ""
 "%(changelog)s\n"
 "\n"
 "Do you want to install it now?"
-msgstr "新しいバージョン %(version)s が利用可能になりました\n\n変更履歴:\n%(changelog)s\n\n今すぐインストールしますか?"
+msgstr ""
+"新しいバージョン %(version)s が利用可能になりました\n"
+"\n"
+"変更履歴:\n"
+"%(changelog)s\n"
+"\n"
+"今すぐインストールしますか?"
 
 msgid "No favorites to export"
 msgstr "エクスポートするお気に入りがありません"
@@ -183,8 +202,8 @@ msgstr "言語を選択してください"
 msgid "Settings"
 msgstr "設定"
 
-msgid "Settings functionality coming soon!"
-msgstr "設定機能は近日公開予定です。"
+msgid "Skyline wrapper"
+msgstr "スカイラインラッパー"
 
 #, fuzzy
 msgid "SkylineWebcams and YouTube entries play from the bouquet only with streamlink and the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
@@ -200,7 +219,9 @@ msgstr "人気のウェブカメラ"
 msgid ""
 "Unable to fetch version info:\n"
 "{}"
-msgstr "バージョン情報を取得できません:\n{}"
+msgstr ""
+"バージョン情報を取得できません:\n"
+"{}"
 
 msgid "Update"
 msgstr "アップデート"
@@ -234,6 +255,10 @@ msgid "User Lists"
 msgstr "ユーザーリスト"
 
 #, fuzzy
+msgid "WorldCam Settings"
+msgstr "設定"
+
+#, fuzzy
 msgid ""
 "WorldCam v%s\n"
 "\n"
@@ -248,8 +273,14 @@ msgstr "ワールドカメラ v{}"
 msgid "You are already running the latest version: {}"
 msgstr "すでに最新バージョンを実行しています: {}"
 
+msgid "YouTube wrapper"
+msgstr "YouTube ラッパー"
+
 msgid "Your Favorites"
 msgstr "お気に入り"
+
+#~ msgid "Settings functionality coming soon!"
+#~ msgstr "設定機能は近日公開予定です。"
 
 #~ msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
 #~ msgstr "YouTube エントリは、yt-dlp ラッパー プラグイン (enigma2-plugin-extensions-ytdlpwrapper) を使用してのみブーケから再生されます。"

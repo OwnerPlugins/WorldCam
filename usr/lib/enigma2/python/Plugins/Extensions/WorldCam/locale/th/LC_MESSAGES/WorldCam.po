@@ -69,17 +69,25 @@ msgid "Export All to Bouquet"
 msgstr "ส่งออกทั้งหมดไปยังช่อดอกไม้"
 
 #, fuzzy
+msgid "Export delay"
+msgstr "ส่งออก"
+
+#, fuzzy
 msgid "Export failed"
 msgstr "การส่งออกล้มเหลว:"
 
 msgid "Export failed:"
 msgstr "การส่งออกล้มเหลว:"
 
+#, fuzzy
+msgid "Export workers"
+msgstr "ส่งออก"
+
 msgid "Exported %d webcams to '%s'"
 msgstr "ส่งออกเว็บแคม %d รายการไปยัง '%s'"
 
 #, fuzzy
-msgid "Exporting..."
+msgid "Exporting... Please wait"
 msgstr "ส่งออก"
 
 msgid "Favorites"
@@ -88,7 +96,9 @@ msgstr "รายการโปรด"
 msgid ""
 "Install it with:\n"
 "opkg install python3-yt-dlp"
-msgstr "ติดตั้งด้วย:\nopkg ติดตั้ง python3-yt-dlp"
+msgstr ""
+"ติดตั้งด้วย:\n"
+"opkg ติดตั้ง python3-yt-dlp"
 
 msgid "Language changed to %s"
 msgstr "ภาษาเปลี่ยนเป็น %s"
@@ -97,7 +107,10 @@ msgid ""
 "Like this plugin?\n"
 "Buy me a coffee by scanning QR code.\n"
 "Your support keeps development alive!"
-msgstr "ชอบปลั๊กอินนี้หรือไม่?\nซื้อกาแฟให้ฉันโดยสแกนรหัส QR\nการสนับสนุนของคุณช่วยให้การพัฒนายังคงอยู่!"
+msgstr ""
+"ชอบปลั๊กอินนี้หรือไม่?\n"
+"ซื้อกาแฟให้ฉันโดยสแกนรหัส QR\n"
+"การสนับสนุนของคุณช่วยให้การพัฒนายังคงอยู่!"
 
 msgid "Live webcams from around the world"
 msgstr "เว็บแคมถ่ายทอดสดจากทั่วโลก"
@@ -120,7 +133,13 @@ msgid ""
 "%(changelog)s\n"
 "\n"
 "Do you want to install it now?"
-msgstr "มีเวอร์ชันใหม่ %(version)s แล้ว\n\nบันทึกการเปลี่ยนแปลง:\n%(changelog)s\n\nคุณต้องการติดตั้งตอนนี้หรือไม่?"
+msgstr ""
+"มีเวอร์ชันใหม่ %(version)s แล้ว\n"
+"\n"
+"บันทึกการเปลี่ยนแปลง:\n"
+"%(changelog)s\n"
+"\n"
+"คุณต้องการติดตั้งตอนนี้หรือไม่?"
 
 msgid "No favorites to export"
 msgstr "ไม่มีรายการโปรดที่จะส่งออก"
@@ -182,8 +201,8 @@ msgstr "เลือกภาษา"
 msgid "Settings"
 msgstr "การตั้งค่า"
 
-msgid "Settings functionality coming soon!"
-msgstr "ฟังก์ชั่นการตั้งค่าจะมาเร็ว ๆ นี้!"
+msgid "Skyline wrapper"
+msgstr "กระดาษห่อสกายไลน์"
 
 #, fuzzy
 msgid "SkylineWebcams and YouTube entries play from the bouquet only with streamlink and the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
@@ -199,7 +218,9 @@ msgstr "เว็บแคมยอดนิยม"
 msgid ""
 "Unable to fetch version info:\n"
 "{}"
-msgstr "ไม่สามารถดึงข้อมูลเวอร์ชันได้:\n{}"
+msgstr ""
+"ไม่สามารถดึงข้อมูลเวอร์ชันได้:\n"
+"{}"
 
 msgid "Update"
 msgstr "อัปเดต"
@@ -233,6 +254,10 @@ msgid "User Lists"
 msgstr "รายชื่อผู้ใช้"
 
 #, fuzzy
+msgid "WorldCam Settings"
+msgstr "เวิลด์แคม v%s"
+
+#, fuzzy
 msgid ""
 "WorldCam v%s\n"
 "\n"
@@ -247,8 +272,14 @@ msgstr "เวิลด์แคม วี{}"
 msgid "You are already running the latest version: {}"
 msgstr "คุณกำลังใช้งานเวอร์ชันล่าสุดอยู่แล้ว: {}"
 
+msgid "YouTube wrapper"
+msgstr "Wrapper ของ YouTube"
+
 msgid "Your Favorites"
 msgstr "รายการโปรดของคุณ"
+
+#~ msgid "Settings functionality coming soon!"
+#~ msgstr "ฟังก์ชั่นการตั้งค่าจะมาเร็ว ๆ นี้!"
 
 #~ msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
 #~ msgstr "รายการ YouTube จะเล่นจากช่อดอกไม้ด้วยปลั๊กอิน yt-dlp wrapper เท่านั้น (enigma2-plugin-extensions-ytdlpwrapper)"
@@ -348,9 +379,6 @@ msgstr "รายการโปรดของคุณ"
 
 #~ msgid "Technical error in Webcam.pl"
 #~ msgstr "ข้อผิดพลาดทางเทคนิคใน Webcam.pl"
-
-#~ msgid "WorldCam v%s"
-#~ msgstr "เวิลด์แคม v%s"
 
 #~ msgid "YouTube playback error"
 #~ msgstr "ข้อผิดพลาดในการเล่น YouTube"
