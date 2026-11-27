@@ -70,17 +70,25 @@ msgid "Export All to Bouquet"
 msgstr "부케로 모두 내보내기"
 
 #, fuzzy
+msgid "Export delay"
+msgstr "내보내다"
+
+#, fuzzy
 msgid "Export failed"
 msgstr "내보내기 실패:"
 
 msgid "Export failed:"
 msgstr "내보내기 실패:"
 
+#, fuzzy
+msgid "Export workers"
+msgstr "내보내다"
+
 msgid "Exported %d webcams to '%s'"
 msgstr "%d개의 웹캠을 '%s'(으)로 내보냈습니다."
 
 #, fuzzy
-msgid "Exporting..."
+msgid "Exporting... Please wait"
 msgstr "내보내다"
 
 msgid "Favorites"
@@ -89,7 +97,9 @@ msgstr "즐겨찾기"
 msgid ""
 "Install it with:\n"
 "opkg install python3-yt-dlp"
-msgstr "다음을 사용하여 설치하세요.\nopkg는 python3-yt-dlp를 설치합니다."
+msgstr ""
+"다음을 사용하여 설치하세요.\n"
+"opkg는 python3-yt-dlp를 설치합니다."
 
 msgid "Language changed to %s"
 msgstr "언어가 %s(으)로 변경되었습니다."
@@ -98,7 +108,10 @@ msgid ""
 "Like this plugin?\n"
 "Buy me a coffee by scanning QR code.\n"
 "Your support keeps development alive!"
-msgstr "이 플러그인이 마음에 드시나요?\nQR코드를 스캔해서 커피를 사주세요.\n여러분의 지원으로 개발이 살아있게 됩니다!"
+msgstr ""
+"이 플러그인이 마음에 드시나요?\n"
+"QR코드를 스캔해서 커피를 사주세요.\n"
+"여러분의 지원으로 개발이 살아있게 됩니다!"
 
 msgid "Live webcams from around the world"
 msgstr "전 세계의 라이브 웹캠"
@@ -121,7 +134,13 @@ msgid ""
 "%(changelog)s\n"
 "\n"
 "Do you want to install it now?"
-msgstr "새 버전 %(version)s 사용 가능\n\n변경 내역:\n%(changelog)s\n\n지금 설치하시겠습니까?"
+msgstr ""
+"새 버전 %(version)s 사용 가능\n"
+"\n"
+"변경 내역:\n"
+"%(changelog)s\n"
+"\n"
+"지금 설치하시겠습니까?"
 
 msgid "No favorites to export"
 msgstr "내보낼 즐겨찾기가 없습니다."
@@ -183,8 +202,8 @@ msgstr "언어 선택"
 msgid "Settings"
 msgstr "설정"
 
-msgid "Settings functionality coming soon!"
-msgstr "설정 기능이 곧 제공될 예정입니다!"
+msgid "Skyline wrapper"
+msgstr "스카이라인 래퍼"
 
 #, fuzzy
 msgid "SkylineWebcams and YouTube entries play from the bouquet only with streamlink and the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
@@ -200,7 +219,9 @@ msgstr "인기 웹캠"
 msgid ""
 "Unable to fetch version info:\n"
 "{}"
-msgstr "버전 정보를 가져올 수 없습니다.\n{}"
+msgstr ""
+"버전 정보를 가져올 수 없습니다.\n"
+"{}"
 
 msgid "Update"
 msgstr "업데이트"
@@ -234,6 +255,10 @@ msgid "User Lists"
 msgstr "사용자 목록"
 
 #, fuzzy
+msgid "WorldCam Settings"
+msgstr "설정"
+
+#, fuzzy
 msgid ""
 "WorldCam v%s\n"
 "\n"
@@ -248,8 +273,14 @@ msgstr "월드캠 v{}"
 msgid "You are already running the latest version: {}"
 msgstr "이미 최신 버전을 실행하고 있습니다: {}"
 
+msgid "YouTube wrapper"
+msgstr "유튜브 래퍼"
+
 msgid "Your Favorites"
 msgstr "즐겨찾기"
+
+#~ msgid "Settings functionality coming soon!"
+#~ msgstr "설정 기능이 곧 제공될 예정입니다!"
 
 #~ msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
 #~ msgstr "YouTube 항목은 yt-dlp 래퍼 플러그인(enigma2-plugin-extensions-ytdlpwrapper)을 사용하는 경우에만 부케에서 재생됩니다."

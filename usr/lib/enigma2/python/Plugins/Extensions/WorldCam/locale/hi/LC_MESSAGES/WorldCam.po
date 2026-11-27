@@ -69,17 +69,25 @@ msgid "Export All to Bouquet"
 msgstr "सभी को गुलदस्ता में निर्यात करें"
 
 #, fuzzy
+msgid "Export delay"
+msgstr "निर्यात"
+
+#, fuzzy
 msgid "Export failed"
 msgstr "निर्यात विफल:"
 
 msgid "Export failed:"
 msgstr "निर्यात विफल:"
 
+#, fuzzy
+msgid "Export workers"
+msgstr "निर्यात"
+
 msgid "Exported %d webcams to '%s'"
 msgstr "%d वेबकैम को '%s' में निर्यात किया गया"
 
 #, fuzzy
-msgid "Exporting..."
+msgid "Exporting... Please wait"
 msgstr "निर्यात"
 
 msgid "Favorites"
@@ -88,7 +96,9 @@ msgstr "पसंदीदा"
 msgid ""
 "Install it with:\n"
 "opkg install python3-yt-dlp"
-msgstr "इसे इसके साथ स्थापित करें:\nopkg Python3-yt-dlp स्थापित करें"
+msgstr ""
+"इसे इसके साथ स्थापित करें:\n"
+"opkg Python3-yt-dlp स्थापित करें"
 
 msgid "Language changed to %s"
 msgstr "भाषा को %s में बदल दिया गया"
@@ -97,7 +107,10 @@ msgid ""
 "Like this plugin?\n"
 "Buy me a coffee by scanning QR code.\n"
 "Your support keeps development alive!"
-msgstr "क्या आपको यह प्लगइन पसंद आया?\nQR कोड स्कैन करके मेरे लिए कॉफ़ी खरीदें।\nआपका समर्थन विकास को जीवित रखता है!"
+msgstr ""
+"क्या आपको यह प्लगइन पसंद आया?\n"
+"QR कोड स्कैन करके मेरे लिए कॉफ़ी खरीदें।\n"
+"आपका समर्थन विकास को जीवित रखता है!"
 
 msgid "Live webcams from around the world"
 msgstr "दुनिया भर से लाइव वेबकैम"
@@ -120,7 +133,13 @@ msgid ""
 "%(changelog)s\n"
 "\n"
 "Do you want to install it now?"
-msgstr "नया संस्करण %(version)s उपलब्ध है\n\nचेंजलॉग:\n%(changelog)s\n\nक्या आप इसे अभी इंस्टॉल करना चाहते हैं?"
+msgstr ""
+"नया संस्करण %(version)s उपलब्ध है\n"
+"\n"
+"चेंजलॉग:\n"
+"%(changelog)s\n"
+"\n"
+"क्या आप इसे अभी इंस्टॉल करना चाहते हैं?"
 
 msgid "No favorites to export"
 msgstr "निर्यात करने के लिए कोई पसंदीदा नहीं"
@@ -182,8 +201,8 @@ msgstr "भाषा चुने"
 msgid "Settings"
 msgstr "सेटिंग्स"
 
-msgid "Settings functionality coming soon!"
-msgstr "सेटिंग्स कार्यक्षमता जल्द ही आ रही है!"
+msgid "Skyline wrapper"
+msgstr "स्काईलाइन आवरण"
 
 #, fuzzy
 msgid "SkylineWebcams and YouTube entries play from the bouquet only with streamlink and the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
@@ -199,7 +218,9 @@ msgstr "शीर्ष वेबकैम"
 msgid ""
 "Unable to fetch version info:\n"
 "{}"
-msgstr "संस्करण जानकारी लाने में असमर्थ:\n{}"
+msgstr ""
+"संस्करण जानकारी लाने में असमर्थ:\n"
+"{}"
 
 msgid "Update"
 msgstr "अद्यतन"
@@ -233,6 +254,10 @@ msgid "User Lists"
 msgstr "उपयोगकर्ता सूचियाँ"
 
 #, fuzzy
+msgid "WorldCam Settings"
+msgstr "वर्ल्डकैम v%s"
+
+#, fuzzy
 msgid ""
 "WorldCam v%s\n"
 "\n"
@@ -247,8 +272,14 @@ msgstr "वर्ल्डकैम वी{}"
 msgid "You are already running the latest version: {}"
 msgstr "आप पहले से ही नवीनतम संस्करण चला रहे हैं: {}"
 
+msgid "YouTube wrapper"
+msgstr "यूट्यूब रैपर"
+
 msgid "Your Favorites"
 msgstr "आपके पसंदीदा"
+
+#~ msgid "Settings functionality coming soon!"
+#~ msgstr "सेटिंग्स कार्यक्षमता जल्द ही आ रही है!"
 
 #~ msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
 #~ msgstr "YouTube प्रविष्टियाँ केवल yt-dlp रैपर प्लगइन (enigma2-plugin-extensions-ytdlpwrapper) के साथ बुके से चलती हैं।"
@@ -351,9 +382,6 @@ msgstr "आपके पसंदीदा"
 
 #~ msgid "Technical error in Webcam.pl"
 #~ msgstr "Webcam.pl में तकनीकी त्रुटि"
-
-#~ msgid "WorldCam v%s"
-#~ msgstr "वर्ल्डकैम v%s"
 
 #~ msgid "YouTube playback error"
 #~ msgstr "यूट्यूब प्लेबैक त्रुटि"
