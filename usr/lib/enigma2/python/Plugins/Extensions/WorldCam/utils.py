@@ -32,6 +32,7 @@ import html
 from urllib.parse import quote, urlparse, urlunparse
 from enigma import eDVBDB, eEnv
 from Tools.Directories import resolveFilename, SCOPE_CURRENT_SKIN, SCOPE_PLUGINS
+from Components.config import config
 
 try:
     from Components.AVSwitch import AVSwitch
@@ -240,28 +241,30 @@ def is_skyline_page(url):
 
 
 def bouquet_service_lines(url, name):
-    """
-    #SERVICE / #DESCRIPTION lines for a webcam.
-    Returns (lines, kind) with kind 'youtube', 'streamlink' or 'direct'.
-    - YouTube: streamlink://https://www.youtube.com/watch?v=ID
-      (streamlink wrapper plugin; a plain https YouTube link is not
-      handled by any wrapper and gives a black screen)
-    - skylinewebcams pages: streamlink:// (streamlink wrapper plugin)
-    - anything else is a direct stream
-    """
     url = str(url or "").replace("\r", " ").replace("\n", " ").strip()
     name = str(name or "").replace("\r", " ").replace("\n", " ").strip()
-    
-    # AGGIUNTA: Decodifica le entità HTML (es. &#039; diventa ')
     name = html.unescape(name)
     
     if is_youtube_url(url):
         kind = "youtube"
         url = convert_youtube_embed_to_watch(url)
-        service_url = "streamlink%3a//" + url.replace(":", "%3a")
+        wrapper = config.plugins.WorldCam.youtube_wrapper.value
+        
+        # Fallback logic
+        if wrapper == "auto":
+            # Try yt-dlp first, fallback to streamlink
+            service_url = f"yt-dlp%3a//{url.replace(':', '%3a')}"
+        else:
+            service_url = f"{wrapper}%3a//{url.replace(':', '%3a')}"
+            
     elif is_skyline_page(url):
         kind = "streamlink"
-        service_url = "streamlink%3a//" + url.replace(":", "%3a")
+        wrapper = config.plugins.WorldCam.skyline_wrapper.value
+        
+        if wrapper == "auto":
+            service_url = f"streamlink%3a//{url.replace(':', '%3a')}"
+        else:
+            service_url = f"{wrapper}%3a//{url.replace(':', '%3a')}"
     else:
         kind = "direct"
         service_url = url.replace(":", "%3a")
@@ -269,6 +272,45 @@ def bouquet_service_lines(url, name):
     lines = "#SERVICE 4097:0:1:0:0:0:0:0:0:0:%s:%s\n#DESCRIPTION %s\n" % (
         service_url, name.replace(":", "%3a"), name)
     return lines, kind
+
+
+def resolve_skyline_youtube(urls):
+    urls = [u for u in dict.fromkeys(urls) if is_skyline_page(u)]
+    if not urls:
+        return {}
+        
+    import time
+    from concurrent.futures import ThreadPoolExecutor
+    from .scraper import SkylineScraper
+    scraper = SkylineScraper()
+    found = {}
+
+    delay = float(config.plugins.WorldCam.export_delay.value)
+    workers = int(config.plugins.WorldCam.export_workers.value)
+
+    def check(page_url):
+        time.sleep(delay)
+        try:
+            stream = scraper.get_stream_url(page_url)
+            if stream and is_youtube_url(stream):
+                return page_url, stream
+        except Exception:
+            pass
+        return page_url, None
+
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        for page_url, stream in pool.map(check, urls):
+            if stream:
+                found[page_url] = stream
+
+    Logger().info("Export: %d of %d SkylineWebcams cams are YouTube" % (len(found), len(urls)))
+    return found
+
+
+def get_service_type(preferred=None):
+    if preferred == "exteplayer3":
+        return 5002
+    return 4097
 
 
 def resolve_skyline_youtube(urls, workers=1):
@@ -289,8 +331,7 @@ def resolve_skyline_youtube(urls, workers=1):
     total = len(urls)
     
     for i, page_url in enumerate(urls):
-        # PAUSA DI SICUREZZA: 1.5 secondi tra una pagina e l'altra
-        time.sleep(1.5)
+        time.sleep(0.8)
         
         try:
             stream = scraper.get_stream_url(page_url)
@@ -299,7 +340,6 @@ def resolve_skyline_youtube(urls, workers=1):
         except Exception:
             pass
             
-        # Log di avanzamento (utile per vedere che non si è bloccato)
         if (i + 1) % 5 == 0:
             Logger().info("Export progress: %d/%d pages checked..." % (i + 1, total))
 

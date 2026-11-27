@@ -1,7 +1,7 @@
 #!/bin/bash
 
-version='7.6'
-changelog='Bouquet export fix: YouTube cams (e.g. SkylineWebcams Thailand) are now exported as streamlink://https://www.youtube.com/... (streamlink wrapper) instead of a plain https link that gave a black screen. HLS cams unchanged. Bouquets exported with 7.5 must be exported again.'
+version='7.7'
+changelog="Added Settings menu with YouTube and Skyline wrapper selection, configurable export delay and workers, plus HD, FHD and WQHD XML skins."
 FILEPATH=/tmp/WorldCam-main.tar.gz
 TMPPATH=/tmp/worldcam_extract
 

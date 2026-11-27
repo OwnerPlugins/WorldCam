@@ -69,9 +69,7 @@ def check_requirements(logger=None):
         missing.append("yt-dlp")
 
     # streamlink: verifichiamo se il modulo Python è presente
-    # (evita falsi positivi se l'eseguibile non è nel PATH di Enigma2)
     try:
-        import importlib.util
         if importlib.util.find_spec("streamlink") is None:
             missing.append("streamlink")
     except Exception:

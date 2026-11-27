@@ -1,16 +1,13 @@
-# WorldCam translations
-# Copyright (C) 2025 Lululla Team
-# This file is distributed under the same license as the Lululla package.
-# [lululla] <ekekaz@gmail.com>, 2025.
+# fa translations
+# Copyright (C) 2026 Lululla Team
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: WorldCam\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-02-02 22:47+0100\n"
-"Last-Translator: root <EMAIL@ADDRESS>\n"
-"Language-Team: Persian <translation-team-fa@lists.sourceforge.net>\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: fa <ekekaz@gmail.com>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -46,7 +43,6 @@ msgstr "کشورها"
 msgid "Country"
 msgstr "کشور"
 
-#, fuzzy
 msgid "Empty or missing playlist"
 msgstr "خطا در بارگیری لیست پخش"
 
@@ -68,58 +64,49 @@ msgstr "صادرات"
 msgid "Export All to Bouquet"
 msgstr "صادرات همه به دسته گل"
 
-#, fuzzy
+msgid "Export delay"
+msgstr "تاخیر صادرات"
+
 msgid "Export failed"
 msgstr "صادرات انجام نشد:"
 
-msgid "Export failed:"
-msgstr "صادرات انجام نشد:"
+msgid "Export failed: "
+msgstr "صادرات انجام نشد: "
+
+msgid "Export workers"
+msgstr "کارگران صادراتی"
 
 msgid "Exported %d webcams to '%s'"
 msgstr "%d وب‌کم به «%s» صادر شد"
 
-#, fuzzy
-msgid "Exporting..."
-msgstr "صادرات"
+msgid "Exporting... Please wait"
+msgstr "در حال صادرات... لطفاً صبر کنید"
 
 msgid "Favorites"
 msgstr "موارد دلخواه"
 
-msgid ""
-"Install it with:\n"
-"opkg install python3-yt-dlp"
+msgid "Install it with:\nopkg install python3-yt-dlp"
 msgstr "نصبش کن با:\nopkg python3-yt-dlp را نصب کنید"
 
 msgid "Language changed to %s"
 msgstr "زبان به %s تغییر کرد"
 
-msgid ""
-"Like this plugin?\n"
-"Buy me a coffee by scanning QR code.\n"
-"Your support keeps development alive!"
-msgstr "این افزونه را دوست دارید؟\nبا اسکن کد QR برای من قهوه بخر.\nحمایت شما توسعه را زنده نگه می دارد!"
+msgid "Like this plugin?\nBuy me a coffee by scanning QR code.\nYour support keeps development alive!\n"
+msgstr "این افزونه را دوست دارید؟\nبا اسکن کد QR برای من قهوه بخرید.\nپشتیبانی شما توسعه را زنده نگه می دارد!\n"
 
 msgid "Live webcams from around the world"
 msgstr "وب کم های زنده از سراسر جهان"
 
-#, fuzzy
 msgid "Loading stream..."
 msgstr "پخش جریانی YouTube استخراج نشد"
 
-#, fuzzy
 msgid "Loading..."
 msgstr "در حال ارتقاء..."
 
 msgid "Menu"
 msgstr "منو"
 
-msgid ""
-"New version %(version)s available\n"
-"\n"
-"Changelog:\n"
-"%(changelog)s\n"
-"\n"
-"Do you want to install it now?"
+msgid "New version %(version)s available\n\nChangelog:\n%(changelog)s\n\nDo you want to install it now?"
 msgstr "نسخه جدید %(version)s موجود است\n\nتغییرات:\n%(changelog)s\n\nالان میخوای نصبش کنی؟"
 
 msgid "No favorites to export"
@@ -131,14 +118,12 @@ msgstr "هنوز موارد دلخواه وجود ندارد"
 msgid "No playlists found"
 msgstr "هیچ لیست پخشی یافت نشد"
 
-#, fuzzy
 msgid "No valid streams found"
 msgstr "هیچ لیست پخشی یافت نشد"
 
 msgid "No valid webcams in playlist"
 msgstr "هیچ وب کم معتبری در لیست پخش وجود ندارد"
 
-#, fuzzy
 msgid "No webcams to export"
 msgstr "هیچ مورد دلخواه برای صادرات وجود ندارد"
 
@@ -166,7 +151,6 @@ msgstr "حذف از موارد دلخواه"
 msgid "Removed from favorites"
 msgstr "از موارد دلخواه حذف شد"
 
-#, fuzzy
 msgid "Resolving YouTube stream..."
 msgstr "پخش جریانی YouTube استخراج نشد"
 
@@ -182,23 +166,19 @@ msgstr "زبان را انتخاب کنید"
 msgid "Settings"
 msgstr "تنظیمات"
 
-msgid "Settings functionality coming soon!"
-msgstr "عملکرد تنظیمات به زودی!"
+msgid "Skyline wrapper"
+msgstr "لفاف افق"
 
-#, fuzzy
 msgid "SkylineWebcams and YouTube entries play from the bouquet only with streamlink and the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
 msgstr "ورودی‌های SkylineWebcams فقط با افزونه streamlink wrapper (enigma2-plugin-extensions-streamlinkwrapper) از دسته گل پخش می‌شوند."
 
-#, fuzzy
 msgid "Stream not available"
 msgstr "پخش جریانی YouTube در دسترس نیست"
 
 msgid "Top Webcams"
 msgstr "وب کم های برتر"
 
-msgid ""
-"Unable to fetch version info:\n"
-"{}"
+msgid "Unable to fetch version info:\n{}"
 msgstr "واکشی اطلاعات نسخه ممکن نیست:\n{}"
 
 msgid "Update"
@@ -207,20 +187,13 @@ msgstr "به روز رسانی"
 msgid "Update Aborted!"
 msgstr "به روز رسانی لغو شد!"
 
-#, fuzzy
-msgid ""
-"Update completed successfully!\n"
-"\n"
-"Restart Enigma2 to use the new version."
+msgid "Update completed successfully!\n\nRestart Enigma2 to use the new version."
 msgstr "موارد دلخواه با موفقیت صادر شد! Enigma2 را مجددا راه اندازی کنید تا آنها را ببینید."
 
 msgid "Update encountered an error (code: %s)"
 msgstr "به روز رسانی با خطا مواجه شد (کد: %s)"
 
-#, fuzzy
-msgid ""
-"Update failed:\n"
-"%s"
+msgid "Update failed:\n%s"
 msgstr "صادرات انجام نشد:"
 
 msgid "Update plugin"
@@ -232,17 +205,14 @@ msgstr "در حال ارتقاء..."
 msgid "User Lists"
 msgstr "لیست های کاربر"
 
-#, fuzzy
-msgid ""
-"WorldCam v%s\n"
-"\n"
-"Live webcam viewer featuring global locations\n"
-"\n"
-"Developed by Lululla"
-msgstr "نمایشگر وب کم زنده با مکان های جهانی"
+msgid "WorldCam Settings"
+msgstr "تنظیمات WorldCam"
 
 msgid "WorldCam v{}"
-msgstr ""
+msgstr "WorldCam v{}"
+
+msgid "WorldCam v%s\n\nLive webcam viewer featuring global locations\n\nDeveloped by Lululla"
+msgstr "نمایشگر وب کم زنده با مکان های جهانی"
 
 msgid "You are already running the latest version: {}"
 msgstr "شما در حال حاضر آخرین نسخه را اجرا می کنید: {}"
@@ -250,110 +220,6 @@ msgstr "شما در حال حاضر آخرین نسخه را اجرا می کن�
 msgid "Your Favorites"
 msgstr "موارد دلخواه شما"
 
-#~ msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
-#~ msgstr "ورودی‌های YouTube از دسته گل فقط با افزونه yt-dlp wrapper (enigma2-plugin-extensions-ytdlpwrapper) پخش می‌شوند."
+msgid "YouTube wrapper"
+msgstr "بسته بندی یوتیوب"
 
-#~ msgid "- Local YouTube playlist"
-#~ msgstr "- لیست پخش محلی YouTube"
-
-#~ msgid "- Local webcam list"
-#~ msgstr "- لیست وب کم محلی"
-
-#~ msgid "- Online Direct and YouTube webcams"
-#~ msgstr "- وب کم مستقیم آنلاین و یوتیوب"
-
-#~ msgid "- Online webcam list"
-#~ msgstr "- لیست وب کم آنلاین"
-
-#~ msgid "- Other sources"
-#~ msgstr "- منابع دیگر"
-
-#~ msgid "AFRICA"
-#~ msgstr "آفریقا"
-
-#~ msgid "AMERICAS"
-#~ msgstr "آمریکا"
-
-#~ msgid "Developed by Lululla"
-#~ msgstr "توسعه یافته توسط Lululla"
-
-#~ msgid "EUROPE"
-#~ msgstr "اروپا"
-
-#~ msgid "Empty playlist file"
-#~ msgstr "فایل لیست پخش خالی"
-
-#~ msgid "Error changing language"
-#~ msgstr "خطا در تغییر زبان"
-
-#~ msgid "Error loading categories"
-#~ msgstr "خطا در بارگیری دسته‌ها"
-
-#~ msgid "Error loading continents"
-#~ msgstr "خطا در بارگیری قاره ها"
-
-#~ msgid "Error loading countries"
-#~ msgstr "خطا در بارگیری کشورها"
-
-#~ msgid "Error loading favorites"
-#~ msgstr "خطا در بارگیری موارد دلخواه"
-
-#~ msgid "Error loading locations"
-#~ msgstr "خطا در بارگیری مکان‌ها"
-
-#~ msgid "Error loading playlists"
-#~ msgstr "خطا در بارگیری لیست های پخش"
-
-#~ msgid "Error loading top webcams"
-#~ msgstr "خطا در بارگیری وب کم های برتر"
-
-#~ msgid "Error loading webcams"
-#~ msgstr "خطا در بارگیری وب کم"
-
-#~ msgid "Error opening language selection"
-#~ msgstr "خطا در باز کردن انتخاب زبان"
-
-#~ msgid "Error opening playlist"
-#~ msgstr "خطا در باز کردن لیست پخش"
-
-#~ msgid "File not found"
-#~ msgstr "فایل پیدا نشد"
-
-#~ msgid "Forum support: www.corvoboys.org"
-#~ msgstr "پشتیبانی انجمن: www.corvoboys.org"
-
-#~ msgid "Included playlists and sources:"
-#~ msgstr "فهرست‌های پخش و منابع موجود:"
-
-#~ msgid "No playlists available"
-#~ msgstr "هیچ لیست پخشی در دسترس نیست"
-
-#~ msgid "Powered by Enigma2 and Python"
-#~ msgstr "ارائه شده توسط Enigma2 و Python"
-
-#~ msgid "Removed from favorites: %s"
-#~ msgstr "از موارد دلخواه حذف شد: %s"
-
-#~ msgid "Select a valid category"
-#~ msgstr "یک دسته معتبر انتخاب کنید"
-
-#~ msgid "Select a valid location"
-#~ msgstr "یک مکان معتبر انتخاب کنید"
-
-#~ msgid "Select a valid playlist"
-#~ msgstr "یک لیست پخش معتبر انتخاب کنید"
-
-#~ msgid "Select a valid webcam"
-#~ msgstr "یک وب کم معتبر انتخاب کنید"
-
-#~ msgid "Technical error in Webcam.pl"
-#~ msgstr "خطای فنی در Webcam.pl"
-
-#~ msgid "YouTube playback error"
-#~ msgstr "خطای پخش YouTube"
-
-#~ msgid "Invalid YouTube URL"
-#~ msgstr "URL YouTube نامعتبر است"
-
-#~ msgid "yt-dlp not found. Please install it."
-#~ msgstr "yt-dlp پیدا نشد. لطفا آن را نصب کنید."

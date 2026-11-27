@@ -1,8 +1,8 @@
-<h1 align="center">🌍 You WorldCam Plugin</h1>
+<h1 align="center">🌍 Your WorldCam Plugin</h1>
 
 <p align="center">
   <a href="https://github.com/Belfagor2005/WorldCam">
-    <img src="https://img.shields.io/badge/Version-7.6-blue.svg" alt="Version">
+    <img src="https://img.shields.io/badge/Version-7.7-blue.svg" alt="Version">
   </a>
   <a href="https://www.enigma2.net">
     <img src="https://img.shields.io/badge/Enigma2-Plugin-ff6600.svg" alt="Enigma2">
@@ -23,6 +23,7 @@
     <img src="https://komarev.com/ghpvc/?username=Belfagor2005&label=Repository%20Views&color=blueviolet" alt="Visitors">
   </a>
 </p>
+
 <p align="center">
   <a href="https://ko-fi.com/lululla">
     <img src="https://img.shields.io/badge/_-Donate-red.svg?logo=githubsponsors&labelColor=555555&style=for-the-badge" alt="Donate via Ko-fi">
@@ -32,162 +33,233 @@
   </a>
 </p>
 
-<h1 align="center">
+<p align="center">
 
-**WorldCam** is an Enigma2 plugin that allows you to view live webcams from around the world, with a simple, fast, and stable interface.  
+**WorldCam** is an Enigma2 plugin that allows you to view live webcams from around the world, with a simple, fast, and stable interface.
+
 Completely rewritten and optimized since version **7.3**, the plugin now offers visual previews, new features, and greater reliability.
-</h1>
+
+
+</p>
 
 ---
 
-🚀 **What's new in version 7.6**
+## 🚀 What's new in version 7.7
 
-🛠️ **Fix: YouTube cams in exported bouquets (black screen)**
-In 7.5 the YouTube cams were exported as a plain `https%3a//www.youtube.com/...` link, which no wrapper handles: the result was a black screen.
-They are now exported as `streamlink%3a//https%3a//www.youtube.com/watch?v=…`, so the **streamlink wrapper** plays them, like the SkylineWebcams HLS cams.
+### ⚙️ New Settings Menu
+
+Added a dedicated configuration screen to manage WorldCam settings directly from the plugin.
+
+The new configuration menu includes:
+
+- **YouTube wrapper:** selection of the streaming wrapper, Streamlink or yt-dlp.
+- **Skyline wrapper:** configuration of the wrapper used for SkylineWebcams streams.
+- **Export delay:** configuration of the delay between export operations.
+- **Export workers:** configuration of the number of workers used during exports.
+
+### 🎨 New XML Skins
+
+Added dedicated XML skins for the Settings screen, supporting three screen resolutions:
+
+- **HD:** 1280 × 720
+- **FHD:** 1920 × 1080
+- **WQHD:** 2560 × 1440
+
+Each resolution has its own layout, maintaining the WorldCam graphical design and adapting the screen elements to the display resolution.
+
+---
+
+## 🚀 What's new in version 7.6
+
+### 🛠️ Fix: YouTube cams in exported bouquets (black screen)
+
+In 7.5 the YouTube cams were exported as a plain `https://www.youtube.com/...` link, which no wrapper handles: the result was a black screen.
+
+They are now exported as `streamlink://https://www.youtube.com/watch?v=…`, so the **Streamlink wrapper** plays them, like the SkylineWebcams HLS cams.
+
 Thanks to the forum user who found it. Bouquets exported with 7.5 must be **exported again**.
 
 ---
 
-🚀 **What's new in version 7.5**
+## 🚀 What's new in version 7.5
 
-📺 **YouTube cams in exported bouquets**
+### 📺 YouTube cams in exported bouquets
+
 Many SkylineWebcams cams (e.g. Thailand) are streamed through YouTube. These used to be exported as `streamlink://<SkylineWebcams page>` entries and failed outside the plugin, because the SkylineWebcams Streamlink plugin shipped in the images handles HLS cams only.
+
 On export, WorldCam now checks every SkylineWebcams page:
+
 - **YouTube cams** → exported as YouTube links (`streamlink://https://www.youtube.com/watch?v=…` since 7.6)
-- **HLS cams** → still exported as `streamlink://…`, played by the **streamlink wrapper**
-- pages that cannot be read stay `streamlink://`, so no cam is lost
+- **HLS cams** → still exported as `streamlink://…`, played by the **Streamlink wrapper**
+- Pages that cannot be read stay `streamlink://`, so no cam is lost.
 
 Bouquets exported with older versions must be **exported again** to get the YouTube links.
 
-⏳ **Non-blocking bouquet export**
+### ⏳ Non-blocking bouquet export
+
 Export (locations and favorites) now runs in the background with a "Loading..." indicator; the Enigma2 service list is reloaded in the main thread when it ends.
 
-📦 **Installer**
-Also installs `python3-youtube-dl` together with the streaming dependencies (streamlink, streamlink/ytdlp/ytdl wrappers).
+### 📦 Installer
+
+
+Also installs `python3-youtube-dl` together with the streaming dependencies (Streamlink, Streamlink/ytdlp/ytdl wrappers).
 
 ---
 
-🚀 **What's new in version 7.3**
+## 🚀 What's new in version 7.3
 
-🎨 **Unified UI & PNG Thumbnails**
-All screens (Main Menu, Continents, Countries, Locations, Webcams, User Lists) now share the exact same beautiful layout: large image on the left, text vertically centered on the right. Images are automatically converted to PNG (via ffmpeg) and sized to 120x70/160x90, fixing image cropping and size issues.
+### 🎨 Unified UI & PNG Thumbnails
 
-🌍 **Missing Flags Fixed**
+
+All screens (Main Menu, Continents, Countries, Locations, Webcams, User Lists) now share the exact same beautiful layout: large image on the left, text vertically centered on the right.
+
+Images are automatically converted to PNG (via ffmpeg) and sized to 120x70/160x90, fixing image cropping and size issues.
+
+### 🌍 Missing Flags Fixed
+
 Added hardcoded mappings and fallbacks for regions and countries that SkylineWebcams handles differently (e.g., Zanzibar, Belize, Guadeloupe, Martinique, Lithuania, Luxembourg, San Marino).
 
-🛡️ **Crash Fixes (Player & VRAM)**
+### 🛡️ Crash Fixes (Player & VRAM)
+
 - Fixed the critical crash (`Agp... renderer not found`) caused by custom system skins. The player now forces a clean, internal minimal skin.
 - Prevented the `gAccel accel alloc failed` crash by implementing a smart limitation on how many high-res images are loaded into the video memory at once.
 
-🌐 **Fixed Empty Continents & Streams**
+### 🌐 Fixed Empty Continents & Streams
+
 Continents are now parsed directly from the main page ensuring they are always populated. The stream parser was updated to detect both `.m3u8` (HLS) and `videoId` (YouTube) sources correctly.
 
-📁 **Bouquet Export Fixed**
+### 📁 Bouquet Export Fixed
+
 Exporting favorites or locations to Enigma2 bouquets now correctly resolves the direct `.m3u8` links, making the streams play perfectly outside the plugin.
 
-⚡️ **Async Image Downloading & Caching**
+### ⚡️ Async Image Downloading & Caching
+
 Thumbnails are fetched in parallel using a thread pool and cached in `/tmp/worldcam_thumbs/`. The UI remains smooth and responsive, preventing UI freezes during list loading.
 
-🔍 **Lazy-Loading Image Support**
+### 🔍 Lazy-Loading Image Support
+
 Updated the SkylineWebcams scraper to support `data-src` attributes, correctly parsing images that are lazily loaded by the website.
 
-⚡️ **Fast and interactive UI management**
+### ⚡️ Fast and interactive UI management
+
 Asynchronous webcam loading and smooth navigation between categories.
 
-🇺🇳 **Dynamic flag icons for language/country**
+### 🇺🇳 Dynamic flag icons for language/country
+
 Automatic mapping based on system language or country name.
 
-✅ **New integrated player**
+### ✅ New integrated player
+
 Direct support for HLS streams (.m3u8), YouTube streaming, and two fallback options where available.
 
-🔎 **Fully revamped SkylineWebcams scraper**
+### 🔎 Fully revamped SkylineWebcams scraper
+
 Faster and fully compatible with recent site updates.
 
-🛠️ **Advanced console + file logger**
+### 🛠️ Advanced console + file logger
+
 Supports INFO, DEBUG, ERROR, CRITICAL levels, with color-coded terminal output and persistent logs in `/tmp/worldcam/worldcam.log`.
 
-🧹 **Safe screen cleanup and management**
+### 🧹 Safe screen cleanup and management
+
 Automatic memory cleanup to prevent leaks or crashes.
 
-🔁 **Integrated aspect ratio handling**
+### 🔁 Integrated aspect ratio handling
+
 Stores and restores the correct aspect ratio for each video stream.
 
-📁 **Favorites list now available**
+### 📁 Favorites list now available
+
 You can now manage your favorite webcams from the main menu. While watching a webcam, just press the **Blue button** to add or remove it from your **Favorites**.
 
-🟩 **Favorites toggle shortcut (Green button)**  
+### 🟩 Favorites toggle shortcut (Green button)
+
 Quickly add or remove the selected webcam from your favorites list while browsing.
 
-🟨 **One-click Favorites to Bouquet export (Yellow button)**  
+### 🟨 One-click Favorites to Bouquet export (Yellow button)
+
 Instantly export your favorite webcams into a channel bouquet without opening menus.
 
-▶️ **Next/Previous webcam navigation in player**  
+### ▶️ Next/Previous webcam navigation in player
+
 You can now switch between webcams directly from the player using ch+/ch- arrows.
 
-🧩 **Guaranteed compatibility from Python 2.7 to 3.9+**
+### 🧩 Guaranteed compatibility from Python 2.7 to 3.9+
+
 Safe use of cross-version libraries and methods, with automatic fallbacks.
 
 ---
 
 ## 🎥 YouTube Player Support
 
-WorldCam plays YouTube streams using **yt-dlp** with a robust
-fallback chain, tuned for slow ARM/MIPS receivers:
+WorldCam plays YouTube streams using **yt-dlp** with a robust fallback chain, tuned for slow ARM/MIPS receivers:
 
-1. **`android_vr` client first**  
-   It works without a JavaScript runtime and returns a muxed HLS
-   stream that Enigma2 players (4097 / 5001 / 5002) can handle.
 
-2. **Default yt-dlp clients as fallback**  
-   If `android_vr` fails, yt-dlp uses its built-in defaults
-   (this path benefits from an installed JS runtime — see below).
+1. **`android_vr` client first**
 
-3. **Single-shot format chain**  
-   Instead of starting yt-dlp once per format (slow on receivers),
-   a single call tries `18/22/best[ext=mp4][protocol^=http]/best`
-   in order and returns the first available stream.
 
-Playback is **non-blocking**: yt-dlp runs in a worker thread
-(`twisted.internet.threads.deferToThread`), so the Enigma2 GUI
-stays responsive and the player is not killed by the watchdog.
 
-If resolution fails, the actual yt-dlp error is shown in the
-message box, instead of a generic "stream not available".
+   It works without a JavaScript runtime and returns a muxed HLS stream that Enigma2 players (4097 / 5001 / 5002) can handle.
+
+
+
+2. **Default yt-dlp clients as fallback**
+
+
+
+
+   If `android_vr` fails, yt-dlp uses its built-in defaults (this path benefits from an installed JS runtime — see below).
+
+
+
+3. **Single-shot format chain**
+
+
+   Instead of starting yt-dlp once per format (slow on receivers), a single call tries `18/22/best[ext=mp4][protocol^=http]/best` in order and returns the first available stream.
+
+Playback is **non-blocking**: yt-dlp runs in a worker thread (`twisted.internet.threads.deferToThread`), so the Enigma2 GUI stays responsive and the player is not killed by the watchdog.
+
+If resolution fails, the actual yt-dlp error is shown in the message box, instead of a generic "stream not available".
 
 ---
 
-# 📋 Local List Format for WorldCam
+## 📋 Local List Format for WorldCam
 
-WorldCam supports loading a local list file containing webcam entries.  
-Each line in the list must contain the **name** and the **stream URL** of the webcam,  
-separated by one of the following delimiters:
+WorldCam supports loading a local list file containing webcam entries.
 
-* 🔹 `:::` (triple colon)  
-* 🔹 `;;` (double semicolon)  
-* 🔹 `###` (triple hash)  
-* 🔹 `::` (double colon)  
-* 🔹 `;` (semicolon)  
 
-### 📝 Example lines:
 
-```
+Each line in the list must contain the **name** and the **stream URL** of the webcam, separated by one of the following delimiters:
 
-Camera 1:::[http://example.com/stream1.m3u8](http://example.com/stream1.m3u8)
-My Cam;;[http://example.com/stream2.m3u8](http://example.com/stream2.m3u8)
-Another Cam###[http://example.com/stream3.m3u8](http://example.com/stream3.m3u8)
-Cam Name::[http://example.com/stream4.m3u8](http://example.com/stream4.m3u8)
-SimpleCam;[http://example.com/stream5.m3u8](http://example.com/stream5.m3u8)
-YouTube Cam;[https://www.youtube.com/watch?v=dQw4w9WgXcQ](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
-SimpleCam###http://example.com/stream5.m3u8](http://example.com/stream5.m3u8
-YouTube Cam###https://www.youtube.com/watch?v=dQw4w9WgXcQ](https://www.youtube.com/watch?v=dQw4w9WgXc
+
+
+
+
+- 🔹 `:::` (triple colon)
+- 🔹 `;;` (double semicolon)
+- 🔹 `###` (triple hash)
+- 🔹 `::` (double colon)
+- 🔹 `;` (semicolon)
+
+### 📝 Example lines
+
+```text
+Camera 1:::http://example.com/stream1.m3u8
+My Cam;;http://example.com/stream2.m3u8
+Another Cam###http://example.com/stream3.m3u8
+Cam Name::http://example.com/stream4.m3u8
+SimpleCam;http://example.com/stream5.m3u8
+
+
+YouTube Cam;https://www.youtube.com/watch?v=dQw4w9WgXcQ
 ```
 
 ---
 
 ## 🎥 YouTube streams in Local List
 
-YouTube URLs can be included directly in the local list as valid webcam entries.  
+YouTube URLs can be included directly in the local list as valid webcam entries.
+
 The plugin will automatically detect YouTube links and use its internal player fallback to stream them.
 
 ---
@@ -196,7 +268,7 @@ The plugin will automatically detect YouTube links and use its internal player f
 
 Place your local list file (for example, named `worldcam_list.txt`) inside the following folder:
 
-```
+```text
 /usr/lib/enigma2/python/Plugins/Extensions/WorldCam/Playlist/
 ```
 
@@ -204,9 +276,9 @@ Place your local list file (for example, named `worldcam_list.txt`) inside the f
 
 ## ⚙️ Requirements
 
-- Enigma2 STB (Dreambox, Vu+, Zgemma, Ustym, Octagon, …)  
-- Active internet connection  
-- Python ≥ 3.8  
+- Enigma2 STB (Dreambox, Vu+, Zgemma, Ustym, Octagon, …)
+- Active internet connection
+- Python ≥ 3.8
 - **`yt-dlp`** (binary preferred, module also works)
 - To play **exported bouquets** outside the plugin:
   - `streamlink` + `enigma2-plugin-extensions-streamlinkwrapper` (SkylineWebcams HLS cams and YouTube cams)
@@ -216,30 +288,34 @@ The installer checks these packages and installs the missing ones.
 ---
 
 ## 🧪 Debug & Log
-Logs are saved at:  
 
-```
+
+Logs are saved at:
+
+```text
 /tmp/worldcam/worldcam.log
 ```
 
-You can check internal events and requested video streams directly.  
+You can check internal events and requested video streams directly.
+
 If errors or malfunctions occur, please send this file for support.
 
 ---
 
 ## 📌 Notes
 
-- This plugin is released under the **CC BY-NC-SA 4.0** license  
-- Redistribution without attribution is not allowed  
-- The plugin **does not use external extensions** or complicated dependencies  
-- Any code modification must keep the original header intact
+- This plugin is released under the **CC BY-NC-SA 4.0** license.
+- Redistribution without attribution is not allowed.
+- The plugin **does not use external extensions** or complicated dependencies.
+- Any code modification must keep the original header intact.
 
 ---
 
 ## 🙏 Credits
 
-- Original project: **Lululla**  
-- Stream source: [SkylineWebcams.com](https://www.skylinewebcams.com)  
+- Original project: **Lululla**
+- Stream source: [SkylineWebcams.com](https://www.skylinewebcams.com)
+
 - Graphic support: Public flags and icons
 
 ---

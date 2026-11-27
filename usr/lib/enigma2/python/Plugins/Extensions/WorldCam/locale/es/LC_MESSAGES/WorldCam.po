@@ -1,21 +1,17 @@
-# WorldCam translations
-# Copyright (C) 2025 Lululla Team
-# This file is distributed under the same license as the Lululla package.
-# [lululla] <ekekaz@gmail.com>, 2025.
+# es translations
+# Copyright (C) 2026 Lululla Team
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: WorldCam\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-02-02 22:47+0100\n"
-"Last-Translator: root <EMAIL@ADDRESS>\n"
-"Language-Team: Spanish <es@tp.org.es>\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: es <ekekaz@gmail.com>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "About"
 msgstr "Acerca de"
@@ -47,7 +43,6 @@ msgstr "Países"
 msgid "Country"
 msgstr "País"
 
-#, fuzzy
 msgid "Empty or missing playlist"
 msgstr "Error al cargar la lista de reproducción"
 
@@ -69,58 +64,49 @@ msgstr "Exportar"
 msgid "Export All to Bouquet"
 msgstr "Exportar todo a Bouquet"
 
-#, fuzzy
+msgid "Export delay"
+msgstr "Retraso en la exportación"
+
 msgid "Export failed"
 msgstr "Error al exportar:"
 
-msgid "Export failed:"
-msgstr "Error al exportar:"
+msgid "Export failed: "
+msgstr "Error al exportar: "
+
+msgid "Export workers"
+msgstr "trabajadores exportadores"
 
 msgid "Exported %d webcams to '%s'"
 msgstr "Exportadas %d cámaras web a '%s'"
 
-#, fuzzy
-msgid "Exporting..."
-msgstr "Exportar"
+msgid "Exporting... Please wait"
+msgstr "Exportando... Espere por favor"
 
 msgid "Favorites"
 msgstr "Favoritos"
 
-msgid ""
-"Install it with:\n"
-"opkg install python3-yt-dlp"
+msgid "Install it with:\nopkg install python3-yt-dlp"
 msgstr "Instálalo con:\nopkg instala python3-yt-dlp"
 
 msgid "Language changed to %s"
 msgstr "Idioma cambiado a %s"
 
-msgid ""
-"Like this plugin?\n"
-"Buy me a coffee by scanning QR code.\n"
-"Your support keeps development alive!"
-msgstr "¿Te gusta este complemento?\nCómprame un café escaneando el código QR.\n¡Su apoyo mantiene vivo el desarrollo!"
+msgid "Like this plugin?\nBuy me a coffee by scanning QR code.\nYour support keeps development alive!\n"
+msgstr "¿Te gusta este complemento?\nCómprame un café escaneando el código QR.\n¡Tu apoyo mantiene vivo el desarrollo!\n"
 
 msgid "Live webcams from around the world"
 msgstr "Cámaras web en vivo de todo el mundo"
 
-#, fuzzy
 msgid "Loading stream..."
 msgstr "No se pudo extraer la transmisión de YouTube"
 
-#, fuzzy
 msgid "Loading..."
 msgstr "Actualizando..."
 
 msgid "Menu"
 msgstr "Menú"
 
-msgid ""
-"New version %(version)s available\n"
-"\n"
-"Changelog:\n"
-"%(changelog)s\n"
-"\n"
-"Do you want to install it now?"
+msgid "New version %(version)s available\n\nChangelog:\n%(changelog)s\n\nDo you want to install it now?"
 msgstr "Nueva versión %(version)s disponible\n\nRegistro de cambios:\n%(changelog)s\n\n¿Quieres instalarlo ahora?"
 
 msgid "No favorites to export"
@@ -132,14 +118,12 @@ msgstr "Aún no hay favoritos"
 msgid "No playlists found"
 msgstr "No se encontraron listas de reproducción"
 
-#, fuzzy
 msgid "No valid streams found"
 msgstr "No se encontraron listas de reproducción"
 
 msgid "No valid webcams in playlist"
 msgstr "No hay cámaras web válidas en la lista de reproducción"
 
-#, fuzzy
 msgid "No webcams to export"
 msgstr "No hay favoritos para exportar"
 
@@ -167,7 +151,6 @@ msgstr "Quitar de favoritos"
 msgid "Removed from favorites"
 msgstr "Eliminado de favoritos"
 
-#, fuzzy
 msgid "Resolving YouTube stream..."
 msgstr "No se pudo extraer la transmisión de YouTube"
 
@@ -183,23 +166,19 @@ msgstr "Seleccionar idioma"
 msgid "Settings"
 msgstr "Ajustes"
 
-msgid "Settings functionality coming soon!"
-msgstr "¡La funcionalidad de configuración estará disponible próximamente!"
+msgid "Skyline wrapper"
+msgstr "Envoltorio del horizonte"
 
-#, fuzzy
 msgid "SkylineWebcams and YouTube entries play from the bouquet only with streamlink and the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
 msgstr "Las entradas de SkylineWebcams se reproducen desde el ramo solo con el complemento contenedor streamlink (enigma2-plugin-extensions-streamlinkwrapper)."
 
-#, fuzzy
 msgid "Stream not available"
 msgstr "Transmisión de YouTube no disponible"
 
 msgid "Top Webcams"
 msgstr "Mejores cámaras web"
 
-msgid ""
-"Unable to fetch version info:\n"
-"{}"
+msgid "Unable to fetch version info:\n{}"
 msgstr "No se puede recuperar la información de la versión:\n{}"
 
 msgid "Update"
@@ -208,20 +187,13 @@ msgstr "Actualizar"
 msgid "Update Aborted!"
 msgstr "¡Actualización cancelada!"
 
-#, fuzzy
-msgid ""
-"Update completed successfully!\n"
-"\n"
-"Restart Enigma2 to use the new version."
+msgid "Update completed successfully!\n\nRestart Enigma2 to use the new version."
 msgstr "¡Favoritos exportados exitosamente! Reinicie Enigma2 para verlos."
 
 msgid "Update encountered an error (code: %s)"
 msgstr "La actualización encontró un error (código: %s)"
 
-#, fuzzy
-msgid ""
-"Update failed:\n"
-"%s"
+msgid "Update failed:\n%s"
 msgstr "Error al exportar:"
 
 msgid "Update plugin"
@@ -233,17 +205,14 @@ msgstr "Actualizando..."
 msgid "User Lists"
 msgstr "Listas de usuarios"
 
-#, fuzzy
-msgid ""
-"WorldCam v%s\n"
-"\n"
-"Live webcam viewer featuring global locations\n"
-"\n"
-"Developed by Lululla"
-msgstr "Visor de cámara web en vivo con ubicaciones globales"
+msgid "WorldCam Settings"
+msgstr "Configuración de WorldCam"
 
 msgid "WorldCam v{}"
-msgstr ""
+msgstr "WorldCam v{}"
+
+msgid "WorldCam v%s\n\nLive webcam viewer featuring global locations\n\nDeveloped by Lululla"
+msgstr "Visor de cámara web en vivo con ubicaciones globales"
 
 msgid "You are already running the latest version: {}"
 msgstr "Ya estás ejecutando la última versión: {}"
@@ -251,110 +220,6 @@ msgstr "Ya estás ejecutando la última versión: {}"
 msgid "Your Favorites"
 msgstr "Tus favoritos"
 
-#~ msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
-#~ msgstr "Las entradas de YouTube se reproducen desde el ramo solo con el complemento contenedor yt-dlp (enigma2-plugin-extensions-ytdlpwrapper)."
+msgid "YouTube wrapper"
+msgstr "Envoltorio de YouTube"
 
-#~ msgid "- Local YouTube playlist"
-#~ msgstr "- Lista de reproducción local de YouTube"
-
-#~ msgid "- Local webcam list"
-#~ msgstr "- Lista de cámaras web locales"
-
-#~ msgid "- Online Direct and YouTube webcams"
-#~ msgstr "- Cámaras web Online Direct y YouTube"
-
-#~ msgid "- Online webcam list"
-#~ msgstr "- Lista de cámaras web en línea"
-
-#~ msgid "- Other sources"
-#~ msgstr "- Otras fuentes"
-
-#~ msgid "AFRICA"
-#~ msgstr "ÁFRICA"
-
-#~ msgid "AMERICAS"
-#~ msgstr "AMÉRICAS"
-
-#~ msgid "Developed by Lululla"
-#~ msgstr "Desarrollado por Lululla"
-
-#~ msgid "EUROPE"
-#~ msgstr "EUROPA"
-
-#~ msgid "Empty playlist file"
-#~ msgstr "Archivo de lista de reproducción vacío"
-
-#~ msgid "Error changing language"
-#~ msgstr "Error al cambiar el idioma"
-
-#~ msgid "Error loading categories"
-#~ msgstr "Error al cargar categorías"
-
-#~ msgid "Error loading continents"
-#~ msgstr "Error al cargar continentes"
-
-#~ msgid "Error loading countries"
-#~ msgstr "Error al cargar países"
-
-#~ msgid "Error loading favorites"
-#~ msgstr "Error al cargar favoritos"
-
-#~ msgid "Error loading locations"
-#~ msgstr "Error al cargar ubicaciones"
-
-#~ msgid "Error loading playlists"
-#~ msgstr "Error al cargar listas de reproducción"
-
-#~ msgid "Error loading top webcams"
-#~ msgstr "Error al cargar las mejores cámaras web"
-
-#~ msgid "Error loading webcams"
-#~ msgstr "Error al cargar cámaras web"
-
-#~ msgid "Error opening language selection"
-#~ msgstr "Error al abrir la selección de idioma"
-
-#~ msgid "Error opening playlist"
-#~ msgstr "Error al abrir la lista de reproducción"
-
-#~ msgid "File not found"
-#~ msgstr "Archivo no encontrado"
-
-#~ msgid "Forum support: www.corvoboys.org"
-#~ msgstr "Soporte del foro: www.corvoboys.org"
-
-#~ msgid "Included playlists and sources:"
-#~ msgstr "Listas de reproducción y fuentes incluidas:"
-
-#~ msgid "No playlists available"
-#~ msgstr "No hay listas de reproducción disponibles"
-
-#~ msgid "Powered by Enigma2 and Python"
-#~ msgstr "Desarrollado por Enigma2 y Python"
-
-#~ msgid "Removed from favorites: %s"
-#~ msgstr "Eliminado de favoritos: %s"
-
-#~ msgid "Select a valid category"
-#~ msgstr "Seleccione una categoría válida"
-
-#~ msgid "Select a valid location"
-#~ msgstr "Seleccione una ubicación válida"
-
-#~ msgid "Select a valid playlist"
-#~ msgstr "Selecciona una lista de reproducción válida"
-
-#~ msgid "Select a valid webcam"
-#~ msgstr "Seleccione una cámara web válida"
-
-#~ msgid "Technical error in Webcam.pl"
-#~ msgstr "Error técnico en Webcam.pl"
-
-#~ msgid "YouTube playback error"
-#~ msgstr "Error de reproducción de YouTube"
-
-#~ msgid "Invalid YouTube URL"
-#~ msgstr "URL de YouTube no válida"
-
-#~ msgid "yt-dlp not found. Please install it."
-#~ msgstr "yt-dlp no encontrado. Por favor instálelo."

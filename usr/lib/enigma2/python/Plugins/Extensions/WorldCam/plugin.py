@@ -41,10 +41,16 @@ from Components.Label import Label
 from Components.MenuList import MenuList
 from Components.MultiContent import MultiContentEntryPixmapAlphaTest, MultiContentEntryText
 from Components.Pixmap import Pixmap
+from Components.ConfigList import ConfigListScreen
+from Components.config import config, getConfigListEntry, configfile
+from Components.Sources.StaticText import StaticText
+
 from Screens.ChoiceBox import ChoiceBox
 from Screens.Console import Console
 from Screens.MessageBox import MessageBox
 from Screens.Screen import Screen
+from Screens.Setup import Setup
+
 
 from . import (
     _, AgentRequest, installer_url, paypal, PLUGIN_VERSION, PLUGIN_PATH, DEFAULT_ICON
@@ -106,7 +112,6 @@ class WebcamList(MenuList):
 def wcListEntry(name, idx, image_path=None, is_webcam=False):
     res = [name]
     
-    # Dimensioni del testo
     if screen_width == 2560:
         text_pos, text_size = (215, 0), (1000, ROW_HEIGHT_THUMB)
     elif screen_width == 1920:
@@ -125,7 +130,6 @@ def wcListEntry(name, idx, image_path=None, is_webcam=False):
 
     if png:
         if is_webcam:
-            # Le webcam usano il formato orizzontale grande (160x90 a 1920)
             if screen_width == 2560:
                 size = (192, 108)
             elif screen_width == 1920:
@@ -134,13 +138,12 @@ def wcListEntry(name, idx, image_path=None, is_webcam=False):
                 size = (120, 70)
             pos = (10, (ROW_HEIGHT_THUMB - size[1]) // 2)
         else:
-            # Le bandiere/icone usano ESATTAMENTE il tuo formato 120x70
             if screen_width == 2560:
-                size = (180, 105) # Proporzionale per UHD
+                size = (180, 105)
             elif screen_width == 1920:
-                size = (120, 70)  # La tua dimensione esatta
+                size = (120, 70)
             else:
-                size = (100, 58)  # Proporzionale per HD
+                size = (100, 58)
             pos = (10, (ROW_HEIGHT_THUMB - size[1]) // 2)
             
         res.append(MultiContentEntryPixmapAlphaTest(pos=pos, size=size, png=png))
@@ -164,7 +167,6 @@ def showlist(data, list_widget, _retry=False):
         icon = item.get("icon") if isinstance(item, dict) else None
         thumbnail = item.get("thumbnail") if isinstance(item, dict) else None
 
-        # Capisce se è una webcam o un'icona generica
         is_webcam = thumbnail is not None
 
         image_path = None
@@ -209,70 +211,271 @@ def showlist(data, list_widget, _retry=False):
 
 
 class WebcamBaseScreen(Screen):
-    def __init__(self, session, lang=None):
+
+    def __init__(self, session, lang=None, screen_type="main"):
         Screen.__init__(self, session)
+
         self.logger = Logger()
         self.session = session
         self.lang = lang or get_current_language()
+        self.screen_type = screen_type
+
         self.skin_path = self.get_skin_path()
         self.skin = self.load_skin()
-        self["list"] = WebcamList([])
+
+        # La lista WebcamList serve solamente nella schermata principale.
+        if self.screen_type != "setup":
+            self["list"] = WebcamList([])
+
         self.screen_closed = False
         self._async_title = None
+
         self.onClose.append(self._mark_closed)
 
-    def _mark_closed(self): self.screen_closed = True
+    def _mark_closed(self):
+        self.screen_closed = True
 
     def run_async(self, func, callback, title=None):
         self._async_title = title
-        if title is not None and "title" in self: self["title"].setText(_("Loading..."))
+
+        if title is not None and "title" in self:
+            self["title"].setText(_("Loading..."))
+
         from twisted.internet import threads
+
         d = threads.deferToThread(func)
         d.addCallback(self._async_done, callback)
         d.addErrback(self._async_failed, callback)
 
     def _async_done(self, result, callback):
-        if self.screen_closed: return
-        if self._async_title is not None and "title" in self: self["title"].setText(self._async_title)
+        if getattr(self, "screen_closed", True):
+            return
+
+        if self._async_title is not None and "title" in self:
+            self["title"].setText(self._async_title)
+
         callback(result)
 
     def _async_failed(self, failure, callback):
-        self.logger.error("Loading error: %s" % failure.getErrorMessage())
+        if getattr(self, "screen_closed", True):
+            return
+
+        try:
+            logger = getattr(self, "logger", Logger())
+            logger.error(
+                "Loading error: %s" % failure.getErrorMessage()
+            )
+        except Exception:
+            pass
+
         self._async_done(None, callback)
 
     def get_skin_path(self):
-        if screen_width == 2560: return join(PLUGIN_PATH, "skin/uhd")
-        elif screen_width == 1920: return join(PLUGIN_PATH, "skin/fhd")
+        if screen_width == 2560:
+            return join(PLUGIN_PATH, "skin/uhd")
+        elif screen_width == 1920:
+            return join(PLUGIN_PATH, "skin/fhd")
+
         return join(PLUGIN_PATH, "skin/hd")
 
     def load_skin(self):
-        skin_file = "WorldCamMainScreen.xml"
+
+        if self.screen_type == "setup":
+            skin_file = "WorldCamSetupScreen.xml"
+        else:
+            skin_file = "WorldCamMainScreen.xml"
+
         skin_path = join(self.skin_path, skin_file)
+
         try:
             with open(skin_path, "r", encoding="utf-8") as f:
                 return f.read()
+
         except Exception as e:
-            self.logger.error(f"Skin loading error: {str(e)}")
-            # FALLBACK SKIN: Se il file XML manca, usa questo layout di emergenza
+            self.logger.error(
+                "Skin loading error (%s): %s" % (skin_file, str(e))
+            )
+
+            if self.screen_type == "setup":
+                return """
+                <screen name="WorldCamSettingsScreen"
+                    position="center,center"
+                    size="1000,650"
+                    title="WorldCam Settings"
+                    flags="wfNoBorder">
+
+                    <widget name="title"
+                        position="30,10"
+                        size="940,40"
+                        font="Regular;26"
+                        halign="center"
+                        transparent="1"
+                    />
+
+                    <widget name="config"
+                        position="30,60"
+                        size="940,500"
+                        itemHeight="50"
+                        scrollbarMode="showOnDemand"
+                        foregroundColor="#FFFFFF"
+                        backgroundColor="#202020"
+                        foregroundColorSelected="#FFFFFF"
+                        backgroundColorSelected="#405878"
+                    />
+
+                    <widget name="key_red"
+                        position="30,590"
+                        size="200,40"
+                        font="Regular;24"
+                        foregroundColor="#FFFFFF"
+                        backgroundColor="#9F1313"
+                        halign="center"
+                        valign="center"
+                    />
+
+                    <widget name="key_green"
+                        position="250,590"
+                        size="200,40"
+                        font="Regular;24"
+                        foregroundColor="#FFFFFF"
+                        backgroundColor="#1F771F"
+                        halign="center"
+                        valign="center"
+                    />
+
+                </screen>
+                """
+
             return """
-            <screen name="WorldCamMainScreen" position="center,center" size="900,650" title="WorldCam" flags="wfNoBorder">
-                <widget name="title" position="10,10" size="880,40" font="Regular;30" halign="center" transparent="1" />
-                <widget name="list" position="10,60" size="880,520" scrollbarMode="showOnDemand" />
-                <widget name="key_red" position="10,590" size="200,40" font="Regular;20" halign="center" transparent="1" />
-                <widget name="key_green" position="230,590" size="200,40" font="Regular;20" halign="center" transparent="1" />
-                <widget name="key_yellow" position="450,590" size="200,40" font="Regular;20" halign="center" transparent="1" />
-                <widget name="key_blue" position="670,590" size="200,40" font="Regular;20" halign="center" transparent="1" />
+            <screen name="WorldCamMainScreen"
+                position="center,center"
+                size="900,650"
+                title="WorldCam"
+                flags="wfNoBorder">
+
+                <widget name="title"
+                    position="10,10"
+                    size="880,40"
+                    font="Regular;30"
+                    halign="center"
+                    transparent="1"
+                />
+
+                <widget name="list"
+                    position="10,60"
+                    size="880,520"
+                    scrollbarMode="showOnDemand"
+                />
+
+                <widget name="key_red"
+                    position="10,590"
+                    size="200,40"
+                    font="Regular;20"
+                    halign="center"
+                    transparent="1"
+                />
+
+                <widget name="key_green"
+                    position="230,590"
+                    size="200,40"
+                    font="Regular;20"
+                    halign="center"
+                    transparent="1"
+                />
+
+                <widget name="key_yellow"
+                    position="450,590"
+                    size="200,40"
+                    font="Regular;20"
+                    halign="center"
+                    transparent="1"
+                />
+
+                <widget name="key_blue"
+                    position="670,590"
+                    size="200,40"
+                    font="Regular;20"
+                    halign="center"
+                    transparent="1"
+                />
+
             </screen>
             """
 
     def set_flag_icon(self):
         if "flag_icon" in self:
             flag_path = get_flag_path(self.lang)
+
             if exists(flag_path):
                 pixmap = loadPNG(flag_path)
-                if pixmap: self["flag_icon"].instance.setPixmap(pixmap)
 
-    def get_flag_icon(self): return get_flag_path(self.lang)
+                if pixmap:
+                    self["flag_icon"].instance.setPixmap(pixmap)
+
+    def get_flag_icon(self):
+        return get_flag_path(self.lang)
+
+
+class WorldCamSettingsScreen(WebcamBaseScreen, ConfigListScreen):
+
+    def __init__(self, session):
+
+        WebcamBaseScreen.__init__(
+            self,
+            session,
+            screen_type="setup"
+        )
+
+        self["title"] = StaticText(_("WorldCam Settings"))
+        self["paypal"] = StaticText("")
+        self["key_red"] = Button(_("Exit"))
+        self["key_green"] = Button(_("Select"))
+        ConfigListScreen.__init__(
+            self,
+            [
+                getConfigListEntry(
+                    _("YouTube wrapper"),
+                    config.plugins.WorldCam.youtube_wrapper
+                ),
+                getConfigListEntry(
+                    _("Skyline wrapper"),
+                    config.plugins.WorldCam.skyline_wrapper
+                ),
+                getConfigListEntry(
+                    _("Export delay"),
+                    config.plugins.WorldCam.export_delay
+                ),
+                getConfigListEntry(
+                    _("Export workers"),
+                    config.plugins.WorldCam.export_workers
+                ),
+            ],
+            session=session
+        )
+
+        self["actions"] = HelpableActionMap(self, "WorldCamActions", {
+            "ok": self.close,
+            "cancel": self.close,
+            "red": self.close,
+            "green": self.keySave
+        })
+
+        self.setTitle(_("WorldCam Settings"))
+
+    def keySave(self):
+
+        for entry in self["config"].list:
+            entry[1].save()
+
+        configfile.save()
+        self.close()
+
+    def keyCancel(self):
+
+        for entry in self["config"].list:
+            entry[1].cancel()
+
+        self.close()
 
 
 class WorldCamMainScreen(WebcamBaseScreen):
@@ -375,8 +578,11 @@ class WorldCamMainScreen(WebcamBaseScreen):
     def show_message(self, message, type=MessageBox.TYPE_INFO, timeout=0):
         self.session.openWithCallback(None, MessageBox, message, type, timeout=timeout)
 
-    def open_settings(self): self.defer_message(_("Settings functionality coming soon!"))
-    def check_update_silent(self): self.update_plugin(silent=True)
+    def open_settings(self):
+        self.session.open(WorldCamSettingsScreen)
+
+    def check_update_silent(self):
+        self.update_plugin(silent=True)
 
     def update_plugin(self, silent=False):
         from twisted.internet import threads
@@ -467,6 +673,11 @@ class WorldCamFavoritesScreen(WebcamBaseScreen):
             self["key_yellow"].setText(_("Remove"))
         except Exception as e: self.logger.error("Error loading favorites: %s" % str(e))
 
+    def on_item_selected(self):
+        index = self["list"].getCurrentIndex()
+        if index is None or index < 0 or index >= len(self.favorites): return
+        self.session.open(WorldCamPlayer, webcams=self.favorites, current_index=index)
+
     def remove_favorite(self):
         index = self["list"].getCurrentIndex()
         if index is None or index < 0 or index >= len(self.favorites): return
@@ -474,19 +685,27 @@ class WorldCamFavoritesScreen(WebcamBaseScreen):
         if FavoritesManager.remove_favorite(webcam["url"]): self.load_favorites()
 
     def export_favorites(self):
-        # in a thread: the export opens every SkylineWebcams page
-        self.run_async(lambda: FavoritesManager.export_to_bouquet(reload=False), self._export_done, self["title"].getText())
+        if getattr(self, 'screen_closed', False):
+            return
+        self["title"].setText(_("Exporting... Please wait"))
+        self.run_async(
+            lambda: FavoritesManager.export_to_bouquet(reload=False), 
+            self._export_done, 
+            None
+        )
 
     def _export_done(self, result):
+        if getattr(self, 'screen_closed', True): return
+        self["title"].setText(_("Your Favorites")) # or appropriate title
         success, message = result or (False, _("Export failed"))
+        
         if success:
-            reload_services()   # main thread: eDVBDB is not thread-safe
+            # Reload services in a timer to prevent GUI freeze
+            self.reload_timer = eTimer()
+            self.reload_timer.callback.append(reload_services)
+            self.reload_timer.start(100, True)
+            
         self.session.open(MessageBox, message, MessageBox.TYPE_INFO if success else MessageBox.TYPE_ERROR)
-
-    def on_item_selected(self):
-        index = self["list"].getCurrentIndex()
-        if index is None or index < 0 or index >= len(self.favorites): return
-        self.session.open(WorldCamPlayer, webcams=self.favorites, current_index=index)
 
 
 class WorldCamLocalScreen(WebcamBaseScreen):
@@ -595,18 +814,27 @@ class WorldCamLocal(WebcamBaseScreen):
         self.session.open(WorldCamPlayer, webcams=self.webcams, current_index=index)
 
     def export_local_webcams(self):
-        if not self.webcams: return
+        if getattr(self, 'screen_closed', False) or not self.webcams:
+            return
         title = splitext(self.category)[0]
+        self["title"].setText(_("Exporting... Please wait"))
         self.run_async(
             lambda: FavoritesManager.export_to_bouquet(self.webcams, title, reload=False), 
             self._export_done, 
-            _("Exporting...")
+            None
         )
 
     def _export_done(self, result):
+        if getattr(self, 'screen_closed', True): return
+        self["title"].setText(splitext(self.category)[0]) # or appropriate title
         success, message = result or (False, _("Export failed"))
+        
         if success:
-            reload_services()
+            # Reload services in a timer to prevent GUI freeze
+            self.reload_timer = eTimer()
+            self.reload_timer.callback.append(reload_services)
+            self.reload_timer.start(100, True)
+            
         self.session.open(MessageBox, message, MessageBox.TYPE_INFO if success else MessageBox.TYPE_ERROR)
 
 
@@ -643,7 +871,6 @@ class WorldCamContinentScreen(WebcamBaseScreen):
                 if "AMERIC" in c_name:
                     icon_name = "americas.png"
                 elif "EUROP" in c_name:
-                    # Controlla se esiste europe.png, altrimenti usa europa.png
                     if exists(join(PLUGIN_PATH, "countries", "europe.png")):
                         icon_name = "europe.png"
                     else:
@@ -773,17 +1000,12 @@ class WorldCamCategoryScreen(WebcamBaseScreen):
             for c in self.categories:
                 c_name = c["name"]
                 
-                # Crea uno "slug" dal nome: minuscolo, senza accenti, senza spazi
-                # Es. "Piste da Sci" -> "pistedasci", "Città" -> "citta"
                 slug = unicodedata.normalize('NFKD', c_name).encode('ASCII', 'ignore').decode('utf-8')
                 slug = slug.lower().replace(" ", "").replace("'", "").replace("-", "")
                 
-                # 1. Cerca prima il file esatto (es. paesaggi.png, vulcani.png, pistedasci.png)
                 exact_path = join(PLUGIN_PATH, "countries", f"{slug}.png")
                 if exists(exact_path):
                     icon_name = f"{slug}.png"
-                    
-                # 2. Altrimenti usa le parole chiave di fallback
                 elif "animal" in slug: icon_name = "animali.png"
                 elif "citt" in slug or "city" in slug: icon_name = "citta.png"
                 elif "web" in slug or "internet" in slug: icon_name = "web.png"
@@ -796,7 +1018,6 @@ class WorldCamCategoryScreen(WebcamBaseScreen):
                 elif "unesco" in slug: icon_name = "unesco.png"
                 elif "vulcan" in slug: icon_name = "vulcani.png"
                 else:
-                    # Fallback finale
                     icon_name = "categories.png"
                     
                 items.append({"name": c_name, "icon": icon_name})
@@ -854,17 +1075,26 @@ class WorldCamTopScreen(WebcamBaseScreen):
         self.session.open(WorldCamPlayer, webcams=self.top_webcams, current_index=index)
 
     def export_top_webcams(self):
-        if not self.top_webcams: return
+        if getattr(self, 'screen_closed', False) or not self.top_webcams:
+            return
+        self["title"].setText(_("Exporting... Please wait"))
         self.run_async(
             lambda: FavoritesManager.export_to_bouquet(self.top_webcams, "Top Webcams", reload=False), 
             self._export_done, 
-            _("Exporting...")
+            None
         )
 
     def _export_done(self, result):
+        if getattr(self, 'screen_closed', True): return
+        self["title"].setText(_("Top Webcams")) # or appropriate title
         success, message = result or (False, _("Export failed"))
+        
         if success:
-            reload_services()
+            # Reload services in a timer to prevent GUI freeze
+            self.reload_timer = eTimer()
+            self.reload_timer.callback.append(reload_services)
+            self.reload_timer.start(100, True)
+            
         self.session.open(MessageBox, message, MessageBox.TYPE_INFO if success else MessageBox.TYPE_ERROR)
 
 
@@ -954,18 +1184,9 @@ class WorldCamWebcamScreen(WebcamBaseScreen):
             index = self["list"].getCurrentIndex()
             self.session.open(WorldCamPlayer, webcams=self.webcams, current_index=index)
 
-    def export_bouquet_direct(self):
-        # in a thread: the export opens every SkylineWebcams page
-        webcams, name = list(self.webcams), self.location["name"]
-        self.run_async(lambda: FavoritesManager.export_to_bouquet(webcams, name, reload=False), self._export_done, name)
 
-    def _export_done(self, result):
-        success, message = result or (False, _("Export failed"))
-        if success:
-            reload_services()   # main thread: eDVBDB is not thread-safe
-        self.session.open(MessageBox, message, MessageBox.TYPE_INFO if success else MessageBox.TYPE_ERROR)
-
-    def load_webcams(self): self.run_async(lambda: self.scraper.get_webcams(self.location["url"]), self._webcams_loaded, self.location["name"])
+    def load_webcams(self):
+        self.run_async(lambda: self.scraper.get_webcams(self.location["url"]), self._webcams_loaded, self.location["name"])
 
     def _webcams_loaded(self, webcams):
         try:
@@ -980,6 +1201,30 @@ class WorldCamWebcamScreen(WebcamBaseScreen):
         index = self["list"].getCurrentIndex()
         if index is None or index < 0 or index >= len(self.webcams): return
         self.session.open(WorldCamPlayer, webcams=self.webcams, current_index=index)
+
+    def export_bouquet_direct(self):
+        if getattr(self, 'screen_closed', False):
+            return
+        webcams, name = list(self.webcams), self.location["name"]
+        self["title"].setText(_("Exporting... Please wait"))
+        self.run_async(
+            lambda: FavoritesManager.export_to_bouquet(webcams, name, reload=False), 
+            self._export_done, 
+            None
+        )
+
+    def _export_done(self, result):
+        if getattr(self, 'screen_closed', True): return
+        self["title"].setText(self.location["name"]) # or appropriate title
+        success, message = result or (False, _("Export failed"))
+        
+        if success:
+            # Reload services in a timer to prevent GUI freeze
+            self.reload_timer = eTimer()
+            self.reload_timer.callback.append(reload_services)
+            self.reload_timer.start(100, True)
+            
+        self.session.open(MessageBox, message, MessageBox.TYPE_INFO if success else MessageBox.TYPE_ERROR)
 
 
 def main(session, **kwargs):

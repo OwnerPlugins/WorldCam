@@ -1,21 +1,17 @@
-# WorldCam translations
-# Copyright (C) 2025 Lululla Team
-# This file is distributed under the same license as the Lululla package.
-# [lululla] <ekekaz@gmail.com>, 2025.
+# uk translations
+# Copyright (C) 2026 Lululla Team
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: WorldCam\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-02-02 22:48+0100\n"
-"Last-Translator: root <EMAIL@ADDRESS>\n"
-"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: uk <ekekaz@gmail.com>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 msgid "About"
 msgstr "про"
@@ -47,7 +43,6 @@ msgstr "Країни"
 msgid "Country"
 msgstr "Країна"
 
-#, fuzzy
 msgid "Empty or missing playlist"
 msgstr "Помилка завантаження списку відтворення"
 
@@ -69,58 +64,49 @@ msgstr "Експорт"
 msgid "Export All to Bouquet"
 msgstr "Експортувати все в букет"
 
-#, fuzzy
+msgid "Export delay"
+msgstr "Затримка експорту"
+
 msgid "Export failed"
 msgstr "Помилка експорту:"
 
-msgid "Export failed:"
-msgstr "Помилка експорту:"
+msgid "Export failed: "
+msgstr "Помилка експорту: "
+
+msgid "Export workers"
+msgstr "Експортні працівники"
 
 msgid "Exported %d webcams to '%s'"
 msgstr "Експортовано %d веб-камери в \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"%s\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\""
 
-#, fuzzy
-msgid "Exporting..."
-msgstr "Експорт"
+msgid "Exporting... Please wait"
+msgstr "Експорт... Зачекайте"
 
 msgid "Favorites"
 msgstr "Вибране"
 
-msgid ""
-"Install it with:\n"
-"opkg install python3-yt-dlp"
+msgid "Install it with:\nopkg install python3-yt-dlp"
 msgstr "Встановіть його за допомогою:\nopkg встановити python3-yt-dlp"
 
 msgid "Language changed to %s"
 msgstr "Мову змінено на %s"
 
-msgid ""
-"Like this plugin?\n"
-"Buy me a coffee by scanning QR code.\n"
-"Your support keeps development alive!"
-msgstr "Подобається цей плагін?\nКупіть мені каву, відсканувавши QR-код.\nВаша підтримка підтримує розвиток!"
+msgid "Like this plugin?\nBuy me a coffee by scanning QR code.\nYour support keeps development alive!\n"
+msgstr "Подобається цей плагін?\nКупіть мені кави, відсканувавши QR-код.\nВаша підтримка підтримує розвиток!\n"
 
 msgid "Live webcams from around the world"
 msgstr "Онлайн веб-камери з усього світу"
 
-#, fuzzy
 msgid "Loading stream..."
 msgstr "Не вдалося видобути потік YouTube"
 
-#, fuzzy
 msgid "Loading..."
 msgstr "Оновлення..."
 
 msgid "Menu"
 msgstr "Меню"
 
-msgid ""
-"New version %(version)s available\n"
-"\n"
-"Changelog:\n"
-"%(changelog)s\n"
-"\n"
-"Do you want to install it now?"
+msgid "New version %(version)s available\n\nChangelog:\n%(changelog)s\n\nDo you want to install it now?"
 msgstr "Доступна нова версія %(version)s\n\nЖурнал змін:\n%(changelog)s\n\nВи хочете встановити його зараз?"
 
 msgid "No favorites to export"
@@ -132,14 +118,12 @@ msgstr "Вибраних ще немає"
 msgid "No playlists found"
 msgstr "Списків відтворення не знайдено"
 
-#, fuzzy
 msgid "No valid streams found"
 msgstr "Списків відтворення не знайдено"
 
 msgid "No valid webcams in playlist"
 msgstr "У списку відтворення немає дійсних веб-камер"
 
-#, fuzzy
 msgid "No webcams to export"
 msgstr "Немає вибраного для експорту"
 
@@ -167,7 +151,6 @@ msgstr "Видалити з вибраного"
 msgid "Removed from favorites"
 msgstr "Видалено з вибраного"
 
-#, fuzzy
 msgid "Resolving YouTube stream..."
 msgstr "Не вдалося видобути потік YouTube"
 
@@ -183,23 +166,19 @@ msgstr "Виберіть мову"
 msgid "Settings"
 msgstr "Налаштування"
 
-msgid "Settings functionality coming soon!"
-msgstr "Незабаром з’являться функції налаштувань!"
+msgid "Skyline wrapper"
+msgstr "Обгортка Skyline"
 
-#, fuzzy
 msgid "SkylineWebcams and YouTube entries play from the bouquet only with streamlink and the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
 msgstr "Записи SkylineWebcams відтворюються з букета лише за допомогою плагіна оболонки streamlink (enigma2-plugin-extensions-streamlinkwrapper)."
 
-#, fuzzy
 msgid "Stream not available"
 msgstr "Потік YouTube недоступний"
 
 msgid "Top Webcams"
 msgstr "Топ веб-камер"
 
-msgid ""
-"Unable to fetch version info:\n"
-"{}"
+msgid "Unable to fetch version info:\n{}"
 msgstr "Не вдалося отримати інформацію про версію:\n{}"
 
 msgid "Update"
@@ -208,20 +187,13 @@ msgstr "оновлення"
 msgid "Update Aborted!"
 msgstr "Оновлення скасовано!"
 
-#, fuzzy
-msgid ""
-"Update completed successfully!\n"
-"\n"
-"Restart Enigma2 to use the new version."
+msgid "Update completed successfully!\n\nRestart Enigma2 to use the new version."
 msgstr "Вибране успішно експортовано! Перезапустіть Enigma2, щоб побачити їх."
 
 msgid "Update encountered an error (code: %s)"
 msgstr "Оновлення виявило помилку (код: %s)"
 
-#, fuzzy
-msgid ""
-"Update failed:\n"
-"%s"
+msgid "Update failed:\n%s"
 msgstr "Помилка експорту:"
 
 msgid "Update plugin"
@@ -233,17 +205,14 @@ msgstr "Оновлення..."
 msgid "User Lists"
 msgstr "Списки користувачів"
 
-#, fuzzy
-msgid ""
-"WorldCam v%s\n"
-"\n"
-"Live webcam viewer featuring global locations\n"
-"\n"
-"Developed by Lululla"
-msgstr "Засіб перегляду з веб-камери в реальному часі, що показує глобальні місця розташування"
+msgid "WorldCam Settings"
+msgstr "Налаштування WorldCam"
 
 msgid "WorldCam v{}"
-msgstr ""
+msgstr "WorldCam v{}"
+
+msgid "WorldCam v%s\n\nLive webcam viewer featuring global locations\n\nDeveloped by Lululla"
+msgstr "Засіб перегляду з веб-камери в реальному часі, що показує глобальні місця розташування"
 
 msgid "You are already running the latest version: {}"
 msgstr "Ви вже використовуєте останню версію: {}"
@@ -251,110 +220,6 @@ msgstr "Ви вже використовуєте останню версію: {}
 msgid "Your Favorites"
 msgstr "Ваші улюблені"
 
-#~ msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
-#~ msgstr "Записи YouTube відтворюються з букета лише за допомогою плагіна yt-dlp wrapper (enigma2-plugin-extensions-ytdlpwrapper)."
+msgid "YouTube wrapper"
+msgstr "Обгортка YouTube"
 
-#~ msgid "- Local YouTube playlist"
-#~ msgstr "- Локальний список відтворення YouTube"
-
-#~ msgid "- Local webcam list"
-#~ msgstr "- Локальний список веб-камер"
-
-#~ msgid "- Online Direct and YouTube webcams"
-#~ msgstr "- Веб-камери Online Direct і YouTube"
-
-#~ msgid "- Online webcam list"
-#~ msgstr "- Список веб-камер онлайн"
-
-#~ msgid "- Other sources"
-#~ msgstr "- Інші джерела"
-
-#~ msgid "AFRICA"
-#~ msgstr "АФРИКА"
-
-#~ msgid "AMERICAS"
-#~ msgstr "АМЕРИКА"
-
-#~ msgid "Developed by Lululla"
-#~ msgstr "Розроблено Lululla"
-
-#~ msgid "EUROPE"
-#~ msgstr "ЄВРОПА"
-
-#~ msgid "Empty playlist file"
-#~ msgstr "Порожній файл списку відтворення"
-
-#~ msgid "Error changing language"
-#~ msgstr "Помилка зміни мови"
-
-#~ msgid "Error loading categories"
-#~ msgstr "Помилка завантаження категорій"
-
-#~ msgid "Error loading continents"
-#~ msgstr "Помилка завантаження континентів"
-
-#~ msgid "Error loading countries"
-#~ msgstr "Помилка завантаження країн"
-
-#~ msgid "Error loading favorites"
-#~ msgstr "Помилка завантаження вибраного"
-
-#~ msgid "Error loading locations"
-#~ msgstr "Помилка завантаження місць"
-
-#~ msgid "Error loading playlists"
-#~ msgstr "Помилка завантаження списків відтворення"
-
-#~ msgid "Error loading top webcams"
-#~ msgstr "Помилка завантаження найпопулярніших веб-камер"
-
-#~ msgid "Error loading webcams"
-#~ msgstr "Помилка завантаження веб-камер"
-
-#~ msgid "Error opening language selection"
-#~ msgstr "Помилка відкриття вибору мови"
-
-#~ msgid "Error opening playlist"
-#~ msgstr "Помилка відкриття списку відтворення"
-
-#~ msgid "File not found"
-#~ msgstr "Файл не знайдено"
-
-#~ msgid "Forum support: www.corvoboys.org"
-#~ msgstr "Підтримка форуму: www.corvoboys.org"
-
-#~ msgid "Included playlists and sources:"
-#~ msgstr "Включені списки відтворення та джерела:"
-
-#~ msgid "No playlists available"
-#~ msgstr "Немає доступних списків відтворення"
-
-#~ msgid "Powered by Enigma2 and Python"
-#~ msgstr "Працює на Enigma2 і Python"
-
-#~ msgid "Removed from favorites: %s"
-#~ msgstr "Видалено з вибраного: %s"
-
-#~ msgid "Select a valid category"
-#~ msgstr "Виберіть дійсну категорію"
-
-#~ msgid "Select a valid location"
-#~ msgstr "Виберіть дійсне розташування"
-
-#~ msgid "Select a valid playlist"
-#~ msgstr "Виберіть дійсний список відтворення"
-
-#~ msgid "Select a valid webcam"
-#~ msgstr "Виберіть дійсну веб-камеру"
-
-#~ msgid "Technical error in Webcam.pl"
-#~ msgstr "Технічна помилка в Webcam.pl"
-
-#~ msgid "YouTube playback error"
-#~ msgstr "Помилка відтворення YouTube"
-
-#~ msgid "Invalid YouTube URL"
-#~ msgstr "Недійсна URL-адреса YouTube"
-
-#~ msgid "yt-dlp not found. Please install it."
-#~ msgstr "yt-dlp не знайдено. Будь ласка, встановіть його."

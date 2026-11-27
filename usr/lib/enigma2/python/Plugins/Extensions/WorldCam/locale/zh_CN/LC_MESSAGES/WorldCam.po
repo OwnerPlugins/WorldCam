@@ -1,41 +1,17 @@
-# WorldCam translations
-# Copyright (C) 2025 Lululla Team
-# This file is distributed under the same license as the Lululla package.
-# [lululla] <ekekaz@gmail.com>, 2025.
+# zh_CN translations
+# Copyright (C) 2026 Lululla Team
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: WorldCam\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-02-02 22:48+0100\n"
-"Last-Translator: root <EMAIL@ADDRESS>\n"
-"Language-Team: Language zh-CN\n"
-"Language: zh-CN\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: zh_CN <ekekaz@gmail.com>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-msgid "- Local YouTube playlist"
-msgstr "- 本地 YouTube 播放列表"
-
-msgid "- Local webcam list"
-msgstr "- 本地网络摄像头列表"
-
-msgid "- Online Direct and YouTube webcams"
-msgstr "- 在线直播和 YouTube 网络摄像头"
-
-msgid "- Online webcam list"
-msgstr "- 在线网络摄像头列表"
-
-msgid "- Other sources"
-msgstr "- 其他来源"
-
-msgid "AFRICA"
-msgstr "非洲"
-
-msgid "AMERICAS"
-msgstr "美洲"
 
 msgid "About"
 msgstr "关于"
@@ -67,53 +43,11 @@ msgstr "国家"
 msgid "Country"
 msgstr "国家"
 
-msgid "Developed by Lululla"
-msgstr "由 卢鲁拉 开发"
-
-msgid "EUROPE"
-msgstr "欧洲"
-
-msgid "Empty playlist file"
-msgstr "空播放列表文件"
+msgid "Empty or missing playlist"
+msgstr "播放列表为空或缺失"
 
 msgid "Error adding favorite"
 msgstr "添加收藏夹时出错"
-
-msgid "Error changing language"
-msgstr "更改语言时出错"
-
-msgid "Error loading categories"
-msgstr "加载类别时出错"
-
-msgid "Error loading continents"
-msgstr "加载大陆时出错"
-
-msgid "Error loading countries"
-msgstr "加载国家/地区时出错"
-
-msgid "Error loading favorites"
-msgstr "加载收藏夹时出错"
-
-msgid "Error loading locations"
-msgstr "加载位置时出错"
-
-msgid "Error loading playlist"
-msgstr "加载播放列表时出错"
-
-msgid "Error loading playlists"
-msgstr "加载播放列表时出错"
-
-msgid "Error loading top webcams"
-msgstr "加载顶级网络摄像头时出错"
-
-msgid "Error loading webcams"
-msgstr "加载网络摄像头时出错"
-
-msgid "Error opening language selection"
-msgstr "打开语言选择时出错"
-
-msgid "Error opening playlist"
-msgstr "打开播放列表时出错"
 
 msgid "Error removing favorite"
 msgstr "删除收藏夹时出错"
@@ -130,46 +64,50 @@ msgstr "出口"
 msgid "Export All to Bouquet"
 msgstr "全部导出到花束"
 
-msgid "Export failed:"
-msgstr "导出失败："
+msgid "Export delay"
+msgstr "出口延迟"
+
+msgid "Export failed"
+msgstr "导出失败"
+
+msgid "Export failed: "
+msgstr "导出失败： "
+
+msgid "Export workers"
+msgstr "出口工人"
 
 msgid "Exported %d webcams to '%s'"
 msgstr "已将 %d 个网络摄像头导出到“%s”"
 
+msgid "Exporting... Please wait"
+msgstr "正在导出...请稍候"
+
 msgid "Favorites"
 msgstr "收藏夹"
 
-msgid "File not found"
-msgstr "找不到文件"
-
-msgid "Forum support: www.corvoboys.org"
-msgstr "论坛支持：www.corvoboys.org"
-
-msgid "GitHub: %s"
-msgstr "GitHub：%s"
-
-msgid "Included playlists and sources:"
-msgstr "包含的播放列表和来源："
+msgid "Install it with:\nopkg install python3-yt-dlp"
+msgstr "安装它：\nopkg install python3-yt-dlp"
 
 msgid "Language changed to %s"
 msgstr "语言更改为 %s"
 
-msgid "Live webcam viewer featuring global locations"
-msgstr "具有全球位置的实时网络摄像头查看器"
+msgid "Like this plugin?\nBuy me a coffee by scanning QR code.\nYour support keeps development alive!\n"
+msgstr "喜欢这个插件吗？\n扫描二维码给我买杯咖啡。\n您的支持让开发充满活力！\n"
 
 msgid "Live webcams from around the world"
 msgstr "来自世界各地的实时网络摄像头"
 
-#, fuzzy
 msgid "Loading stream..."
 msgstr "无法提取 YouTube 流"
 
-#, fuzzy
 msgid "Loading..."
 msgstr "正在升级..."
 
 msgid "Menu"
 msgstr "菜单"
+
+msgid "New version %(version)s available\n\nChangelog:\n%(changelog)s\n\nDo you want to install it now?"
+msgstr "新版本 %(version)s 可用\n\n更改日志：\n%(changelog)s\n\n您想立即安装吗？"
 
 msgid "No favorites to export"
 msgstr "没有可导出的收藏夹"
@@ -177,20 +115,15 @@ msgstr "没有可导出的收藏夹"
 msgid "No favorites yet"
 msgstr "还没有收藏夹"
 
-msgid "No playlists available"
-msgstr "没有可用的播放列表"
-
 msgid "No playlists found"
 msgstr "未找到播放列表"
 
-#, fuzzy
 msgid "No valid streams found"
 msgstr "未找到播放列表"
 
 msgid "No valid webcams in playlist"
 msgstr "播放列表中没有有效的网络摄像头"
 
-#, fuzzy
 msgid "No webcams to export"
 msgstr "没有可导出的收藏夹"
 
@@ -209,9 +142,6 @@ msgstr "播放错误"
 msgid "Playback failed!"
 msgstr "播放失败！"
 
-msgid "Powered by Enigma2 and Python"
-msgstr "由 Enigma2 和 Python 提供支持"
-
 msgid "Remove"
 msgstr "消除"
 
@@ -221,27 +151,11 @@ msgstr "从收藏夹中删除"
 msgid "Removed from favorites"
 msgstr "已从收藏夹中删除"
 
-msgid "Removed from favorites: %s"
-msgstr "已从收藏夹中删除：%s"
-
-#, fuzzy
 msgid "Resolving YouTube stream..."
 msgstr "无法提取 YouTube 流"
 
 msgid "Select"
 msgstr "选择"
-
-msgid "Select a valid category"
-msgstr "选择有效类别"
-
-msgid "Select a valid location"
-msgstr "选择有效位置"
-
-msgid "Select a valid playlist"
-msgstr "选择有效的播放列表"
-
-msgid "Select a valid webcam"
-msgstr "选择有效的网络摄像头"
 
 msgid "Select an option"
 msgstr "选择一个选项"
@@ -252,21 +166,20 @@ msgstr "选择语言"
 msgid "Settings"
 msgstr "设置"
 
-msgid "Settings functionality coming soon!"
-msgstr "设置功能即将推出！"
+msgid "Skyline wrapper"
+msgstr "天际线包装纸"
 
-msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
-msgstr "SkylineWebcams 条目仅通过 Streamlink 包装器插件 (enigma2-plugin-extensions-streamlinkwrapper) 从花束中播放。"
+msgid "SkylineWebcams and YouTube entries play from the bouquet only with streamlink and the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "SkylineWebcams 和 YouTube 条目仅通过 Streamlink 和 StreamLink 包装器插件 (enigma2-plugin-extensions-streamlinkwrapper) 从花束中播放。"
 
-#, fuzzy
 msgid "Stream not available"
 msgstr "YouTube 流不可用"
 
-msgid "Technical error in Webcam.pl"
-msgstr "Webcam.pl 中的技术错误"
-
 msgid "Top Webcams"
 msgstr "热门网络摄像头"
+
+msgid "Unable to fetch version info:\n{}"
+msgstr "无法获取版本信息：\n{}"
 
 msgid "Update"
 msgstr "更新"
@@ -274,8 +187,14 @@ msgstr "更新"
 msgid "Update Aborted!"
 msgstr "更新中止！"
 
+msgid "Update completed successfully!\n\nRestart Enigma2 to use the new version."
+msgstr "更新成功完成！\n\n重新启动 Enigma2 以使用新版本。"
+
 msgid "Update encountered an error (code: %s)"
 msgstr "更新遇到错误（代码：%s）"
+
+msgid "Update failed:\n%s"
+msgstr "更新失败：\n%s"
 
 msgid "Update plugin"
 msgstr "更新插件"
@@ -286,29 +205,21 @@ msgstr "正在升级..."
 msgid "User Lists"
 msgstr "用户列表"
 
-msgid "WorldCam v%s"
-msgstr ""
+msgid "WorldCam Settings"
+msgstr "世界摄像机设置"
 
 msgid "WorldCam v{}"
-msgstr ""
+msgstr "WorldCam v{}"
+
+msgid "WorldCam v%s\n\nLive webcam viewer featuring global locations\n\nDeveloped by Lululla"
+msgstr "WorldCam v%s\n\n具有全球位置的实时网络摄像头查看器\n\n由 Lululla 开发"
 
 msgid "You are already running the latest version: {}"
 msgstr "您已经在运行最新版本：{}"
 
-msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
-msgstr "YouTube 条目只能通过 yt-dlp 包装器插件 (enigma2-plugin-extensions-ytdlpwrapper) 从花束中播放。"
-
 msgid "Your Favorites"
 msgstr "您的最爱"
 
-#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
-#~ msgstr "收藏夹导出成功！重新启动 Enigma2 即可看到它们。"
+msgid "YouTube wrapper"
+msgstr "YouTube 包装器"
 
-#~ msgid "YouTube playback error"
-#~ msgstr "YouTube 播放错误"
-
-#~ msgid "Invalid YouTube URL"
-#~ msgstr "YouTube 网址无效"
-
-#~ msgid "yt-dlp not found. Please install it."
-#~ msgstr "未找到 yt-dlp。请安装它。"

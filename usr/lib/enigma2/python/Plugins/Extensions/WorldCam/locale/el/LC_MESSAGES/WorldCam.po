@@ -1,44 +1,17 @@
+# el translations
+# Copyright (C) 2026 Lululla Team
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: WorldCam\n"
-"POT-Creation-Date: 2025-06-22 22:51+0200\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
-"Language-Team: giorbak\n"
+"Language-Team: el <ekekaz@gmail.com>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-SearchPath-0: __init__.py\n"
-"X-Poedit-SearchPath-1: player.py\n"
-"X-Poedit-SearchPath-2: scraper.py\n"
-"X-Poedit-SearchPath-3: utils.py\n"
-"X-Poedit-SearchPath-4: plugin.py\n"
-
-msgid "- Local YouTube playlist"
-msgstr "- Τοπική λίστα αναπαραγωγής YouTube"
-
-msgid "- Local webcam list"
-msgstr "- Τοπική λίστα καμερών ιστού"
-
-msgid "- Online Direct and YouTube webcams"
-msgstr "- Διαδικτυακές απευθείας κάμερες ιστού και YouTube"
-
-msgid "- Online webcam list"
-msgstr "- Διαδικτυακή λίστα καμερών ιστού"
-
-msgid "- Other sources"
-msgstr "- Άλλες πηγές"
-
-msgid "AFRICA"
-msgstr "ΑΦΡΙΚΗ"
-
-msgid "AMERICAS"
-msgstr "ΑΜΕΡΙΚΗ"
 
 msgid "About"
 msgstr "Σχετικά"
@@ -70,54 +43,11 @@ msgstr "Χώρες"
 msgid "Country"
 msgstr "Χώρα"
 
-msgid "Developed by Lululla"
-msgstr "Ανάπτυξη από τον Lululla"
-
-msgid "EUROPE"
-msgstr "ΕΥΡΩΠΗ"
-
-#, fuzzy
-msgid "Empty playlist file"
-msgstr "Καμία διαθέσιμη λίστα αναπαραγωγής"
+msgid "Empty or missing playlist"
+msgstr "Λίστα αναπαραγωγής είναι άδεια ή λείπει"
 
 msgid "Error adding favorite"
 msgstr "Σφάλμα κατά την προσθήκη στα αγαπημένα"
-
-msgid "Error changing language"
-msgstr "Σφάλμα κατά την αλλαγή γλώσσας"
-
-msgid "Error loading categories"
-msgstr "Σφάλμα κατά τη φόρτωση των κατηγοριών"
-
-msgid "Error loading continents"
-msgstr "Σφάλμα κατά τη φόρτωση των ηπείρων"
-
-msgid "Error loading countries"
-msgstr "Σφάλμα κατά τη φόρτωση των χωρών"
-
-msgid "Error loading favorites"
-msgstr "Σφάλμα φόρτωσης αγαπημένων"
-
-msgid "Error loading locations"
-msgstr "Σφάλμα κατά τη φόρτωση των τοποθεσιών"
-
-msgid "Error loading playlist"
-msgstr "Σφάλμα κατά τη φόρτωση της λίστας αναπαραγωγής"
-
-msgid "Error loading playlists"
-msgstr "Σφάλμα κατά τη φόρτωση των λιστών αναπαραγωγής"
-
-msgid "Error loading top webcams"
-msgstr "Σφάλμα κατά τη φόρτωση των κορυφαίων καμερών ιστού"
-
-msgid "Error loading webcams"
-msgstr "Σφάλμα κατά τη φόρτωση των καμερών ιστού"
-
-msgid "Error opening language selection"
-msgstr "Σφάλμα κατά το άνοιγμα της επιλογής γλώσσας"
-
-msgid "Error opening playlist"
-msgstr "Σφάλμα κατά το άνοιγμα της λίστας αναπαραγωγής"
 
 msgid "Error removing favorite"
 msgstr "Σφάλμα κατά την αφαίρεση από τα αγαπημένα"
@@ -134,48 +64,50 @@ msgstr "Εξαγωγή"
 msgid "Export All to Bouquet"
 msgstr "Εξαγωγή όλων σε μπουκέτο"
 
-#, fuzzy
-msgid "Export failed:"
+msgid "Export delay"
+msgstr "Καθυστέρηση εξαγωγής"
+
+msgid "Export failed"
+msgstr "Η εξαγωγή απέτυχε"
+
+msgid "Export failed: "
 msgstr "Η εξαγωγή απέτυχε: "
+
+msgid "Export workers"
+msgstr "Εργαζόμενοι στις εξαγωγές"
 
 msgid "Exported %d webcams to '%s'"
 msgstr "Έγινε εξαγωγή %d webcam στο '%s'"
 
+msgid "Exporting... Please wait"
+msgstr "Εξαγωγή... Περιμένετε"
+
 msgid "Favorites"
 msgstr "Αγαπημένα"
 
-#, fuzzy
-msgid "File not found"
-msgstr "Το αρχείο λίστας αναπαραγωγής δεν βρέθηκε"
-
-msgid "Forum support: www.corvoboys.org"
-msgstr "Φόρουμ υποστήριξης: www.corvoboys.org"
-
-msgid "GitHub: %s"
-msgstr ""
-
-msgid "Included playlists and sources:"
-msgstr "Περιλαμβανόμενες λίστες αναπαραγωγής και πηγές:"
+msgid "Install it with:\nopkg install python3-yt-dlp"
+msgstr "Εγκαταστήστε το με:\nopkg install python3-yt-dlp"
 
 msgid "Language changed to %s"
 msgstr "Η γλώσσα άλλαξε σε %s"
 
-msgid "Live webcam viewer featuring global locations"
-msgstr "Προβολή ζωντανών καμερών ιστού από τοποθεσίες παγκοσμίως"
+msgid "Like this plugin?\nBuy me a coffee by scanning QR code.\nYour support keeps development alive!\n"
+msgstr "Σας αρέσει αυτή η προσθήκη;\nΑγοράστε μου έναν καφέ σαρώνοντας τον κωδικό QR.\nΗ υποστήριξή σας κρατά ζωντανή την ανάπτυξη!\n"
 
 msgid "Live webcams from around the world"
 msgstr "Ζωντανές κάμερες ιστού από όλο τον κόσμο"
 
-#, fuzzy
 msgid "Loading stream..."
 msgstr "Δεν ήταν δυνατή η εξαγωγή της ροής βίντεο"
 
-#, fuzzy
 msgid "Loading..."
 msgstr "Αναβάθμιση..."
 
 msgid "Menu"
 msgstr "Μενού"
+
+msgid "New version %(version)s available\n\nChangelog:\n%(changelog)s\n\nDo you want to install it now?"
+msgstr "Νέα έκδοση %(version)s διαθέσιμη\n\nΑρχείο αλλαγών:\n%(changelog)s\n\nΘέλετε να το εγκαταστήσετε τώρα;"
 
 msgid "No favorites to export"
 msgstr "Δεν υπάρχουν αγαπημένα προς εξαγωγή"
@@ -183,21 +115,15 @@ msgstr "Δεν υπάρχουν αγαπημένα προς εξαγωγή"
 msgid "No favorites yet"
 msgstr "Δεν υπάρχουν αγαπημένα ακόμα"
 
-msgid "No playlists available"
-msgstr "Καμία διαθέσιμη λίστα αναπαραγωγής"
-
 msgid "No playlists found"
 msgstr "Δεν βρέθηκαν λίστες αναπαραγωγής"
 
-#, fuzzy
 msgid "No valid streams found"
 msgstr "Δεν βρέθηκαν λίστες αναπαραγωγής"
 
-#, fuzzy
 msgid "No valid webcams in playlist"
 msgstr "- Τοπική λίστα καμερών ιστού"
 
-#, fuzzy
 msgid "No webcams to export"
 msgstr "Δεν υπάρχουν αγαπημένα προς εξαγωγή"
 
@@ -210,15 +136,11 @@ msgstr "Αναπαραγωγή"
 msgid "Play/pause not supported for this stream"
 msgstr "Η αναπαραγωγή/παύση δεν υποστηρίζεται για αυτήν τη ροή"
 
-#, fuzzy
 msgid "Playback error"
 msgstr "Η αναπαραγωγή απέτυχε!"
 
 msgid "Playback failed!"
 msgstr "Η αναπαραγωγή απέτυχε!"
-
-msgid "Powered by Enigma2 and Python"
-msgstr "Με την υποστήριξη των Enigma2 και Python"
 
 msgid "Remove"
 msgstr "Αφαίρεση"
@@ -229,53 +151,35 @@ msgstr "Αφαίρεση από τα αγαπημένα"
 msgid "Removed from favorites"
 msgstr "Αφαιρέθηκε από τα αγαπημένα"
 
-msgid "Removed from favorites: %s"
-msgstr "Αφαιρέθηκε από τα αγαπημένα: %s"
-
-#, fuzzy
 msgid "Resolving YouTube stream..."
 msgstr "Δεν ήταν δυνατή η εξαγωγή της ροής βίντεο"
 
 msgid "Select"
 msgstr "Επιλογή"
 
-msgid "Select a valid category"
-msgstr "Επιλέξτε έγκυρη κατηγορία"
-
-msgid "Select a valid location"
-msgstr "Επιλέξτε έγκυρη τοποθεσία"
-
-msgid "Select a valid playlist"
-msgstr "Επιλέξτε έγκυρη λίστα αναπαραγωγής"
-
-msgid "Select a valid webcam"
-msgstr "Επιλέξτε έγκυρη κάμερα ιστού"
-
 msgid "Select an option"
 msgstr "Επιλέξτε μια επιλογή"
 
-#, fuzzy
 msgid "Select language"
 msgstr "Αλλαγή γλώσσας"
 
 msgid "Settings"
 msgstr "Ρυθμίσεις"
 
-msgid "Settings functionality coming soon!"
-msgstr "Η λειτουργία Ρυθμίσεις έρχεται σύντομα!"
+msgid "Skyline wrapper"
+msgstr "Περιτύλιγμα ορίζοντα"
 
-msgid "SkylineWebcams entries play from the bouquet only with the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
-msgstr "Οι καταχωρήσεις SkylineWebcams αναπαράγονται από το μπουκέτο μόνο με την προσθήκη streamlink wrapper (enigma2-plugin-extensions-streamlinkwrapper)."
+msgid "SkylineWebcams and YouTube entries play from the bouquet only with streamlink and the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
+msgstr "Οι SkylineWebcams και οι καταχωρίσεις στο YouTube αναπαράγονται από το μπουκέτο μόνο με το streamlink και την προσθήκη streamlink wrapper (enigma2-plugin-extensions-streamlinkwrapper)."
 
-#, fuzzy
 msgid "Stream not available"
 msgstr "Η ροή YouTube δεν είναι διαθέσιμη"
 
-msgid "Technical error in Webcam.pl"
-msgstr "Τεχνικό σφάλμα στο Webcam.pl"
-
 msgid "Top Webcams"
 msgstr "Κορυφαίες κάμερες ιστού"
+
+msgid "Unable to fetch version info:\n{}"
+msgstr "Δεν είναι δυνατή η ανάκτηση πληροφοριών έκδοσης:\n{}"
 
 msgid "Update"
 msgstr "Ενημέρωση"
@@ -283,8 +187,14 @@ msgstr "Ενημέρωση"
 msgid "Update Aborted!"
 msgstr "Η ενημέρωση ακυρώθηκε!"
 
+msgid "Update completed successfully!\n\nRestart Enigma2 to use the new version."
+msgstr "Η ενημέρωση ολοκληρώθηκε με επιτυχία!\n\nΕπανεκκινήστε το Enigma2 για να χρησιμοποιήσετε τη νέα έκδοση."
+
 msgid "Update encountered an error (code: %s)"
 msgstr "Προέκυψε σφάλμα κατά την ενημέρωση (κωδικός: %s)"
+
+msgid "Update failed:\n%s"
+msgstr "Η ενημέρωση απέτυχε:\n%s"
 
 msgid "Update plugin"
 msgstr "Ενημέρωση του πρόσθετου"
@@ -295,136 +205,21 @@ msgstr "Αναβάθμιση..."
 msgid "User Lists"
 msgstr "Λίστες χρήστη"
 
-msgid "WorldCam v%s"
-msgstr "WorldCam v%s"
+msgid "WorldCam Settings"
+msgstr "Ρυθμίσεις WorldCam"
 
 msgid "WorldCam v{}"
 msgstr "WorldCam v{}"
 
+msgid "WorldCam v%s\n\nLive webcam viewer featuring global locations\n\nDeveloped by Lululla"
+msgstr "WorldCam v%s\n\nΖωντανή προβολή κάμερας web με παγκόσμιες τοποθεσίες\n\nΑναπτύχθηκε από την Lululla"
+
 msgid "You are already running the latest version: {}"
 msgstr "Χρησιμοποιείτε ήδη την πιο πρόσφατη έκδοση: {}"
-
-msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
-msgstr "Οι καταχωρίσεις στο YouTube παίζονται από το μπουκέτο μόνο με την προσθήκη yt-dlp wrapper (enigma2-plugin-extensions-ytdlpwrapper)."
 
 msgid "Your Favorites"
 msgstr "Τα αγαπημένα σας"
 
-#~ msgid "Favorites exported successfully! Restart Enigma2 to see them."
-#~ msgstr "Τα αγαπημένα εξήχθησαν με επιτυχία! Επανεκκινήστε το Enigma2 για να τα δείτε."
+msgid "YouTube wrapper"
+msgstr "Περιτύλιγμα YouTube"
 
-#, fuzzy
-#~ msgid "YouTube playback error"
-#~ msgstr "Όλες οι μέθοδοι αναπαραγωγής YouTube απέτυχαν!"
-
-#~ msgid "Invalid YouTube URL"
-#~ msgstr "Μη έγκυρο URL YouTube"
-
-#~ msgid "yt-dlp not found. Please install it."
-#~ msgstr "Το yt-dlp δεν βρέθηκε. Εγκαταστήστε το."
-
-#~ msgid "GitHub: https://github.com/Belfagor2005/"
-#~ msgstr "GitHub: https://github.com/Belfagor2005/"
-
-#~ msgid "Update yt-dlp"
-#~ msgstr "Ενημέρωση yt-dlp"
-
-#~ msgid "yt-dlp updated successfully!"
-#~ msgstr "Το yt-dlp ενημερώθηκε με επιτυχία!"
-
-#~ msgid "All YouTube methods failed!"
-#~ msgstr "Όλες οι μέθοδοι του YouTube απέτυχαν!"
-
-#~ msgid "Couldn't extract video stream"
-#~ msgstr "Δεν ήταν δυνατή η εξαγωγή της ροής βίντεο"
-
-#, python-format
-#~ msgid ""
-#~ "Error opening settings:\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Σφάλμα κατά το άνοιγμα των ρυθμίσεων:\n"
-#~ "%s"
-
-#~ msgid "Error playing YouTube video with proxy!"
-#~ msgstr "Σφάλμα κατά την αναπαραγωγή βίντεο YouTube μέσω proxy!"
-
-#~ msgid "Error playing YouTube video!"
-#~ msgstr "Σφάλμα κατά την αναπαραγωγή βίντεο YouTube!"
-
-#, python-format
-#~ msgid ""
-#~ "Failed to update yt-dlp:\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Αποτυχία ενημέρωσης του yt-dlp:\n"
-#~ "%s"
-
-#~ msgid ""
-#~ "Like this plugin?\n"
-#~ "Buy me a coffee by scanning QR code.\n"
-#~ "Your support keeps development alive!\n"
-#~ msgstr ""
-#~ "Σας άρεσε αυτό το πρόσθετο;\n"
-#~ "Κεράστε μου έναν καφέ σκανάροντας τον κωδικό QR.\n"
-#~ "Η υποστήριξή σας κρατά την ανάπτυξη ζωντανή!\n"
-
-#, python-format
-#~ msgid ""
-#~ "New version %s available\n"
-#~ "\n"
-#~ "Changelog: %s\n"
-#~ "\n"
-#~ "Do you want to install it now?"
-#~ msgstr ""
-#~ "Διαθέσιμη νέα έκδοση %s\n"
-#~ "\n"
-#~ "Καταγραφή αλλαγών: %s\n"
-#~ "\n"
-#~ "Θέλετε να την εγκαταστήσετε τώρα;"
-
-#~ msgid ""
-#~ "Player Controls:\n"
-#~ "OK - Show/hide info bar\n"
-#~ "GREEN - Previous webcam\n"
-#~ "YELLOW - Next webcam\n"
-#~ "BLUE - Toggle favorite\n"
-#~ "PLAY/PAUSE - Toggle playback\n"
-#~ "STOP - Stop playback\n"
-#~ "EXIT - Close player\n"
-#~ msgstr ""
-#~ "Χειριστήρια προγράμματος αναπαραγωγής:\n"
-#~ "OK - Εμφάνιση/απόκρυψη μπάρας πληροφοριών\n"
-#~ "GREEN - Προηγούμενη κάμερα ιστού\n"
-#~ "YELLOW - Επόμενη κάμερα ιστού\n"
-#~ "BLUE - Εναλλαγή αγαπημένων\n"
-#~ "PLAY/PAUSE - Εναλλαγή αναπαραγωγής\n"
-#~ "STOP - Διακοπή αναπαραγωγής\n"
-#~ "EXIT - Κλείσιμο προγράμματος αναπαραγωγής\n"
-
-#~ msgid "Playlist file not found or empty"
-#~ msgstr "Το αρχείο λίστας αναπαραγωγής δεν βρέθηκε ή είναι κενό"
-
-#~ msgid ""
-#~ "Unable to fetch version info:\n"
-#~ "{}"
-#~ msgstr ""
-#~ "Αδυναμία λήψης πληροφοριών έκδοσης:\n"
-#~ "{}"
-
-#~ msgid ""
-#~ "Update completed successfully!\n"
-#~ "\n"
-#~ "The plugin will now close."
-#~ msgstr ""
-#~ "Η ενημέρωση ολοκληρώθηκε με επιτυχία!\n"
-#~ "\n"
-#~ "Το πρόσθετο θα κλείσει τώρα."
-
-#, python-format
-#~ msgid ""
-#~ "Update failed:\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Η ενημέρωση απέτυχε:\n"
-#~ "%s"

@@ -1,15 +1,17 @@
+# pl translations
+# Copyright (C) 2026 Lululla Team
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: WorldCam\n"
-"POT-Creation-Date: 2025-06-30 19:21+0200\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
-"Language-Team: pl.alaaa\n"
+"Language-Team: pl <ekekaz@gmail.com>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.11\n"
 
 msgid "About"
 msgstr "O..."
@@ -41,7 +43,6 @@ msgstr "Kraj "
 msgid "Country"
 msgstr "Kraj"
 
-#, fuzzy
 msgid "Empty or missing playlist"
 msgstr "Błąd ładowania listy odtwarzania"
 
@@ -63,70 +64,50 @@ msgstr "Eksport"
 msgid "Export All to Bouquet"
 msgstr "Dodaj Wszystkie do Bukietu"
 
-#, fuzzy
+msgid "Export delay"
+msgstr "Opóźnienie eksportu"
+
 msgid "Export failed"
 msgstr "Eksport nie powiódł się:"
 
-#, fuzzy
-msgid "Export failed:"
-msgstr "Eksport nie powiódł się:"
+msgid "Export failed: "
+msgstr "Eksport nie powiódł się: "
+
+msgid "Export workers"
+msgstr "Pracownicy eksportowi"
 
 msgid "Exported %d webcams to '%s'"
 msgstr "Wyeksportowano %d kamery internetowe do „%s”"
 
-#, fuzzy
-msgid "Exporting..."
-msgstr "Eksport"
+msgid "Exporting... Please wait"
+msgstr "Eksportowanie... Proszę czekać"
 
 msgid "Favorites"
 msgstr "Ulubione"
 
-msgid ""
-"Install it with:\n"
-"opkg install python3-yt-dlp"
+msgid "Install it with:\nopkg install python3-yt-dlp"
 msgstr "Zainstaluj go za pomocą:\nopkg zainstaluj python3-yt-dlp"
 
 msgid "Language changed to %s"
 msgstr "Język %s  wybrany."
 
-#, fuzzy
-msgid ""
-"Like this plugin?\n"
-"Buy me a coffee by scanning QR code.\n"
-"Your support keeps development alive!"
-msgstr ""
-"Podoba Ci się ta wtyczka?\n"
-"Kup mi kawę, skanując kod QR.\n"
-"Twoje wsparcie utrzymuje rozwój!\n"
+msgid "Like this plugin?\nBuy me a coffee by scanning QR code.\nYour support keeps development alive!\n"
+msgstr "Podoba Ci się ta wtyczka?\nKup mi kawę, skanując kod QR.\nTwoje wsparcie utrzymuje rozwój!\n"
 
 msgid "Live webcams from around the world"
 msgstr "Kamery internetowe na żywo z całego świata"
 
-#, fuzzy
 msgid "Loading stream..."
 msgstr "Ładowanie kamer internet. ..."
 
-#, fuzzy
 msgid "Loading..."
 msgstr "Aktualizowanie..."
 
 msgid "Menu"
 msgstr "Menu"
 
-#, fuzzy
-msgid ""
-"New version %(version)s available\n"
-"\n"
-"Changelog:\n"
-"%(changelog)s\n"
-"\n"
-"Do you want to install it now?"
-msgstr ""
-"Dostępna jest nowa wersja %s\n"
-"\n"
-"Lista zmian: %s\n"
-"\n"
-"Czy chcesz ją teraz zainstalować?"
+msgid "New version %(version)s available\n\nChangelog:\n%(changelog)s\n\nDo you want to install it now?"
+msgstr "Dostępna jest nowa wersja %s\n\nLista zmian: %s\n\nCzy chcesz ją teraz zainstalować?"
 
 msgid "No favorites to export"
 msgstr "Brak ulubionych do eksportu"
@@ -137,15 +118,12 @@ msgstr "Nie ma ulubionych"
 msgid "No playlists found"
 msgstr "Nie znaleziono list odtwarzania"
 
-#, fuzzy
 msgid "No valid streams found"
 msgstr "Nie znaleziono list odtwarzania"
 
-#, fuzzy
 msgid "No valid webcams in playlist"
 msgstr "- Lista lokalnych kamer internetowych"
 
-#, fuzzy
 msgid "No webcams to export"
 msgstr "Brak ulubionych do eksportu"
 
@@ -158,7 +136,6 @@ msgstr "Odtwarzaj"
 msgid "Play/pause not supported for this stream"
 msgstr "Odtwarzanie/pauza nie jest obsługiwana w przypadku tego strumienia"
 
-#, fuzzy
 msgid "Playback error"
 msgstr "Odtwarzanie nie powiodło się!"
 
@@ -174,7 +151,6 @@ msgstr "Usuń z ulubionych"
 msgid "Removed from favorites"
 msgstr "Usunięto z ulubionych"
 
-#, fuzzy
 msgid "Resolving YouTube stream..."
 msgstr "Nie można wyodrębnić strumienia wideo"
 
@@ -190,26 +166,20 @@ msgstr "Wybierz język"
 msgid "Settings"
 msgstr "Ustawienia"
 
-msgid "Settings functionality coming soon!"
-msgstr "Funkcjonalność ustawień będzie dostępna już wkrótce!"
+msgid "Skyline wrapper"
+msgstr "Opakowanie Skyline"
 
-#, fuzzy
 msgid "SkylineWebcams and YouTube entries play from the bouquet only with streamlink and the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
 msgstr "Wpisy SkylineWebcams odtwarzają się z bukietu tylko z wtyczką wrappera streamlink (enigma2-plugin-extensions-streamlinkwrapper)."
 
-#, fuzzy
 msgid "Stream not available"
 msgstr "Transmisja YouTube nie jest dostępna"
 
 msgid "Top Webcams"
 msgstr "Najlepsze kamery internetowe"
 
-msgid ""
-"Unable to fetch version info:\n"
-"{}"
-msgstr ""
-"Nie można pobrać informacji o wersji:\n"
-"{}"
+msgid "Unable to fetch version info:\n{}"
+msgstr "Nie można pobrać informacji o wersji:\n{}"
 
 msgid "Update"
 msgstr "Aktualizuj"
@@ -217,22 +187,14 @@ msgstr "Aktualizuj"
 msgid "Update Aborted!"
 msgstr "Aktualizacja przerwana!"
 
-#, fuzzy
-msgid ""
-"Update completed successfully!\n"
-"\n"
-"Restart Enigma2 to use the new version."
+msgid "Update completed successfully!\n\nRestart Enigma2 to use the new version."
 msgstr "Ulubione zostały pomyślnie wyeksportowane! Uruchom ponownie Enigmę2, aby je zobaczyć."
 
 msgid "Update encountered an error (code: %s)"
 msgstr "Podczas aktualizacji wystąpił błąd (kod: %s)"
 
-msgid ""
-"Update failed:\n"
-"%s"
-msgstr ""
-"Aktualizacja nie powiodła się:\n"
-"%s"
+msgid "Update failed:\n%s"
+msgstr "Aktualizacja nie powiodła się:\n%s"
 
 msgid "Update plugin"
 msgstr "Aktualizuj wtyczkę"
@@ -243,17 +205,14 @@ msgstr "Aktualizowanie..."
 msgid "User Lists"
 msgstr "Listy użytkownika"
 
-#, fuzzy
-msgid ""
-"WorldCam v%s\n"
-"\n"
-"Live webcam viewer featuring global locations\n"
-"\n"
-"Developed by Lululla"
-msgstr "Przeglądarka internetowa na żywo z widokami z lokalizacji na całym świecie"
+msgid "WorldCam Settings"
+msgstr "Ustawienia WorldCama"
 
 msgid "WorldCam v{}"
-msgstr ""
+msgstr "WorldCam v{}"
+
+msgid "WorldCam v%s\n\nLive webcam viewer featuring global locations\n\nDeveloped by Lululla"
+msgstr "Przeglądarka internetowa na żywo z widokami z lokalizacji na całym świecie"
 
 msgid "You are already running the latest version: {}"
 msgstr "Używasz już najnowszej wersji: {}"
@@ -261,245 +220,6 @@ msgstr "Używasz już najnowszej wersji: {}"
 msgid "Your Favorites"
 msgstr "Twoje ulubione"
 
-#~ msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
-#~ msgstr "Wpisy YouTube odtwarzają się z bukietu tylko przy pomocy wtyczki wrappera yt-dlp (enigma2-plugin-extensions-ytdlpwrapper)."
+msgid "YouTube wrapper"
+msgstr "Opakowanie YouTube'a"
 
-#~ msgid "- Local YouTube playlist"
-#~ msgstr "- Lokalna lista odtwarzania YouTube"
-
-#~ msgid "- Local webcam list"
-#~ msgstr "- Lista lokalnych kamer internetowych"
-
-#~ msgid "- Online Direct and YouTube webcams"
-#~ msgstr "- Kamery internetowe Online Direct i YouTube"
-
-#~ msgid "- Online webcam list"
-#~ msgstr "- Lista kamer internetowych online"
-
-#~ msgid "- Other sources"
-#~ msgstr "- Inne źródła"
-
-#~ msgid "AFRICA"
-#~ msgstr "AFRYKA"
-
-#~ msgid "AMERICAS"
-#~ msgstr "AMERYKA"
-
-#~ msgid "Developed by Lululla"
-#~ msgstr "Opracowane przez Lululla"
-
-#~ msgid "EUROPE"
-#~ msgstr "EUROPA"
-
-#, fuzzy
-#~ msgid "Empty playlist file"
-#~ msgstr "Brak dostępnych list odtwarzania"
-
-#~ msgid "Error changing language"
-#~ msgstr "Błąd przy zmianie języka"
-
-#~ msgid "Error loading categories"
-#~ msgstr "Błąd ładowania kategorii"
-
-#~ msgid "Error loading continents"
-#~ msgstr "Błąd ładowania kontynentów"
-
-#~ msgid "Error loading countries"
-#~ msgstr "Błąd  ładowania lokalizacji"
-
-#~ msgid "Error loading favorites"
-#~ msgstr "Błąd ładowania ulubionych"
-
-#~ msgid "Error loading locations"
-#~ msgstr "Błąd podczas ładowania lokalizacji"
-
-#~ msgid "Error loading playlists"
-#~ msgstr "Błąd ładowania list odtwarzania"
-
-#~ msgid "Error loading top webcams"
-#~ msgstr "Błąd ładowania najlepszych kamer internetowych"
-
-#~ msgid "Error loading webcams"
-#~ msgstr "Błąd ładowania kamer internetowych"
-
-#~ msgid "Error opening language selection"
-#~ msgstr "Błąd podczas otwierania pliku nagrania"
-
-#~ msgid "Error opening playlist"
-#~ msgstr "Błąd otwierania listy odtwarzania"
-
-#, fuzzy
-#~ msgid "File not found"
-#~ msgstr "Nie znaleziono pliku listy odtwarzania"
-
-#~ msgid "Forum support: www.corvoboys.org"
-#~ msgstr "Wsparcie forum: www.corvoboys.org"
-
-#~ msgid "Included playlists and sources:"
-#~ msgstr "Dołączone listy odtwarzania i źródła:"
-
-#~ msgid "No playlists available"
-#~ msgstr "Brak dostępnych list odtwarzania"
-
-#~ msgid "Powered by Enigma2 and Python"
-#~ msgstr "Oparte na Enigma2 i Pythonie"
-
-#~ msgid "Removed from favorites: %s"
-#~ msgstr "Usunięto z ulubionych: %s"
-
-#~ msgid "Select a valid category"
-#~ msgstr "Proszę wybierz kategorie."
-
-#~ msgid "Select a valid location"
-#~ msgstr "Wybierz prawidłową lokalizację"
-
-#~ msgid "Select a valid playlist"
-#~ msgstr "Wybierz prawidłową listę odtwarzania"
-
-#~ msgid "Select a valid webcam"
-#~ msgstr "Wybierz prawidłową kamerę internetową"
-
-#~ msgid "Technical error in Webcam.pl"
-#~ msgstr "Błąd techniczny w Webcam.pl"
-
-#, fuzzy
-#~ msgid "YouTube playback error"
-#~ msgstr "Wszystkie metody odtwarzania YouTube nie powiodły się!"
-
-#~ msgid "Invalid YouTube URL"
-#~ msgstr "Nieprawidłowy adres URL YouTube"
-
-#~ msgid "yt-dlp not found. Please install it."
-#~ msgstr "Nie znaleziono yt-dlp. Zainstaluj go."
-
-#~ msgid "Update yt-dlp"
-#~ msgstr "Aktualizuj yt-dlp"
-
-#~ msgid "yt-dlp updated successfully!"
-#~ msgstr "yt-dlp zaktualizowano pomyślnie!"
-
-#~ msgid "All YouTube methods failed!"
-#~ msgstr "Wszystkie metody YouTube zawiodły!"
-
-#~ msgid "Animals"
-#~ msgstr "Zwierzęta"
-
-#~ msgid "Beaches"
-#~ msgstr "Plaże"
-
-#~ msgid "Could not extract stream URL"
-#~ msgstr "Nie można wyodrębnić adresu URL strumienia"
-
-#~ msgid "Could not extract video ID"
-#~ msgstr "Nie wyodrębniono ID wideo"
-
-#~ msgid "Couldn't extract video information"
-#~ msgstr "Nie udało się wyodrębnić informacji o wideo"
-
-#~ msgid "Couldn't extract video stream"
-#~ msgstr "Nie udało się wyodrębnić strumienia wideo"
-
-#~ msgid ""
-#~ "Do you want to Convert to Favorite Bouquet ?\n"
-#~ "\n"
-#~ "Attention!! Wait while converting !!!"
-#~ msgstr ""
-#~ "Czy chcesz przekonwertować na ulubiony bukiet?\n"
-#~ "\n"
-#~ "Uwaga!! Poczekaj na konwersję !!!"
-
-#~ msgid "Error import YoutubeDL yt_dlp module!"
-#~ msgstr "Błąd importu modułu YoutubeDL yt_dlp!"
-
-#~ msgid "Error loading stream"
-#~ msgstr "Błąd ładowania strumienia"
-
-#~ msgid ""
-#~ "Error opening settings:\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Błąd otwierania ustawień:\n"
-#~ "%s"
-
-#~ msgid "Error playing YouTube video with proxy!"
-#~ msgstr "Błąd odtwarzania filmu z YouTube za pomocą serwera proxy!"
-
-#~ msgid "Error playing YouTube video!"
-#~ msgstr "Błąd podczas odtwarzania filmu na YouTube!"
-
-#~ msgid ""
-#~ "Failed to update yt-dlp:\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Nie udało się zaktualizować yt-dlp:\n"
-#~ "%s"
-
-#~ msgid "Lakes"
-#~ msgstr "Jeziora"
-
-#~ msgid "Loading categories..."
-#~ msgstr "Ładowanie kategorii..."
-
-#~ msgid "Loading failed"
-#~ msgstr "Pobieranie nie powiodło się"
-
-#~ msgid "No categories found"
-#~ msgstr "Nie znaleziono kategorii"
-
-#~ msgid "No languages available"
-#~ msgstr "Brak dostępnych języków"
-
-#~ msgid "No playable formats available"
-#~ msgstr "Brak dostępnych formatów do odtworzenia"
-
-#~ msgid ""
-#~ "Player Controls:\n"
-#~ "OK - Show/hide info bar\n"
-#~ "CH- - Previous webcam\n"
-#~ "CH+ - Next webcam\n"
-#~ "BLUE - Toggle favorite\n"
-#~ "PLAY/PAUSE - Toggle playback\n"
-#~ "STOP - Stop playback\n"
-#~ "EXIT - Close player\n"
-#~ msgstr ""
-#~ "Elementy sterujące odtwarzacza:\n"
-#~ "OK - Pokaż/ukryj pasek informacji\n"
-#~ "CH- - Poprzednia kamera internetowa\n"
-#~ "CH+ - następna kamera internetowa\n"
-#~ "NIEBIESKI - przełącz ulubione\n"
-#~ "ODTWARZANIE/PAUZA - Przełączanie odtwarzania\n"
-#~ "ZATRZYMAJ - Zatrzymaj odtwarzanie\n"
-#~ "WYJDŹ - Zamknij gracza\n"
-
-#~ msgid "Playlist file not found or empty"
-#~ msgstr "Plik listy odtwarzania nie został znaleziony lub jest pusty"
-
-#~ msgid "Reload Bouquet"
-#~ msgstr "Przeładuj Bukiet"
-
-#~ msgid "Remove all Worldcam Favorite Bouquet ?"
-#~ msgstr "Usunąć wszystkie uUubione Bukiety Worldcam ?"
-
-#~ msgid "Select webcam"
-#~ msgstr "Wybierz kamery internetowe "
-
-#~ msgid ""
-#~ "Update completed successfully!\n"
-#~ "\n"
-#~ "The plugin will now close."
-#~ msgstr ""
-#~ "Aktualizacja zakończona pomyślnie!\n"
-#~ "\n"
-#~ "Wtyczka zostanie teraz zamknięta."
-
-#~ msgid "Worldcam Favorites List have been removed"
-#~ msgstr "Lista ulubionych w Worldcam została usunięta"
-
-#~ msgid "You are already running the latest version: %s"
-#~ msgstr "Używasz już najnowszej wersji: %s"
-
-#~ msgid "bouquets reloaded.."
-#~ msgstr "bukiety ponownie załadowane.."
-
-#~ msgid "yt_dlp module missing!"
-#~ msgstr "brak modułu yt_dlp!"

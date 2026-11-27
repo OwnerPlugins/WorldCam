@@ -1,21 +1,17 @@
-# WorldCam translations
-# Copyright (C) 2025 Lululla Team
-# This file is distributed under the same license as the Lululla package.
-# [lululla] <ekekaz@gmail.com>, 2025.
+# tr translations
+# Copyright (C) 2026 Lululla Team
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: WorldCam\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-02-02 22:48+0100\n"
-"Last-Translator: root <EMAIL@ADDRESS>\n"
-"Language-Team: Turkish <gnome-turk@gnome.org>\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: tr <ekekaz@gmail.com>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "About"
 msgstr "Hakkında"
@@ -47,7 +43,6 @@ msgstr "Ülkeler"
 msgid "Country"
 msgstr "Ülke"
 
-#, fuzzy
 msgid "Empty or missing playlist"
 msgstr "Oynatma listesi yüklenirken hata oluştu"
 
@@ -69,58 +64,49 @@ msgstr "İhracat"
 msgid "Export All to Bouquet"
 msgstr "Tümünü Bukete Aktar"
 
-#, fuzzy
+msgid "Export delay"
+msgstr "İhracat gecikmesi"
+
 msgid "Export failed"
 msgstr "Dışa aktarma başarısız oldu:"
 
-msgid "Export failed:"
-msgstr "Dışa aktarma başarısız oldu:"
+msgid "Export failed: "
+msgstr "Dışa aktarma başarısız oldu: "
+
+msgid "Export workers"
+msgstr "İhracat işçileri"
 
 msgid "Exported %d webcams to '%s'"
 msgstr "%d web kamerası '%s' hedefine aktarıldı"
 
-#, fuzzy
-msgid "Exporting..."
-msgstr "İhracat"
+msgid "Exporting... Please wait"
+msgstr "Dışa aktarılıyor... Lütfen bekleyin"
 
 msgid "Favorites"
 msgstr "Favoriler"
 
-msgid ""
-"Install it with:\n"
-"opkg install python3-yt-dlp"
+msgid "Install it with:\nopkg install python3-yt-dlp"
 msgstr "Şununla yükleyin:\nopkg python3-yt-dlp'yi yükleyin"
 
 msgid "Language changed to %s"
 msgstr "Dil %s olarak değiştirildi"
 
-msgid ""
-"Like this plugin?\n"
-"Buy me a coffee by scanning QR code.\n"
-"Your support keeps development alive!"
-msgstr "Bu eklentiyi beğendiniz mi?\nQR kodunu tarayarak bana bir kahve ısmarla.\nDesteğiniz gelişimi canlı tutuyor!"
+msgid "Like this plugin?\nBuy me a coffee by scanning QR code.\nYour support keeps development alive!\n"
+msgstr "Bu eklentiyi beğendiniz mi?\nQR kodunu tarayarak bana bir kahve ısmarlayın.\nDesteğiniz gelişimi canlı tutuyor!\n"
 
 msgid "Live webcams from around the world"
 msgstr "Dünyanın dört bir yanından canlı web kameraları"
 
-#, fuzzy
 msgid "Loading stream..."
 msgstr "YouTube akışı çıkarılamadı"
 
-#, fuzzy
 msgid "Loading..."
 msgstr "Yükseltiliyor..."
 
 msgid "Menu"
 msgstr "Menü"
 
-msgid ""
-"New version %(version)s available\n"
-"\n"
-"Changelog:\n"
-"%(changelog)s\n"
-"\n"
-"Do you want to install it now?"
+msgid "New version %(version)s available\n\nChangelog:\n%(changelog)s\n\nDo you want to install it now?"
 msgstr "Yeni sürüm %(version)s mevcut\n\nDeğişiklik günlüğü:\n%(changelog)s\n\nŞimdi yüklemek istiyor musunuz?"
 
 msgid "No favorites to export"
@@ -132,14 +118,12 @@ msgstr "Henüz favori yok"
 msgid "No playlists found"
 msgstr "Oynatma listesi bulunamadı"
 
-#, fuzzy
 msgid "No valid streams found"
 msgstr "Oynatma listesi bulunamadı"
 
 msgid "No valid webcams in playlist"
 msgstr "Çalma listesinde geçerli bir web kamerası yok"
 
-#, fuzzy
 msgid "No webcams to export"
 msgstr "Dışa aktarılacak favori yok"
 
@@ -167,7 +151,6 @@ msgstr "Favorilerden kaldır"
 msgid "Removed from favorites"
 msgstr "Favorilerden kaldırıldı"
 
-#, fuzzy
 msgid "Resolving YouTube stream..."
 msgstr "YouTube akışı çıkarılamadı"
 
@@ -183,23 +166,19 @@ msgstr "Dil seçin"
 msgid "Settings"
 msgstr "Ayarlar"
 
-msgid "Settings functionality coming soon!"
-msgstr "Ayarlar işlevi çok yakında!"
+msgid "Skyline wrapper"
+msgstr "Ufuk çizgisi sarmalayıcı"
 
-#, fuzzy
 msgid "SkylineWebcams and YouTube entries play from the bouquet only with streamlink and the streamlink wrapper plugin (enigma2-plugin-extensions-streamlinkwrapper)."
 msgstr "SkylineWebcams girişleri buketten yalnızca akış bağlantısı sarmalayıcı eklentisi (enigma2-plugin-extensions-streamlinkwrapper) ile oynatılır."
 
-#, fuzzy
 msgid "Stream not available"
 msgstr "YouTube akışı kullanılamıyor"
 
 msgid "Top Webcams"
 msgstr "En İyi Web Kameraları"
 
-msgid ""
-"Unable to fetch version info:\n"
-"{}"
+msgid "Unable to fetch version info:\n{}"
 msgstr "Sürüm bilgisi getirilemiyor:\n{}"
 
 msgid "Update"
@@ -208,20 +187,13 @@ msgstr "Güncelleme"
 msgid "Update Aborted!"
 msgstr "Güncelleme İptal Edildi!"
 
-#, fuzzy
-msgid ""
-"Update completed successfully!\n"
-"\n"
-"Restart Enigma2 to use the new version."
+msgid "Update completed successfully!\n\nRestart Enigma2 to use the new version."
 msgstr "Favoriler başarıyla dışa aktarıldı! Bunları görmek için Enigma2'yi yeniden başlatın."
 
 msgid "Update encountered an error (code: %s)"
 msgstr "Güncelleme bir hatayla karşılaştı (kod: %s)"
 
-#, fuzzy
-msgid ""
-"Update failed:\n"
-"%s"
+msgid "Update failed:\n%s"
 msgstr "Dışa aktarma başarısız oldu:"
 
 msgid "Update plugin"
@@ -233,17 +205,14 @@ msgstr "Yükseltiliyor..."
 msgid "User Lists"
 msgstr "Kullanıcı Listeleri"
 
-#, fuzzy
-msgid ""
-"WorldCam v%s\n"
-"\n"
-"Live webcam viewer featuring global locations\n"
-"\n"
-"Developed by Lululla"
-msgstr "Küresel konumları gösteren canlı web kamerası görüntüleyici"
+msgid "WorldCam Settings"
+msgstr "WorldCam Ayarları"
 
 msgid "WorldCam v{}"
-msgstr ""
+msgstr "WorldCam v{}"
+
+msgid "WorldCam v%s\n\nLive webcam viewer featuring global locations\n\nDeveloped by Lululla"
+msgstr "Küresel konumları gösteren canlı web kamerası görüntüleyici"
 
 msgid "You are already running the latest version: {}"
 msgstr "Zaten en son sürümü çalıştırıyorsunuz: {}"
@@ -251,110 +220,6 @@ msgstr "Zaten en son sürümü çalıştırıyorsunuz: {}"
 msgid "Your Favorites"
 msgstr "Favorileriniz"
 
-#~ msgid "YouTube entries play from the bouquet only with the yt-dlp wrapper plugin (enigma2-plugin-extensions-ytdlpwrapper)."
-#~ msgstr "YouTube girişleri buketten yalnızca yt-dlp sarmalayıcı eklentisi (enigma2-plugin-extensions-ytdlpwrapper) ile oynatılır."
+msgid "YouTube wrapper"
+msgstr "YouTube sarmalayıcı"
 
-#~ msgid "- Local YouTube playlist"
-#~ msgstr "- Yerel YouTube oynatma listesi"
-
-#~ msgid "- Local webcam list"
-#~ msgstr "- Yerel web kamerası listesi"
-
-#~ msgid "- Online Direct and YouTube webcams"
-#~ msgstr "- Çevrimiçi Doğrudan ve YouTube web kameraları"
-
-#~ msgid "- Online webcam list"
-#~ msgstr "- Çevrimiçi web kamerası listesi"
-
-#~ msgid "- Other sources"
-#~ msgstr "- Diğer kaynaklar"
-
-#~ msgid "AFRICA"
-#~ msgstr "AFRİKA"
-
-#~ msgid "AMERICAS"
-#~ msgstr "AMERİKA KITALARI"
-
-#~ msgid "Developed by Lululla"
-#~ msgstr "Lululla tarafından geliştirildi"
-
-#~ msgid "EUROPE"
-#~ msgstr "AVRUPA"
-
-#~ msgid "Empty playlist file"
-#~ msgstr "Çalma listesi dosyasını boşalt"
-
-#~ msgid "Error changing language"
-#~ msgstr "Dil değiştirilirken hata oluştu"
-
-#~ msgid "Error loading categories"
-#~ msgstr "Kategoriler yüklenirken hata oluştu"
-
-#~ msgid "Error loading continents"
-#~ msgstr "Kıtalar yüklenirken hata oluştu"
-
-#~ msgid "Error loading countries"
-#~ msgstr "Ülkeler yüklenirken hata oluştu"
-
-#~ msgid "Error loading favorites"
-#~ msgstr "Favoriler yüklenirken hata oluştu"
-
-#~ msgid "Error loading locations"
-#~ msgstr "Konumlar yüklenirken hata oluştu"
-
-#~ msgid "Error loading playlists"
-#~ msgstr "Oynatma listeleri yüklenirken hata oluştu"
-
-#~ msgid "Error loading top webcams"
-#~ msgstr "En iyi web kameraları yüklenirken hata oluştu"
-
-#~ msgid "Error loading webcams"
-#~ msgstr "Web kameraları yüklenirken hata oluştu"
-
-#~ msgid "Error opening language selection"
-#~ msgstr "Dil seçimi açılırken hata oluştu"
-
-#~ msgid "Error opening playlist"
-#~ msgstr "Oynatma listesi açılırken hata oluştu"
-
-#~ msgid "File not found"
-#~ msgstr "Dosya bulunamadı"
-
-#~ msgid "Forum support: www.corvoboys.org"
-#~ msgstr "Forum desteği: www.corvoboys.org"
-
-#~ msgid "Included playlists and sources:"
-#~ msgstr "Dahil edilen çalma listeleri ve kaynaklar:"
-
-#~ msgid "No playlists available"
-#~ msgstr "Oynatma listesi yok"
-
-#~ msgid "Powered by Enigma2 and Python"
-#~ msgstr "Enigma2 ve Python tarafından desteklenmektedir"
-
-#~ msgid "Removed from favorites: %s"
-#~ msgstr "Favorilerden kaldırıldı: %s"
-
-#~ msgid "Select a valid category"
-#~ msgstr "Geçerli bir kategori seçin"
-
-#~ msgid "Select a valid location"
-#~ msgstr "Geçerli bir konum seçin"
-
-#~ msgid "Select a valid playlist"
-#~ msgstr "Geçerli bir oynatma listesi seçin"
-
-#~ msgid "Select a valid webcam"
-#~ msgstr "Geçerli bir web kamerası seçin"
-
-#~ msgid "Technical error in Webcam.pl"
-#~ msgstr "Webcam.pl'de teknik hata"
-
-#~ msgid "YouTube playback error"
-#~ msgstr "YouTube oynatma hatası"
-
-#~ msgid "Invalid YouTube URL"
-#~ msgstr "Geçersiz YouTube URL'si"
-
-#~ msgid "yt-dlp not found. Please install it."
-#~ msgstr "yt-dlp bulunamadı. Lütfen yükleyin."
