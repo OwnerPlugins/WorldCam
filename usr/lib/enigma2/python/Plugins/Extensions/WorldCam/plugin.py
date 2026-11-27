@@ -426,10 +426,11 @@ class WorldCamSettingsScreen(WebcamBaseScreen, ConfigListScreen):
             screen_type="setup"
         )
 
-        self["title"] = StaticText(_("WorldCam Settings"))
-        self["paypal"] = StaticText("")
+        # widget name="..." in the skin needs a Label, not a StaticText
+        self["title"] = Label(_("WorldCam Settings"))
+        self["paypal"] = Label(paypal())
         self["key_red"] = Button(_("Exit"))
-        self["key_green"] = Button(_("Select"))
+        self["key_green"] = Button(_("Save"))
         ConfigListScreen.__init__(
             self,
             [
@@ -454,9 +455,9 @@ class WorldCamSettingsScreen(WebcamBaseScreen, ConfigListScreen):
         )
 
         self["actions"] = HelpableActionMap(self, "WorldCamActions", {
-            "ok": self.close,
-            "cancel": self.close,
-            "red": self.close,
+            "ok": self.keySave,
+            "cancel": self.keyCancel,
+            "red": self.keyCancel,
             "green": self.keySave
         })
 
@@ -702,7 +703,7 @@ class WorldCamFavoritesScreen(WebcamBaseScreen):
         if success:
             # Reload services in a timer to prevent GUI freeze
             self.reload_timer = eTimer()
-            self.reload_timer.callback.append(reload_services)
+            self.reload_timer_conn = timer_connect(self.reload_timer, reload_services)
             self.reload_timer.start(100, True)
             
         self.session.open(MessageBox, message, MessageBox.TYPE_INFO if success else MessageBox.TYPE_ERROR)
@@ -832,7 +833,7 @@ class WorldCamLocal(WebcamBaseScreen):
         if success:
             # Reload services in a timer to prevent GUI freeze
             self.reload_timer = eTimer()
-            self.reload_timer.callback.append(reload_services)
+            self.reload_timer_conn = timer_connect(self.reload_timer, reload_services)
             self.reload_timer.start(100, True)
             
         self.session.open(MessageBox, message, MessageBox.TYPE_INFO if success else MessageBox.TYPE_ERROR)
@@ -1092,7 +1093,7 @@ class WorldCamTopScreen(WebcamBaseScreen):
         if success:
             # Reload services in a timer to prevent GUI freeze
             self.reload_timer = eTimer()
-            self.reload_timer.callback.append(reload_services)
+            self.reload_timer_conn = timer_connect(self.reload_timer, reload_services)
             self.reload_timer.start(100, True)
             
         self.session.open(MessageBox, message, MessageBox.TYPE_INFO if success else MessageBox.TYPE_ERROR)
@@ -1221,7 +1222,7 @@ class WorldCamWebcamScreen(WebcamBaseScreen):
         if success:
             # Reload services in a timer to prevent GUI freeze
             self.reload_timer = eTimer()
-            self.reload_timer.callback.append(reload_services)
+            self.reload_timer_conn = timer_connect(self.reload_timer, reload_services)
             self.reload_timer.start(100, True)
             
         self.session.open(MessageBox, message, MessageBox.TYPE_INFO if success else MessageBox.TYPE_ERROR)

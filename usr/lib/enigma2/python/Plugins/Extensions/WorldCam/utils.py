@@ -307,46 +307,6 @@ def resolve_skyline_youtube(urls):
     return found
 
 
-def get_service_type(preferred=None):
-    if preferred == "exteplayer3":
-        return 5002
-    return 4097
-
-
-def resolve_skyline_youtube(urls, workers=1):
-    """
-    Open the given SkylineWebcams pages (sequentially) and return
-    {page_url: youtube_watch_url} for the cams streamed through YouTube.
-    We removed the parallel download to avoid HTTP 429 Too Many Requests.
-    """
-    urls = [u for u in dict.fromkeys(urls) if is_skyline_page(u)]
-    if not urls:
-        return {}
-        
-    import time
-    from .scraper import SkylineScraper   # lazy: scraper imports utils
-    scraper = SkylineScraper()
-
-    found = {}
-    total = len(urls)
-    
-    for i, page_url in enumerate(urls):
-        time.sleep(0.8)
-        
-        try:
-            stream = scraper.get_stream_url(page_url)
-            if stream and is_youtube_url(stream):
-                found[page_url] = stream
-        except Exception:
-            pass
-            
-        if (i + 1) % 5 == 0:
-            Logger().info("Export progress: %d/%d pages checked..." % (i + 1, total))
-
-    Logger().info("Export: %d of %d SkylineWebcams cams are YouTube" % (len(found), len(urls)))
-    return found
-
-
 class FavoritesManager:
     @staticmethod
     def _migrate_old_file():
