@@ -1,0 +1,24 @@
+<screen name="WorldCamSettingsScreen" position="center,center" size="2560,1440" title="..::WORLDCAM::.." flags="wfNoBorder">
+    <!-- Graph -->
+    <widget name="title" position="1305,51" size="1045,53" font="Regular;43" halign="center" zPosition="5" transparent="1"/>
+    <widget name="paypal" position="341,1013" size="773,267" font="Regular;43" cornerRadius="35" foregroundColor="#ffb75b" backgroundColor="#101010" halign="left" transparent="1" zPosition="5" valign="top"/>
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WorldCam/pics/ft.png" position="2300,136" size="133,133" zPosition="4" scale="1" alphatest="blend"/>
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WorldCam/plugin.png" position="1267,136" size="336,133" scale="1" zPosition="5" alphatest="blend"/>
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WorldCam/pics/logo.png" position="1204,44" size="67,67" scale="1" zPosition="5" alphatest="blend"/>
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WorldCam/pics/PayPal.png" position="915,1261" size="208,100" scale="1" zPosition="5" alphatest="on"/>
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WorldCam/pics/qr-code.png" position="64,1016" size="267,267" scale="1" zPosition="2" alphatest="on"/>
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WorldCam/pics/slider_fhd.png" position="1267,280" size="1195,7" alphatest="blend"/>
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WorldCam/pics/slider_fhd.png" position="1267,1220" size="1195,7" alphatest="blend"/>
+    <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WorldCam/pics/mask.png" position="center,center" size="2560,1440" transparent="1" zPosition="-1" alphatest="blend"/>
+    <!-- Video Preview -->
+    <widget source="session.VideoPicture" render="Pig" position="103,203" zPosition="20" size="985,561" backgroundColor="transparent" transparent="0"/>
+    <!-- Clock -->
+    <widget font="Regular;53" halign="center" position="92,40" render="Label" size="999,93" source="global.CurrentTime" transparent="1" backgroundColor="#000000" foregroundColor="#92f1fc">
+        <convert type="ClockToText">Format:%a %d.%m. %Y | %H:%M</convert>
+    </widget>
+    <!-- Menu List -->
+    <widget name="config" position="1272,303" size="1180,887" itemHeight="87" cornerRadius="120" backgroundColor="#000b2049" foregroundColorSelected="#ffffff" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="#00005826" scrollbarSliderBorderColor="#00171a1c" scrollbarWidth="13" scrollbarSliderBorderWidth="1" transparent="1" zPosition="10" foregroundColor="#00a0a0a0" backgroundColorSelected="#008080"/>
+    <!-- Colors -->
+    <widget name="key_red" position="1297,1343" size="280,80" valign="center" halign="center" zPosition="4" foregroundColor="#ffffff" font="Regular;40" transparent="1"/>
+    <widget name="key_green" position="1584,1343" size="280,80" valign="center" halign="center" zPosition="4" foregroundColor="#ffffff" font="Regular;40" transparent="1"/>
+</screen>
