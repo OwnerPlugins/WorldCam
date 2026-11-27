@@ -1,6 +1,6 @@
 #!/bin/bash
 
-version='7.7'
+version='7.8'
 changelog="Added Settings menu with YouTube and Skyline wrapper selection, configurable export delay and workers, plus HD, FHD and WQHD XML skins."
 FILEPATH=/tmp/WorldCam-main.tar.gz
 TMPPATH=/tmp/worldcam_extract

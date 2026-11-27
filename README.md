@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/Belfagor2005/WorldCam">
-    <img src="https://img.shields.io/badge/Version-7.7-blue.svg" alt="Version">
+    <img src="https://img.shields.io/badge/Version-7.8-blue.svg" alt="Version">
   </a>
   <a href="https://www.enigma2.net">
     <img src="https://img.shields.io/badge/Enigma2-Plugin-ff6600.svg" alt="Enigma2">
@@ -43,6 +43,12 @@ Completely rewritten and optimized since version **7.3**, the plugin now offers 
 </p>
 
 ---
+## 🚀 What's new in version 7.8
+
+### 🛠️ Fix: Importlib
+
+---
+
 
 ## 🚀 What's new in version 7.7
 

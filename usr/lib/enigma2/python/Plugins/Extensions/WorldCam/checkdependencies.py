@@ -70,7 +70,7 @@ def check_requirements(logger=None):
 
     # streamlink: verifichiamo se il modulo Python è presente
     try:
-        if importlib.util.find_spec("streamlink") is None:
+        if find_spec("streamlink") is None:
             missing.append("streamlink")
     except Exception:
         if which("streamlink") is None:
